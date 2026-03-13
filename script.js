@@ -1456,6 +1456,44 @@ const projetos = [
     galeria: []
   },
   {
+    id: 70,
+    nome: "Teste de Fluxo",
+    categoria: "ia",
+    categoriaLabel: "Produção com IA",
+    ano: "2025",
+    videoId: "",
+    descricao: "Teste de fluxo usando o Nano Banana + VEO3. Projeto pessoal de experimentação com ferramentas de IA generativa para criação de vídeo.",
+    ficha: {
+      "Função": "Produção com IA",
+      "Ferramentas": "Nano Banana + VEO3",
+      "Tipo": "Projeto Pessoal",
+      "Ano": "2025"
+    },
+    videos: [
+      { url: "assets/projetos/ia-projeto-1/video.mp4", talento: "Teste de Fluxo - Nano Banana + VEO3" }
+    ],
+    galeria: []
+  },
+  {
+    id: 71,
+    nome: "Dentro da Minha Cabeça",
+    categoria: "ia",
+    categoriaLabel: "Produção com IA",
+    ano: "2025",
+    videoId: "",
+    descricao: "O que acontece dentro da minha cabeça. Projeto pessoal explorando Higgsfield, Nano Banana e Flux AI com referência ao Filipe Ret.",
+    ficha: {
+      "Função": "Produção com IA",
+      "Ferramentas": "Higgsfield + Nano Banana + Flux AI",
+      "Tipo": "Projeto Pessoal",
+      "Ano": "2025"
+    },
+    videos: [
+      { url: "assets/projetos/ia-projeto-2/video.mp4", talento: "Dentro da Minha Cabeça - Higgsfield + Flux AI" }
+    ],
+    galeria: []
+  },
+  {
     id: 41,
     nome: "Allfluence",
     categoria: "video",
@@ -2367,7 +2405,7 @@ document.getElementById('contatoForm').addEventListener('submit', async (e) => {
   btn.disabled = true;
 
   try {
-    const res = await fetch(form.action, {
+    const res = await fetch('https://formsubmit.co/ajax/savyllaadryan@gmail.com', {
       method: 'POST',
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
