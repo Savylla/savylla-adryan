@@ -4,14 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Savylla Adryan | Produção Audiovisual</title>
-  <meta name="description" content="Savylla Adryan - Filmmaker, IA, Designer, Motion e Fotografia. Portfólio profissional audiovisual.">
+  <meta name="description" content="Savylla Adryan - Filmmaker, Direção, Designer e Fotografia. Portfólio profissional audiovisual.">
   <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts fallback (usados ate voce adicionar as fontes premium) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <!-- Fontes carregadas localmente via @font-face no style.css (IBM Plex Sans + IBM Plex Sans Condensed) -->
 </head>
 <body>
+
+  <!-- Global Background Video -->
+  <div class="global-bg">
+    <video autoplay muted loop playsinline>
+      <source src="assets/bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="global-bg__overlay"></div>
+  </div>
 
   <!-- Side Labels -->
   <div class="side-label side-label--left" id="sideMenu">MENU</div>
@@ -21,9 +26,9 @@
   <div class="nav-overlay" id="navOverlay">
     <nav class="nav-overlay__inner">
       <a href="#hero" class="nav-overlay__link" data-index="01">Início</a>
-      <a href="#trabalhos" class="nav-overlay__link" data-index="02">Trabalhos</a>
-      <a href="#sobre" class="nav-overlay__link" data-index="03">Sobre</a>
-      <a href="#showreel" class="nav-overlay__link" data-index="04">Showreel</a>
+      <a href="#sobre" class="nav-overlay__link" data-index="02">Sobre</a>
+      <a href="#clientes" class="nav-overlay__link" data-index="03">Clientes</a>
+      <a href="#trabalhos" class="nav-overlay__link" data-index="04">Projetos</a>
       <a href="#contato" class="nav-overlay__link" data-index="05">Contato</a>
     </nav>
   </div>
@@ -33,9 +38,9 @@
     <div class="header__inner">
       <a href="#hero" class="header__logo">SAVYLLA ADRYAN</a>
       <nav class="header__nav">
-        <a href="#trabalhos">Trabalhos</a>
         <a href="#sobre">Sobre</a>
-        <a href="#showreel">Showreel</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#trabalhos">Projetos</a>
         <a href="#contato" class="header__cta">Contato</a>
       </nav>
       <button class="header__burger" id="burgerBtn" aria-label="Menu">
@@ -56,7 +61,7 @@
         <span class="hero__title-line"><span class="display-font">Histórias</span> que</span>
         <span class="hero__title-line">ganham <span class="display-font">vida</span></span>
       </h1>
-      <p class="hero__subtitle">Filmmaker | IA | Designer | Motion | Fotografia</p>
+      <p class="hero__subtitle">Filmmaker | Direção | Fotografia | Design</p>
     </div>
     <div class="hero__scroll">
       <div class="hero__scroll-line"></div>
@@ -67,26 +72,26 @@
   <section class="sobre" id="sobre">
     <div class="sobre__container">
       <div class="sobre__image">
-        <img src="assets/perfil.jpg" alt="Savylla Adryan">
+        <img src="assets/perfil.png" alt="Savylla Adryan">
       </div>
       <div class="sobre__content">
         <h2 class="sobre__title accent">
-          Savylla<br>Adryan
+          Savylla Adryan
         </h2>
-        <p class="sobre__text">Com formação em Produção Audiovisual, me empenho a mais de 10 anos na área, realizando desde o planejamento do projeto até a finalização do produto.</p>
-        <p class="sobre__text">Atuo como filmmaker, designer e fotógrafo, unindo narrativa visual, motion graphics e inteligência artificial para entregar projetos com identidade própria e impacto real.</p>
-        <a href="#trabalhos" class="btn">Ver Trabalhos</a>
+        <p class="sobre__text">Filmmaker, diretor, fotógrafo e designer com mais de 10 anos de atuação em produção audiovisual. Da concepção à entrega final, conduzo projetos com visão criativa e domínio técnico em todas as etapas.</p>
+        <p class="sobre__text">Produzo conteúdo para marcas como Nestlé, Mercado Pago, Bradesco, Magazine Luiza, Drogasil, Carolina Herrera, LG e Warner Music — com projetos exibidos no cinema e em plataformas como TikTok, YouTube e Instagram. Também dedico meu olhar a projetos de impacto social, como a ONG Casinha Acolhida e campanhas como #OrgulhoNãoPara e Doritos Rainbow.</p>
+        <a href="#trabalhos" class="btn">Ver Projetos</a>
         <div class="sobre__stats">
           <div class="sobre__stat">
-            <span class="sobre__stat-num">17+</span>
-            <span class="sobre__stat-label">Projetos</span>
+            <span class="sobre__stat-num">500+</span>
+            <span class="sobre__stat-label">Produções</span>
           </div>
           <div class="sobre__stat">
             <span class="sobre__stat-num">10+</span>
             <span class="sobre__stat-label">Anos</span>
           </div>
           <div class="sobre__stat">
-            <span class="sobre__stat-num">15+</span>
+            <span class="sobre__stat-num">40+</span>
             <span class="sobre__stat-label">Clientes</span>
           </div>
         </div>
@@ -98,40 +103,734 @@
   <section class="quote">
     <div class="quote__inner">
       <blockquote class="quote__text">
-        &ldquo;Para criar impacto real, o filme é <span class="accent">a forma mais poderosa e emotiva</span> de comunicação possível&rdquo;
+        &ldquo;Para criar impacto real, o vídeo é <span class="accent">a forma mais poderosa</span> de comunicação possível&rdquo;
       </blockquote>
     </div>
   </section>
 
-  <!-- Trabalhos -->
+  <!-- Clientes -->
+  <section class="clientes" id="clientes">
+    <div class="clientes__container">
+      <h2 class="clientes__title">Marcas que <span class="display-font accent">confiam</span> no meu trabalho</h2>
+      <p class="clientes__subtitle">Produção de conteúdo para TikTok, Instagram e campanhas digitais</p>
+      <div class="clientes__grid">
+        <div class="clientes__item" data-name="Drogasil">
+          <img src="assets/logos/drogasil.png" alt="Drogasil" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Drogasil</span>
+        </div>
+        <div class="clientes__item" data-name="Raia">
+          <img src="assets/logos/raia.png" alt="Raia" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Raia</span>
+        </div>
+        <div class="clientes__item" data-name="Mercado Pago">
+          <img src="assets/logos/mercado-pago.png" alt="Mercado Pago" class="clientes__logo" style="max-height:70px;max-width:170px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Mercado Pago</span>
+        </div>
+        <div class="clientes__item" data-name="Magazine Luiza">
+          <img src="assets/logos/magazine-luiza.png" alt="Magazine Luiza" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Magazine Luiza</span>
+        </div>
+        <div class="clientes__item" data-name="Netshoes">
+          <img src="assets/logos/netshoes.png" alt="Netshoes" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Netshoes</span>
+        </div>
+        <div class="clientes__item" data-name="LG">
+          <img src="assets/logos/lg.png" alt="LG" class="clientes__logo" style="max-height:40px;max-width:100px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">LG</span>
+        </div>
+        <div class="clientes__item" data-name="Uber">
+          <img src="assets/logos/uber.svg" alt="Uber" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Uber</span>
+        </div>
+        <div class="clientes__item" data-name="Philips">
+          <img src="assets/logos/philips.png" alt="Philips" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Philips</span>
+        </div>
+        <div class="clientes__item" data-name="Intimus">
+          <img src="assets/logos/intimus.png" alt="Intimus" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Intimus</span>
+        </div>
+        <div class="clientes__item" data-name="Bradesco">
+          <img src="assets/logos/bradesco.png" alt="Bradesco" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Bradesco</span>
+        </div>
+        <div class="clientes__item" data-name="Domino's">
+          <img src="assets/logos/dominos.png" alt="Domino's" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Domino's</span>
+        </div>
+        <div class="clientes__item" data-name="Serasa">
+          <img src="assets/logos/serasa.png" alt="Serasa" class="clientes__logo" style="max-height:60px;max-width:150px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Serasa</span>
+        </div>
+        <div class="clientes__item" data-name="Movida">
+          <img src="assets/logos/movida.png" alt="Movida" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Movida</span>
+        </div>
+        <div class="clientes__item" data-name="KaBuM!">
+          <img src="assets/logos/kabum.png" alt="KaBuM!" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">KaBuM!</span>
+        </div>
+        <div class="clientes__item" data-name="Neo Energia">
+          <img src="assets/logos/neoenergia.png" alt="Neo Energia" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Neo Energia</span>
+        </div>
+        <div class="clientes__item" data-name="Claro">
+          <img src="assets/logos/claro.png" alt="Claro" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Claro</span>
+        </div>
+        <div class="clientes__item" data-name="Vans">
+          <img src="assets/logos/vans.png" alt="Vans" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Vans</span>
+        </div>
+        <div class="clientes__item" data-name="Bet Nacional">
+          <img src="assets/logos/bet-nacional.png" alt="Bet Nacional" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Bet Nacional</span>
+        </div>
+        <div class="clientes__item" data-name="Bravecto">
+          <img src="assets/logos/bravecto.png" alt="Bravecto" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Bravecto</span>
+        </div>
+        <div class="clientes__item" data-name="Carolina Herrera">
+          <img src="assets/logos/carolina-herrera.png" alt="Carolina Herrera" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Carolina Herrera</span>
+        </div>
+        <div class="clientes__item" data-name="Nestlé">
+          <img src="assets/logos/nestle.png" alt="Nestlé" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Nestlé</span>
+        </div>
+        <div class="clientes__item" data-name="Carrefour">
+          <img src="assets/logos/carrefour.png" alt="Carrefour" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Carrefour</span>
+        </div>
+
+        <div class="clientes__item" data-name="Allfluence">
+          <img src="assets/logos/allfluence.png" alt="Allfluence" class="clientes__logo" style="max-height:70px;max-width:170px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Allfluence</span>
+        </div>
+        <div class="clientes__item" data-name="Veloe">
+          <img src="assets/logos/veloe.png" alt="Veloe" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Veloe</span>
+        </div>
+        <div class="clientes__item" data-name="Agibank">
+          <img src="assets/logos/agibank.png" alt="Agibank" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Agibank</span>
+        </div>
+        <div class="clientes__item" data-name="Livelo">
+          <img src="assets/logos/livelo.png" alt="Livelo" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Livelo</span>
+        </div>
+        <div class="clientes__item" data-name="Baby Sec">
+          <img src="assets/logos/baby-sec.png" alt="Baby Sec" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Baby Sec</span>
+        </div>
+        <div class="clientes__item" data-name="GA.MA">
+          <img src="assets/logos/gama.png" alt="GA.MA" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">GA.MA</span>
+        </div>
+        <div class="clientes__item" data-name="Bullsbet">
+          <img src="assets/logos/bullsbet.png" alt="Bullsbet" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Bullsbet</span>
+        </div>
+        <div class="clientes__item" data-name="Faculdade Estácio">
+          <img src="assets/logos/estacio.png" alt="Faculdade Estácio" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Faculdade Estácio</span>
+        </div>
+        <div class="clientes__item" data-name="Reals Bet">
+          <img src="assets/logos/reals-bet.png" alt="Reals Bet" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Reals Bet</span>
+        </div>
+        <div class="clientes__item" data-name="Sorriso">
+          <img src="assets/logos/sorriso.png" alt="Sorriso" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Sorriso</span>
+        </div>
+        <div class="clientes__item" data-name="Tramontina">
+          <img src="assets/logos/tramontina.png" alt="Tramontina" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Tramontina</span>
+        </div>
+        <div class="clientes__item" data-name="Softys Kitchen">
+          <img src="assets/logos/softys-kitchen.png" alt="Softys Kitchen" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Softys Kitchen</span>
+        </div>
+        <div class="clientes__item" data-name="Aiqfome">
+          <img src="assets/logos/aiqfome.png" alt="Aiqfome" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Aiqfome</span>
+        </div>
+        <div class="clientes__item" data-name="Philco Britânia">
+          <img src="assets/logos/philco.png" alt="Philco Britânia" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Philco Britânia</span>
+        </div>
+        <div class="clientes__item" data-name="Mycon">
+          <img src="assets/logos/mycon.png" alt="Mycon" class="clientes__logo" style="max-height:70px;max-width:170px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Mycon</span>
+        </div>
+        <div class="clientes__item" data-name="Atacadão">
+          <img src="assets/logos/atacadao.png" alt="Atacadão" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Atacadão</span>
+        </div>
+        <div class="clientes__item" data-name="Cassino.Bet">
+          <img src="assets/logos/cassino-bet.png" alt="Cassino.Bet" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Cassino.Bet</span>
+        </div>
+        <div class="clientes__item" data-name="Irmãos Scribel" data-ids="3,58">
+          <img src="assets/logos/irmaos-scribel.png" alt="Irmãos Scribel" class="clientes__logo" style="max-height:160px;max-width:300px;opacity:1;object-fit:contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Irmãos Scribel</span>
+        </div>
+        <div class="clientes__item" data-name="Alma Festival">
+          <img src="assets/logos/alma-festival.png" alt="Alma Festival" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Alma Festival</span>
+        </div>
+        <div class="clientes__item" data-name="Warner Music Group" data-ids="1,59">
+          <img src="assets/logos/warner-music-uk.png" alt="Warner Music Group" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Warner Music Group</span>
+        </div>
+        <div class="clientes__item" data-name="Casinha Acolhida" data-ids="60,61,62">
+          <img src="assets/logos/casinha-acolhida.png" alt="Casinha Acolhida" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Casinha Acolhida</span>
+        </div>
+        <div class="clientes__item" data-name="Apsa" data-id="63">
+          <img src="assets/logos/apsa.png" alt="Apsa" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Apsa</span>
+        </div>
+        <div class="clientes__item" data-name="Doutora Drag" data-id="64">
+          <img src="assets/logos/doutora-drag.png" alt="Doutora Drag" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Doutora Drag</span>
+        </div>
+        <div class="clientes__item" data-name="Linha Produções" data-id="65">
+          <img src="assets/logos/linha-producoes.png" alt="Linha Produções" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Linha Produções</span>
+        </div>
+        <div class="clientes__item" data-name="Garagem Coletiva" data-id="68">
+          <img src="assets/logos/garagem-coletiva.png" alt="Garagem Coletiva" class="clientes__logo" style="max-height:65px;max-width:150px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Garagem Coletiva</span>
+        </div>
+        <div class="clientes__item" data-name="Devassas" data-id="67">
+          <img src="assets/logos/devassas.png" alt="Devassas" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Devassas</span>
+        </div>
+        <div class="clientes__item" data-name="Força da Terra" data-id="66">
+          <img src="assets/logos/forca-da-terra.png" alt="Força da Terra" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="clientes__fallback" style="display:none">Força da Terra</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos -->
   <section class="trabalhos" id="trabalhos">
     <div class="trabalhos__header">
-      <h2 class="trabalhos__title">Meus <span class="display-font accent">trabalhos</span></h2>
+      <h2 class="trabalhos__title">Meus <span class="display-font accent">projetos</span></h2>
       <div class="trabalhos__filtros">
         <button class="trabalhos__filtro active" data-filter="todos">Tudo</button>
         <button class="trabalhos__filtro" data-filter="video">Vídeo</button>
-        <button class="trabalhos__filtro" data-filter="ia">IA</button>
-        <button class="trabalhos__filtro" data-filter="design">Design</button>
-        <button class="trabalhos__filtro" data-filter="motion">Motion</button>
+        <button class="trabalhos__filtro" data-filter="direcao">Direção</button>
         <button class="trabalhos__filtro" data-filter="fotografia">Fotografia</button>
+        <button class="trabalhos__filtro" data-filter="design">Design</button>
+        <button class="trabalhos__filtro" data-filter="ia">IA</button>
       </div>
     </div>
 
     <div class="trabalhos__grid" id="trabalhosGrid">
 
-      <article class="trabalhos__item trabalhos__item--wide" data-category="design" data-id="1">
+      <article class="trabalhos__item trabalhos__item--wide" data-category="video direcao" data-id="18">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/warner-uk-thumb.jpg" alt="Warner Music UK" loading="lazy">
+          <img src="assets/projetos/drogasil-thumb.png" alt="Drogasil" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Warner Music UK</h3>
-          <span class="trabalhos__cat accent">Design</span>
+          <h3 class="trabalhos__nome">Drogasil</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
         </div>
       </article>
 
-      <article class="trabalhos__item" data-category="fotografia" data-id="2">
+      <article class="trabalhos__item" data-category="video direcao" data-id="19">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/alma-festival-thumb.jpg" alt="Alma Festival" loading="lazy">
+          <img src="assets/projetos/mercado-pago-thumb.png" alt="Mercado Pago" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Mercado Pago</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="20">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/magazine-luiza-thumb.png" alt="Magazine Luiza" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Magazine Luiza</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="21">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/raia-thumb.png" alt="Raia" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Raia</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="22">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/bradesco-thumb.png" alt="Bradesco" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Bradesco</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="23">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/netshoes-thumb.png" alt="Netshoes" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Netshoes</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="24">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/lg-thumb.jpg" alt="LG" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">LG</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="25">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/uber-thumb.jpg" alt="Uber" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Uber</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="26">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/carolina-herrera-thumb.png" alt="Carolina Herrera" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Carolina Herrera</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="27">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/nestle-thumb.png" alt="Nestlé" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Nestlé</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="28">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/philips-thumb.png" alt="Philips" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Philips</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="29">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/intimus-thumb.png" alt="Intimus" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Intimus</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="30">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/dominos-thumb.png" alt="Domino's" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Domino's</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="31">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/serasa-thumb.png" alt="Serasa" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Serasa</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="32">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/movida-thumb.png" alt="Movida" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Movida</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="33">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/kabum-thumb.png" alt="KaBuM!" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">KaBuM!</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="34">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/neoenergia-thumb.jpg" alt="Neo Energia" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Neo Energia</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="35">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/claro-thumb.png" alt="Claro" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Claro</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="36">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/vans-thumb.png" alt="Vans" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Vans</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="37">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/bet-nacional-thumb.png" alt="Bet Nacional" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Bet Nacional</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="38">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/bravecto-thumb.png" alt="Bravecto" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Bravecto</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="39">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/carrefour-thumb.jpg" alt="Carrefour" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Carrefour</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="ia" data-id="69">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/oscar/capa.avif" alt="Oscar 2026" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Oscar 2026</h3>
+          <span class="trabalhos__cat accent">Produção com IA</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="41">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/allfluence-thumb.png" alt="Allfluence" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Allfluence</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Social Media</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="42">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/veloe-thumb.jpg" alt="Veloe" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Veloe</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item trabalhos__item--wide" data-category="video direcao" data-id="43">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/agibank-thumb.png" alt="Agibank" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Agibank</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="44">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/livelo-thumb.png" alt="Livelo" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Livelo</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="45">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/baby-sec-thumb.png" alt="Baby Sec" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Baby Sec</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="46">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/gama-thumb.png" alt="Gama" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">GA.MA</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item trabalhos__item--wide" data-category="video direcao" data-id="47">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/bullsbet-thumb.png" alt="Bullsbet" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Bullsbet</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="48">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/estacio-thumb.png" alt="Faculdade Estácio" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Faculdade Estácio</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="49">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/reals-bet-thumb.jpg" alt="Reals Bet" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Reals Bet</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="50">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/sorriso-thumb.png" alt="Sorriso" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Sorriso</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="51">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/tramontina-thumb.jpg" alt="Tramontina" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Tramontina</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="52">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/softys-kitchen-thumb.png" alt="Softys Kitchen" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Softys Kitchen</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="53">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/aiqfome-thumb.jpg" alt="Aiqfome" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Aiqfome</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="54">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/philco-thumb.jpg" alt="Philco Britânia" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Philco Britânia</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="55">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/mycon-thumb.png" alt="Mycon" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Mycon</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="56">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/atacadao-thumb.jpg" alt="Atacadão" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Atacadão</h3>
+          <span class="trabalhos__cat accent">Filmmaker + Direção</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="57">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/cassino-bet-thumb.jpg" alt="Cassino.Bet" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Cassino.Bet</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="66">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/forca-da-terra-thumb.png" alt="Força da Terra" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Força da Terra</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="65">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/linha-producoes/capa.avif" alt="Linha Produções" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Linha Produções</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="64">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/doutora-drag/capa.avif" alt="Doutora Drag" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Doutora Drag</h3>
+          <span class="trabalhos__cat accent">Edição de Vídeo</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video direcao" data-id="68">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/garagem-coletiva/capa.avif" alt="Garagem Coletiva" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Garagem Coletiva</h3>
+          <span class="trabalhos__cat accent">Direção + Filmmaker</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="video" data-id="67">
+        <div class="trabalhos__thumb">
+          <video src="assets/projetos/devassas/capa.mp4" muted preload="metadata"></video>
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Devassas</h3>
+          <span class="trabalhos__cat accent">Filmmaker</span>
+        </div>
+      </article>
+
+      <!-- Fotografia -->
+      <article class="trabalhos__item trabalhos__item--wide" data-category="fotografia" data-id="2">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/alma-festival/Savylla-Alma-3.jpg" alt="Alma Festival" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Alma Festival</h3>
@@ -141,151 +840,90 @@
 
       <article class="trabalhos__item" data-category="fotografia" data-id="3">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/irmaos-scribel-thumb.jpg" alt="Irmaos Scribel" loading="lazy">
+          <img src="assets/projetos/acampamento-medo-1/foto-1.avif" alt="Acampamento do Medo 1" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg></div>
         </div>
         <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Irmaos Scribel</h3>
+          <h3 class="trabalhos__nome">Acampamento do Medo 1</h3>
           <span class="trabalhos__cat accent">Fotografia + Edição</span>
         </div>
       </article>
 
-      <article class="trabalhos__item" data-category="fotografia" data-id="4">
+      <article class="trabalhos__item" data-category="fotografia" data-id="58">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/warner-br-thumb.jpg" alt="Warner Music Brasil" loading="lazy">
+          <img src="assets/projetos/acampamento-medo-2/foto-1.avif" alt="Acampamento do Medo 2" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg></div>
         </div>
         <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Warner Music Brasil</h3>
+          <h3 class="trabalhos__nome">Acampamento do Medo 2</h3>
           <span class="trabalhos__cat accent">Fotografia + Edição</span>
         </div>
       </article>
 
-      <article class="trabalhos__item trabalhos__item--wide" data-category="design" data-id="5">
+      <article class="trabalhos__item" data-category="fotografia" data-id="59">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/casinha-acolhida-thumb.jpg" alt="ONG Casinha Acolhida" loading="lazy">
+          <img src="assets/projetos/warner-confraternizacao/capa.avif" alt="Warner Music Group - Confraternização 2023" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg></div>
         </div>
         <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">ONG Casinha Acolhida</h3>
+          <h3 class="trabalhos__nome">Confraternização 2023</h3>
+          <span class="trabalhos__cat accent">Fotografia</span>
+        </div>
+      </article>
+
+      <!-- Design -->
+      <article class="trabalhos__item trabalhos__item--wide" data-category="design" data-id="1">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/warner-uk/foto-1.avif" alt="Warner Music Group - Radical Optimism" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Dua Lipa - Radical Optimism</h3>
+          <span class="trabalhos__cat accent">Design</span>
+        </div>
+      </article>
+
+      <article class="trabalhos__item" data-category="design" data-id="60">
+        <div class="trabalhos__thumb">
+          <img src="assets/projetos/casinha-acolhida/capa.avif" alt="Casinha Acolhida" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        </div>
+        <div class="trabalhos__info">
+          <h3 class="trabalhos__nome">Casinha Acolhida</h3>
           <span class="trabalhos__cat accent">Coordenação de Arte</span>
         </div>
       </article>
 
-      <article class="trabalhos__item" data-category="video" data-id="6">
+      <article class="trabalhos__item" data-category="design" data-id="61">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/dalla-thumb.jpg" alt="Dalla Cervejaria" loading="lazy">
+          <img src="assets/projetos/doritos-rainbow/capa.avif" alt="Doritos Rainbow" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
         </div>
         <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Dalla Cervejaria</h3>
-          <span class="trabalhos__cat accent">Som + Produção</span>
+          <h3 class="trabalhos__nome">Doritos Rainbow</h3>
+          <span class="trabalhos__cat accent">Design</span>
         </div>
       </article>
 
-      <article class="trabalhos__item" data-category="video" data-id="7">
+      <article class="trabalhos__item" data-category="design" data-id="62">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/brax-thumb.jpg" alt="BRAX Sports Assets" loading="lazy">
+          <img src="assets/projetos/orgulho-nao-para/capa.avif" alt="#OrgulhoNãoPara Ambev" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
         </div>
         <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">BRAX Sports Assets</h3>
-          <span class="trabalhos__cat accent">Captação de Som</span>
+          <h3 class="trabalhos__nome">#OrgulhoNãoPara Ambev</h3>
+          <span class="trabalhos__cat accent">Design</span>
         </div>
       </article>
 
-      <article class="trabalhos__item" data-category="fotografia" data-id="8">
+      <article class="trabalhos__item" data-category="design" data-id="63">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/sereia-lapa-thumb.jpg" alt="Sereia da Lapa" loading="lazy">
+          <img src="assets/projetos/apsa/capa.avif" alt="Apsa" loading="lazy">
+          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
         </div>
         <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Sereia da Lapa</h3>
-          <span class="trabalhos__cat accent">Making Of + Produção</span>
-        </div>
-      </article>
-
-      <article class="trabalhos__item trabalhos__item--wide" data-category="motion" data-id="9">
-        <div class="trabalhos__thumb">
-          <img src="assets/projetos/teca-thumb.jpg" alt="Teçá Arte e Cultura" loading="lazy">
-        </div>
-        <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Teçá Arte e Cultura</h3>
-          <span class="trabalhos__cat accent">Edição de Vídeo</span>
-        </div>
-      </article>
-
-      <article class="trabalhos__item" data-category="video" data-id="10">
-        <div class="trabalhos__thumb">
-          <img src="assets/projetos/espetaculo-thumb.jpg" alt="Espetáculo Entretenimento" loading="lazy">
-        </div>
-        <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Espetáculo Entretenimento</h3>
-          <span class="trabalhos__cat accent">Produção de Campo</span>
-        </div>
-      </article>
-
-      <article class="trabalhos__item" data-category="video" data-id="11">
-        <div class="trabalhos__thumb">
-          <img src="assets/projetos/imaginatto-thumb.jpg" alt="Imaginatto" loading="lazy">
-        </div>
-        <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Imaginatto</h3>
-          <span class="trabalhos__cat accent">Videomaker + Design</span>
-        </div>
-      </article>
-
-      <article class="trabalhos__item" data-category="motion" data-id="12">
-        <div class="trabalhos__thumb">
-          <img src="assets/projetos/doutora-drag-thumb.jpg" alt="Doutora Drag" loading="lazy">
-        </div>
-        <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Doutora Drag</h3>
-          <span class="trabalhos__cat accent">Edição + Motion</span>
-        </div>
-      </article>
-
-      <article class="trabalhos__item trabalhos__item--wide" data-category="motion" data-id="13">
-        <div class="trabalhos__thumb">
-          <img src="assets/projetos/imagem-integrada-thumb.jpg" alt="Imagem Integrada" loading="lazy">
-        </div>
-        <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Imagem Integrada</h3>
-          <span class="trabalhos__cat accent">Videomaker + Motion + Design</span>
-        </div>
-      </article>
-
-      <article class="trabalhos__item" data-category="video" data-id="14">
-        <div class="trabalhos__thumb">
-          <img src="assets/projetos/linha-producoes-thumb.jpg" alt="Linha Produções" loading="lazy">
-        </div>
-        <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Linha Produções</h3>
-          <span class="trabalhos__cat accent">Câmera + Motion</span>
-        </div>
-      </article>
-
-      <article class="trabalhos__item" data-category="video" data-id="15">
-        <div class="trabalhos__thumb">
-          <img src="assets/projetos/forca-terra-thumb.jpg" alt="Força da Terra" loading="lazy">
-        </div>
-        <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Força da Terra</h3>
-          <span class="trabalhos__cat accent">Videomaker</span>
-        </div>
-      </article>
-
-      <article class="trabalhos__item" data-category="video" data-id="16">
-        <div class="trabalhos__thumb">
-          <img src="assets/projetos/devassas-thumb.jpg" alt="Devassas" loading="lazy">
-        </div>
-        <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Devassas</h3>
-          <span class="trabalhos__cat accent">Produção + Edição</span>
-        </div>
-      </article>
-
-      <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="17">
-        <div class="trabalhos__thumb">
-          <img src="assets/projetos/coletiva-garagem-thumb.jpg" alt="Coletiva Garagem" loading="lazy">
-        </div>
-        <div class="trabalhos__info">
-          <h3 class="trabalhos__nome">Coletiva Garagem</h3>
-          <span class="trabalhos__cat accent">Direção + Videomaker + Design</span>
+          <h3 class="trabalhos__nome">Apsa</h3>
+          <span class="trabalhos__cat accent">Design</span>
         </div>
       </article>
 
@@ -309,46 +947,23 @@
           <dl class="modal__ficha-grid" id="modalFicha"></dl>
         </div>
         <div class="modal__galeria">
-          <h3>Galeria</h3>
+          <h3 id="galeriaTitle">Galeria</h3>
           <div class="modal__galeria-grid" id="galeriaGrid"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Showreel -->
-  <section class="showreel" id="showreel">
-    <div class="showreel__container">
-      <h2 class="showreel__title">Show<span class="display-font accent">reel</span></h2>
-      <div class="showreel__video">
-        <div class="showreel__placeholder" id="showreelVideo" data-video-id="VIDEO_ID">
-          <div class="showreel__play">
-            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-          </div>
-          <p>Clique para assistir</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- CTA Banner -->
-  <section class="cta" id="cta">
-    <div class="cta__bg">
-      <img src="assets/cta-bg.jpg" alt="" loading="lazy">
+  <!-- Contato + Footer wrapper with video bg -->
+  <div class="contato-wrapper">
+    <div class="contato-wrapper__bg">
+      <video autoplay muted loop playsinline>
+        <source src="assets/bg-contato.mp4" type="video/mp4">
+      </video>
+      <div class="contato-wrapper__overlay"></div>
     </div>
-    <div class="cta__overlay"></div>
-    <div class="cta__content">
-      <h2 class="cta__title">Vamos criar algo incrível?</h2>
-      <p class="cta__text">Se você está interessado em trabalhar comigo e criar algo único, entre em contato.</p>
-      <a href="#contato" class="btn btn--light">Entre em Contato</a>
-    </div>
-    <blockquote class="cta__quote">
-      &ldquo;A criatividade é a inteligência se divertindo&rdquo;
-      <cite class="accent">Einstein</cite>
-    </blockquote>
-  </section>
 
-  <!-- Contato -->
   <section class="contato" id="contato">
     <div class="contato__container">
       <div class="contato__left">
@@ -371,7 +986,7 @@
           </a>
         </div>
       </div>
-      <form class="contato__form" id="contatoForm">
+      <form class="contato__form" id="contatoForm" action="https://formspree.io/savyllaadryan@gmail.com" method="POST">
         <div class="contato__field">
           <input type="text" name="nome" placeholder="Seu nome" required>
         </div>
@@ -393,9 +1008,26 @@
   <footer class="footer">
     <div class="footer__inner">
       <span class="footer__logo">SAVYLLA ADRYAN</span>
-      <p>&copy; 2024 Todos os direitos reservados.</p>
+      <p>&copy; 2026 Todos os direitos reservados.</p>
     </div>
   </footer>
+  </div><!-- /contato-wrapper -->
+
+  <!-- Lightbox Fullscreen -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox__backdrop"></div>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Próxima">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
+    </button>
+    <div class="lightbox__counter" id="lightboxCounter"></div>
+    <div class="lightbox__track" id="lightboxTrack"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>

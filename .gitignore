@@ -1,0 +1,11 @@
+downloads/
+client_secret.json
+client_videos.json
+token.json
+upload_progress.json
+videos_full.json
+videos_mapped.json
+youtube_results.json
+download_videos.js
+youtube_uploader.py
+portfolio_doc.html
