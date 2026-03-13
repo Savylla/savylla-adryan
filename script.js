@@ -1449,6 +1449,7 @@ const projetos = [
       "Tipo": "Conteúdo com IA",
       "Ano": "2026"
     },
+    instagram: "https://www.instagram.com/allfluence/",
     website: "https://www.allfluence.com.br/",
     videos: [
       { url: "assets/projetos/oscar/video-1.mp4", talento: "Oscar 2026 - Produção com IA" }
@@ -1481,7 +1482,7 @@ const projetos = [
     categoriaLabel: "Produção com IA",
     ano: "2025",
     videoId: "",
-    descricao: "O que acontece dentro da minha cabeça. Projeto pessoal explorando Higgsfield, Nano Banana e Flux AI com referência ao Filipe Ret.",
+    descricao: "Projeto pessoal explorando ferramentas no Higgsfield",
     ficha: {
       "Função": "Produção com IA",
       "Ferramentas": "Higgsfield + Nano Banana + Flux AI",
