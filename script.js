@@ -1952,6 +1952,16 @@ function escapeHTML(str) {
   return div.innerHTML;
 }
 
+function sanitizeURL(url) {
+  if (!url) return '';
+  try {
+    const u = new URL(url, window.location.origin);
+    if (['https:', 'http:'].includes(u.protocol)) return url;
+    if (url.startsWith('assets/')) return url;
+    return '';
+  } catch { return ''; }
+}
+
 // ----------------------------------------
 // Logo fallback (moved from inline onerror)
 // ----------------------------------------
@@ -2092,13 +2102,13 @@ function openModal(id) {
 
   if (p.videoId && !p.videoId.startsWith('VIDEO_ID') && p.videoId !== '') {
     videoEl.style.display = '';
-    videoEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${p.videoId}?rel=0" allow="encrypted-media" allowfullscreen></iframe>`;
+    videoEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${encodeURIComponent(p.videoId)}?rel=0" allow="encrypted-media" allowfullscreen></iframe>`;
   } else if (hasVideos) {
     videoEl.style.display = '';
     if (displayVideos[0].youtubeId) {
-      videoEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${displayVideos[0].youtubeId}?rel=0&autoplay=1" allow="autoplay; encrypted-media" allowfullscreen style="width:100%;height:100%;border:none;"></iframe>`;
+      videoEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${encodeURIComponent(displayVideos[0].youtubeId)}?rel=0&autoplay=1" allow="autoplay; encrypted-media" allowfullscreen style="width:100%;height:100%;border:none;"></iframe>`;
     } else {
-      videoEl.innerHTML = `<video controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${displayVideos[0].url}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
+      videoEl.innerHTML = `<video controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${sanitizeURL(displayVideos[0].url)}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
     }
     if (displayVideos[0].talento) {
       videoEl.innerHTML += `<div class="modal__video-talent">${escapeHTML(displayVideos[0].talento)}</div>`;
@@ -2106,7 +2116,7 @@ function openModal(id) {
   } else if (p.galeria && p.galeria.length > 0) {
     // Photography project: show hero image instead of video placeholder
     videoEl.style.display = '';
-    videoEl.innerHTML = `<img src="${p.galeria[0]}" alt="${p.nome}" style="width:100%;height:100%;object-fit:cover;">`;
+    videoEl.innerHTML = `<img src="${sanitizeURL(p.galeria[0])}" alt="${escapeHTML(p.nome)}" style="width:100%;height:100%;object-fit:cover;">`;
   } else {
     videoEl.style.display = '';
     videoEl.innerHTML = `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--text-muted)"><p>Video em breve</p></div>`;
@@ -2211,9 +2221,9 @@ function openModal(id) {
       `;
       card.addEventListener('click', () => {
         if (v.youtubeId) {
-          videoEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${v.youtubeId}?rel=0&autoplay=1" allow="autoplay; encrypted-media" allowfullscreen style="width:100%;height:100%;border:none;"></iframe>`;
+          videoEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${encodeURIComponent(v.youtubeId)}?rel=0&autoplay=1" allow="autoplay; encrypted-media" allowfullscreen style="width:100%;height:100%;border:none;"></iframe>`;
         } else {
-          videoEl.innerHTML = `<video controls autoplay playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${v.url}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
+          videoEl.innerHTML = `<video controls autoplay playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${sanitizeURL(v.url)}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
         }
         if (v.talento) {
           videoEl.innerHTML += `<div class="modal__video-talent">${escapeHTML(v.talento)}</div>`;
@@ -2242,34 +2252,35 @@ function openModal(id) {
     }
   } else {
     // Image gallery for non-video projects
+    const galeriaList = p.galeria || [];
     const galeriaTitle = document.getElementById('galeriaTitle');
-    if (galeriaTitle) galeriaTitle.textContent = `Galeria (${p.galeria.length})`;
+    if (galeriaTitle) galeriaTitle.textContent = `Galeria (${galeriaList.length})`;
 
     // Use photo-optimized grid for photography projects
-    if (p.categoria === 'fotografia' && p.galeria.length > 3) {
+    if (p.categoria === 'fotografia' && galeriaList.length > 3) {
       galeriaEl.classList.add('modal__galeria-grid--photos');
     } else {
       galeriaEl.classList.remove('modal__galeria-grid--photos');
     }
 
-    p.galeria.forEach((src, i) => {
+    galeriaList.forEach((src, i) => {
       const img = document.createElement('img');
-      img.src = src;
-      img.alt = p.nome;
+      img.src = sanitizeURL(src);
+      img.alt = escapeHTML(p.nome);
       img.loading = 'lazy';
       img.onerror = function() { this.alt = 'Imagem indisponível'; this.style.opacity = '0.3'; };
-      img.addEventListener('click', () => openLightbox(p.galeria, i));
+      img.addEventListener('click', () => openLightbox(galeriaList, i));
       galeriaEl.appendChild(img);
     });
 
     // YouTube videos in gallery
     if (p.youtubeGaleria && p.youtubeGaleria.length > 0) {
-      if (galeriaTitle) galeriaTitle.textContent = `Galeria (${p.galeria.length + p.youtubeGaleria.length})`;
+      if (galeriaTitle) galeriaTitle.textContent = `Galeria (${galeriaList.length + p.youtubeGaleria.length})`;
       p.youtubeGaleria.forEach(vid => {
         const wrapper = document.createElement('a');
         wrapper.href = `https://www.youtube.com/watch?v=${vid}`;
         wrapper.target = '_blank';
-        wrapper.rel = 'noopener';
+        wrapper.rel = 'noopener noreferrer';
         wrapper.style.cssText = 'position:relative;display:block;border-radius:8px;overflow:hidden;cursor:pointer;';
         wrapper.innerHTML = `
           <img src="https://img.youtube.com/vi/${vid}/hqdefault.jpg" alt="Vídeo" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;">
@@ -2630,3 +2641,100 @@ lightboxTrack.addEventListener('touchend', (e) => {
     lightboxGoTo(diff > 0 ? 1 : -1);
   }
 }, { passive: true });
+
+// ----------------------------------------
+// "Carregar Mais" — limita projetos visíveis
+// ----------------------------------------
+(function() {
+  const INITIAL_VISIBLE = 12;
+  const grid = document.getElementById('trabalhosGrid');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const loadMoreWrap = loadMoreBtn ? loadMoreBtn.parentElement : null;
+  if (!grid || !loadMoreBtn) return;
+
+  const allItems = Array.from(grid.querySelectorAll('.trabalhos__item'));
+
+  function applyLimit() {
+    let visibleCount = 0;
+    allItems.forEach(item => {
+      if (item.classList.contains('hidden')) return;
+      visibleCount++;
+      if (visibleCount > INITIAL_VISIBLE && !grid.dataset.expanded) {
+        item.style.display = 'none';
+      } else {
+        item.style.display = '';
+      }
+    });
+    if (loadMoreWrap) {
+      loadMoreWrap.classList.toggle('hidden', visibleCount <= INITIAL_VISIBLE || grid.dataset.expanded === 'true');
+    }
+  }
+
+  applyLimit();
+
+  loadMoreBtn.addEventListener('click', () => {
+    grid.dataset.expanded = 'true';
+    allItems.forEach(item => {
+      if (!item.classList.contains('hidden')) item.style.display = '';
+    });
+    if (loadMoreWrap) loadMoreWrap.classList.add('hidden');
+  });
+
+  // Re-apply on filter change
+  filtros.forEach(btn => {
+    btn.addEventListener('click', () => {
+      delete grid.dataset.expanded;
+      setTimeout(applyLimit, 10);
+    });
+  });
+})();
+
+// ----------------------------------------
+// CTA de contato dentro do modal
+// ----------------------------------------
+(function() {
+  const modalBody = document.querySelector('.modal__body');
+  if (!modalBody) return;
+
+  const existingCTA = modalBody.querySelector('.modal__contact-cta');
+  if (existingCTA) return;
+
+  const cta = document.createElement('a');
+  cta.href = '#contato';
+  cta.className = 'btn modal__contact-cta';
+  cta.textContent = 'Solicitar Orçamento';
+  cta.style.cssText = 'display:inline-block;margin-top:32px;';
+  cta.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeModal();
+    setTimeout(() => {
+      document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+    }, 400);
+  });
+  modalBody.appendChild(cta);
+})();
+
+// ----------------------------------------
+// Hover video cleanup — remove após 5s de mouseleave
+// ----------------------------------------
+(function() {
+  const MAX_CACHED = 3;
+  const cachedVideos = [];
+
+  document.querySelectorAll('.trabalhos__item').forEach(item => {
+    item.addEventListener('mouseleave', () => {
+      const video = item.querySelector('.trabalhos__hover-video');
+      if (!video) return;
+      cachedVideos.push({ el: video, item: item });
+      while (cachedVideos.length > MAX_CACHED) {
+        const oldest = cachedVideos.shift();
+        if (oldest.el && oldest.el.parentNode) {
+          oldest.el.pause();
+          oldest.el.removeAttribute('src');
+          oldest.el.load();
+          oldest.el.remove();
+        }
+      }
+    });
+  });
+})();

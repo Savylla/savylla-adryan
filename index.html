@@ -22,8 +22,7 @@
   <link rel="dns-prefetch" href="https://formsubmit.co">
 
   <!-- Preload fontes críticas -->
-  <link rel="preload" href="assets/fonts/BonheurRoyale-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="assets/fonts/IBMPlexSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/BonheurRoyale-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -34,14 +33,14 @@
 
   <!-- Global Background Video -->
   <div class="global-bg">
-    <video autoplay muted loop playsinline poster="assets/bg-poster.jpg" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="none" poster="assets/bg-poster.jpg" aria-hidden="true">
       <source src="assets/bg-video-compressed.mp4" type="video/mp4">
     </video>
     <div class="global-bg__overlay"></div>
   </div>
 
   <!-- Side Labels -->
-  <div class="side-label side-label--left" id="sideMenu">MENU</div>
+  <button class="side-label side-label--left" id="sideMenu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navOverlay">MENU</button>
   <div class="side-label side-label--right"><a href="#contato">CONTACT</a></div>
 
   <!-- Full-screen Navigation Overlay -->
@@ -86,6 +85,10 @@
         <span class="hero__title-line">ganham <span class="display-font">vida</span></span>
       </h1>
       <p class="hero__subtitle">Direção | Filmmaker | IA | Fotografia | Design</p>
+      <div class="hero__ctas">
+        <a href="#trabalhos" class="btn">Ver Projetos</a>
+        <a href="#contato" class="btn btn--outline">Fale Comigo</a>
+      </div>
     </div>
     <div class="hero__scroll">
       <div class="hero__scroll-line"></div>
@@ -138,200 +141,200 @@
       <h2 class="clientes__title">Marcas que <span class="display-font accent">acreditam</span> no meu trabalho</h2>
       <div class="clientes__grid">
         <div class="clientes__item" data-name="Drogasil">
-          <img src="assets/logos/drogasil.webp" alt="Drogasil" class="clientes__logo">
+          <img src="assets/logos/drogasil.webp" alt="Drogasil" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Drogasil</span>
         </div>
         <div class="clientes__item" data-name="Raia">
-          <img src="assets/logos/raia.webp" alt="Raia" class="clientes__logo">
+          <img src="assets/logos/raia.webp" alt="Raia" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Raia</span>
         </div>
         <div class="clientes__item" data-name="Mercado Pago">
-          <img src="assets/logos/mercado-pago.webp" alt="Mercado Pago" class="clientes__logo" style="max-height:70px;max-width:170px">
+          <img src="assets/logos/mercado-pago.webp" alt="Mercado Pago" class="clientes__logo" loading="lazy" decoding="async" style="max-height:70px;max-width:170px">
           <span class="clientes__fallback" style="display:none">Mercado Pago</span>
         </div>
         <div class="clientes__item" data-name="Magazine Luiza">
-          <img src="assets/logos/magazine-luiza.webp" alt="Magazine Luiza" class="clientes__logo">
+          <img src="assets/logos/magazine-luiza.webp" alt="Magazine Luiza" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Magazine Luiza</span>
         </div>
         <div class="clientes__item" data-name="Netshoes">
-          <img src="assets/logos/netshoes.webp" alt="Netshoes" class="clientes__logo">
+          <img src="assets/logos/netshoes.webp" alt="Netshoes" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Netshoes</span>
         </div>
         <div class="clientes__item" data-name="LG">
-          <img src="assets/logos/lg.webp" alt="LG" class="clientes__logo" style="max-height:40px;max-width:100px">
+          <img src="assets/logos/lg.webp" alt="LG" class="clientes__logo" loading="lazy" decoding="async" style="max-height:40px;max-width:100px">
           <span class="clientes__fallback" style="display:none">LG</span>
         </div>
         <div class="clientes__item" data-name="Uber">
-          <img src="assets/logos/uber.svg" alt="Uber" class="clientes__logo" style="max-height:90px;max-width:200px">
+          <img src="assets/logos/uber.svg" alt="Uber" class="clientes__logo" loading="lazy" decoding="async" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Uber</span>
         </div>
         <div class="clientes__item" data-name="Philips">
-          <img src="assets/logos/philips.webp" alt="Philips" class="clientes__logo">
+          <img src="assets/logos/philips.webp" alt="Philips" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Philips</span>
         </div>
         <div class="clientes__item" data-name="Intimus">
-          <img src="assets/logos/intimus.webp" alt="Intimus" class="clientes__logo">
+          <img src="assets/logos/intimus.webp" alt="Intimus" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Intimus</span>
         </div>
         <div class="clientes__item" data-name="Bradesco">
-          <img src="assets/logos/bradesco.webp" alt="Bradesco" class="clientes__logo" style="max-height:75px;max-width:180px">
+          <img src="assets/logos/bradesco.webp" alt="Bradesco" class="clientes__logo" loading="lazy" decoding="async" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">Bradesco</span>
         </div>
         <div class="clientes__item" data-name="Domino's">
-          <img src="assets/logos/dominos.webp" alt="Domino's" class="clientes__logo" style="max-height:90px;max-width:200px">
+          <img src="assets/logos/dominos.webp" alt="Domino's" class="clientes__logo" loading="lazy" decoding="async" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Domino's</span>
         </div>
         <div class="clientes__item" data-name="Serasa">
-          <img src="assets/logos/serasa.webp" alt="Serasa" class="clientes__logo" style="max-height:60px;max-width:150px">
+          <img src="assets/logos/serasa.webp" alt="Serasa" class="clientes__logo" loading="lazy" decoding="async" style="max-height:60px;max-width:150px">
           <span class="clientes__fallback" style="display:none">Serasa</span>
         </div>
         <div class="clientes__item" data-name="Movida">
-          <img src="assets/logos/movida.webp" alt="Movida" class="clientes__logo">
+          <img src="assets/logos/movida.webp" alt="Movida" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Movida</span>
         </div>
         <div class="clientes__item" data-name="KaBuM!">
-          <img src="assets/logos/kabum.webp" alt="KaBuM!" class="clientes__logo">
+          <img src="assets/logos/kabum.webp" alt="KaBuM!" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">KaBuM!</span>
         </div>
         <div class="clientes__item" data-name="Neo Energia">
-          <img src="assets/logos/neoenergia.webp" alt="Neo Energia" class="clientes__logo" style="max-height:75px;max-width:180px">
+          <img src="assets/logos/neoenergia.webp" alt="Neo Energia" class="clientes__logo" loading="lazy" decoding="async" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">Neo Energia</span>
         </div>
         <div class="clientes__item" data-name="Claro">
-          <img src="assets/logos/claro.webp" alt="Claro" class="clientes__logo">
+          <img src="assets/logos/claro.webp" alt="Claro" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Claro</span>
         </div>
         <div class="clientes__item" data-name="Vans">
-          <img src="assets/logos/vans.webp" alt="Vans" class="clientes__logo">
+          <img src="assets/logos/vans.webp" alt="Vans" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Vans</span>
         </div>
         <div class="clientes__item" data-name="Bet Nacional">
-          <img src="assets/logos/bet-nacional.webp" alt="Bet Nacional" class="clientes__logo">
+          <img src="assets/logos/bet-nacional.webp" alt="Bet Nacional" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Bet Nacional</span>
         </div>
         <div class="clientes__item" data-name="Bravecto">
-          <img src="assets/logos/bravecto.webp" alt="Bravecto" class="clientes__logo">
+          <img src="assets/logos/bravecto.webp" alt="Bravecto" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Bravecto</span>
         </div>
         <div class="clientes__item" data-name="Carolina Herrera">
-          <img src="assets/logos/carolina-herrera.webp" alt="Carolina Herrera" class="clientes__logo" style="max-height:75px;max-width:180px">
+          <img src="assets/logos/carolina-herrera.webp" alt="Carolina Herrera" class="clientes__logo" loading="lazy" decoding="async" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">Carolina Herrera</span>
         </div>
         <div class="clientes__item" data-name="Nestlé">
-          <img src="assets/logos/nestle.webp" alt="Nestlé" class="clientes__logo">
+          <img src="assets/logos/nestle.webp" alt="Nestlé" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Nestlé</span>
         </div>
         <div class="clientes__item" data-name="Carrefour">
-          <img src="assets/logos/carrefour.webp" alt="Carrefour" class="clientes__logo" style="max-height:75px;max-width:180px">
+          <img src="assets/logos/carrefour.webp" alt="Carrefour" class="clientes__logo" loading="lazy" decoding="async" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">Carrefour</span>
         </div>
 
         <div class="clientes__item" data-name="Allfluence">
-          <img src="assets/logos/allfluence.webp" alt="Allfluence" class="clientes__logo" style="max-height:70px;max-width:170px">
+          <img src="assets/logos/allfluence.webp" alt="Allfluence" class="clientes__logo" loading="lazy" decoding="async" style="max-height:70px;max-width:170px">
           <span class="clientes__fallback" style="display:none">Allfluence</span>
         </div>
         <div class="clientes__item" data-name="Veloe">
-          <img src="assets/logos/veloe.webp" alt="Veloe" class="clientes__logo">
+          <img src="assets/logos/veloe.webp" alt="Veloe" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Veloe</span>
         </div>
         <div class="clientes__item" data-name="Agibank">
-          <img src="assets/logos/agibank.webp" alt="Agibank" class="clientes__logo">
+          <img src="assets/logos/agibank.webp" alt="Agibank" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Agibank</span>
         </div>
         <div class="clientes__item" data-name="Livelo">
-          <img src="assets/logos/livelo.webp" alt="Livelo" class="clientes__logo">
+          <img src="assets/logos/livelo.webp" alt="Livelo" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Livelo</span>
         </div>
         <div class="clientes__item" data-name="Baby Sec">
-          <img src="assets/logos/baby-sec.webp" alt="Baby Sec" class="clientes__logo" style="max-height:75px;max-width:180px">
+          <img src="assets/logos/baby-sec.webp" alt="Baby Sec" class="clientes__logo" loading="lazy" decoding="async" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">Baby Sec</span>
         </div>
         <div class="clientes__item" data-name="GA.MA">
-          <img src="assets/logos/gama.webp" alt="GA.MA" class="clientes__logo" style="max-height:75px;max-width:180px">
+          <img src="assets/logos/gama.webp" alt="GA.MA" class="clientes__logo" loading="lazy" decoding="async" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">GA.MA</span>
         </div>
         <div class="clientes__item" data-name="Bullsbet">
-          <img src="assets/logos/bullsbet.webp" alt="Bullsbet" class="clientes__logo">
+          <img src="assets/logos/bullsbet.webp" alt="Bullsbet" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Bullsbet</span>
         </div>
         <div class="clientes__item" data-name="Faculdade Estácio">
-          <img src="assets/logos/estacio.webp" alt="Faculdade Estácio" class="clientes__logo">
+          <img src="assets/logos/estacio.webp" alt="Faculdade Estácio" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Faculdade Estácio</span>
         </div>
         <div class="clientes__item" data-name="Reals Bet">
-          <img src="assets/logos/reals-bet.webp" alt="Reals Bet" class="clientes__logo">
+          <img src="assets/logos/reals-bet.webp" alt="Reals Bet" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Reals Bet</span>
         </div>
         <div class="clientes__item" data-name="Sorriso">
-          <img src="assets/logos/sorriso.webp" alt="Sorriso" class="clientes__logo">
+          <img src="assets/logos/sorriso.webp" alt="Sorriso" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Sorriso</span>
         </div>
         <div class="clientes__item" data-name="Tramontina">
-          <img src="assets/logos/tramontina.webp" alt="Tramontina" class="clientes__logo">
+          <img src="assets/logos/tramontina.webp" alt="Tramontina" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Tramontina</span>
         </div>
         <div class="clientes__item" data-name="Softys Kitchen">
-          <img src="assets/logos/softys-kitchen.webp" alt="Softys Kitchen" class="clientes__logo">
+          <img src="assets/logos/softys-kitchen.webp" alt="Softys Kitchen" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Softys Kitchen</span>
         </div>
         <div class="clientes__item" data-name="Aiqfome">
-          <img src="assets/logos/aiqfome.webp" alt="Aiqfome" class="clientes__logo">
+          <img src="assets/logos/aiqfome.webp" alt="Aiqfome" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Aiqfome</span>
         </div>
         <div class="clientes__item" data-name="Philco Britânia">
-          <img src="assets/logos/philco.webp" alt="Philco Britânia" class="clientes__logo">
+          <img src="assets/logos/philco.webp" alt="Philco Britânia" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Philco Britânia</span>
         </div>
         <div class="clientes__item" data-name="Mycon">
-          <img src="assets/logos/mycon.webp" alt="Mycon" class="clientes__logo" style="max-height:70px;max-width:170px">
+          <img src="assets/logos/mycon.webp" alt="Mycon" class="clientes__logo" loading="lazy" decoding="async" style="max-height:70px;max-width:170px">
           <span class="clientes__fallback" style="display:none">Mycon</span>
         </div>
         <div class="clientes__item" data-name="Atacadão">
-          <img src="assets/logos/atacadao.webp" alt="Atacadão" class="clientes__logo" style="max-height:75px;max-width:180px">
+          <img src="assets/logos/atacadao.webp" alt="Atacadão" class="clientes__logo" loading="lazy" decoding="async" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">Atacadão</span>
         </div>
         <div class="clientes__item" data-name="Cassino.Bet">
-          <img src="assets/logos/cassino-bet.webp" alt="Cassino.Bet" class="clientes__logo">
+          <img src="assets/logos/cassino-bet.webp" alt="Cassino.Bet" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Cassino.Bet</span>
         </div>
         <div class="clientes__item" data-name="Irmãos Scribel" data-ids="3,58">
-          <img src="assets/logos/irmaos-scribel.webp" alt="Irmãos Scribel" class="clientes__logo" style="max-height:160px;max-width:300px;opacity:1;object-fit:contain">
+          <img src="assets/logos/irmaos-scribel.webp" alt="Irmãos Scribel" class="clientes__logo" loading="lazy" decoding="async" style="max-height:160px;max-width:300px;opacity:1;object-fit:contain">
           <span class="clientes__fallback" style="display:none">Irmãos Scribel</span>
         </div>
         <div class="clientes__item" data-name="Alma Festival">
-          <img src="assets/logos/alma-festival.webp" alt="Alma Festival" class="clientes__logo">
+          <img src="assets/logos/alma-festival.webp" alt="Alma Festival" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Alma Festival</span>
         </div>
         <div class="clientes__item" data-name="Warner Music Group" data-ids="1,59">
-          <img src="assets/logos/warner-music-uk.webp" alt="Warner Music Group" class="clientes__logo">
+          <img src="assets/logos/warner-music-uk.webp" alt="Warner Music Group" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Warner Music Group</span>
         </div>
         <div class="clientes__item" data-name="Casinha Acolhida" data-ids="60,61,62">
-          <img src="assets/logos/casinha-acolhida.webp" alt="Casinha Acolhida" class="clientes__logo">
+          <img src="assets/logos/casinha-acolhida.webp" alt="Casinha Acolhida" class="clientes__logo" loading="lazy" decoding="async">
           <span class="clientes__fallback" style="display:none">Casinha Acolhida</span>
         </div>
         <div class="clientes__item" data-name="Apsa" data-id="63">
-          <img src="assets/logos/apsa.webp" alt="Apsa" class="clientes__logo" style="max-height:90px;max-width:200px">
+          <img src="assets/logos/apsa.webp" alt="Apsa" class="clientes__logo" loading="lazy" decoding="async" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Apsa</span>
         </div>
         <div class="clientes__item" data-name="Doutora Drag" data-id="64">
-          <img src="assets/logos/doutora-drag.webp" alt="Doutora Drag" class="clientes__logo" style="max-height:90px;max-width:200px">
+          <img src="assets/logos/doutora-drag.webp" alt="Doutora Drag" class="clientes__logo" loading="lazy" decoding="async" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Doutora Drag</span>
         </div>
         <div class="clientes__item" data-name="Linha Produções" data-id="65">
-          <img src="assets/logos/linha-producoes.webp" alt="Linha Produções" class="clientes__logo" style="max-height:90px;max-width:200px">
+          <img src="assets/logos/linha-producoes.webp" alt="Linha Produções" class="clientes__logo" loading="lazy" decoding="async" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Linha Produções</span>
         </div>
         <div class="clientes__item" data-name="Garagem Coletiva" data-id="68">
-          <img src="assets/logos/garagem-coletiva.webp" alt="Garagem Coletiva" class="clientes__logo" style="max-height:65px;max-width:150px">
+          <img src="assets/logos/garagem-coletiva.webp" alt="Garagem Coletiva" class="clientes__logo" loading="lazy" decoding="async" style="max-height:65px;max-width:150px">
           <span class="clientes__fallback" style="display:none">Garagem Coletiva</span>
         </div>
         <div class="clientes__item" data-name="Devassas" data-id="67">
-          <img src="assets/logos/devassas.webp" alt="Devassas" class="clientes__logo" style="max-height:90px;max-width:200px">
+          <img src="assets/logos/devassas.webp" alt="Devassas" class="clientes__logo" loading="lazy" decoding="async" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Devassas</span>
         </div>
         <div class="clientes__item" data-name="Força da Terra" data-id="66">
-          <img src="assets/logos/forca-da-terra.webp" alt="Força da Terra" class="clientes__logo" style="max-height:90px;max-width:200px">
+          <img src="assets/logos/forca-da-terra.webp" alt="Força da Terra" class="clientes__logo" loading="lazy" decoding="async" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Força da Terra</span>
         </div>
       </div>
@@ -352,12 +355,18 @@
       </div>
     </div>
 
+    <svg style="display:none">
+      <symbol id="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></symbol>
+      <symbol id="icon-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></symbol>
+      <symbol id="icon-design" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></symbol>
+    </svg>
+
     <div class="trabalhos__grid" id="trabalhosGrid">
 
       <article class="trabalhos__item trabalhos__item--wide" data-category="video direcao" data-id="18">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/drogasil-thumb.webp" alt="Drogasil" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Drogasil</h3>
@@ -368,7 +377,7 @@
       <article class="trabalhos__item" data-category="video direcao" data-id="19">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/mercado-pago-thumb.webp" alt="Mercado Pago" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Mercado Pago</h3>
@@ -379,7 +388,7 @@
       <article class="trabalhos__item" data-category="video direcao" data-id="20">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/magazine-luiza-thumb.webp" alt="Magazine Luiza" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Magazine Luiza</h3>
@@ -390,7 +399,7 @@
       <article class="trabalhos__item" data-category="video direcao" data-id="21">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/raia-thumb.webp" alt="Raia" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Raia</h3>
@@ -401,7 +410,7 @@
       <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="22">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/bradesco-thumb.webp" alt="Bradesco" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Bradesco</h3>
@@ -412,7 +421,7 @@
       <article class="trabalhos__item" data-category="video direcao" data-id="23">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/netshoes-thumb.webp" alt="Netshoes" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Netshoes</h3>
@@ -422,8 +431,8 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="24">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/lg-thumb.jpg" alt="LG" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <img src="assets/projetos/lg-thumb.webp" alt="LG" loading="lazy">
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">LG</h3>
@@ -433,8 +442,8 @@
 
       <article class="trabalhos__item" data-category="video" data-id="25">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/uber-thumb.jpg" alt="Uber" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <img src="assets/projetos/uber-thumb.webp" alt="Uber" loading="lazy">
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Uber</h3>
@@ -445,7 +454,7 @@
       <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="26">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/carolina-herrera-thumb.webp" alt="Carolina Herrera" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Carolina Herrera</h3>
@@ -456,7 +465,7 @@
       <article class="trabalhos__item" data-category="video" data-id="27">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/nestle-thumb.webp" alt="Nestlé" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Nestlé</h3>
@@ -467,7 +476,7 @@
       <article class="trabalhos__item" data-category="video direcao" data-id="28">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/philips-thumb.webp" alt="Philips" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Philips</h3>
@@ -478,7 +487,7 @@
       <article class="trabalhos__item" data-category="video direcao" data-id="29">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/intimus-thumb.webp" alt="Intimus" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Intimus</h3>
@@ -489,7 +498,7 @@
       <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="30">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/dominos-thumb.webp" alt="Domino's" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Domino's</h3>
@@ -500,7 +509,7 @@
       <article class="trabalhos__item" data-category="video" data-id="31">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/serasa-thumb.webp" alt="Serasa" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Serasa</h3>
@@ -511,7 +520,7 @@
       <article class="trabalhos__item" data-category="video" data-id="32">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/movida-thumb.webp" alt="Movida" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Movida</h3>
@@ -522,7 +531,7 @@
       <article class="trabalhos__item" data-category="video" data-id="33">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/kabum-thumb.webp" alt="KaBuM!" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">KaBuM!</h3>
@@ -532,8 +541,8 @@
 
       <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="34">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/neoenergia-thumb.jpg" alt="Neo Energia" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <img src="assets/projetos/neoenergia-thumb.webp" alt="Neo Energia" loading="lazy">
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Neo Energia</h3>
@@ -544,7 +553,7 @@
       <article class="trabalhos__item" data-category="video" data-id="35">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/claro-thumb.webp" alt="Claro" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Claro</h3>
@@ -555,7 +564,7 @@
       <article class="trabalhos__item" data-category="video" data-id="36">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/vans-thumb.webp" alt="Vans" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Vans</h3>
@@ -566,7 +575,7 @@
       <article class="trabalhos__item" data-category="video" data-id="37">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/bet-nacional-thumb.webp" alt="Bet Nacional" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Bet Nacional</h3>
@@ -577,7 +586,7 @@
       <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="38">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/bravecto-thumb.webp" alt="Bravecto" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Bravecto</h3>
@@ -587,8 +596,8 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="39">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/carrefour-thumb.jpg" alt="Carrefour" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <img src="assets/projetos/carrefour-thumb.webp" alt="Carrefour" loading="lazy">
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Carrefour</h3>
@@ -599,7 +608,7 @@
       <article class="trabalhos__item" data-category="ia" data-id="69">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/oscar/capa.avif" alt="Oscar 2026" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Oscar 2026</h3>
@@ -610,7 +619,7 @@
       <article class="trabalhos__item" data-category="ia" data-id="70">
         <div class="trabalhos__thumb">
           <video src="assets/projetos/ia-projeto-1/video.mp4" muted loop playsinline preload="metadata"></video>
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Teste de Fluxo</h3>
@@ -621,7 +630,7 @@
       <article class="trabalhos__item" data-category="ia" data-id="71">
         <div class="trabalhos__thumb">
           <video src="assets/projetos/ia-projeto-2/video.mp4" muted loop playsinline preload="metadata"></video>
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Dentro da Minha Cabeça</h3>
@@ -632,7 +641,7 @@
       <article class="trabalhos__item" data-category="video direcao" data-id="41">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/allfluence-thumb.webp" alt="Allfluence" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Allfluence</h3>
@@ -642,8 +651,8 @@
 
       <article class="trabalhos__item" data-category="video" data-id="42">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/veloe-thumb.jpg" alt="Veloe" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <img src="assets/projetos/veloe-thumb.webp" alt="Veloe" loading="lazy">
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Veloe</h3>
@@ -654,7 +663,7 @@
       <article class="trabalhos__item trabalhos__item--wide" data-category="video direcao" data-id="43">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/agibank-thumb.webp" alt="Agibank" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Agibank</h3>
@@ -665,7 +674,7 @@
       <article class="trabalhos__item" data-category="video" data-id="44">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/livelo-thumb.webp" alt="Livelo" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Livelo</h3>
@@ -676,7 +685,7 @@
       <article class="trabalhos__item" data-category="video direcao" data-id="45">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/baby-sec-thumb.webp" alt="Baby Sec" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Baby Sec</h3>
@@ -687,7 +696,7 @@
       <article class="trabalhos__item" data-category="video direcao" data-id="46">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/gama-thumb.webp" alt="Gama" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">GA.MA</h3>
@@ -698,7 +707,7 @@
       <article class="trabalhos__item trabalhos__item--wide" data-category="video direcao" data-id="47">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/bullsbet-thumb.webp" alt="Bullsbet" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Bullsbet</h3>
@@ -709,7 +718,7 @@
       <article class="trabalhos__item" data-category="video direcao" data-id="48">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/estacio-thumb.webp" alt="Faculdade Estácio" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Faculdade Estácio</h3>
@@ -719,8 +728,8 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="49">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/reals-bet-thumb.jpg" alt="Reals Bet" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <img src="assets/projetos/reals-bet-thumb.webp" alt="Reals Bet" loading="lazy">
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Reals Bet</h3>
@@ -731,7 +740,7 @@
       <article class="trabalhos__item" data-category="video" data-id="50">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/sorriso-thumb.webp" alt="Sorriso" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Sorriso</h3>
@@ -741,8 +750,8 @@
 
       <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="51">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/tramontina-thumb.jpg" alt="Tramontina" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <img src="assets/projetos/tramontina-thumb.webp" alt="Tramontina" loading="lazy">
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Tramontina</h3>
@@ -753,7 +762,7 @@
       <article class="trabalhos__item" data-category="video" data-id="52">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/softys-kitchen-thumb.webp" alt="Softys Kitchen" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Softys Kitchen</h3>
@@ -763,8 +772,8 @@
 
       <article class="trabalhos__item" data-category="video" data-id="53">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/aiqfome-thumb.jpg" alt="Aiqfome" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <img src="assets/projetos/aiqfome-thumb.webp" alt="Aiqfome" loading="lazy">
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Aiqfome</h3>
@@ -774,8 +783,8 @@
 
       <article class="trabalhos__item" data-category="video" data-id="54">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/philco-thumb.jpg" alt="Philco Britânia" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <img src="assets/projetos/philco-thumb.webp" alt="Philco Britânia" loading="lazy">
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Philco Britânia</h3>
@@ -786,7 +795,7 @@
       <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="55">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/mycon-thumb.webp" alt="Mycon" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Mycon</h3>
@@ -796,8 +805,8 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="56">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/atacadao-thumb.jpg" alt="Atacadão" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <img src="assets/projetos/atacadao-thumb.webp" alt="Atacadão" loading="lazy">
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Atacadão</h3>
@@ -807,8 +816,8 @@
 
       <article class="trabalhos__item" data-category="video" data-id="57">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/cassino-bet-thumb.jpg" alt="Cassino.Bet" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <img src="assets/projetos/cassino-bet-thumb.webp" alt="Cassino.Bet" loading="lazy">
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Cassino.Bet</h3>
@@ -819,7 +828,7 @@
       <article class="trabalhos__item" data-category="video" data-id="66">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/forca-da-terra-thumb.webp" alt="Força da Terra" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Força da Terra</h3>
@@ -830,7 +839,7 @@
       <article class="trabalhos__item" data-category="video" data-id="65">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/linha-producoes/capa.avif" alt="Linha Produções" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Linha Produções</h3>
@@ -841,7 +850,7 @@
       <article class="trabalhos__item" data-category="video" data-id="64">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/doutora-drag/capa.avif" alt="Doutora Drag" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Doutora Drag</h3>
@@ -852,7 +861,7 @@
       <article class="trabalhos__item" data-category="video direcao" data-id="68">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/garagem-coletiva/capa.avif" alt="Garagem Coletiva" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Garagem Coletiva</h3>
@@ -863,7 +872,7 @@
       <article class="trabalhos__item" data-category="video" data-id="67">
         <div class="trabalhos__thumb">
           <video src="assets/projetos/devassas/capa.mp4" muted preload="metadata"></video>
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Devassas</h3>
@@ -874,8 +883,8 @@
       <!-- Fotografia -->
       <article class="trabalhos__item trabalhos__item--wide" data-category="fotografia" data-id="2">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/alma-festival/Savylla-Alma-3.jpg" alt="Alma Festival" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg></div>
+          <img src="assets/projetos/alma-festival/Savylla-Alma-3.webp" alt="Alma Festival" loading="lazy">
+          <div class="trabalhos__play-icon"><svg><use href="#icon-camera"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Alma Festival</h3>
@@ -886,7 +895,7 @@
       <article class="trabalhos__item" data-category="fotografia" data-id="3">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/acampamento-medo-1/foto-1.avif" alt="Acampamento do Medo 1" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-camera"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Acampamento do Medo 1</h3>
@@ -897,7 +906,7 @@
       <article class="trabalhos__item" data-category="fotografia" data-id="58">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/acampamento-medo-2/foto-1.avif" alt="Acampamento do Medo 2" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-camera"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Acampamento do Medo 2</h3>
@@ -908,7 +917,7 @@
       <article class="trabalhos__item" data-category="fotografia" data-id="59">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/warner-confraternizacao/capa.avif" alt="Warner Music Group - Confraternização 2023" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-camera"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Confraternização 2023</h3>
@@ -920,7 +929,7 @@
       <article class="trabalhos__item trabalhos__item--wide" data-category="design" data-id="1">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/warner-uk/foto-1.avif" alt="Warner Music Group - Radical Optimism" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-design"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Dua Lipa - Radical Optimism</h3>
@@ -931,7 +940,7 @@
       <article class="trabalhos__item" data-category="design" data-id="60">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/casinha-acolhida/capa.avif" alt="Casinha Acolhida" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-design"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Casinha Acolhida</h3>
@@ -942,7 +951,7 @@
       <article class="trabalhos__item" data-category="design" data-id="61">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/doritos-rainbow/capa.avif" alt="Doritos Rainbow" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-design"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Doritos Rainbow</h3>
@@ -953,7 +962,7 @@
       <article class="trabalhos__item" data-category="design" data-id="62">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/orgulho-nao-para/capa.avif" alt="#OrgulhoNãoPara Ambev" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-design"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">#OrgulhoNãoPara Ambev</h3>
@@ -964,7 +973,7 @@
       <article class="trabalhos__item" data-category="design" data-id="63">
         <div class="trabalhos__thumb">
           <img src="assets/projetos/apsa/capa.avif" alt="Apsa" loading="lazy">
-          <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="trabalhos__play-icon"><svg><use href="#icon-design"/></svg></div>
         </div>
         <div class="trabalhos__info">
           <h3 class="trabalhos__nome">Apsa</h3>
@@ -972,6 +981,9 @@
         </div>
       </article>
 
+    </div>
+    <div class="trabalhos__load-more-wrap">
+      <button class="btn btn--outline trabalhos__load-more" id="loadMoreBtn">Carregar Mais Projetos</button>
     </div>
   </section>
 
@@ -1035,20 +1047,24 @@
       </div>
       <form class="contato__form" id="contatoForm" action="https://formsubmit.co/savyllaadryan@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Nova mensagem do portfólio">
-        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_captcha" value="true">
         <input type="hidden" name="_template" value="table">
         <input type="text" name="_honey" style="display:none">
         <div class="contato__field">
-          <input type="text" name="nome" placeholder="Seu nome" required>
+          <label for="campo-nome" class="sr-only">Seu nome</label>
+          <input type="text" id="campo-nome" name="nome" placeholder="Seu nome" required>
         </div>
         <div class="contato__field">
-          <input type="email" name="email" placeholder="Seu email" required>
+          <label for="campo-email" class="sr-only">Seu email</label>
+          <input type="email" id="campo-email" name="email" placeholder="Seu email" required>
         </div>
         <div class="contato__field">
-          <input type="text" name="assunto" placeholder="Assunto">
+          <label for="campo-assunto" class="sr-only">Assunto</label>
+          <input type="text" id="campo-assunto" name="assunto" placeholder="Assunto">
         </div>
         <div class="contato__field">
-          <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+          <label for="campo-mensagem" class="sr-only">Sua mensagem</label>
+          <textarea id="campo-mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
         </div>
         <button type="submit" class="btn">Enviar Mensagem</button>
       </form>
@@ -1059,6 +1075,19 @@
   <footer class="footer">
     <div class="footer__inner">
       <span class="footer__logo">SAVYLLA ADRYAN</span>
+      <nav class="footer__nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#trabalhos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/savyllaadryan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="mailto:savyllaadryan@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
       <p>&copy; 2026 Todos os direitos reservados.</p>
     </div>
   </footer>
