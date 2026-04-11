@@ -5,15 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Savylla Adryan | Produção Audiovisual</title>
   <meta name="description" content="Savylla Adryan - Filmmaker, Direção, Designer e Fotografia. Portfólio profissional audiovisual.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Savylla Adryan | Produção Audiovisual">
+  <meta property="og:description" content="Filmmaker, Direção, Designer e Fotografia. Portfólio profissional audiovisual.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://www.youtube.com">
+  <link rel="preconnect" href="https://img.youtube.com">
+  <link rel="dns-prefetch" href="https://formsubmit.co">
+
+  <!-- Preload fontes críticas -->
+  <link rel="preload" href="assets/fonts/BonheurRoyale-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/IBMPlexSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+
   <link rel="stylesheet" href="style.css">
-  <!-- Fontes carregadas localmente via @font-face no style.css (IBM Plex Sans + IBM Plex Sans Condensed) -->
 </head>
 <body>
 
+  <!-- Skip navigation -->
+  <a href="#main-content" class="skip-link">Pular para conteúdo</a>
+
   <!-- Global Background Video -->
   <div class="global-bg">
-    <video autoplay muted loop playsinline>
-      <source src="assets/bg-video.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline poster="assets/bg-poster.jpg" aria-hidden="true">
+      <source src="assets/bg-video-compressed.mp4" type="video/mp4">
     </video>
     <div class="global-bg__overlay"></div>
   </div>
@@ -23,7 +45,7 @@
   <div class="side-label side-label--right"><a href="#contato">CONTACT</a></div>
 
   <!-- Full-screen Navigation Overlay -->
-  <div class="nav-overlay" id="navOverlay">
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
     <nav class="nav-overlay__inner">
       <a href="#hero" class="nav-overlay__link" data-index="01">Início</a>
       <a href="#sobre" class="nav-overlay__link" data-index="02">Sobre</a>
@@ -43,11 +65,13 @@
         <a href="#trabalhos">Projetos</a>
         <a href="#contato" class="header__cta">Contato</a>
       </nav>
-      <button class="header__burger" id="burgerBtn" aria-label="Menu">
+      <button class="header__burger" id="burgerBtn" aria-label="Menu" aria-expanded="false" aria-controls="navOverlay">
         <span></span><span></span>
       </button>
     </div>
   </header>
+
+  <main id="main-content">
 
   <!-- Hero -->
   <section class="hero" id="hero">
@@ -72,7 +96,7 @@
   <section class="sobre" id="sobre">
     <div class="sobre__container">
       <div class="sobre__image">
-        <img src="assets/perfil.png" alt="Savylla Adryan">
+        <img src="assets/perfil.webp" alt="Foto de perfil de Savylla Adryan, filmmaker e diretor" width="480" height="640" loading="lazy" decoding="async">
       </div>
       <div class="sobre__content">
         <h2 class="sobre__title">
@@ -114,200 +138,200 @@
       <h2 class="clientes__title">Marcas que <span class="display-font accent">acreditam</span> no meu trabalho</h2>
       <div class="clientes__grid">
         <div class="clientes__item" data-name="Drogasil">
-          <img src="assets/logos/drogasil.png" alt="Drogasil" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/drogasil.webp" alt="Drogasil" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Drogasil</span>
         </div>
         <div class="clientes__item" data-name="Raia">
-          <img src="assets/logos/raia.png" alt="Raia" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/raia.webp" alt="Raia" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Raia</span>
         </div>
         <div class="clientes__item" data-name="Mercado Pago">
-          <img src="assets/logos/mercado-pago.png" alt="Mercado Pago" class="clientes__logo" style="max-height:70px;max-width:170px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/mercado-pago.webp" alt="Mercado Pago" class="clientes__logo" style="max-height:70px;max-width:170px">
           <span class="clientes__fallback" style="display:none">Mercado Pago</span>
         </div>
         <div class="clientes__item" data-name="Magazine Luiza">
-          <img src="assets/logos/magazine-luiza.png" alt="Magazine Luiza" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/magazine-luiza.webp" alt="Magazine Luiza" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Magazine Luiza</span>
         </div>
         <div class="clientes__item" data-name="Netshoes">
-          <img src="assets/logos/netshoes.png" alt="Netshoes" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/netshoes.webp" alt="Netshoes" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Netshoes</span>
         </div>
         <div class="clientes__item" data-name="LG">
-          <img src="assets/logos/lg.png" alt="LG" class="clientes__logo" style="max-height:40px;max-width:100px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/lg.webp" alt="LG" class="clientes__logo" style="max-height:40px;max-width:100px">
           <span class="clientes__fallback" style="display:none">LG</span>
         </div>
         <div class="clientes__item" data-name="Uber">
-          <img src="assets/logos/uber.svg" alt="Uber" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/uber.svg" alt="Uber" class="clientes__logo" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Uber</span>
         </div>
         <div class="clientes__item" data-name="Philips">
-          <img src="assets/logos/philips.png" alt="Philips" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/philips.webp" alt="Philips" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Philips</span>
         </div>
         <div class="clientes__item" data-name="Intimus">
-          <img src="assets/logos/intimus.png" alt="Intimus" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/intimus.webp" alt="Intimus" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Intimus</span>
         </div>
         <div class="clientes__item" data-name="Bradesco">
-          <img src="assets/logos/bradesco.png" alt="Bradesco" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/bradesco.webp" alt="Bradesco" class="clientes__logo" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">Bradesco</span>
         </div>
         <div class="clientes__item" data-name="Domino's">
-          <img src="assets/logos/dominos.png" alt="Domino's" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/dominos.webp" alt="Domino's" class="clientes__logo" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Domino's</span>
         </div>
         <div class="clientes__item" data-name="Serasa">
-          <img src="assets/logos/serasa.png" alt="Serasa" class="clientes__logo" style="max-height:60px;max-width:150px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/serasa.webp" alt="Serasa" class="clientes__logo" style="max-height:60px;max-width:150px">
           <span class="clientes__fallback" style="display:none">Serasa</span>
         </div>
         <div class="clientes__item" data-name="Movida">
-          <img src="assets/logos/movida.png" alt="Movida" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/movida.webp" alt="Movida" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Movida</span>
         </div>
         <div class="clientes__item" data-name="KaBuM!">
-          <img src="assets/logos/kabum.png" alt="KaBuM!" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/kabum.webp" alt="KaBuM!" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">KaBuM!</span>
         </div>
         <div class="clientes__item" data-name="Neo Energia">
-          <img src="assets/logos/neoenergia.png" alt="Neo Energia" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/neoenergia.webp" alt="Neo Energia" class="clientes__logo" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">Neo Energia</span>
         </div>
         <div class="clientes__item" data-name="Claro">
-          <img src="assets/logos/claro.png" alt="Claro" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/claro.webp" alt="Claro" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Claro</span>
         </div>
         <div class="clientes__item" data-name="Vans">
-          <img src="assets/logos/vans.png" alt="Vans" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/vans.webp" alt="Vans" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Vans</span>
         </div>
         <div class="clientes__item" data-name="Bet Nacional">
-          <img src="assets/logos/bet-nacional.png" alt="Bet Nacional" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/bet-nacional.webp" alt="Bet Nacional" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Bet Nacional</span>
         </div>
         <div class="clientes__item" data-name="Bravecto">
-          <img src="assets/logos/bravecto.png" alt="Bravecto" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/bravecto.webp" alt="Bravecto" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Bravecto</span>
         </div>
         <div class="clientes__item" data-name="Carolina Herrera">
-          <img src="assets/logos/carolina-herrera.png" alt="Carolina Herrera" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/carolina-herrera.webp" alt="Carolina Herrera" class="clientes__logo" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">Carolina Herrera</span>
         </div>
         <div class="clientes__item" data-name="Nestlé">
-          <img src="assets/logos/nestle.png" alt="Nestlé" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/nestle.webp" alt="Nestlé" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Nestlé</span>
         </div>
         <div class="clientes__item" data-name="Carrefour">
-          <img src="assets/logos/carrefour.png" alt="Carrefour" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/carrefour.webp" alt="Carrefour" class="clientes__logo" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">Carrefour</span>
         </div>
 
         <div class="clientes__item" data-name="Allfluence">
-          <img src="assets/logos/allfluence.png" alt="Allfluence" class="clientes__logo" style="max-height:70px;max-width:170px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/allfluence.webp" alt="Allfluence" class="clientes__logo" style="max-height:70px;max-width:170px">
           <span class="clientes__fallback" style="display:none">Allfluence</span>
         </div>
         <div class="clientes__item" data-name="Veloe">
-          <img src="assets/logos/veloe.png" alt="Veloe" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/veloe.webp" alt="Veloe" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Veloe</span>
         </div>
         <div class="clientes__item" data-name="Agibank">
-          <img src="assets/logos/agibank.png" alt="Agibank" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/agibank.webp" alt="Agibank" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Agibank</span>
         </div>
         <div class="clientes__item" data-name="Livelo">
-          <img src="assets/logos/livelo.png" alt="Livelo" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/livelo.webp" alt="Livelo" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Livelo</span>
         </div>
         <div class="clientes__item" data-name="Baby Sec">
-          <img src="assets/logos/baby-sec.png" alt="Baby Sec" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/baby-sec.webp" alt="Baby Sec" class="clientes__logo" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">Baby Sec</span>
         </div>
         <div class="clientes__item" data-name="GA.MA">
-          <img src="assets/logos/gama.png" alt="GA.MA" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/gama.webp" alt="GA.MA" class="clientes__logo" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">GA.MA</span>
         </div>
         <div class="clientes__item" data-name="Bullsbet">
-          <img src="assets/logos/bullsbet.png" alt="Bullsbet" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/bullsbet.webp" alt="Bullsbet" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Bullsbet</span>
         </div>
         <div class="clientes__item" data-name="Faculdade Estácio">
-          <img src="assets/logos/estacio.png" alt="Faculdade Estácio" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/estacio.webp" alt="Faculdade Estácio" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Faculdade Estácio</span>
         </div>
         <div class="clientes__item" data-name="Reals Bet">
-          <img src="assets/logos/reals-bet.png" alt="Reals Bet" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/reals-bet.webp" alt="Reals Bet" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Reals Bet</span>
         </div>
         <div class="clientes__item" data-name="Sorriso">
-          <img src="assets/logos/sorriso.png" alt="Sorriso" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/sorriso.webp" alt="Sorriso" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Sorriso</span>
         </div>
         <div class="clientes__item" data-name="Tramontina">
-          <img src="assets/logos/tramontina.png" alt="Tramontina" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/tramontina.webp" alt="Tramontina" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Tramontina</span>
         </div>
         <div class="clientes__item" data-name="Softys Kitchen">
-          <img src="assets/logos/softys-kitchen.png" alt="Softys Kitchen" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/softys-kitchen.webp" alt="Softys Kitchen" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Softys Kitchen</span>
         </div>
         <div class="clientes__item" data-name="Aiqfome">
-          <img src="assets/logos/aiqfome.png" alt="Aiqfome" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/aiqfome.webp" alt="Aiqfome" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Aiqfome</span>
         </div>
         <div class="clientes__item" data-name="Philco Britânia">
-          <img src="assets/logos/philco.png" alt="Philco Britânia" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/philco.webp" alt="Philco Britânia" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Philco Britânia</span>
         </div>
         <div class="clientes__item" data-name="Mycon">
-          <img src="assets/logos/mycon.png" alt="Mycon" class="clientes__logo" style="max-height:70px;max-width:170px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/mycon.webp" alt="Mycon" class="clientes__logo" style="max-height:70px;max-width:170px">
           <span class="clientes__fallback" style="display:none">Mycon</span>
         </div>
         <div class="clientes__item" data-name="Atacadão">
-          <img src="assets/logos/atacadao.png" alt="Atacadão" class="clientes__logo" style="max-height:75px;max-width:180px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/atacadao.webp" alt="Atacadão" class="clientes__logo" style="max-height:75px;max-width:180px">
           <span class="clientes__fallback" style="display:none">Atacadão</span>
         </div>
         <div class="clientes__item" data-name="Cassino.Bet">
-          <img src="assets/logos/cassino-bet.png" alt="Cassino.Bet" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/cassino-bet.webp" alt="Cassino.Bet" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Cassino.Bet</span>
         </div>
         <div class="clientes__item" data-name="Irmãos Scribel" data-ids="3,58">
-          <img src="assets/logos/irmaos-scribel.png" alt="Irmãos Scribel" class="clientes__logo" style="max-height:160px;max-width:300px;opacity:1;object-fit:contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/irmaos-scribel.webp" alt="Irmãos Scribel" class="clientes__logo" style="max-height:160px;max-width:300px;opacity:1;object-fit:contain">
           <span class="clientes__fallback" style="display:none">Irmãos Scribel</span>
         </div>
         <div class="clientes__item" data-name="Alma Festival">
-          <img src="assets/logos/alma-festival.png" alt="Alma Festival" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/alma-festival.webp" alt="Alma Festival" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Alma Festival</span>
         </div>
         <div class="clientes__item" data-name="Warner Music Group" data-ids="1,59">
-          <img src="assets/logos/warner-music-uk.png" alt="Warner Music Group" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/warner-music-uk.webp" alt="Warner Music Group" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Warner Music Group</span>
         </div>
         <div class="clientes__item" data-name="Casinha Acolhida" data-ids="60,61,62">
-          <img src="assets/logos/casinha-acolhida.png" alt="Casinha Acolhida" class="clientes__logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/casinha-acolhida.webp" alt="Casinha Acolhida" class="clientes__logo">
           <span class="clientes__fallback" style="display:none">Casinha Acolhida</span>
         </div>
         <div class="clientes__item" data-name="Apsa" data-id="63">
-          <img src="assets/logos/apsa.png" alt="Apsa" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/apsa.webp" alt="Apsa" class="clientes__logo" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Apsa</span>
         </div>
         <div class="clientes__item" data-name="Doutora Drag" data-id="64">
-          <img src="assets/logos/doutora-drag.png" alt="Doutora Drag" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/doutora-drag.webp" alt="Doutora Drag" class="clientes__logo" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Doutora Drag</span>
         </div>
         <div class="clientes__item" data-name="Linha Produções" data-id="65">
-          <img src="assets/logos/linha-producoes.png" alt="Linha Produções" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/linha-producoes.webp" alt="Linha Produções" class="clientes__logo" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Linha Produções</span>
         </div>
         <div class="clientes__item" data-name="Garagem Coletiva" data-id="68">
-          <img src="assets/logos/garagem-coletiva.png" alt="Garagem Coletiva" class="clientes__logo" style="max-height:65px;max-width:150px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/garagem-coletiva.webp" alt="Garagem Coletiva" class="clientes__logo" style="max-height:65px;max-width:150px">
           <span class="clientes__fallback" style="display:none">Garagem Coletiva</span>
         </div>
         <div class="clientes__item" data-name="Devassas" data-id="67">
-          <img src="assets/logos/devassas.png" alt="Devassas" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/devassas.webp" alt="Devassas" class="clientes__logo" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Devassas</span>
         </div>
         <div class="clientes__item" data-name="Força da Terra" data-id="66">
-          <img src="assets/logos/forca-da-terra.png" alt="Força da Terra" class="clientes__logo" style="max-height:90px;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/logos/forca-da-terra.webp" alt="Força da Terra" class="clientes__logo" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Força da Terra</span>
         </div>
       </div>
@@ -332,7 +356,7 @@
 
       <article class="trabalhos__item trabalhos__item--wide" data-category="video direcao" data-id="18">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/drogasil-thumb.png" alt="Drogasil" loading="lazy">
+          <img src="assets/projetos/drogasil-thumb.webp" alt="Drogasil" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -343,7 +367,7 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="19">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/mercado-pago-thumb.png" alt="Mercado Pago" loading="lazy">
+          <img src="assets/projetos/mercado-pago-thumb.webp" alt="Mercado Pago" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -354,7 +378,7 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="20">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/magazine-luiza-thumb.png" alt="Magazine Luiza" loading="lazy">
+          <img src="assets/projetos/magazine-luiza-thumb.webp" alt="Magazine Luiza" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -365,7 +389,7 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="21">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/raia-thumb.png" alt="Raia" loading="lazy">
+          <img src="assets/projetos/raia-thumb.webp" alt="Raia" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -376,7 +400,7 @@
 
       <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="22">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/bradesco-thumb.png" alt="Bradesco" loading="lazy">
+          <img src="assets/projetos/bradesco-thumb.webp" alt="Bradesco" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -387,7 +411,7 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="23">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/netshoes-thumb.png" alt="Netshoes" loading="lazy">
+          <img src="assets/projetos/netshoes-thumb.webp" alt="Netshoes" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -420,7 +444,7 @@
 
       <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="26">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/carolina-herrera-thumb.png" alt="Carolina Herrera" loading="lazy">
+          <img src="assets/projetos/carolina-herrera-thumb.webp" alt="Carolina Herrera" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -431,7 +455,7 @@
 
       <article class="trabalhos__item" data-category="video" data-id="27">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/nestle-thumb.png" alt="Nestlé" loading="lazy">
+          <img src="assets/projetos/nestle-thumb.webp" alt="Nestlé" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -442,7 +466,7 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="28">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/philips-thumb.png" alt="Philips" loading="lazy">
+          <img src="assets/projetos/philips-thumb.webp" alt="Philips" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -453,7 +477,7 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="29">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/intimus-thumb.png" alt="Intimus" loading="lazy">
+          <img src="assets/projetos/intimus-thumb.webp" alt="Intimus" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -464,7 +488,7 @@
 
       <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="30">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/dominos-thumb.png" alt="Domino's" loading="lazy">
+          <img src="assets/projetos/dominos-thumb.webp" alt="Domino's" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -475,7 +499,7 @@
 
       <article class="trabalhos__item" data-category="video" data-id="31">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/serasa-thumb.png" alt="Serasa" loading="lazy">
+          <img src="assets/projetos/serasa-thumb.webp" alt="Serasa" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -486,7 +510,7 @@
 
       <article class="trabalhos__item" data-category="video" data-id="32">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/movida-thumb.png" alt="Movida" loading="lazy">
+          <img src="assets/projetos/movida-thumb.webp" alt="Movida" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -497,7 +521,7 @@
 
       <article class="trabalhos__item" data-category="video" data-id="33">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/kabum-thumb.png" alt="KaBuM!" loading="lazy">
+          <img src="assets/projetos/kabum-thumb.webp" alt="KaBuM!" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -519,7 +543,7 @@
 
       <article class="trabalhos__item" data-category="video" data-id="35">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/claro-thumb.png" alt="Claro" loading="lazy">
+          <img src="assets/projetos/claro-thumb.webp" alt="Claro" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -530,7 +554,7 @@
 
       <article class="trabalhos__item" data-category="video" data-id="36">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/vans-thumb.png" alt="Vans" loading="lazy">
+          <img src="assets/projetos/vans-thumb.webp" alt="Vans" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -541,7 +565,7 @@
 
       <article class="trabalhos__item" data-category="video" data-id="37">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/bet-nacional-thumb.png" alt="Bet Nacional" loading="lazy">
+          <img src="assets/projetos/bet-nacional-thumb.webp" alt="Bet Nacional" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -552,7 +576,7 @@
 
       <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="38">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/bravecto-thumb.png" alt="Bravecto" loading="lazy">
+          <img src="assets/projetos/bravecto-thumb.webp" alt="Bravecto" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -607,7 +631,7 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="41">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/allfluence-thumb.png" alt="Allfluence" loading="lazy">
+          <img src="assets/projetos/allfluence-thumb.webp" alt="Allfluence" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -629,7 +653,7 @@
 
       <article class="trabalhos__item trabalhos__item--wide" data-category="video direcao" data-id="43">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/agibank-thumb.png" alt="Agibank" loading="lazy">
+          <img src="assets/projetos/agibank-thumb.webp" alt="Agibank" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -640,7 +664,7 @@
 
       <article class="trabalhos__item" data-category="video" data-id="44">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/livelo-thumb.png" alt="Livelo" loading="lazy">
+          <img src="assets/projetos/livelo-thumb.webp" alt="Livelo" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -651,7 +675,7 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="45">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/baby-sec-thumb.png" alt="Baby Sec" loading="lazy">
+          <img src="assets/projetos/baby-sec-thumb.webp" alt="Baby Sec" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -662,7 +686,7 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="46">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/gama-thumb.png" alt="Gama" loading="lazy">
+          <img src="assets/projetos/gama-thumb.webp" alt="Gama" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -673,7 +697,7 @@
 
       <article class="trabalhos__item trabalhos__item--wide" data-category="video direcao" data-id="47">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/bullsbet-thumb.png" alt="Bullsbet" loading="lazy">
+          <img src="assets/projetos/bullsbet-thumb.webp" alt="Bullsbet" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -684,7 +708,7 @@
 
       <article class="trabalhos__item" data-category="video direcao" data-id="48">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/estacio-thumb.png" alt="Faculdade Estácio" loading="lazy">
+          <img src="assets/projetos/estacio-thumb.webp" alt="Faculdade Estácio" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -706,7 +730,7 @@
 
       <article class="trabalhos__item" data-category="video" data-id="50">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/sorriso-thumb.png" alt="Sorriso" loading="lazy">
+          <img src="assets/projetos/sorriso-thumb.webp" alt="Sorriso" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -728,7 +752,7 @@
 
       <article class="trabalhos__item" data-category="video" data-id="52">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/softys-kitchen-thumb.png" alt="Softys Kitchen" loading="lazy">
+          <img src="assets/projetos/softys-kitchen-thumb.webp" alt="Softys Kitchen" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -761,7 +785,7 @@
 
       <article class="trabalhos__item trabalhos__item--wide" data-category="video" data-id="55">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/mycon-thumb.png" alt="Mycon" loading="lazy">
+          <img src="assets/projetos/mycon-thumb.webp" alt="Mycon" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -794,7 +818,7 @@
 
       <article class="trabalhos__item" data-category="video" data-id="66">
         <div class="trabalhos__thumb">
-          <img src="assets/projetos/forca-da-terra-thumb.png" alt="Força da Terra" loading="lazy">
+          <img src="assets/projetos/forca-da-terra-thumb.webp" alt="Força da Terra" loading="lazy">
           <div class="trabalhos__play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -952,7 +976,9 @@
   </section>
 
   <!-- Modal de Projeto -->
-  <div class="modal" id="projetoModal">
+  </main>
+
+  <div class="modal" id="projetoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
     <div class="modal__backdrop"></div>
     <div class="modal__content">
       <button class="modal__close" id="modalClose" aria-label="Fechar">
@@ -979,8 +1005,8 @@
   <!-- Contato + Footer wrapper with video bg -->
   <div class="contato-wrapper">
     <div class="contato-wrapper__bg">
-      <video autoplay muted loop playsinline>
-        <source src="assets/bg-contato.mp4" type="video/mp4">
+      <video id="contatoBgVideo" muted loop playsinline poster="assets/bg-contato-poster.jpg" aria-hidden="true">
+        <!-- Source added via JS lazy loading -->
       </video>
       <div class="contato-wrapper__overlay"></div>
     </div>
@@ -1039,7 +1065,7 @@
   </div><!-- /contato-wrapper -->
 
   <!-- Lightbox Fullscreen -->
-  <div class="lightbox" id="lightbox">
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria de fotos">
     <div class="lightbox__backdrop"></div>
     <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -1054,6 +1080,6 @@
     <div class="lightbox__track" id="lightboxTrack"></div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

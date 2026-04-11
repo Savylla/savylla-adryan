@@ -1938,12 +1938,66 @@ const projetos = [
 ];
 
 // ----------------------------------------
-// Header scroll
+// JS loaded flag (for .reveal CSS fallback)
+// ----------------------------------------
+document.documentElement.classList.add('js-loaded');
+
+// ----------------------------------------
+// Utility: escape HTML to prevent XSS
+// ----------------------------------------
+function escapeHTML(str) {
+  if (str == null) return '';
+  const div = document.createElement('div');
+  div.textContent = String(str);
+  return div.innerHTML;
+}
+
+// ----------------------------------------
+// Logo fallback (moved from inline onerror)
+// ----------------------------------------
+document.querySelectorAll('.clientes__logo').forEach(img => {
+  img.addEventListener('error', () => {
+    img.style.display = 'none';
+    const fallback = img.nextElementSibling;
+    if (fallback) fallback.style.display = 'flex';
+  });
+});
+
+// ----------------------------------------
+// Lazy load contato background video
+// ----------------------------------------
+const contatoBgVideo = document.getElementById('contatoBgVideo');
+if (contatoBgVideo) {
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const source = document.createElement('source');
+        source.src = 'assets/bg-contato-compressed.mp4';
+        source.type = 'video/mp4';
+        contatoBgVideo.appendChild(source);
+        contatoBgVideo.load();
+        contatoBgVideo.play().catch(() => {});
+        videoObserver.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '200px' });
+  videoObserver.observe(contatoBgVideo);
+}
+
+// ----------------------------------------
+// Header scroll (throttled with rAF)
 // ----------------------------------------
 const header = document.getElementById('header');
+let scrollTicking = false;
 window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 80);
-});
+  if (!scrollTicking) {
+    requestAnimationFrame(() => {
+      if (header) header.classList.toggle('scrolled', window.scrollY > 80);
+      scrollTicking = false;
+    });
+    scrollTicking = true;
+  }
+}, { passive: true });
 
 // ----------------------------------------
 // Fullscreen nav overlay
@@ -1953,14 +2007,19 @@ const navOverlay = document.getElementById('navOverlay');
 const burgerBtn = document.getElementById('burgerBtn');
 
 function toggleNav() {
+  const isOpen = !navOverlay.classList.contains('active');
   navOverlay.classList.toggle('active');
   burgerBtn.classList.toggle('active');
-  document.body.style.overflow = navOverlay.classList.contains('active') ? 'hidden' : '';
+  burgerBtn.setAttribute('aria-expanded', String(isOpen));
+  navOverlay.setAttribute('aria-hidden', String(!isOpen));
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 }
 
 function closeNav() {
   navOverlay.classList.remove('active');
   burgerBtn.classList.remove('active');
+  burgerBtn.setAttribute('aria-expanded', 'false');
+  navOverlay.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
 }
 
@@ -2003,7 +2062,7 @@ filtros.forEach(btn => {
     btn.classList.add('active');
     activeFilter = btn.dataset.filter;
     items.forEach(item => {
-      const categories = item.dataset.category.split(' ');
+      const categories = (item.dataset.category || '').split(' ');
       item.classList.toggle('hidden', activeFilter !== 'todos' && !categories.includes(activeFilter));
     });
   });
@@ -2042,7 +2101,7 @@ function openModal(id) {
       videoEl.innerHTML = `<video controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${displayVideos[0].url}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
     }
     if (displayVideos[0].talento) {
-      videoEl.innerHTML += `<div class="modal__video-talent">${displayVideos[0].talento}</div>`;
+      videoEl.innerHTML += `<div class="modal__video-talent">${escapeHTML(displayVideos[0].talento)}</div>`;
     }
   } else if (p.galeria && p.galeria.length > 0) {
     // Photography project: show hero image instead of video placeholder
@@ -2054,7 +2113,7 @@ function openModal(id) {
   }
 
   const fichaEl = document.getElementById('modalFicha');
-  fichaEl.innerHTML = Object.entries(p.ficha).map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
+  fichaEl.innerHTML = Object.entries(p.ficha).map(([k, v]) => `<div><dt>${escapeHTML(k)}</dt><dd>${escapeHTML(v)}</dd></div>`).join('');
 
   // Social/link buttons
   const existingLinks = document.querySelectorAll('.modal__link-btn');
@@ -2112,12 +2171,20 @@ function openModal(id) {
     addSocialBtn(p.linkedin, icons.linkedin, 'LinkedIn');
   }
   if (p.website) {
-    const domain = new URL(p.website).hostname.replace('www.', '');
-    addSocialBtn(p.website, icons.website, domain);
+    try {
+      const domain = new URL(p.website).hostname.replace('www.', '');
+      addSocialBtn(p.website, icons.website, domain);
+    } catch (e) {
+      addSocialBtn(p.website, icons.website, 'Website');
+    }
   }
   if (p.website2) {
-    const domain2 = new URL(p.website2).hostname.replace('www.', '');
-    addSocialBtn(p.website2, icons.website, domain2);
+    try {
+      const domain2 = new URL(p.website2).hostname.replace('www.', '');
+      addSocialBtn(p.website2, icons.website, domain2);
+    } catch (e) {
+      addSocialBtn(p.website2, icons.website, 'Website');
+    }
   }
 
   if (linksContainer.children.length > 0) {
@@ -2140,7 +2207,7 @@ function openModal(id) {
         <div class="modal__video-card-play">
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
         </div>
-        <span class="modal__video-card-talent">${v.talento || 'Video ' + (i + 1)}</span>
+        <span class="modal__video-card-talent">${escapeHTML(v.talento || 'Video ' + (i + 1))}</span>
       `;
       card.addEventListener('click', () => {
         if (v.youtubeId) {
@@ -2149,7 +2216,7 @@ function openModal(id) {
           videoEl.innerHTML = `<video controls autoplay playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${v.url}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
         }
         if (v.talento) {
-          videoEl.innerHTML += `<div class="modal__video-talent">${v.talento}</div>`;
+          videoEl.innerHTML += `<div class="modal__video-talent">${escapeHTML(v.talento)}</div>`;
         }
         galeriaEl.querySelectorAll('.modal__video-card').forEach(c => c.classList.remove('active'));
         card.classList.add('active');
@@ -2168,7 +2235,7 @@ function openModal(id) {
         img.alt = p.nome;
         img.loading = 'lazy';
         img.style.cssText = 'width:100%;border-radius:8px;cursor:pointer;';
-        img.onerror = function() { this.style.display = 'none'; };
+        img.onerror = function() { this.alt = 'Imagem indisponível'; this.style.opacity = '0.3'; };
         img.addEventListener('click', () => openLightbox(p.galeria, i));
         galeriaEl.appendChild(img);
       });
@@ -2190,7 +2257,7 @@ function openModal(id) {
       img.src = src;
       img.alt = p.nome;
       img.loading = 'lazy';
-      img.onerror = function() { this.style.display = 'none'; };
+      img.onerror = function() { this.alt = 'Imagem indisponível'; this.style.opacity = '0.3'; };
       img.addEventListener('click', () => openLightbox(p.galeria, i));
       galeriaEl.appendChild(img);
     });
@@ -2232,16 +2299,42 @@ function openModal(id) {
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
+
+  // Focus trap: move focus into modal
+  const closeBtn = document.getElementById('modalClose');
+  if (closeBtn) closeBtn.focus();
+}
+
+let lastFocusedElement = null;
+
+function openModalWithFocus(id) {
+  lastFocusedElement = document.activeElement;
+  openModal(id);
 }
 
 function closeModal() {
   modal.classList.remove('active');
   document.body.style.overflow = '';
   document.getElementById('modalVideo').innerHTML = '';
+  if (lastFocusedElement) {
+    lastFocusedElement.focus();
+    lastFocusedElement = null;
+  }
 }
 
 items.forEach(item => {
-  item.addEventListener('click', () => openModal(parseInt(item.dataset.id)));
+  // Accessibility: make items keyboard-navigable
+  item.setAttribute('tabindex', '0');
+  item.setAttribute('role', 'button');
+
+  const handleItemClick = () => {
+    const itemId = parseInt(item.dataset.id);
+    if (!isNaN(itemId)) openModalWithFocus(itemId);
+  };
+  item.addEventListener('click', handleItemClick);
+  item.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleItemClick(); }
+  });
 
   // Hover video preview
   const id = parseInt(item.dataset.id);
@@ -2277,7 +2370,10 @@ items.forEach(item => {
       hoverVideo.play().then(() => {
         hoverVideo.classList.add('active');
         if (thumbImg) thumbImg.style.opacity = '0';
-      }).catch(() => {});
+      }).catch(() => {
+        if (hoverVideo) hoverVideo.classList.remove('active');
+        if (thumbImg) thumbImg.style.opacity = '1';
+      });
     }, 300);
   });
 
@@ -2293,7 +2389,9 @@ items.forEach(item => {
 
 modalClose.addEventListener('click', closeModal);
 modal.querySelector('.modal__backdrop').addEventListener('click', closeModal);
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !lightbox.classList.contains('active')) closeModal();
+});
 
 // ----------------------------------------
 // Showreel lazy embed
@@ -2317,31 +2415,41 @@ if (showreelEl) {
 // ----------------------------------------
 // Scroll reveal
 // ----------------------------------------
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+const revealElements = document.querySelectorAll('.sobre__image, .sobre__content, .trabalhos__header, .trabalhos__item, .showreel__container, .cta__content, .cta__quote, .contato__left, .contato__form, .quote__inner, .clientes__container');
 
-document.querySelectorAll('.sobre__image, .sobre__content, .trabalhos__header, .trabalhos__item, .showreel__container, .cta__content, .cta__quote, .contato__left, .contato__form, .quote__inner, .clientes__container').forEach(el => {
-  el.classList.add('reveal');
-  revealObserver.observe(el);
-});
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  revealElements.forEach(el => {
+    el.classList.add('reveal');
+    revealObserver.observe(el);
+  });
+} else {
+  // Fallback: show all elements immediately
+  revealElements.forEach(el => el.classList.add('reveal', 'visible'));
+}
 
 // ----------------------------------------
 // Clientes -> Modal
 // ----------------------------------------
 document.querySelectorAll('.clientes__item').forEach(item => {
-  item.addEventListener('click', () => {
-    // Multiple projects: show picker
+  item.setAttribute('tabindex', '0');
+  item.setAttribute('role', 'button');
+
+  const handleClientClick = () => {
+    lastFocusedElement = document.activeElement;
     if (item.dataset.ids) {
       const ids = item.dataset.ids.split(',').map(Number);
       const projs = ids.map(id => projetos.find(p => p.id === id)).filter(Boolean);
       if (projs.length === 1) {
-        openModal(projs[0].id);
+        openModalWithFocus(projs[0].id);
         return;
       }
       showProjectPicker(projs);
@@ -2350,8 +2458,13 @@ document.querySelectorAll('.clientes__item').forEach(item => {
     const clienteName = item.dataset.name || item.textContent.trim();
     const projeto = projetos.find(p => p.nome.toLowerCase() === clienteName.toLowerCase());
     if (projeto) {
-      openModal(projeto.id);
+      openModalWithFocus(projeto.id);
     }
+  };
+
+  item.addEventListener('click', handleClientClick);
+  item.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClientClick(); }
   });
 });
 
@@ -2370,8 +2483,8 @@ function showProjectPicker(projs) {
       <div class="picker-options">
         ${projs.map(p => `
           <button class="picker-option" data-id="${p.id}">
-            <span class="picker-option-name">${p.nome}</span>
-            <span class="picker-option-label">${p.categoriaLabel}</span>
+            <span class="picker-option-name">${escapeHTML(p.nome)}</span>
+            <span class="picker-option-label">${escapeHTML(p.categoriaLabel)}</span>
           </button>
         `).join('')}
       </div>
@@ -2397,37 +2510,52 @@ function showProjectPicker(projs) {
 // ----------------------------------------
 // Form
 // ----------------------------------------
-document.getElementById('contatoForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('button[type="submit"]');
-  const originalText = btn.textContent;
-  btn.textContent = 'Enviando...';
-  btn.disabled = true;
+const contatoForm = document.getElementById('contatoForm');
+if (contatoForm) {
+  contatoForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
 
-  try {
-    const res = await fetch('https://formsubmit.co/ajax/savyllaadryan@gmail.com', {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
 
-    if (res.ok) {
-      btn.textContent = 'Mensagem enviada!';
-      form.reset();
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.disabled = false;
-      }, 3000);
-    } else {
-      throw new Error('Erro no envio');
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/savyllaadryan@gmail.com', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' },
+        signal: controller.signal
+      });
+      clearTimeout(timeout);
+
+      if (res.ok) {
+        btn.textContent = 'Mensagem enviada!';
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.disabled = false;
+        }, 3000);
+      } else {
+        throw new Error('Erro no envio');
+      }
+    } catch (err) {
+      clearTimeout(timeout);
+      if (err.name === 'AbortError') {
+        btn.textContent = 'Tempo esgotado. Tente novamente.';
+      } else if (!navigator.onLine) {
+        btn.textContent = 'Sem conexão. Verifique sua internet.';
+      } else {
+        btn.textContent = 'Erro ao enviar. Tente novamente.';
+      }
+      btn.disabled = false;
+      setTimeout(() => { btn.textContent = originalText; }, 3000);
     }
-  } catch (err) {
-    btn.textContent = 'Erro ao enviar. Tente novamente.';
-    btn.disabled = false;
-    setTimeout(() => { btn.textContent = originalText; }, 3000);
-  }
-});
+  });
+}
 
 // ----------------------------------------
 // Lightbox Fullscreen (Photo Gallery)
@@ -2454,12 +2582,20 @@ function openLightbox(images, startIndex) {
 
 function closeLightbox() {
   lightbox.classList.remove('active');
-  document.body.style.overflow = '';
+  // Only restore overflow if modal is not open
+  if (!modal.classList.contains('active')) {
+    document.body.style.overflow = '';
+  }
   lightboxTrack.innerHTML = '';
 }
 
 function showLightboxImage() {
-  lightboxTrack.innerHTML = `<img src="${lbImages[lbIndex]}" alt="Foto ${lbIndex + 1}">`;
+  const img = document.createElement('img');
+  img.src = lbImages[lbIndex];
+  img.alt = `Foto ${lbIndex + 1}`;
+  img.onerror = function() { this.alt = 'Imagem indisponível'; this.style.opacity = '0.3'; };
+  lightboxTrack.innerHTML = '';
+  lightboxTrack.appendChild(img);
   lightboxCounter.textContent = `${lbIndex + 1} / ${lbImages.length}`;
   lightboxPrev.style.display = lbImages.length > 1 ? '' : 'none';
   lightboxNext.style.display = lbImages.length > 1 ? '' : 'none';

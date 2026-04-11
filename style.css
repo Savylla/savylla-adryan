@@ -121,7 +121,7 @@
   --bg-elevated: #162236;
   --text: #e2e8f2;
   --text-dim: #8a9bb8;
-  --text-muted: #4a5e7a;
+  --text-muted: #6b7fa0;
   --accent: #5b8ec9;
   --accent-light: #7aacdf;
   --accent-glow: rgba(91, 142, 201, 0.15);
@@ -136,7 +136,36 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+/* Focus indicators — acessibilidade */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Skip navigation link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: var(--bg-dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
 
 body {
   font-family: var(--font-body);
@@ -295,6 +324,7 @@ button { font-family: inherit; }
 
 .header.scrolled {
   background: rgba(7, 13, 24, 0.95);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   padding: 16px 40px;
   border-bottom: 1px solid var(--border);
@@ -335,16 +365,16 @@ button { font-family: inherit; }
 
 .header__nav a:hover { color: var(--text); }
 
-.header__cta {
+.header__nav .header__cta {
   padding: 10px 24px;
   border: 1px solid var(--accent);
-  color: var(--accent) !important;
-  transition: all 0.3s var(--ease) !important;
+  color: var(--accent);
+  transition: all 0.3s var(--ease);
 }
 
-.header__cta:hover {
-  background: var(--accent) !important;
-  color: var(--bg-dark) !important;
+.header__nav .header__cta:hover {
+  background: var(--accent);
+  color: var(--bg-dark);
 }
 
 .header__burger {
@@ -1495,13 +1525,14 @@ button { font-family: inherit; }
 /* ========================================
    ANIMATIONS
    ======================================== */
-.reveal {
+/* Reveal animations only when JS is loaded */
+.js-loaded .reveal {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
 }
 
-.reveal.visible {
+.js-loaded .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1555,7 +1586,7 @@ button { font-family: inherit; }
   .hero__title { font-size: 2.5rem; }
   .sobre__stats { flex-direction: column; gap: 20px; }
   .trabalhos__filtros { gap: 6px; }
-  .trabalhos__filtro { padding: 6px 14px; font-size: 0.65rem; }
+  .trabalhos__filtro { padding: 10px 16px; font-size: 0.65rem; min-height: 44px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1772,4 +1803,18 @@ button { font-family: inherit; }
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--accent);
+}
+
+/* ========================================
+   PRINT
+   ======================================== */
+@media print {
+  body { background: #fff; color: #000; }
+  .global-bg, .nav-overlay, .modal, .lightbox, .picker-overlay,
+  .side-label, .header__burger, .hero__scroll, .contato-wrapper__bg { display: none; }
+  .header { position: static; background: #fff; border-bottom: 1px solid #ccc; }
+  .header__logo, .header__nav a { color: #000; }
+  video, iframe { display: none; }
+  a { color: #000; text-decoration: underline; }
+  .sobre::before { display: none; }
 }
