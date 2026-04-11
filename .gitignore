@@ -31,7 +31,26 @@ logs/
 .DS_Store
 Thumbs.db
 .idea/
+.cursor/
+.playwright-mcp/
 *.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# Selenium / Browser data
+chrome_selenium_data/
+
+# Compilations (large video files)
+compilations/
+
+# Debug artifacts
+debug_*.png
+debug_*.txt
+
+# Upload logs
+upload_log.txt
 
 # AIOX Local (AIOX)
 .aiox-core/local/

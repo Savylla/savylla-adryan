@@ -1,0 +1,1755 @@
+{
+  "completed_clients": [],
+  "current_client": null,
+  "results": {
+    "Agibank": {
+      "video_id": "58SNZviSX10",
+      "url": "https://youtu.be/58SNZviSX10",
+      "title": "Portfolio - Agibank (8 videos)",
+      "type": "single_client",
+      "clients": [
+        "Agibank"
+      ],
+      "num_videos": 8,
+      "duration": "4:38",
+      "is_short": false,
+      "chapters": [
+        {
+          "timestamp": "0:00",
+          "name": "AGIBANK Agibank (2025 03 06) v3 48s ISADORA CECATTO",
+          "talento": "Isadora cecatto",
+          "client": "Agibank"
+        },
+        {
+          "timestamp": "0:48",
+          "name": "AGIBANK Agibank (20250306) v6 32s Isadora Cecatto",
+          "talento": "Isadora cecatto",
+          "client": "Agibank"
+        },
+        {
+          "timestamp": "1:28",
+          "name": "AGIBANK - Agibank (2025-03-06) v2 34s Isadora Cecatto",
+          "talento": "Isadora cecatto",
+          "client": "Agibank"
+        },
+        {
+          "timestamp": "2:02",
+          "name": "AGIBANK Agibank (20250306) v3 25s Debora Melo",
+          "talento": "Isadora cecatto",
+          "client": "Agibank"
+        },
+        {
+          "timestamp": "2:27",
+          "name": "AGIBANK - Agibank (2025-03-06) v3 24s Debora Melo",
+          "talento": "D bora Melo",
+          "client": "Agibank"
+        },
+        {
+          "timestamp": "2:52",
+          "name": "AGIBANK Agibank (2025 03 06) v1 28s Isadora Cecatto",
+          "talento": "D bora Melo",
+          "client": "Agibank"
+        },
+        {
+          "timestamp": "3:21",
+          "name": "AGIBANK - Agibank (2025-03-06) v4 36s DeboraMello",
+          "talento": "D bora Melo",
+          "client": "Agibank"
+        },
+        {
+          "timestamp": "3:53",
+          "name": "AGIBANK Agibank (2025 03 06) v1 45s Debora Melo",
+          "talento": "D bora Melo",
+          "client": "Agibank"
+        }
+      ],
+      "original_urls": [
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/41765364-6390-463f-849d-6f714ae6a092/%5B06%5D%5BP01%5D%5BNN%5D%20AGIBANK%20Agibank%20(2025%2003%2006)_v3_48s_ISADORA_CECATTO.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559296874&amp;usg=AOvVaw2sdrB1mNyNteqDXgtPwIeh",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/d6b57b83-cf77-4b13-80af-53043678a203/%5B07%5D%5BP01%5D%5BNN%5D%20AGIBANK%20%20Agibank%20(20250306)_v6_32s_Isadora_Cecatto.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559297895&amp;usg=AOvVaw3QEhiJXa6dXkIFGFUxjHHr",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/6dbb787b-174e-409c-a9e1-a0399f1f5a95/%5B08%5D%5BP01%5D%5BNN%5D%20AGIBANK%20-%20Agibank%20(2025-03-06)_v2_34s_Isadora_Cecatto.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559299118&amp;usg=AOvVaw1NwB0CXyJRSyZnQo6oYvkE",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/0542518f-008b-407c-929c-eddd9c1e23d7/%5B04%5D%5BP01%5D%5BNN%5D%20AGIBANK%20Agibank%20(20250306)_v3_25s_Debora%20Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559300302&amp;usg=AOvVaw24e1Me4iiBSmemkh5IOLAf",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/ae6d698a-5aa6-42c0-9ee2-828bc8fc2880/%5B03%5D%5BP01%5D%5BNN%5D%20AGIBANK%20-%20Agibank%20(2025-03-06)_v3_24s_Debora_Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559301429&amp;usg=AOvVaw1zZuVmpj5NLgosNz9jHyCF",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/96698954-22f2-49bd-a0cc-b0ade753f033/%5B05%5D%5BP01%5D%5BNN%5D%20AGIBANK%20%20%20Agibank%20(2025%2003%2006)_v1_28s_Isadora%20Cecatto.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559302573&amp;usg=AOvVaw2PgZBeX6I6xVRpNC9ZO-tG",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/ae41bd56-8f92-4561-a97e-e06379725ec3/%5B02%5D%5BP01%5D%5BNN%5D%20AGIBANK%20-%20Agibank%20(2025-03-06)_v4_36s_DeboraMello.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559303621&amp;usg=AOvVaw3ZhetxxNDs4dRfdlJUKRNd",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/bc592bf4-6021-49d6-930a-49c137ee1756/%5B01%5D%5BP01%5D%5BNN%5D%20AGIBANK%20%20Agibank%20(2025%2003%2006)_v1_45s_Debora%20Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559304779&amp;usg=AOvVaw37Kp9VCj2sxLUOd16LewdP"
+      ]
+    },
+    "Allfluence": {
+      "video_id": "CAMctibBSVg",
+      "url": "https://youtu.be/CAMctibBSVg",
+      "title": "Portfolio - Allfluence (11 videos)",
+      "type": "single_client",
+      "clients": [
+        "Allfluence"
+      ],
+      "num_videos": 11,
+      "duration": "3:33",
+      "is_short": false,
+      "chapters": [
+        {
+          "timestamp": "0:00",
+          "name": "Coisas que me dão arrepio v2-1 15s Yago Capita",
+          "talento": "Yago Capita",
+          "client": "Allfluence"
+        },
+        {
+          "timestamp": "0:15",
+          "name": "Coisas que me dão arrepio v2-2 15s Yago Capita",
+          "talento": "Yago Capita",
+          "client": "Allfluence"
+        },
+        {
+          "timestamp": "0:30",
+          "name": "Coisas que me dão arrepio v2-3 13s Yago Capita",
+          "talento": "Yago Capita",
+          "client": "Allfluence"
+        },
+        {
+          "timestamp": "0:43",
+          "name": "Mantra de Marketing v3 25s Pedro Valerio Yago Capita",
+          "talento": "Yago Capita Pedro Val rio",
+          "client": "Allfluence"
+        },
+        {
+          "timestamp": "1:09",
+          "name": "Erro Windows - Solicitação de acesso v1 07s",
+          "talento": "Yago Capita",
+          "client": "Allfluence"
+        },
+        {
+          "timestamp": "1:16",
+          "name": "Equipe Unida, chefe Orgulhoso v3 20s",
+          "talento": "Camille Ana Claudia Padilha Savylla",
+          "client": "Allfluence"
+        },
+        {
+          "timestamp": "1:37",
+          "name": "v2 24s",
+          "talento": "Yago Capita Camille Ana Claudia Padilha Savylla",
+          "client": "Allfluence"
+        },
+        {
+          "timestamp": "2:01",
+          "name": "Como eu faço para ter uma equipe focada numa apresentação v1 07s 1",
+          "talento": "Camille Ana Claudia Padilha Savylla",
+          "client": "Allfluence"
+        },
+        {
+          "timestamp": "2:09",
+          "name": "v1 36s",
+          "talento": "Camille Ana Claudia Padilha Savylla",
+          "client": "Allfluence"
+        },
+        {
+          "timestamp": "2:45",
+          "name": "Confra - Trend -Jet2Holidays- remix v1 10s",
+          "talento": "Equipe Allfluence",
+          "client": "Allfluence"
+        },
+        {
+          "timestamp": "2:56",
+          "name": "ALLFLUENCE + OSCAR 2026 v4 37s",
+          "talento": "Allfluence + Oscar 2026",
+          "client": "Allfluence"
+        }
+      ],
+      "original_urls": [
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/fc9d155a-efc6-49ba-98a5-5aedb5bda954/%5BSM%5D%5BR02%5D%5B10%5D%20Coisas%20que%20me%20d%C3%A3o%20arrepio_v2-1_15s_Yago%20Capita.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559060511&amp;usg=AOvVaw2LVCJMzO0L6GXm57wK6Rd8",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/3e5c224a-8167-4026-966e-669841a7cdcc/%5BSM%5D%5BR02%5D%5B10%5D%20Coisas%20que%20me%20d%C3%A3o%20arrepio_v2-2_15s_Yago%20Capita.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559061508&amp;usg=AOvVaw1gi8Gk9EPKJIb2lmKOeKDe",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/cf67f0d3-169a-4323-89ab-768fb361dc13/%5BSM%5D%5BR02%5D%5B10%5D%20Coisas%20que%20me%20d%C3%A3o%20arrepio_v2-3_13s_Yago%20Capita.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559062501&amp;usg=AOvVaw1OZ-K1aKzTqXTalSeqcGjS",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/7f023b6c-c1f4-4b6f-94bd-94b29c3dcee8/%5BSM%5D%5BR02%5D%5B09%5D%20Mantra%20de%20Marketing_v3_25s_Pedro_Valerio_Yago_Capita.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559063398&amp;usg=AOvVaw3PYFPDu4ZWpVnWKNsyfat9",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/6eb9932c-ed8e-4bdd-b182-74d2290c4f41/%5BSM%5D%5BR02%5D%5B07%5D%20Erro%20Windows%20-%20Solicita%C3%A7%C3%A3o%20de%20acesso_v1_07s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559064376&amp;usg=AOvVaw38lUcvspWpTfIMYjBJztPs",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/d4d14eaa-f457-48f5-8b66-cdb45febc318/%5BSM%5D%5BR02%5D%5B12%5D%20Equipe%20Unida%2C%20chefe%20Orgulhoso_v3_20s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559065430&amp;usg=AOvVaw3u3PatNXjeSpFs_GeQLzo7",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/3bdc96f0-17f6-4363-86ff-31a85e5b263e/%5BSM%5D%5BR02%5D%5B14%5D_v2_24s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559066525&amp;usg=AOvVaw2dfyXW8Vb8XrYk1cUmlPSe",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/d8b3b6a3-dd26-41b7-934d-a94d0881c99f/%5BSM%5D%5BR02%5D%5B17%5D%20Como%20eu%20fa%C3%A7o%20para%20ter%20uma%20equipe%20focada%20numa%20apresenta%C3%A7%C3%A3o_v1_07s_1.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559067727&amp;usg=AOvVaw3wuTpjTQQC1OwUemVmeTJ7",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/85b07bae-3832-4cfa-a2fc-76ab428bd0f3/%5BSM%5D%5BR03%5D%5B02%5D_v1_36s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559068838&amp;usg=AOvVaw1bgb-DYUxdZwjW9OQ2NU8v",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/fb5dcee7-fd25-4789-962d-c732145a582e/%5BSM%5D%5BE13%5D%20Confra%20-%20Trend%20-Jet2Holidays-%20remix_v1_10s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559070002&amp;usg=AOvVaw0Y8aOaQZWjgE9gqlIVOCgB",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/f7224e4c-9166-4b39-8c1a-bbb79efae8e6/%5BIA%5D%5BR01%5D%20ALLFLUENCE%20%2B%20OSCAR%202026_v4_37s.mp4?view=open"
+      ]
+    },
+    "Bradesco": {
+      "video_id": "4q03mlkF8Xs",
+      "url": "https://youtu.be/4q03mlkF8Xs",
+      "title": "Portfolio - Bradesco (11 videos)",
+      "type": "single_client",
+      "clients": [
+        "Bradesco"
+      ],
+      "num_videos": 11,
+      "duration": "5:17",
+      "is_short": false,
+      "chapters": [
+        {
+          "timestamp": "0:00",
+          "name": "BRADESCO Sala de Performance - Abertura de Contas PF v3 50s Pedro",
+          "talento": "Pedro Zurawski",
+          "client": "Bradesco"
+        },
+        {
+          "timestamp": "0:50",
+          "name": "BRADESCO Sala de Performance - Abertura de Contas PF v3 26s",
+          "talento": "Pedro Zurawski",
+          "client": "Bradesco"
+        },
+        {
+          "timestamp": "1:17",
+          "name": "BRADESCO Sala de Performance - Abertura de Contas PF v2 19s Pedro Zurawski",
+          "talento": "Pedro Zurawski",
+          "client": "Bradesco"
+        },
+        {
+          "timestamp": "1:36",
+          "name": "BRADESCO - Sala de Performance - Abertura de Contas PF v7 34s Pedro Zurawski",
+          "talento": "Pedro Zurawski",
+          "client": "Bradesco"
+        },
+        {
+          "timestamp": "2:07",
+          "name": "BRADESCO NetNew - LIME v3 38s Jorge Hissa",
+          "talento": "Jorge Hissa",
+          "client": "Bradesco"
+        },
+        {
+          "timestamp": "2:46",
+          "name": "BRADESCO NetNew - LIME v2 33s Jorge",
+          "talento": "Jorge Hissa",
+          "client": "Bradesco"
+        },
+        {
+          "timestamp": "3:20",
+          "name": "BRADESCO - NetNew - LIME v4 17s",
+          "talento": "Jorge Hissa",
+          "client": "Bradesco"
+        },
+        {
+          "timestamp": "3:40",
+          "name": "BRADESCO v3 39s Pedro Ruivo",
+          "talento": "Pedro Ruivo",
+          "client": "Bradesco"
+        },
+        {
+          "timestamp": "4:20",
+          "name": "BRADESCO NetNew - LIME v3 29s",
+          "talento": "Jorge Hissa",
+          "client": "Bradesco"
+        },
+        {
+          "timestamp": "4:49",
+          "name": "BRADESCO NetNew - LIME v3 11s Pedro Ruivo",
+          "talento": "Pedro Ruivo",
+          "client": "Bradesco"
+        },
+        {
+          "timestamp": "5:02",
+          "name": "BRADESCO NetNew - LIME v2 15s Pedro Ruivo",
+          "talento": "Pedro Ruivo",
+          "client": "Bradesco"
+        }
+      ],
+      "original_urls": [
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/1da50ebb-0b75-4769-a7d2-f2183863dd27/%5B01%5D%20%5BP03%5D%5BNN%5D%20BRADESCO%20%20%20Sala%20de%20Performance%20-%20Abertura%20de%20Contas%20PF_v3_50s_Pedro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559446233&amp;usg=AOvVaw1m-wuY9tyBlqRYMdvndGrx",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/92492774-d77d-48af-bc42-680885138a2a/%5B02%5D%20%5BP03%5D%5BNN%5D%20BRADESCO%20Sala%20de%20Performance%20-%20Abertura%20de%20Contas%20PF_v3_26s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559447420&amp;usg=AOvVaw3XN3k6JOU2B5o4cKibPvA4",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/e1a21a2d-0419-4708-9e04-2e551829a06e/%5B03%5D%20%5BP03%5D%5BNN%5D%20BRADESCO%20%20%20Sala%20de%20Performance%20-%20Abertura%20de%20Contas%20PF_v2_19s_Pedro%20Zurawski.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559448617&amp;usg=AOvVaw2JUSw2iBizfDl_WEy4xhKc",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/0eb06898-8522-4189-8fa5-b9915d04627a/%5B04%5D%20%5BP03%5D%5BNN%5D%20BRADESCO%20-%20Sala%20de%20Performance%20-%20Abertura%20de%20Contas%20PF_v7_34s_Pedro%20Zurawski.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559449893&amp;usg=AOvVaw2DXBoV8UJEOcEn1ZQyZDJ7",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/108ef842-4eab-4344-bf0f-08eaf061ae9d/%5B01%5D%20%5BP04%5D%5BNN%5D%20BRADESCO%20%20%20NetNew%20-%20LIME_v3_38s_Jorge%20Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559451262&amp;usg=AOvVaw2-SJ5Etr5rZ-FeDVV269sz",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/91fa7565-3a51-401c-ad36-d507fe36a3e0/%5B03%5D%20%5BP04%5D%5BNN%5D%20BRADESCO%20%20%20NetNew%20-%20LIME_v2_33s_Jorge.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559452656&amp;usg=AOvVaw1-04VkJB4GG6aR3nUlh7U8",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/2ec98c10-ce8c-4de0-babd-9d3b232de711/%5B04%5D%20%5BP04%5D%5BNN%5D%20BRADESCO%20-%20NetNew%20-%20LIME_v4_17s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559454011&amp;usg=AOvVaw302jW_-8OxX1o0eoBdkUg5",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/b13072b5-7ab6-4d08-8dc5-f76dd2fdb8c9/%5B05%5D%20%5BP04%5D%5BNN%5D%20BRADESCO_v3_39s_Pedro_Ruivo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559455230&amp;usg=AOvVaw1ZAc6Mq4qWdNbntuTtjiJ8",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/8c0bb94a-5dd2-4e88-878d-a98ab2665377/%5B06%5D%20%5BP04%5D%5BNN%5D%20BRADESCO%20%20%20NetNew%20-%20LIME_v3_29s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559456298&amp;usg=AOvVaw1TkXEfkAh5Km_WDGHd6xQZ",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/281d003c-6723-4972-b6a2-5b90e5018faf/%5B07%5D%20%5BP04%5D%5BNN%5D%20BRADESCO%20%20%20NetNew%20-%20LIME_v3_11s_Pedro%20Ruivo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559457457&amp;usg=AOvVaw3Cvja_dKK_yoefC-uvN-yR",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/c46fb27f-ed7e-4ac4-86bb-423c4567bd97/%5B08%5D%20%5BP04%5D%5BNN%5D%20BRADESCO%20%20%20NetNew%20-%20LIME_v2_15s_Pedro%20Ruivo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559458644&amp;usg=AOvVaw1uNCraiXy6XYe1x-d03vux"
+      ]
+    },
+    "Bravecto": {
+      "video_id": "2LryboBE220",
+      "url": "https://youtu.be/2LryboBE220",
+      "title": "Portfolio - Bravecto (10 videos)",
+      "type": "single_client",
+      "clients": [
+        "Bravecto"
+      ],
+      "num_videos": 10,
+      "duration": "5:01",
+      "is_short": false,
+      "chapters": [
+        {
+          "timestamp": "0:00",
+          "name": "BRAVECTO - 2025 Bravecto Brasil v2 40s",
+          "talento": "Cachorro - Yago",
+          "client": "Bravecto"
+        },
+        {
+          "timestamp": "0:40",
+          "name": "BRAVECTO 2025 Bravecto Brasil II v1 34s",
+          "talento": "Whisky - Yago",
+          "client": "Bravecto"
+        },
+        {
+          "timestamp": "1:15",
+          "name": "BRAVECTO 2025 Bravecto Brasil II v1 25s",
+          "talento": "Loretta Martins",
+          "client": "Bravecto"
+        },
+        {
+          "timestamp": "1:40",
+          "name": "BRAVECTO 2025 Bravecto Brasil II v3 21s loretta",
+          "talento": "Loretta Martins",
+          "client": "Bravecto"
+        },
+        {
+          "timestamp": "2:02",
+          "name": "BRAVECTO 2025 Bravecto Brasil II v2 42s Jorge",
+          "talento": "Jorge Hissa",
+          "client": "Bravecto"
+        },
+        {
+          "timestamp": "2:44",
+          "name": "BRAVECTO - 2025 Bravecto Brasil II v3 32s Yago",
+          "talento": "Cachorro - Yago",
+          "client": "Bravecto"
+        },
+        {
+          "timestamp": "3:17",
+          "name": "BRAVECTO 2025 Bravecto Brasil II v3 27s",
+          "talento": "Cachorro - Yago",
+          "client": "Bravecto"
+        },
+        {
+          "timestamp": "3:38",
+          "name": "BRAVECTO - 2025 Bravecto Brasil II v3 24s Loretta Martins",
+          "talento": "Loretta Martins",
+          "client": "Bravecto"
+        },
+        {
+          "timestamp": "4:03",
+          "name": "BRAVECTO - 2025 Bravecto Brasil II v4 26s LorettaMartins",
+          "talento": "Loretta Martins",
+          "client": "Bravecto"
+        },
+        {
+          "timestamp": "4:30",
+          "name": "BRAVECTO 2025 Bravecto Brasil II v3 31s Jorge Hissa",
+          "talento": "Jorge Hissa",
+          "client": "Bravecto"
+        }
+      ],
+      "original_urls": [
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/11170c6e-c430-4f01-95b5-cf5885246fe0/%5B02%5D%20%5BP01%5D%5BNN%5D%20BRAVECTO%20-%202025%20Bravecto%20Brasil%20%5Bregional%5D_v2_40s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559371371&amp;usg=AOvVaw3now2AYpvRk10aeEwhtNMU",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/6a95c00b-1ef9-424d-9b53-39bf272ed325/%5B01%5D%20%5BP01%5D%5BNN%5D%20BRAVECTO%20%20%202025%20Bravecto%20Brasil%20%5Bregional%5D_v3_27s_%C3%8Dgor%20Arvelos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559372414&amp;usg=AOvVaw1goDLlLVXRoUXe-xu87uDi",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/ac6ca81b-92c9-478c-bea4-960f22d06584/%5B01%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%202025%20Bravecto%20Brasil%20II_v1_34s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559373462&amp;usg=AOvVaw1gy7Ai1fxA5DVKvf4kD7wO",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/98b919cc-3c0a-470a-aba1-3952654021e5/%5B02%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20%20%202025%20Bravecto%20Brasil%20II_v1_25s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559374484&amp;usg=AOvVaw2-FSYmzdOpqkKnCVlILirD",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/88f833dd-776d-4b2b-8903-c909cb7ae394/%5B04%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20%20%202025%20Bravecto%20Brasil%20II_v3_21s_loretta.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559375504&amp;usg=AOvVaw15jRxG2esXybJRIb1hgD-E",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/554efbdf-5744-4895-82b2-115e33aecc6f/%5B05%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20%20%202025%20Bravecto%20Brasil%20II_v2_42s_Jorge.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559376576&amp;usg=AOvVaw1Yry59KC9r-sz7ZTbAPJcg",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/c0fb4f38-55fe-4929-bf53-cc3efc60170f/%5B06%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20-%202025%20Bravecto%20Brasil%20II_v3_32s_Yago.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559377606&amp;usg=AOvVaw3iDkw94E__BrVYH9Qhvmzi",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/a74e590f-5b9a-4969-8aab-87c8dc7ab5f5/%5B07%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20%20%202025%20Bravecto%20Brasil%20II_v3_27s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559378651&amp;usg=AOvVaw3Mg1BNXygH5KdhXmsLDALu",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/cd3681d3-3635-464f-ae34-8ba89321d692/%5B08%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20-%202025%20Bravecto%20Brasil%20II_v3_24s_Loretta_Martins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559379697&amp;usg=AOvVaw3UHAvjLlo37oUla5o56Ojf",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/327926bd-61be-4e81-9d7f-565260cc81cf/%5B09%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20-%202025%20Bravecto%20Brasil%20II_v4_26s_LorettaMartins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559380766&amp;usg=AOvVaw2aZUEobPKnRYkxYCCYA_vz",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/0b1379bc-4c09-40ef-b02a-87c1c4e9be97/%5B10%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20%20%202025%20Bravecto%20Brasil%20II_v3_31s_Jorge%20Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559381858&amp;usg=AOvVaw1L4tTGYPOZQ0xvusJ-TYoO"
+      ]
+    },
+    "Claro": {
+      "video_id": "5d7KY_aLXGc",
+      "url": "https://youtu.be/5d7KY_aLXGc",
+      "title": "Portfolio - Claro (5 videos)",
+      "type": "single_client",
+      "clients": [
+        "Claro"
+      ],
+      "num_videos": 5,
+      "duration": "5:59",
+      "is_short": false,
+      "chapters": [
+        {
+          "timestamp": "0:00",
+          "name": "CLARO Claro Prezao v6 35s nalu",
+          "talento": "Nalu Moura",
+          "client": "Claro"
+        },
+        {
+          "timestamp": "0:34",
+          "name": "CLARO Claro controle em Net New v4 46s Vinicius Scribel",
+          "talento": "Vinicius Scribel",
+          "client": "Claro"
+        },
+        {
+          "timestamp": "1:21",
+          "name": "CLARO - Claro controle em Net New v11 50s Vinicius Scribel",
+          "talento": "Vinicius Scribel",
+          "client": "Claro"
+        },
+        {
+          "timestamp": "2:12",
+          "name": "CLARO Claro controle em Net New v6 52s Vinicius Scribel",
+          "talento": "Vinicius Scribel",
+          "client": "Claro"
+        },
+        {
+          "timestamp": "3:04",
+          "name": "CLARO Claro controle em Net New v6 45s Vinicius Scribel",
+          "talento": "Vinicius Scribel",
+          "client": "Claro"
+        }
+      ],
+      "original_urls": [
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/cc9a3d7b-c8ac-404c-a87f-afdb44d391fe/%5B03%5D%20%5BP02%5D%5BCH%5D%20CLARO%20%20%20Claro%20Prezao_v6_35s_nalu.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559385073&amp;usg=AOvVaw0fchhkY9rvU26QuR9fDBnR",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/2b4005c8-8867-4c36-ac40-23b5c37e0daa/%5B01%5D%20%5BP04%5D%5BNN%5D%20CLARO%20%20%20Claro%20controle%20em%20Net%20New_v4_46s_Vinicius%20Scribel.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559386186&amp;usg=AOvVaw3TSJ-nxpetZiE1V3IYZ0Av",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/20a358cc-2b72-402b-ae52-db6b2d17d643/%5B02%5D%20%5BP04%5D%5BNN%5D%20CLARO%20-%20Claro%20controle%20em%20Net%20New_v11_50s_Vinicius%20Scribel.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559387461&amp;usg=AOvVaw3s4oQueeLzevjrRL1zWpWy",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/1554afc0-e193-41ec-a1c7-ce0d9e6ab17d/%5B03%5D%20%5BP04%5D%5BNN%5D%20CLARO%20%20%20Claro%20controle%20em%20Net%20New_v6_52s_Vinicius%20Scribel.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559388734&amp;usg=AOvVaw3jTDCNXY5aTWJ8Om0PeKjH",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/d07c6fab-4d5c-4943-ade0-474a484f4a88/%5B04%5D%20%5BP04%5D%5BNN%5D%20CLARO%20%20%20Claro%20controle%20em%20Net%20New_v6_45s_Vinicius%20Scribel.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559389950&amp;usg=AOvVaw3cT4Nj0isfeZSLTAWWCY-3"
+      ]
+    },
+    "Dominos": {
+      "video_id": "ZeOby-PHHow",
+      "url": "https://youtu.be/ZeOby-PHHow",
+      "title": "Portfolio - Dominos (8 videos)",
+      "type": "single_client",
+      "clients": [
+        "Dominos"
+      ],
+      "num_videos": 8,
+      "duration": "4:50",
+      "is_short": false,
+      "chapters": [
+        {
+          "timestamp": "0:00",
+          "name": "DOMINOS TTCX Agosto 25 v1 35s",
+          "talento": "Jorge Hissa",
+          "client": "Dominos"
+        },
+        {
+          "timestamp": "0:35",
+          "name": "DOMINOS TTCX Agosto 25 v1 37s Jorge Hissa",
+          "talento": "Jorge Hissa",
+          "client": "Dominos"
+        },
+        {
+          "timestamp": "1:12",
+          "name": "DOMINOS TTCX Agosto 25 v4 59s Jorge Hissa",
+          "talento": "Jorge Hissa",
+          "client": "Dominos"
+        },
+        {
+          "timestamp": "2:11",
+          "name": "DOMINOS - TTCX Agosto-25 v4 42s Jorge Hissa",
+          "talento": "Jorge Hissa",
+          "client": "Dominos"
+        },
+        {
+          "timestamp": "2:53",
+          "name": "DOMINOS TTCX Agosto 25 v3 33s Jorge Hissa",
+          "talento": "Jorge Hissa",
+          "client": "Dominos"
+        },
+        {
+          "timestamp": "3:26",
+          "name": "DOMINOS - TTCX Agosto-25 v6 40s JorgeHissa",
+          "talento": "Jorge Hissa",
+          "client": "Dominos"
+        },
+        {
+          "timestamp": "4:03",
+          "name": "DOMINOS TTCX Agosto 25 V5 24S JORGE",
+          "talento": "Jorge Hissa",
+          "client": "Dominos"
+        },
+        {
+          "timestamp": "4:28",
+          "name": "DOMINOS - TTCX Agosto-25 v5 27s Jorge Hissa",
+          "talento": "Jorge Hissa",
+          "client": "Dominos"
+        }
+      ],
+      "original_urls": [
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/7b2c95ad-3d0e-4a09-936e-ab48be5c09ad/%5B01%5D%20%5BP04%5D%5BNN%5D%20DOMINOS%20%20%20TTCX%20Agosto%2025_v1_35s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559437072&amp;usg=AOvVaw1S8AAdGnt7J3Y1PVpGSFUT",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/ae34a567-33aa-418f-bffc-0790836dc92f/%5B02%5D%20%5BP04%5D%5BNN%5D%20DOMINOS%20%20%20TTCX%20Agosto%2025_v1_37s_Jorge%20Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559438192&amp;usg=AOvVaw2A3jl6Gh0SjyfiuTZ5nMP3",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/1b859f65-4a73-47c4-8470-43c9d18fbea6/%5B03%5D%20%5BP04%5D%5BNN%5D%20DOMINOS%20%20%20TTCX%20Agosto%2025_v4_59s_Jorge%20Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559439307&amp;usg=AOvVaw16-W_IIuKctbP54j-N78lo",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/b9493fa5-9358-4034-addf-a4661c11ddfa/%5B04%5D%20%5BP04%5D%5BNN%5D%20DOMINOS%20-%20TTCX%20Agosto-25_v4_42s_Jorge_Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559440430&amp;usg=AOvVaw3SuJvPih5p5GmdimvcpWbW",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/5f258762-057f-4667-9b12-5ac7f41635ab/%5B01%5D%20%5BP05%5D%5BNN%5D%20DOMINOS%20%20%20TTCX%20Agosto%2025_v3_33s_Jorge%20Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559441481&amp;usg=AOvVaw1Vl8RFn8NeSN47ESHt7pUq",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/56cf2d04-2ec1-4e3c-b566-390f5ac955b2/%5B02%5D%20%5BP05%5D%5BNN%5D%20DOMINOS%20-%20TTCX%20Agosto-25_v6_40s_JorgeHissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559442571&amp;usg=AOvVaw2PCaPv9Qx-4TpFz4pAyX0g",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/f13c6340-e3b5-4b86-9b8d-e949c0990e21/%5B03%5D%20%5BP05%5D%5BNN%5D%20DOMINOS%20%20%20TTCX%20Agosto%2025_V5_24S_JORGE.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559443772&amp;usg=AOvVaw0mU4LkMOFfA85oL7fhpx1G",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/191be07b-fdf6-4935-a679-1b67c1764ea6/%5B04%5D%20%5BP05%5D%5BNN%5D%20DOMINOS%20-%20TTCX%20Agosto-25_v5_27s_Jorge_Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559444946&amp;usg=AOvVaw33L-Udmed4_FSNc65yeK9m"
+      ]
+    },
+    "Drogasil": {
+      "video_id": "nyGBly6VZZc",
+      "url": "https://youtu.be/nyGBly6VZZc",
+      "title": "Portfolio - Drogasil (50 videos)",
+      "type": "single_client",
+      "clients": [
+        "Drogasil"
+      ],
+      "num_videos": 50,
+      "duration": "33:31",
+      "is_short": false,
+      "chapters": [
+        {
+          "timestamp": "0:00",
+          "name": "Raia - Drogasil Varejar v1 29s Daniela",
+          "talento": "Daniela Castelo",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "0:29",
+          "name": "Raia - Drogasil Varejar v5 29s Debora Mel",
+          "talento": "D bora Melo",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "0:59",
+          "name": "Raia - Drogasil Varejar v3 32s DeboraMelo",
+          "talento": "D bora Melo",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "1:31",
+          "name": "Raia - Drogasil Varejar v5 Daniela Castelo 55s",
+          "talento": "Daniela Castelo",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "2:27",
+          "name": "Raia - Drogasil Varejar v2 24s Frederico Volkmann",
+          "talento": "Frederico Volkmann",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "2:51",
+          "name": "Raia - Drogasil Varejar v3 46s Frederico",
+          "talento": "Frederico Volkmann",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "3:37",
+          "name": "Raia - Drogasil Varejar v2 41s Quezia",
+          "talento": "Quezia Castro",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "4:19",
+          "name": "Raia - Drogasil Varejar v4 37s Quezia Fernandes",
+          "talento": "Quezia Castro",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "4:56",
+          "name": "RAIA Drogasil Dia das Mães v3 39s Clara Giffoni",
+          "talento": "Clara Giffoni",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "5:36",
+          "name": "RAIA Drogasil - Bond Repair v3 21s Julia Helen",
+          "talento": "Julia Helen",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "5:57",
+          "name": "RAIA Drogasil - Bond Repair v3 44s Julia Helen",
+          "talento": "Julia Helen",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "6:42",
+          "name": "RAIA | Drogasil - Bond Repair v2 41s JuliaHelen",
+          "talento": "Julia Helen",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "7:23",
+          "name": "RAIA Drogasil - Bond Repair v4 38s JULIA HELEN",
+          "talento": "Julia Helen",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "8:01",
+          "name": "RAIA Dia dos namorados Drogasil v4 44s LARISSA VENTURINI",
+          "talento": "Larissa Venturini",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "8:47",
+          "name": "RAIA Dia dos namorados - Drogasil v2 39s Larissa Venturini",
+          "talento": "Larissa Venturini",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "9:27",
+          "name": "RAIA Dia dos namorados - Drogasil v2 54s Larissa Venturini",
+          "talento": "Larissa Venturini",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "10:21",
+          "name": "RAIA - Dia dos namorados - Drogasil v5 50s LarissaVenturini",
+          "talento": "Larissa Venturini",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "11:12",
+          "name": "essa é a matemática que eu gosto v1 30s-Yago",
+          "talento": "Yago Capita",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "11:43",
+          "name": "RAIA Black Fraldas - Drogasil v3 31s Andrei Lamberg",
+          "talento": "Andrei Lamberg",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "12:14",
+          "name": "RAIA - Black Fraldas - Drogasil v2 18s Andrei",
+          "talento": "Andrei Lamberg",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "12:33",
+          "name": "RAIA Black Fraldas - Drogasil v3 41s Andrei Lamberg",
+          "talento": "Andrei Lamberg",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "13:12",
+          "name": "RAIA AlwaysOn Perfumaria JUL - Drogasil v1 35s Murillo Amorim",
+          "talento": "Murilo Amorim",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "13:48",
+          "name": "RAIA - AlwaysOn Perfumaria-JUL - Drogasil v3 35s Murillo",
+          "talento": "Murilo Amorim",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "14:23",
+          "name": "RAIA AlwaysOn PerfumariaJUL - Drogasil v1 45s Murilo Amorim",
+          "talento": "Murilo Amorim",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "15:09",
+          "name": "RAIA AlwaysOn PerfumariaJUL - Drogasil v2 20s Murilo Amorim",
+          "talento": "Murilo Amorim",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "15:29",
+          "name": "RAIA AlwaysOn PerfumariaJUL - Drogasil v6 52s Thays Godinho Ribeiro",
+          "talento": "Thays Godinho Ribeiro",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "16:22",
+          "name": "RAIA AlwaysOn Perfumaria JUL - Drogasil v3 47s Thays Godinho Ribeiro",
+          "talento": "Thays Godinho Ribeiro",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "17:09",
+          "name": "RAIA AlwaysOn Perfumaria JUL - Drogasil v2 36s Thays Godinho",
+          "talento": "Thays Godinho Ribeiro",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "17:46",
+          "name": "RAIA AlwaysOn PerfumariaJUL - Drogasil v3 38s Thays Godinho",
+          "talento": "Thays Godinho Ribeiro",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "18:24",
+          "name": "RAIA Autosserviço AlwaysOn Infantil - Drogasil v2 34s Anny Melo",
+          "talento": "Anny Melo",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "18:58",
+          "name": "RAIA - Autosserviço AlwaysOn Infantil - Drogasil v2 42s Anny Melo",
+          "talento": "Anny Melo",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "19:41",
+          "name": "RAIA Autosserviço AlwaysOn Infantil - Drogasil v1 55s Quéren-hapuque",
+          "talento": "Qu ren Hapuque",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "20:35",
+          "name": "RAIA Autosserviço AlwaysOn Infantil - Drogasil v1 57s Anny Melo",
+          "talento": "Anny Melo",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "21:32",
+          "name": "RAIA Autosserviço AlwaysOn Infantil - Drogasil v2 19s Anny",
+          "talento": "Anny Melo",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "21:52",
+          "name": "RAIA Autosserviço AlwaysOn Infantil - Drogasil v3 54s Quéren-hapuque Fernandes",
+          "talento": "Qu ren Hapuque",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "22:47",
+          "name": "RAIA Autosserviço AlwaysOn Infantil - Drogasil v1 30s Quéren",
+          "talento": "Qu ren Hapuque",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "23:17",
+          "name": "RAIA Autosserviço AlwaysOn Infantil - Drogasil v3 48s Queren",
+          "talento": "Qu ren Hapuque",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "24:06",
+          "name": "RAIA - Cuidado que vale mais - Drogasil v4 49s LiviaLima",
+          "talento": "Livia Lima",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "24:57",
+          "name": "RAIA Cuidado que vale mais Drogasil v2 46s frederico",
+          "talento": "Livia Lima",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "25:43",
+          "name": "RAIA Cuidado que vale mais Drogasil v2 53s Frederico Volkmann",
+          "talento": "Frederico Volkmann",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "26:36",
+          "name": "RAIA Cuidado que vale mais Drogasil v3 43s Livia Lima",
+          "talento": "Livia Lima",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "27:20",
+          "name": "RAIA - Cuidado que vale mais - Drogasil v3 31s Frederico",
+          "talento": "Frederico Volkmann",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "27:57",
+          "name": "RAIA - Cuidado que vale mais - Drogasil v3 46s FredericoVolkaman",
+          "talento": "Frederico Volkmann",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "28:40",
+          "name": "RAIA Cuidado que vale mais Drogasil v5 51 Livia Lima",
+          "talento": "Livia Lima",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "29:31",
+          "name": "RAIA Cuidado que vale mais Drogasil v1 36s Frederico Volkmann",
+          "talento": "Frederico Volkmann",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "30:08",
+          "name": "RAIA - OTC - Ciclo Gripal Drogasil v6 54s Yago",
+          "talento": "Yago Capita",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "31:02",
+          "name": "RAIA - OTC - Ciclo Gripal Drogasil v4 34s Yago",
+          "talento": "Yago Capita",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "31:40",
+          "name": "RAIA OTC - Ciclo Gripal Drogasil v3 34s Yago Capita",
+          "talento": "Yago Capita",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "32:14",
+          "name": "RAIA OTC Ciclo Gripal Drogasil v4 48s Yago Capita",
+          "talento": "Yago Capita",
+          "client": "Drogasil"
+        },
+        {
+          "timestamp": "33:03",
+          "name": "RAIA - Marcas Coreanas - Drogasil v2 27s Carolina cruz",
+          "talento": "Carolina Cruz",
+          "client": "Drogasil"
+        }
+      ],
+      "original_urls": [
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/07f45d42-291f-40b1-8a89-598cfac9a63e/%5B07%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v1_29s_Daniela.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559070957&amp;usg=AOvVaw2P-ruilgXtdg2tSbagQrkv",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/0dd44d27-5cc6-413b-85f0-01516aa0f085/%5B05%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v5_29s_Debora_Mel.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559071835&amp;usg=AOvVaw0Qw0oqmTu8hCVqZrtI-Y0v",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/490bc9f6-647d-45f3-9fcf-55f34b5195b9/%5B06%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v3_32s_DeboraMelo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559072704&amp;usg=AOvVaw2l4nCnmg6u8G3ErTwvhWu-",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/ead54170-dfb6-4a08-b64a-f9641fe0ad13/%5B04%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v5_Daniela%20Castelo_55s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559073871&amp;usg=AOvVaw2NXYiqMXV_gKFOebLZuW2q",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/247f3721-3bd1-41d3-af5f-95f81ab39a9c/%5B03%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v2_24s_Frederico_Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559074856&amp;usg=AOvVaw2XidhjZ7y7vvsRGGPI5teQ",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/a9aae3b7-c5ee-4170-890d-1cf0f4cf642f/%5B10%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v3_46s_Frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559075756&amp;usg=AOvVaw0cYn6DvVlsGEpWant77GBu",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/09a62d04-bbd1-448c-a32c-a4b237cca86e/%5B02%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v2_41s_Quezia.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559076828&amp;usg=AOvVaw2OSUP2F_LPYYsqWXq0-R-z",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/62def742-ba4c-4010-875e-17372125481d/%5B08%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v4_37s_Quezia%20Fernandes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559077816&amp;usg=AOvVaw0bUQRUaQACM5SOPpdvilKN",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/c3104f63-b86f-4658-bc7d-14e8acc5bd91/%5B01%5D%20%5BP05%5D%5BNN%5D%20RAIA%20%20Drogasil%20Dia%20das%20M%C3%A3es_v3_39s_Clara_Giffoni.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559078751&amp;usg=AOvVaw1V2rio7bR09Lt8OKzSm62j",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/bee811b5-5ca4-4573-987c-8396bd0f9b02/%5B01%5D%20%5BP04%5D%5BNN%5D%20RAIA%20%20%20Drogasil%20-%20Bond%20Repair_v3_21s_Julia%20Helen.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559079596&amp;usg=AOvVaw20z_w2IMrbJ1HQzuWjd79T",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/cd45e2da-7e21-49b3-9543-e2a8f48468da/%5B07%5D%20%5BP04%5D%5BNN%5D%20RAIA%20%20%20Drogasil%20-%20Bond%20Repair_v3_44s_Julia%20Helen.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559080631&amp;usg=AOvVaw2qFsguGwa5PwI6u8GS2LCu",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/0e1888cc-e6ea-418d-8575-3126f762799c/%5B09%5D%5BP04%5D%5BNN%5D%20RAIA%20%7C%20Drogasil%20-%20Bond%20Repair_v2_41s_JuliaHelen.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559081577&amp;usg=AOvVaw3DVRXp7tMjWh1uiQOYqi9Z",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/c4becab0-59ab-40f2-ba78-cbc750adf986/%5B13%5D%20%5BP04%5D%5BNN%5D%20RAIA%20%20Drogasil%20-%20Bond%20Repair_v4_38s_JULIA_HELEN.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559082633&amp;usg=AOvVaw2dnbdSlKdoJEebBg_yh5G-",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/ae3cfc34-b38b-4221-b366-304ca23af65d/%5B06%5D%20%5BP09%5D%5BNN%5D%20RAIA%20Dia%20dos%20namorados%20Drogasil_v4_44s_LARISSA_VENTURINI.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559083632&amp;usg=AOvVaw1TLjBkZR7LMLOxxGe3kcuZ",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/79772753-a2b4-4174-8a18-84f21cb77949/%5B03%5D%20%5BP09%5D%5BNN%5D%20RAIA%20%20%20Dia%20dos%20namorados%20-%20Drogasil_v2_39s_Larissa%20Venturini.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559084621&amp;usg=AOvVaw241K-VIaFNkCpMFF-VnlJ6",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/3c7c68df-8f82-4d37-adce-34c2f8d45b11/%5B02%5D%20%5BP09%5D%5BNN%5D%20RAIA%20%20%20Dia%20dos%20namorados%20-%20Drogasil_v2_54s_Larissa%20Venturini.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559085633&amp;usg=AOvVaw139FsF1sY-lmkrheGyqiYG",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/48e8e70d-d861-498c-bb0f-af163512beaa/%5B01%5D%20%5BP09%5D%5BNN%5D%20RAIA%20-%20Dia%20dos%20namorados%20-%20Drogasil_v5_50s_LarissaVenturini.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559086625&amp;usg=AOvVaw166jUcVfGaj3CNCwWgiMco",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/f93d09fc-5f7c-4b85-927c-5da62f2b9af1/essa%20%C3%A9%20a%20matem%C3%A1tica%20que%20eu%20gosto_v1_30s-Yago.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559087567&amp;usg=AOvVaw1fDgNZSyJnW4gHuJNCBW0r",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/c0fb5c15-f73c-4300-b2cc-ebed92430e62/%5B01%5D%20%5BP14%5D%5BNN%5D%20RAIA%20%20Black%20Fraldas%20-%20Drogasil_v3_31s_Andrei_Lamberg.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559088449&amp;usg=AOvVaw2mSo4SWSCC7nrSUxO237iH",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/8b326ba4-5a6f-40f1-937c-58b103f7f844/%5B06%5D%20%5BP14%5D%5BNN%5D%20RAIA%20-%20Black%20Fraldas%20-%20Drogasil_v2_18s_Andrei.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559089302&amp;usg=AOvVaw0PbWe85vDVRO0pTYpqCKo5",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/2b49c1f5-0e2d-487e-9811-7bd6a39d472e/%5B07%5D%20%5BP14%5D%5BNN%5D%20RAIA%20%20%20Black%20Fraldas%20-%20Drogasil_v3_41s_Andrei%20Lamberg.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559090187&amp;usg=AOvVaw0_cHJvxuwYhaFomkZnuJ1t",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/3710b9ee-6bfc-4548-93a7-74da1e850806/%5B01%5D%20%5BP16%5D%5BNN%5D%20RAIA%20%20%20AlwaysOn%20Perfumaria%20JUL%20-%20Drogasil_v1_35s_Murillo%20Amorim.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559091105&amp;usg=AOvVaw29m4wZWgF7e0cmnjYFTDCB",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/dc824298-c28c-4157-aa59-70e8ab8cadcd/%5B03%5D%20%5BP16%5D%5BNN%5D%20RAIA%20-%20AlwaysOn%20Perfumaria-JUL%20-%20Drogasil_v3_35s_Murillo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559091987&amp;usg=AOvVaw0gvH3ceOcfsWo2-UolJKxp",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/c7166ae2-bb72-4064-bb6c-1c61a8c73106/%5B04%5D%20%5BP16%5D%5BNN%5D%20RAIA%20AlwaysOn%20PerfumariaJUL%20-%20Drogasil_v1_45s_Murilo_Amorim.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559092891&amp;usg=AOvVaw0LmkvvuzFrHhko92GfbVe3",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/1d34b5fe-bf4b-4ab2-a7b8-2c437cafcc22/%5B08%5D%20%5BP16%5D%5BNN%5D%20RAIA%20%20AlwaysOn%20PerfumariaJUL%20-%20Drogasil_v2_20s_Murilo_Amorim.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559093943&amp;usg=AOvVaw3p5QF01WogDmNEgMuQ6ccg",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/ab86e5c3-c371-4fac-a756-9a8ee04fd452/%5B05%5D%20%5BP16%5D%5BNN%5D%20RAIA%20%20AlwaysOn%20PerfumariaJUL%20-%20Drogasil_v6_52s_Thays_Godinho_Ribeiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559095136&amp;usg=AOvVaw3M5aTUbL18ny0reHYrHIzN",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/7bb85e4c-3da2-4f4a-851e-38a557a8ef46/%5B02%5D%20%5BP16%5D%5BNN%5D%20RAIA%20%20%20AlwaysOn%20Perfumaria%20JUL%20-%20Drogasil_v3_47s_Thays%20Godinho%20Ribeiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559096092&amp;usg=AOvVaw0XLvfFBFOp2c1QDkUqpBAt",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/8bba1e70-e456-4bb7-b034-6c61a4f4d031/%5B06%5D%20%5BP16%5D%5BNN%5D%20RAIA%20%20%20AlwaysOn%20Perfumaria%20JUL%20-%20Drogasil_v2_36s_Thays%20Godinho.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559096966&amp;usg=AOvVaw15djCgfaGPZPh1059D57lL",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/49cdcbcf-3014-4424-9949-f91745ed7c34/%5B07%5D%20%5BP16%5D%5BNN%5D%20RAIA%20%20AlwaysOn%20PerfumariaJUL%20-%20Drogasil_v3_38s_Thays_Godinho.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559097859&amp;usg=AOvVaw39ElrtM3Eidjc-Dik5Cvfk",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/3d579141-eb4f-405d-961a-37bc0ab40207/%5B01%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil_v2_34s_Anny%20Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559098791&amp;usg=AOvVaw0pLQYPP6XW7EAk9I9dEYyj",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/41aa8c31-8550-40ae-b765-a2432cdb6828/%5B02%5D%20%5BP18%5D%5BNN%5D%20RAIA%20-%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil_v2_42s_Anny_Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559099700&amp;usg=AOvVaw07dpLEuY73mGxNNvxEKmW5",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/34eb3b92-a76b-457b-831f-a268bf24caac/%5B03%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil%20_v1_55s_Qu%C3%A9ren-hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559100784&amp;usg=AOvVaw23rSII1_xXIaQuovpZzw8H",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/9eaeb63a-7ce8-489f-b18b-e861ac4a9c28/%5B04%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil%20_v1_57s_Anny%20Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559101750&amp;usg=AOvVaw3zxwZo6Hk3U8BBFcxHoEkD",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/29e4a983-ded1-47f7-82de-8a3aa86864f0/%5B05%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil_v2_19s_Anny.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559102668&amp;usg=AOvVaw0JO9Ut6d4bCix_AXcCPKxT",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/789b04e3-6b88-4974-9d8f-213ee8028021/%5B06%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil_v3_54s_Qu%C3%A9ren-hapuque%20Fernandes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559103595&amp;usg=AOvVaw2sXo3vXwyXrB2T_MpCLwLA",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/da80564b-0524-4867-a10b-73843a2293e5/%5B07%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil_v1_30s_Qu%C3%A9ren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559104543&amp;usg=AOvVaw3v_OmQXPsVh9r2GrzT8MQZ",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/3e3195e1-e0ee-46fc-a886-6856fd0e2bde/%5B08%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil_v3_48s_Queren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559105473&amp;usg=AOvVaw28HrXR71F-9osiXRRh9X5M",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/c8c556b6-0093-4209-a248-a66875a0d537/%5B01%5D%20%5BP20%5D%5BNN%5D%20RAIA%20-%20Cuidado%20que%20vale%20mais%20-%20Drogasil_v4_49s_LiviaLima.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559106323&amp;usg=AOvVaw0rXUr2aNcauH3StvDCt-Q7",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/6fdba7a5-0a0d-4bf5-b3ef-f42d3d6f08d6/%5B02%5D%20%5BP20%5D%5BNN%5D%20RAIA%20%20%20Cuidado%20que%20vale%20mais%20%20%20Drogasil_v2_46s_frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559107258&amp;usg=AOvVaw1BCEZQIyLwFOiw7F9gheGQ",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/88069cee-c153-4fb8-9beb-5c78b91ae99b/%5B03%5D%20%5BP20%5D%5BNN%5D%20RAIA%20%20%20Cuidado%20que%20vale%20mais%20%20%20Drogasil_v2_53s_Frederico%20Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559108133&amp;usg=AOvVaw135BUyWiTCNW06C0NflzOR",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/056e9f78-7ab7-40b5-ba52-c7171a7cc5d3/%5B04%5D%20%5BP20%5D%5BNN%5D%20RAIA%20%20%20Cuidado%20que%20vale%20mais%20%20%20Drogasil_v3_43s_Livia%20Lima.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559109029&amp;usg=AOvVaw1xc4DbwOxUyD9sOxX6_AH5",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/62111e2b-7407-416d-b6b4-232e148dcd52/%5B05%5D%20%5BP20%5D%5BNN%5D%20RAIA%20-%20Cuidado%20que%20vale%20mais%20-%20Drogasil_v3_31s_Frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559109927&amp;usg=AOvVaw0lme_pKoBC5dYBC2PlqhHn",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/fb442bcf-693a-4ecd-9bc9-b2c3921f3587/%5B06%5D%20%5BP20%5D%5BNN%5D%20RAIA%20-%20Cuidado%20que%20vale%20mais%20-%20Drogasil_v3_46s_FredericoVolkaman.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559110883&amp;usg=AOvVaw2RtFDmg9w23IepY0GIDWXv",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/1a961381-bb06-48ee-8b2e-ce5095f51597/%5B07%5D%20%5BP20%5D%5BNN%5D%20RAIA%20Cuidado%20que%20vale%20mais%20Drogasil_v5_51_Livia_Lima.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559111891&amp;usg=AOvVaw1Kxj1GY0ATalvN-aSfrKiH",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/098d04f3-811a-43da-b6dd-8d6736c95601/%5B08%5D%20%5BP20%5D%5BNN%5D%20RAIA%20Cuidado%20que%20vale%20mais%20Drogasil_v1_36s_Frederico_Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559112760&amp;usg=AOvVaw0WXMG6ZX3P-aCng9pDugvO",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/7ab15ea3-e80c-417e-a3cf-6ddca79ef23e/%5B01%5D%20%5BP22%5D%5BNN%5D%20RAIA%20-%20OTC%20-%20Ciclo%20Gripal%20%20Drogasil_v6_54s_Yago.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559113657&amp;usg=AOvVaw1eaVIPl3lRtRcCQMGxnj_U",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/b74a83ba-ddc4-4454-8a75-8b8ad0d2269f/%5B03%5D%20%5BP22%5D%5BNN%5D%20RAIA%20-%20OTC%20-%20Ciclo%20Gripal%20%20Drogasil_v4_34s_Yago.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559114531&amp;usg=AOvVaw0G9iobjyKfBks7pHA3rHOF",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/7b8b98ea-c3ab-483b-abb0-09a73d03fd23/%5B07%5D%20%5BP22%5D%5BNN%5D%20RAIA%20%20%20OTC%20-%20Ciclo%20Gripal%20%20Drogasil_v3_34s_Yago%20Capita.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559115410&amp;usg=AOvVaw2wyJ4FQA5z97FbfrpZKfiD",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/74b8cdf1-a505-4b53-87b2-b92182165310/%5B08%5D%20%5BP22%5D%5BNN%5D%20RAIA%20OTC%20Ciclo%20Gripal%20Drogasil_v4_48s_Yago_Capita.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559116376&amp;usg=AOvVaw20Mg6JLwZ-Tg88sAESr_Hl",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/b5ce8235-b15c-4172-893f-336054717aa5/%5B03%5D%20%5BP24%5D%5BNN%5D%20RAIA%20-%20Marcas%20Coreanas%20-%20Drogasil_v2_27s_Carolina_cruz.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559117310&amp;usg=AOvVaw0ZCBE-6DRudqnAsDHN_WX_"
+      ]
+    },
+    "Faculdade Est cio": {
+      "video_id": "_HOuViqsuEM",
+      "url": "https://youtu.be/_HOuViqsuEM",
+      "title": "Portfolio - Faculdade Est cio (23 videos)",
+      "type": "single_client",
+      "clients": [
+        "Faculdade Est cio"
+      ],
+      "num_videos": 23,
+      "duration": "12:28",
+      "is_short": false,
+      "chapters": [
+        {
+          "timestamp": "0:00",
+          "name": "ESTACIO - Estácio - Fundo - Maio-25 v6 30sLarissaTravassos",
+          "talento": "Larissa Travassos",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "0:29",
+          "name": "ESTACIO Estácio - Fundo - Maio 25 v4 24s Larissa Travassos",
+          "talento": "Larissa Travassos",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "0:53",
+          "name": "ESTACIO Estácio - Fundo - Maio25 v5 34s Joao Mendes",
+          "talento": "Jo o Mendes",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "1:28",
+          "name": "ESTACIO Estácio - Fundo - Maio 25 v6 23s Larissa 1",
+          "talento": "Larissa Travassos",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "1:51",
+          "name": "ESTACIO - Estácio - Fundo - Maio-25 v9 20s-JoãoMendes",
+          "talento": "Jo o Mendes",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "2:12",
+          "name": "ESTACIO Estácio - Fundo - Maio25 v7 34s Joao Mendes",
+          "talento": "Jo o Mendes",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "2:46",
+          "name": "ESTACIO Estácio - Fundo - Maio 25 v5 31s Larissa Travassos",
+          "talento": "Larissa Travassos",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "3:17",
+          "name": "ESTACIO Estácio - Fundo - Maio 25 v4 33s João Mendes",
+          "talento": "Jo o Mendes",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "3:51",
+          "name": "ESTACIO - Pós Estácio - Junho 2025 v6 36s MarianaBraga",
+          "talento": "Mariana Braga",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "4:25",
+          "name": "ESTACIO - Pós Estácio - Junho 2025 v7 38s MarianaBraga",
+          "talento": "Mariana Braga",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "5:00",
+          "name": "ESTACIO Pós Estácio - Junho 2025 v4 31s Mariana Braga",
+          "talento": "Mariana Braga",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "5:31",
+          "name": "ESTACIO - Pós Estácio - Junho 2025 v3 34sRodrigoRabello",
+          "talento": "Rodrigo Rabello",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "6:05",
+          "name": "ESTACIO Pós Estácio - Junho 2025 v6 37s Rodrigo Rabello",
+          "talento": "Rodrigo Rabello",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "6:43",
+          "name": "ESTACIO Pós Estácio - Junho 2025 v5 26s Rodrigo Rabello",
+          "talento": "Rodrigo Rabello",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "7:09",
+          "name": "ESTACIO Pós Estácio - Junho 2025 v6 39s Rodrigo Rabello Ribeiro",
+          "talento": "Rodrigo Rabello",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "7:49",
+          "name": "ESTACIO Pós Estácio - Junho 2025 v6 42s Mariana Braga",
+          "talento": "Mariana Braga",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "8:31",
+          "name": "ESTACIO - Estácio - Performance - Outubro-2025 v5 21sLarissaTravassos",
+          "talento": "Larissa Travassos",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "8:53",
+          "name": "ESTACIO v4 29s Larissa Travassos",
+          "talento": "Larissa Travassos",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "9:23",
+          "name": "ESTACIO - Estácio - Performance - Outubro-2025 v6 34s FernandaPenha",
+          "talento": "Fernanda Penna",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "9:58",
+          "name": "ESTACIO - Estácio - Performance - Outubro-2025 v4 27s Fernanda Penna",
+          "talento": "Fernanda Penna",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "10:26",
+          "name": "ESTACIO v6 41s Larissa Travassos",
+          "talento": "Larissa Travassos",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "11:08",
+          "name": "ESTACIO v4 36s Fernanda Penna",
+          "talento": "Fernanda Penna",
+          "client": "Faculdade Est cio"
+        },
+        {
+          "timestamp": "11:44",
+          "name": "ESTACIO Estácio - Performance - Outubro 2025 v3 44s Fernanda",
+          "talento": "Fernanda Penna",
+          "client": "Faculdade Est cio"
+        }
+      ],
+      "original_urls": [
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/a5c14998-6369-4821-acf7-7f95089ae0d9/%5B08%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20-%20Est%C3%A1cio%20-%20Fundo%20-%20Maio-25_v6_30sLarissaTravassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559329427&amp;usg=AOvVaw37ArBu8eaz5GplcohvAWN6",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/63ff8e9e-63b4-4669-b211-7e6e4f7c3c94/%5B01%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20%20%20Est%C3%A1cio%20-%20Fundo%20-%20Maio%2025_v4_24s_Larissa%20Travassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559330651&amp;usg=AOvVaw31WU_U5XwH-EFjJeqQAHvf",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/454ce9af-89e2-4223-aaa0-ea5dff2b5091/%5B02%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20%20Est%C3%A1cio%20-%20Fundo%20-%20Maio25_v5_34s_Joao_Mendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559331752&amp;usg=AOvVaw0dfJse1KlO9MOKnmdKSNwz",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/75bc1540-d3cb-456d-b528-d5a13809cece/%5B03%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20%20%20Est%C3%A1cio%20-%20Fundo%20-%20Maio%2025_v6_23s_Larissa_1.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559332900&amp;usg=AOvVaw20yAUNqbIn9ZZGX2E_i7pp",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/91ff7db1-6601-46a1-b221-bce8e9d1aea5/%5B04%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20-%20Est%C3%A1cio%20-%20Fundo%20-%20Maio-25_v9_20s-Jo%C3%A3oMendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559334142&amp;usg=AOvVaw1zIYQS6AeX2ayw-xUYwfn1",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/897d5d93-8cfa-4baf-99bb-361891894922/%5B05%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20%20Est%C3%A1cio%20-%20Fundo%20-%20Maio25_v7_34s_Joao_Mendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559335277&amp;usg=AOvVaw3qsxCUNJY6yYl1MwYPaMgc",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/03c4c5ea-bf47-48f9-b0d4-f46d844fabf1/%5B06%5D%20%5BP01%5D%5BNN%5D%20ESTACIO%20%20%20Est%C3%A1cio%20-%20Fundo%20-%20Maio%2025_v5_31s_Larissa%20Travassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559336381&amp;usg=AOvVaw2N3E_nrnyRg8uI2CfIBqEL",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/3ef6377e-7e99-49b9-93a0-c55c32a0f1d2/%5B07%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20%20%20Est%C3%A1cio%20-%20Fundo%20-%20Maio%2025_v4_33s_Jo%C3%A3o%20Mendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559337628&amp;usg=AOvVaw3d1CKdP3jbgI7VO_3sPvgZ",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/395a2e6d-11dc-4bdf-9a74-09ff9686853a/%5B01%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20-%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v6_36s_MarianaBraga.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559338906&amp;usg=AOvVaw3bSBk5Jah_rFN3Ka6H6g-b",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/f20d3934-936e-47a0-a692-c756590ef71a/%5B02%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20-%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v7_38s_MarianaBraga.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559339969&amp;usg=AOvVaw2m5rPGxW9TVEagMcAx9SCe",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/4afd33a5-ca5e-40c4-9ce6-a0310ee67be3/%5B03%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20%20%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v4_31s_Mariana%20Braga.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559340988&amp;usg=AOvVaw2lGwrzyFh0Jx56rcPqxbxq",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/5024686e-13e9-4089-9aeb-ea946e1c9095/%5B04%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20-%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v3_34sRodrigoRabello.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559342014&amp;usg=AOvVaw1umSMd0NR9wab7cq8yqM8p",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/febdb296-d595-4b8f-a9e6-cca20025d356/%5B05%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20%20%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v6_37s_Rodrigo%20Rabello.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559343059&amp;usg=AOvVaw2QYcnMbelblPsr2iq9avmG",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/15a70316-e00b-403f-a26a-1948e1ec6807/%5B06%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20%20%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v5_26s_Rodrigo%20Rabello.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559344529&amp;usg=AOvVaw1NasVPtlAO_mIBVespj1BP",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/a4e0c25b-1ceb-47ad-b5ce-7ee0e7c75468/%5B07%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v6_39s_Rodrigo_Rabello_Ribeiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559346080&amp;usg=AOvVaw2lC8YGEoCPreaGkKLKVhmh",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/fdc3f24a-faee-434c-a446-d9c5f96f75d9/%5B08%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v6_42s_Mariana_Braga.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559347342&amp;usg=AOvVaw0lat_bH2y0kMn4ENVZe6yv",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/b3c0877f-dda8-4879-90a0-f944b4265104/%5B01%5D%20%5BP06%5D%5BNN%5D%20ESTACIO%20-%20Est%C3%A1cio%20-%20Performance%20-%20Outubro-2025_v5_21sLarissaTravassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559348514&amp;usg=AOvVaw1JbozECf5zUDbf_10FsJ5X",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/b04116bb-30de-4d13-ab3d-e7fd2f739290/%5B02%5D%20%5BP06%5D%5BNN%5D%20ESTACIO_v4_29s_Larissa_Travassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559349840&amp;usg=AOvVaw3QI5lxkDMEnPhTi7x9JFvm",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/9ca36de2-cad9-4614-9adc-8939a6518163/%5B03%5D%20%5BP06%5D%5BNN%5D%20ESTACIO%20-%20Est%C3%A1cio%20-%20Performance%20-%20Outubro-2025_v6_34s_FernandaPenha.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559350886&amp;usg=AOvVaw0jMAGCL8-1SAmbM9MuzwUW",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/4cb76fbb-17ce-417d-ada6-5b2e3f52e062/%5B04%5D%20%5BP06%5D%5BNN%5D%20ESTACIO%20-%20Est%C3%A1cio%20-%20Performance%20-%20Outubro-2025_v4_27s_Fernanda_Penna.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559351987&amp;usg=AOvVaw0DSZT8TdKpfIFLx6s2HRSB",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/bc7a5e38-eb1e-46df-a49b-a21172bc2399/%5B05%5D%20%5BP06%5D%5BNN%5D%20ESTACIO%20-%20Est%C3%A1cio%20-%20Performance%20-%20Outubro-2025_v5_44s_Larissa_travassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559353161&amp;usg=AOvVaw0sSyWLfa8ZECZAoDHagqLh",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/d51ce586-98f6-4353-87a8-1e0e05c0f90d/%5B06%5D%20%5BP06%5D%5BNN%5D%20ESTACIO_v6_41s_Larissa_Travassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559354445&amp;usg=AOvVaw3duD9BT8D8BClCbrNaR8kF",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/8d963fbe-3615-498b-92f2-ba535ff944b0/%5B07%5D%20%5BP06%5D%5BNN%5D%20ESTACIO_v4_36s_Fernanda_Penna.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559355463&amp;usg=AOvVaw1-P8LAZkMHXfvcz5_E9T3F",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/aece9183-b7d9-4e08-924d-76615113aa66/%5B08%5D%20%5BP06%5D%5BNN%5D%20ESTACIO%20%20%20Est%C3%A1cio%20-%20Performance%20-%20Outubro%202025_v3_44s_Fernanda.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559356568&amp;usg=AOvVaw3yi2vc3CTO-0g9QTRam_wT"
+      ]
+    },
+    "LG": {
+      "video_id": "VyOKcbcdr-g",
+      "url": "https://youtu.be/VyOKcbcdr-g",
+      "title": "Portfolio - LG (5 videos)",
+      "type": "single_client",
+      "clients": [
+        "LG"
+      ],
+      "num_videos": 5,
+      "duration": "3:52",
+      "is_short": false,
+      "chapters": [
+        {
+          "timestamp": "0:00",
+          "name": "LG LG do Brasil (2025 03 24) v2 42s Karol Alves",
+          "talento": "Karol Alves",
+          "client": "LG"
+        },
+        {
+          "timestamp": "0:44",
+          "name": "LG - LG do Brasil (2025-03-24) v2 41s Clara Griffoni",
+          "talento": "Clara Giffoni",
+          "client": "LG"
+        },
+        {
+          "timestamp": "1:26",
+          "name": "LG-LG-do-Brasi2025-03-24 v3 50s Karolalves",
+          "talento": "Karol Alves",
+          "client": "LG"
+        },
+        {
+          "timestamp": "2:17",
+          "name": "LG LG do Brasil (2025 03 24) v2 59s Karol Alves",
+          "talento": "Karol Alves",
+          "client": "LG"
+        },
+        {
+          "timestamp": "3:17",
+          "name": "LG LG do Brasil (2025 03 24) v2 35s Karol",
+          "talento": "Karol Alves",
+          "client": "LG"
+        }
+      ],
+      "original_urls": [
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/7f13990f-4f7d-4fed-840a-42e93ffb475d/%5B13%5D%20%5BP02%5D%5BNN%5D%20LG%20%20%20LG%20do%20Brasil%20(2025%2003%2024)_v2_42s_Karol%20Alves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559249310&amp;usg=AOvVaw2mvHWBMMs15ofZF9kczzbb",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/6484c532-af74-4c27-aa6a-f99a4106ae90/%5B14%5D%20%5BP02%5D%5BNN%5D%20LG%20-%20LG%20do%20Brasil%20(2025-03-24)_v2_41s_Clara_Griffoni.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559250408&amp;usg=AOvVaw0r4fpyaGoLMLhtCUHo6-Tk",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/fd7a3ec0-ad2e-48eb-a652-3af5016155e2/%5B11%5D%20%5BP02%5D%5BNN%5D%20LG-LG-do-Brasi2025-03-24_v3_50s_Karolalves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559251570&amp;usg=AOvVaw2FEz7fDGV9pB3j7nXwfKoU",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/14a5d158-9b4b-4a83-a53a-14777e589d35/%5B16%5D%20%5BP02%5D%5BNN%5D%20LG%20%20%20LG%20do%20Brasil%20(2025%2003%2024)_v2_59s_Karol%20Alves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559252624&amp;usg=AOvVaw2-C7h0_IXWs5GWzuIajYpq",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/7ffb5427-b64e-4ee4-99cb-226b9d2ac0ba/%5B06%5D%20%5BP02%5D%5BNN%5D%20LG%20%20%20LG%20do%20Brasil%20(2025%2003%2024)%20_v2_35s_Karol.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559253743&amp;usg=AOvVaw2iGAEd0phVD3tcWL5kiwia"
+      ]
+    },
+    "Livelo": {
+      "video_id": "MWQyA8IP6X8",
+      "url": "https://youtu.be/MWQyA8IP6X8",
+      "title": "Portfolio - Livelo (10 videos)",
+      "type": "single_client",
+      "clients": [
+        "Livelo"
+      ],
+      "num_videos": 10,
+      "duration": "5:36",
+      "is_short": false,
+      "chapters": [
+        {
+          "timestamp": "0:00",
+          "name": "LIVELO Club Livelo (2025 04 30) v3 27s Quéren",
+          "talento": "Qu ren Hapuque",
+          "client": "Livelo"
+        },
+        {
+          "timestamp": "0:27",
+          "name": "LIVELO Pontos Viram Dinheiro (2025 05 19) v2 28s Queren",
+          "talento": "Qu ren Hapuque",
+          "client": "Livelo"
+        },
+        {
+          "timestamp": "0:55",
+          "name": "LIVELO Pontos Viram Dinheiro (2025 05 19) v4 37s Queren",
+          "talento": "Qu ren Hapuque",
+          "client": "Livelo"
+        },
+        {
+          "timestamp": "1:33",
+          "name": "LIVELO - Pontos Viram Dinheiro (2025-05-19) v3 40s-QuéremFernandes",
+          "talento": "Qu ren Hapuque",
+          "client": "Livelo"
+        },
+        {
+          "timestamp": "2:14",
+          "name": "LIVELO - Pontos Viram Dinheiro (2025-05-19) v2 39s Queren Hapuque",
+          "talento": "Qu ren Hapuque",
+          "client": "Livelo"
+        },
+        {
+          "timestamp": "2:53",
+          "name": "LIVELO Livelo (2025 05 19) v3 35s Queren",
+          "talento": "Qu ren Hapuque",
+          "client": "Livelo"
+        },
+        {
+          "timestamp": "3:29",
+          "name": "LIVELO - Livelo (2025-05-19) v4 23s Queren",
+          "talento": "Qu ren Hapuque",
+          "client": "Livelo"
+        },
+        {
+          "timestamp": "3:52",
+          "name": "LIVELO Livelo (2025 05 19) v3 20s Quéren",
+          "talento": "Qu ren Hapuque",
+          "client": "Livelo"
+        },
+        {
+          "timestamp": "4:12",
+          "name": "LIVELO - Livelo (2025-05-19) v2 30s-Quéren",
+          "talento": "Qu ren Hapuque",
+          "client": "Livelo"
+        },
+        {
+          "timestamp": "4:44",
+          "name": "LIVELO Livelo Educacional - Brand Mission v5 52s",
+          "talento": "Let cia Pedro",
+          "client": "Livelo"
+        }
+      ],
+      "original_urls": [
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/e5089455-5021-42fc-967f-9004b67b84e4/%5B04%5D%20%5BP11%5D%5BNN%5D%20LIVELO%20%20%20Club%20Livelo%20(2025%2004%2030)_v3_27s_Qu%C3%A9ren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559305812&amp;usg=AOvVaw3BSTY6SCK7lDMt-EVWcnt4",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/1d9dcc75-414c-40f4-91e8-5c519c01d13e/%5B01%5D%20%5BP12%5D%5BNN%5D%20LIVELO%20%20%20Pontos%20Viram%20Dinheiro%20(2025%2005%2019)_v2_28s_Queren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559306826&amp;usg=AOvVaw1aTxkIaBkOE9QaruALY_O6",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/1218d8ef-1221-41fb-b869-b760723e2e3a/%5B02%5D%20%5BP12%5D%5BNN%5D%20LIVELO%20%20%20Pontos%20Viram%20Dinheiro%20(2025%2005%2019)_v4_37s_Queren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559307855&amp;usg=AOvVaw1kefJROTL-qOG2DW33CEW_",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/e242d9a3-d64e-4ac4-945a-69ad115f4164/%5B03%5D%20%5BP12%5D%5BNN%5D%20LIVELO%20-%20Pontos%20Viram%20Dinheiro%20(2025-05-19)_v3_40s-Qu%C3%A9remFernandes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559308884&amp;usg=AOvVaw2AbIkUOqqWVP0XewQbxJBk",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/389efea9-128c-4cfb-9445-a8285bbd134d/%5B04%5D%20%5BP12%5D%5BNN%5D%20LIVELO%20-%20Pontos%20Viram%20Dinheiro%20(2025-05-19)_v2_39s_Queren%20Hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559309874&amp;usg=AOvVaw1WHLTZzwcnifuVVct7I5Yr",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/b3e24740-e878-4779-a5ad-0d2be0f16a97/%5B01%5D%20%5BP13%5D%5BNN%5D%20LIVELO%20%20%20Livelo%20(2025%2005%2019)_v3_35s_Queren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559310950&amp;usg=AOvVaw1H0JSqxr2DgTZHcaxVDy27",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/130f8068-7180-4037-9f83-c310e01a20fc/%5B02%5D%20%5BP13%5D%5BNN%5D%20LIVELO%20-%20Livelo%20(2025-05-19)_v4_23s_Queren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559311953&amp;usg=AOvVaw3qbNr6J8OUXgiRxmUg-tLd",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/1f05ad42-7b3f-46d9-846f-069716982a43/%5B03%5D%20%5BP13%5D%5BNN%5D%20LIVELO%20%20%20Livelo%20(2025%2005%2019)_v3_20s_Qu%C3%A9ren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559313045&amp;usg=AOvVaw2UajnboPPaNopMyLwVe3cO",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/c6e59360-22e0-4f92-9031-9237ecd0a92a/%5B04%5D%20%5BP13%5D%5BNN%5D%20LIVELO%20-%20Livelo%20(2025-05-19)_v2_30s-Qu%C3%A9ren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559314058&amp;usg=AOvVaw1tHFgFsTzT0dsb71Kmwvgj",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/226cc88f-cd13-4b30-8613-a60e2ee8ae06/%5B04%5D%20%5BP14%5D%5BCH%5D%20LIVELO%20%20%20Livelo%20Educacional%20-%20Brand%20Mission_v5_52s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559315092&amp;usg=AOvVaw2cic3bGFID94eyDsJFdSek"
+      ]
+    },
+    "Magazine Luiza": {
+      "video_id": "FB7lNZjlRKY",
+      "url": "https://youtu.be/FB7lNZjlRKY",
+      "title": "Portfolio - Magazine Luiza (31 videos)",
+      "type": "single_client",
+      "clients": [
+        "Magazine Luiza"
+      ],
+      "num_videos": 31,
+      "duration": "16:29",
+      "is_short": false,
+      "chapters": [
+        {
+          "timestamp": "0:00",
+          "name": "MAGALU Top View Payday Abril 25 v1 45s Leticia Machado",
+          "talento": "Leticia Machado",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "0:45",
+          "name": "MAGALU PayDay Abril 25 v2 27s Karol",
+          "talento": "Karol Alves",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "1:13",
+          "name": "MAGALU PayDay Abril 25 v1 41s Julia Helen",
+          "talento": "Julia Helen",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "1:55",
+          "name": "MAGALU PayDay Abril 25 v3 27s Karol",
+          "talento": "Karol Alves",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "2:40",
+          "name": "MAGALU - PayDay Abril 25 v3 32s Julia helen",
+          "talento": "Julia Helen",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "3:13",
+          "name": "MAGALU PayDay Abril 25 v2 20s Drico",
+          "talento": "Drico Alves",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "3:33",
+          "name": "MAGALU - PayDay Abril 25 v2 20s Drico alves",
+          "talento": "Drico Alves",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "3:53",
+          "name": "MAGALU - Magalu - REVIEW DE PRODUTO v3 58s DricoAlvez 1",
+          "talento": "Drico Alves",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "4:52",
+          "name": "MAGALU | Magalu - REVIEW DE PRODUTO v3 33s SamiaAbreu",
+          "talento": "Samia Abreu",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "5:25",
+          "name": "MAGALU - Magalu - REVIEW DE PRODUTO v4 44s Drico Alves",
+          "talento": "Drico Alves",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "6:06",
+          "name": "MAGALU Magalu - REVIEW DE PRODUTO v3 30s Samia Abreu",
+          "talento": "Samia Abreu",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "6:37",
+          "name": "MAGALU Magalu - REVIEW DE PRODUTO v1 29s Pedro Pires",
+          "talento": "Pedro Pires",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "7:07",
+          "name": "MAGALU São João - Junho 25 v2 37s Bruna Noronha",
+          "talento": "Bruna Noronha",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "7:44",
+          "name": "MAGALU São João - Junho 25 v1 29s BRUNA NORONHA",
+          "talento": "Bruna Noronha",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "8:13",
+          "name": "MAGALU São João - Junho 25 v2 31s Bruna Noronha",
+          "talento": "Bruna Noronha",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "8:45",
+          "name": "MAGALU São João - Junho 25 v1 21s Bruna Noronha",
+          "talento": "Bruna Noronha",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "9:07",
+          "name": "MAGALU - Compra Premiada Magalu v2 37s LaraGay",
+          "talento": "Lara Gay",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "9:44",
+          "name": "MAGALU Compra Premiada Magalu v2 32s Lara",
+          "talento": "Lara Gay",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "10:17",
+          "name": "MAGALU Compra Premiada Magalu v6 47s Lara Gay",
+          "talento": "Lara Gay",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "11:04",
+          "name": "MAGALU - Compra Premiada Magalu v4 32s Lara Gay",
+          "talento": "Lara Gay",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "11:36",
+          "name": "MAGALU - Compra Premiada Magalu Agosto v5 25s Quéren Hapuque",
+          "talento": "Qu ren Hapuque",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "12:01",
+          "name": "MAGALU Compra Premiada v2 29s Queren Hapuque",
+          "talento": "Qu ren Hapuque",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "12:31",
+          "name": "MAGALU - Compra Premiada Magalu Agosto v4 30s Quéren Hapuque",
+          "talento": "Qu ren Hapuque",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "13:02",
+          "name": "Magalu Black das Blacks v3 21s Lara",
+          "talento": "Lara Gay",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "13:24",
+          "name": "Magalu Black das Blacks v3 21s Lara",
+          "talento": "Lara Gay",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "13:49",
+          "name": "- Magalu Black das Blacks v3 19s Lara Gay",
+          "talento": "Lara Gay",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "14:08",
+          "name": "- Magalu Black das Blacks v5 16sLaraGay",
+          "talento": "Lara Gay",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "14:26",
+          "name": "MAGALU Magalu Black das Blacks v4 44s",
+          "talento": "Lara Gay",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "15:10",
+          "name": "MAGALU Magalu Black das Blacks v5 25s Lara Gay",
+          "talento": "Lara Gay",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "15:35",
+          "name": "MAGALU - Magalu Black das Blacks v1 26s LaraGay",
+          "talento": "Lara Gay",
+          "client": "Magazine Luiza"
+        },
+        {
+          "timestamp": "16:01",
+          "name": "MAGALU Magalu Black das Blacks v5 27s Lara",
+          "talento": "Lara Gay",
+          "client": "Magazine Luiza"
+        }
+      ],
+      "original_urls": [
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/b8379034-823e-415a-8167-91e1b5b29621/%5B04%5D%20%5BP51%5D%5BCH%5D%20MAGALU%20%20Top%20View%20Payday%20Abril%2025_v1_45s_Leticia_Machado.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559261038&amp;usg=AOvVaw0n5CBcfQ1ZsuSpSCqbPjDk",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/18004192-c81d-42c5-aeb2-840e557ccdf6/%5B05%5D%20%5BP50%5D%5BCH%5D%20MAGALU%20%20%20PayDay%20Abril%2025_v2_27s_Karol.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559262287&amp;usg=AOvVaw0NmQE0uYY7cQ4HEls5UAny",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/ce8a0043-b5e6-4bd3-9212-c23b2648380d/%5B04%5D%20%5BP50%5D%5BCH%5D%20MAGALU%20%20%20PayDay%20Abril%2025_v1_41s_Julia%20Helen.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559263421&amp;usg=AOvVaw2p6bN0Fj4Qho1k96GmoPQN",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/58d95c7b-ee5f-46b1-85b0-67c1e1e57401/%5B06%5D%20%5BP50%5D%5BCH%5D%20MAGALU%20%20%20PayDay%20Abril%2025_v3_27s_Karol.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559264523&amp;usg=AOvVaw3B3gJmDBZ2yl84Cb_e5xND",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/b0570488-b981-432f-b704-0de17b24d743/%5B16%5D%20%5BP50%5D%5BCH%5D%20MAGALU%20-%20PayDay%20Abril%2025_v3_32s_Julia_helen.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559265701&amp;usg=AOvVaw3IpDkhGsm8S3g7CowNIylG",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/1e54fd04-3717-4e6a-97f6-7270719ef538/%5B15%5D%20%5BP50%5D%5BCH%5D%20MAGALU%20%20%20PayDay%20Abril%2025_v2_20s_Drico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559266907&amp;usg=AOvVaw3mpLufzkiyH2mNwxAjOdFz",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/57be187b-2301-4800-bcea-041a2b69139b/%5B10%5D%20%5BP50%5D%5BCH%5D%20MAGALU%20-%20PayDay%20Abril%2025_v2_20s_Drico_alves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559268059&amp;usg=AOvVaw2d2ICdvg2vVOnIZSq2l1DF",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/d17e58f2-3d32-46e4-8747-ca57fd6775f3/%5B09%5D%20%5BP53%5D%5BCH%5D%20MAGALU%20-%20Magalu%20-%20REVIEW%20DE%20PRODUTO_v3_58s_DricoAlvez_1.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559269073&amp;usg=AOvVaw1k40c_RqiUnzyljCJCQieG",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/48bae3bc-4b84-48ca-8d1f-6ed4cbaf4c4f/%5B04%5D%20%5BP53%5D%5BCH%5D%20MAGALU%20%7C%20Magalu%20-%20REVIEW%20DE%20PRODUTO_v3_33s_SamiaAbreu.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559270096&amp;usg=AOvVaw1Y_JJZ35eiugqAKvA3eEDE",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/9262d2c6-77ce-41d6-8ff9-9405105a7281/%5B08%5D%20%5BP53%5D%5BCH%5D%20MAGALU%20-%20Magalu%20-%20REVIEW%20DE%20PRODUTO_v4_44s_Drico_Alves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559271156&amp;usg=AOvVaw0w6Y5Ri6EgJKfA2061jYBg",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/4cb78576-d1ef-4e8b-ba2c-2eb241652e77/%5B03%5D%20%5BP53%5D%5BCH%5D%20MAGALU%20%20Magalu%20-%20REVIEW%20DE%20PRODUTO_v3_30s_Samia_Abreu.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559272251&amp;usg=AOvVaw2TzHXepKhoNis4uUJsVQ5X",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/038b463a-4f6f-4650-8aae-8ce2f6254cf8/%5B02%5D%20%5BP53%5D%5BCH%5D%20MAGALU%20%20%20Magalu%20-%20REVIEW%20DE%20PRODUTO_v1_29s_Pedro%20Pires.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559273325&amp;usg=AOvVaw3t-cdgJMOifOJaVSMHyNvJ",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/e483e880-8734-4377-a828-2a78eb640565/%5B03%5D%20%5BP56%5D%5BNN%5D%20MAGALU%20%20S%C3%A3o%20Jo%C3%A3o%20-%20Junho%2025_v2_37s_Bruna_Noronha.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559274462&amp;usg=AOvVaw2CTIh8cX8urLmyx1vSYrZT",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/283101a3-ac65-4297-bc8b-c77cc1c33292/%5B04%5D%20%5BP56%5D%5BNN%5D%20MAGALU%20%20S%C3%A3o%20Jo%C3%A3o%20-%20Junho%2025_v1_29s_BRUNA_NORONHA.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559275591&amp;usg=AOvVaw0zdcD5D_oD-kMLUUD2g6PH",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/34654a9b-5ef4-4571-991f-05cd6884a31a/%5B02%5D%20%5BP56%5D%5BNN%5D%20MAGALU%20%20%20S%C3%A3o%20Jo%C3%A3o%20-%20Junho%2025_v2_31s_Bruna%20Noronha.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559276716&amp;usg=AOvVaw2daFI70BYOB8_zN3Uu07K5",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/7f43d893-416f-4637-9af8-982d7679d750/%5B01%5D%20%5BP56%5D%5BNN%5D%20MAGALU%20%20%20S%C3%A3o%20Jo%C3%A3o%20-%20Junho%2025_v1_21s_Bruna%20Noronha.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559277807&amp;usg=AOvVaw2vIYw1HsVRcA2kJ6KD3CP0",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/209641c3-bc70-4e1a-ac7a-9ec6e10a6638/%5B01%5D%20%5BP57%5D%5BNN%5D%20MAGALU%20-%20Compra%20Premiada%20Magalu_v2_37s_LaraGay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559278843&amp;usg=AOvVaw2zL8LbvilOGmovkusWfvm3",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/36ef0115-2795-4ccc-a7e2-92f3a54f8851/%5B02%5D%20%5BP57%5D%5BNN%5D%20MAGALU%20%20%20Compra%20Premiada%20Magalu_v2_32s_Lara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559279810&amp;usg=AOvVaw1tylrfFZbr3BUHJ_XLoDgs",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/2a6f2fbf-0e1f-4855-8edd-e5ba5f95599d/%5B03%5D%20%5BP57%5D%5BNN%5D%20MAGALU%20%20%20Compra%20Premiada%20Magalu_v6_47s_Lara%20Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559280911&amp;usg=AOvVaw1xtcuqkKJRLDIY9YHBXMnr",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/cd0501a4-081d-4567-8fe0-b03ca4fb9ad6/%5B04%5D%20%5BP57%5D%5BNN%5D%20MAGALU%20-%20Compra%20Premiada%20Magalu_v4_32s_Lara_Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559281882&amp;usg=AOvVaw39VC4IbjydvaqcnI4FI9F6",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/7d53f17e-597e-4c40-8a0d-e46a33c7db0d/%5B02%5D%20%5BP58%5D%5BNN%5D%20MAGALU%20-%20Compra%20Premiada%20Magalu%20Agosto_v5_25s_Qu%C3%A9ren%20Hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559282909&amp;usg=AOvVaw2q7VXNKQjmEPiQze-u70d9",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/86995a8c-d093-4d31-8870-dd98631ffbd7/%5B03%5D%20%5BP58%5D%5BNN%5D%20MAGALU%20Compra%20Premiada_v2_29s_Queren_Hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559284062&amp;usg=AOvVaw31K6Ray_PQSpsdFpRGCf_m",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/067106bc-9d0c-4dbe-bc36-378dec984b57/%5B04%5D%20%5BP58%5D%5BNN%5D%20MAGALU%20-%20Compra%20Premiada%20Magalu%20Agosto_v4_30s_Qu%C3%A9ren%20Hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559285128&amp;usg=AOvVaw2N33D6qaNAGomXhqH-g0sJ",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/03db00e3-f763-44fd-a87d-671a1edcaa86/%5B01%5D%20%5BP61%5D%5BNN%5D%20%20%20%20Magalu%20Black%20das%20Blacks_v3_21s_Lara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559286215&amp;usg=AOvVaw2l_oEhybRqfbDwGhEuwupH",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/74dd3028-06f1-4e30-bf83-f00deb7874d3/%5B02%5D%20%5BP61%5D%5BNN%5D%20%20%20%20Magalu%20Black%20das%20Blacks_v3_21s_Lara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559287291&amp;usg=AOvVaw2F6E2uHmNAiVOGHEhaHWqB",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/9e114541-6ddd-49c5-bed3-228dde5cc846/%5B03%5D%20%5BP61%5D%5BNN%5D%20%20-%20Magalu%20Black%20das%20Blacks_v3_19s_Lara_Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559288301&amp;usg=AOvVaw07ILOenMjIqtSXG04vuZRe",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/dd01e4b1-ffc3-44fe-b7f7-783a05b31225/%5B04%5D%20%5BP61%5D%5BNN%5D%20%20-%20Magalu%20Black%20das%20Blacks_v5_16sLaraGay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559289296&amp;usg=AOvVaw0_18sabtmghJEyJpe_k_W4",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/d966c754-468a-4c81-960e-c728716d8b37/%5B01%5D%20%5BP90%5D%5BNN%5D%20MAGALU%20%20%20Magalu%20Black%20das%20Blacks_v4_44s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559290467&amp;usg=AOvVaw1R8mCnHx1_4Tk22dzkpmEJ",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/cb2c3bda-eaf6-4a2e-84fd-85bdbb502a71/%5B02%5D%20%5BP90%5D%5BNN%5D%20MAGALU%20%20%20Magalu%20Black%20das%20Blacks_v5_25s_Lara%20Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559291606&amp;usg=AOvVaw1yiXI-OJTl9RTfDDm36tTg",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/562f993b-0c65-4f93-8053-06d91a74f498/%5B03%5D%20%5BP90%5D%5BNN%5D%20MAGALU%20-%20Magalu%20Black%20das%20Blacks_v1_26s_LaraGay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559292622&amp;usg=AOvVaw1kxnvVfYcyGo5UZIByrlME",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/e3d6b8bb-a9e0-476b-a06a-0bb0fc4102fe/%5B04%5D%20%5BP90%5D%5BNN%5D%20MAGALU%20%20%20Magalu%20Black%20das%20Blacks_v5_27s_Lara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559293747&amp;usg=AOvVaw1jVhvzFh3rEbVUZT7jVHam"
+      ]
+    },
+    "Mercado Pago": {
+      "video_id": "FiQ8m4UCcAQ",
+      "url": "https://youtu.be/FiQ8m4UCcAQ",
+      "title": "Portfolio - Mercado Pago (48 videos)",
+      "type": "single_client",
+      "clients": [
+        "Mercado Pago"
+      ],
+      "num_videos": 48,
+      "duration": "34:29",
+      "is_short": false,
+      "chapters": [
+        {
+          "timestamp": "0:00",
+          "name": "Mercado Pago - TTCX-TESTES-SELLERS v5 9s NaluMoura",
+          "talento": "Nalu Moura",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "0:09",
+          "name": "Mercado Pago - TTCX-TESTE-SELLERS v4 53s NaluMoreira",
+          "talento": "Nalu Moura",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "1:03",
+          "name": "MERCADO PAGO MLB Junio Users v3 39s Nalu Moura",
+          "talento": "Nalu Moura",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "1:42",
+          "name": "MERCADO PAGO v1 30s Daniela Castelo",
+          "talento": "Daniela Castelo",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "2:13",
+          "name": "MERCADO PAGO - MLB - Individuals Sep-Oct v2 22s Daniela castelo",
+          "talento": "Daniela Castelo",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "2:36",
+          "name": "MERCADO PAGO MLB Individuals Sep Oct v1 31s",
+          "talento": "Daniela Castelo",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "3:08",
+          "name": "MERCADO PAGO - MLB - Individuals Sep-Oct v3 35s DanielaCastelo",
+          "talento": "Daniela Castelo",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "3:42",
+          "name": "MERCADO PAGO MLB Individuals Sep Oct v2 37s Raphael Monteiro",
+          "talento": "Raphael Monteiro",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "4:20",
+          "name": "MERCADO PAGO - MLB - Individuals Sep-Oct v3 23s RhafaelMonteiro",
+          "talento": "Raphael Monteiro",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "4:43",
+          "name": "MERCADO PAGO MLB Individuals Sep Oct v2 28s Raphael Monteiro",
+          "talento": "Raphael Monteiro",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "5:11",
+          "name": "MERCADO PAGO - MLB - Individuals Sep-Oct v3 23s RhafaelMonteiro",
+          "talento": "Raphael Monteiro",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "5:35",
+          "name": "MERCADO PAGO v3 30s Maria Sousa",
+          "talento": "Maria Souza",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "6:06",
+          "name": "MERCADO PAGO MLB Individuals Sep Oct v3 33s João Mendes",
+          "talento": "Joa&#771;o Mendes",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "6:39",
+          "name": "MERCADO PAGO MLB Individuals Sep Oct v1 24s Maria Eduarda",
+          "talento": "Maria Souza",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "7:04",
+          "name": "MERCADO PAGO MLB Individuals Sep Oct v2 22s Maria Eduarda Sousa",
+          "talento": "Maria Souza",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "7:26",
+          "name": "MERCADO PAGO v3 30s Joao Mendes",
+          "talento": "Joa&#771;o Mendes",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "7:51",
+          "name": "MERCADO PAGO - MLB - Individuals Sep-Oct v2 20s JoãoMendes",
+          "talento": "Joa&#771;o Mendes",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "8:13",
+          "name": "MERCADO PAGO MLB Individuals Sep Oct v1 13s João Mendes",
+          "talento": "Joa&#771;o Mendes",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "8:26",
+          "name": "MERCADO PAGO MLB Individuals Sep Oct v2 30s",
+          "talento": "Maria Souza",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "8:57",
+          "name": "MERCADO PAGO MLB Individuals Sep-Oct v2 19s Loretta Martins",
+          "talento": "Loretta Martins",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "9:17",
+          "name": "MERCADO PAGO - MLB - Individuals Sep-Oct v3 27sLorettaMartins",
+          "talento": "Loretta Martins",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "9:44",
+          "name": "MERCADO PAGO - MLB - Individuals Sep-Oct v3 23s Loretta martins",
+          "talento": "Loretta Martins",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "10:06",
+          "name": "MERCADO PAGO MLB Individuals Sep Oct v4 35s Loretta Martins",
+          "talento": "Loretta Martins",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "10:41",
+          "name": "MERCADO PAGO - MLB - Individuals Sep-Oct v2 25s",
+          "talento": "Frederico Volkmann",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "11:07",
+          "name": "MERCADO PAGO MLB Individuals Sep Oct v1 29s frederico",
+          "talento": "Frederico Volkmann",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "11:36",
+          "name": "MERCADO PAGO MLB Individuals Sep Oct v2 23s Frederico",
+          "talento": "Frederico Volkmann",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "11:59",
+          "name": "MERCADO PAGO - MLB - Individuals Sep-Oct v4 22s FredericoVolkam",
+          "talento": "Frederico Volkmann",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "12:22",
+          "name": "MERCADO PAGO - MLB - Individuals Sep-Oct v3 21s RenenTeiva",
+          "talento": "Renan Teiva",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "12:43",
+          "name": "MERCADO PAGO - MLB - Individuals Sep-Oct v3 20s Renan Telva",
+          "talento": "Renan Teiva",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "13:05",
+          "name": "MERCADO PAGO MLB Individuals SepOct v2 28s Renan Teiva",
+          "talento": "Renan Teiva",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "13:34",
+          "name": "MERCADO PAGO v1 27s Renan Teiva",
+          "talento": "Renan Teiva",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "14:01",
+          "name": "MERCADO PAGO - Mercado Pago - Tap 1 v3 35s Vitória Rodrigues",
+          "talento": "Vit ria Rodrigues",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "14:35",
+          "name": "MERCADO PAGO v3 31s Raphael Monteiro",
+          "talento": "Raphael Monteiro",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "15:06",
+          "name": "MERCADO PAGO Mercado Pago v1 27s",
+          "talento": "Raphael Monteiro",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "15:34",
+          "name": "MERCADO PAGO Mercado Pago v2 28s Vitória Rodrigues",
+          "talento": "Vit ria Rodrigues",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "16:03",
+          "name": "MERCADO PAGO Mercado Pago - Tap 1 v2 22s Raphael",
+          "talento": "Raphael Monteiro",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "16:22",
+          "name": "MERCADO PAGO - Mercado Pago - Tap 1 v4 27s VitoriaRodrigues",
+          "talento": "Vit ria Rodrigues",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "16:49",
+          "name": "MERCADO PAGO - Mercado Pago - Tap 1 v2 17s Vitória rodrigres",
+          "talento": "Vit ria Rodrigues",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "17:07",
+          "name": "MERCADO PAGO Mercado Pago Point Smart v2 30s",
+          "talento": "Antonio Bastos",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "17:38",
+          "name": "MERCADO PAGO - Mercado Pago Point Smart v2 56s MarceloKlain",
+          "talento": "Marcelo Klein",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "18:35",
+          "name": "MERCADO PAGO Mercado Pago Point Smart v3 14s Marcelo Klein",
+          "talento": "Marcelo Klein",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "18:49",
+          "name": "MERCADO PAGO Mercado Pago Point Smart v1 21s Antonio Bastos",
+          "talento": "Antonio Bastos",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "19:11",
+          "name": "MERCADO PAGO - Mercado Pago Point Smart v3 26s AntonioBastos",
+          "talento": "Antonio Bastos",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "19:34",
+          "name": "MERCADO PAGO v3 55s Marcelo Klein",
+          "talento": "Marcelo Klein",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "20:30",
+          "name": "MERCADO PAGO Mercado Pago Point Smart v3 33s",
+          "talento": "Marcelo Klein",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "21:04",
+          "name": "MERCADO PAGO - Mercado Pago Point Smart v2 29s antonio basto",
+          "talento": "Antonio Bastos",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "21:33",
+          "name": "MERCADO PAGO Mercado Pago v2 35s Daniela Caste",
+          "talento": "Daniela Castelo",
+          "client": "Mercado Pago"
+        },
+        {
+          "timestamp": "22:08",
+          "name": "MERCADO PAGO - Mercado Pago - Conta PJ (2025-09-04) v3 39s André Lemos",
+          "talento": "Andr Lemos",
+          "client": "Mercado Pago"
+        }
+      ],
+      "original_urls": [
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/4ad93d6f-324b-4cf4-9c7d-e675d7874324/%5B07%5D%20%5BP36%5D%5BCH%5DMercado%20Pago%20-%20TTCX-TESTES-SELLERS_v5_9s_NaluMoura.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559187447&amp;usg=AOvVaw1vTv-AqE_bHXXWZPO2MNDm",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/e82ccb06-502a-484d-b369-d61c964d4c80/%5B08%5D%20%5BP36%5D%5BCH%5DMercado%20Pago%20-%20TTCX-TESTE-SELLERS_v4_53s_NaluMoreira.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559188501&amp;usg=AOvVaw1xqg44mol2ygC64sTgjCvW",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/2663a671-a0c2-4a68-8bbf-86f3824922e5/%5B07%5D%20%5BP39%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Junio%20Users_v3_39s_Nalu%20Moura.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559189452&amp;usg=AOvVaw1s51FIsW82Gv2-w4bU66ig",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/6feda22c-7685-4e54-99e1-ef45163ea2e1/%5B21%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO_v1_30s_Daniela_Castelo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559190522&amp;usg=AOvVaw1JXO1khTUPDMpaLivn9pKO",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/01a6445e-935d-45cf-9931-aeb58dd425bc/%5B22%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v2_22s_Daniela_castelo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559191494&amp;usg=AOvVaw0ea23aNJzz6JDLvxdlah1D",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/15dbfa46-cce5-4a90-8b8a-e08387c6c968/%5B23%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v1_31s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559192414&amp;usg=AOvVaw1Ihx78TajKejBdBgos627u",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/f90a997c-972d-40c3-8e69-4fe42661841d/%5B24%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_35s_DanielaCastelo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559193380&amp;usg=AOvVaw3lnqMlEU_fUivqPxh_UdjE",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/3817b547-4709-4fd1-915a-df78cd565ea5/%5B25%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v2_37s_Raphael%20Monteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559194528&amp;usg=AOvVaw0ps6C030pEOM7Z7FGp_R4X",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/4f1a2bd1-feb0-4605-a829-bfec3f8badd2/%5B26%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_23s_RhafaelMonteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559195461&amp;usg=AOvVaw10wS0fkQfXVeLLaUJf9uzE",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/5ae24548-5fbd-4c3a-9188-6d1b23b91fb7/%5B27%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v2_28s_Raphael%20Monteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559196457&amp;usg=AOvVaw2FUfZkyeJWdDSuAhks82Ct",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/86d232d2-f0cb-45ef-b068-493e969114cc/%5B28%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_23s_RhafaelMonteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559197506&amp;usg=AOvVaw3UAMxeti7ihSvI6vDcBDnB",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/b19ef0f9-e55d-4913-bbd3-ce05bad37cf4/%5B29%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO_v3_30s_Maria_Sousa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559198439&amp;usg=AOvVaw1Jd4zFchYXYCg5MhGjoOsV",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/1f98f2f9-ed54-49ee-b5fd-15268731889b/%5B30%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v3_33s_Joa%CC%83o%20Mendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559199333&amp;usg=AOvVaw1H1WmVGA7HJru5_M90JLRi",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/04a1f8d0-41cf-48b9-8a53-e5c454aaec9c/%5B31%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v1_24s_Maria%20Eduarda.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559200229&amp;usg=AOvVaw2tTAeRGXDNoUQcUiGDiitc",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/8d97fcde-a8e9-45dd-a9d2-356ab049cd39/%5B32%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v2_22s_Maria%20Eduarda%20Sousa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559201258&amp;usg=AOvVaw0r64xicGzkqkJdlR6O2wA5",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/4057363d-c0b7-46d9-a403-3965887b3167/%5B33%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO_v3_30s_Joao_Mendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559202336&amp;usg=AOvVaw0KP-e4YXdyygYiqOasDjCT",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/cf7dc35f-6609-4f54-b8b9-16cbc1aa1da1/%5B34%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v2_20s_Jo%C3%A3oMendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559203348&amp;usg=AOvVaw0fqzY99XDQH5C06FqwHESW",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/16bb4105-0140-4c44-a45a-39b00149ef2e/%5B35%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct%20_v1_13s_Jo%C3%A3o%20Mendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559204320&amp;usg=AOvVaw3oj1iuec0ynwsG5dPd-CqB",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/2a124479-533c-4059-a48c-670761dfa0a2/%5B36%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v2_30s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559205345&amp;usg=AOvVaw3Bfy3riTORLB1Lmaw-wfwq",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/eb542d1e-790c-4f60-bddd-a97863713ee2/%5B45%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20MLB%20Individuals%20Sep-Oct_v2_19s_Loretta%20Martins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559206354&amp;usg=AOvVaw0Yie2WtEOnFPh9hr32aoXw",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/4eb27e4a-410d-47cf-9e6c-b8fe22c2d024/%5B46%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_27sLorettaMartins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559207330&amp;usg=AOvVaw3xDeeR5be0UEwOGV1vF_VT",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/8838206c-8763-4809-a047-9dab2d1b426a/%5B47%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_23s_Loretta_martins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559208316&amp;usg=AOvVaw37gWzz2YU6nAMF8u6LjsrT",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/41b606a4-1aab-4bf9-802a-023072e95820/%5B48%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v4_35s_Loretta%20Martins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559209312&amp;usg=AOvVaw0Bq8cqw48A6ROE8QIxlsu4",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/948d953c-f3f4-49bc-89b2-3f33fd5a45d2/%5B49%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v2_25s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559210267&amp;usg=AOvVaw1LqUOwIIkNMnhYpE0UGyJI",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/2a696331-5819-4768-89b8-3c02b5c90553/%5B50%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v1_29s_frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559211226&amp;usg=AOvVaw0nrnCHNhJxGzCP5a-tmb_k",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/fdc70a95-88a8-4098-94eb-dc436ba7d535/%5B51%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v2_23s_Frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559212142&amp;usg=AOvVaw2kLrD-IIUJNdS8br3_hUXF",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/7260d6e5-49d5-4aed-9b0c-5fa7bc316381/%5B52%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v4_22s_FredericoVolkam.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559213100&amp;usg=AOvVaw3gAbc94RVHmo-0e1-LAXZf",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/c11674a3-aef8-44e5-a997-4b37066c57e5/%5B53%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_21s_RenenTeiva.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559213990&amp;usg=AOvVaw13RklT9bMExeOobE3ihkZo",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/1d187cff-08de-4d54-a855-95286f2ef289/%5B54%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_20s_Renan_Telva.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559214907&amp;usg=AOvVaw1QkhF_oZrhQvh_i3o8eCgj",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/043aff5c-68bb-441c-8d2c-6761e93aa12a/%5B55%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20MLB%20Individuals%20SepOct_v2_28s_Renan%20Teiva.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559215970&amp;usg=AOvVaw07_Z6Z6L6anS1ayiprJv8O",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/035b2783-7663-4771-9ce5-3f9aea82c056/%5B56%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO_v1_27s_Renan_Teiva.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559216908&amp;usg=AOvVaw1o4oHpIcLy7MW1AVLQxOa0",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/c3188400-804c-42da-8422-d9311a1fc42c/%5B01%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20-%20Tap%201_v3_35s_Vit%C3%B3ria_Rodrigues.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559217856&amp;usg=AOvVaw3FUkLHk8rGYT9c5CkcAA82",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/2a84f06f-1f22-4de3-a886-e5a31b238ee3/%5B02%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO_v3_31s_Raphael_Monteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559218833&amp;usg=AOvVaw2qligG2FAfuq-twvfs9IVh",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/d6e68c5c-6bba-4c7c-976d-cd865cff9aef/%5B03%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO%20Mercado%20Pago_v1_27s_.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559219889&amp;usg=AOvVaw2o3DgDq4ZfVzwkokAmgfzE",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/afac0389-7e1a-46f6-9a08-517a8fce8226/%5B04%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO%20Mercado%20Pago_v2_28s_Vit%C3%B3ria_Rodrigues.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559220936&amp;usg=AOvVaw2r7-SmA_hQa6YxF9GrLLAt",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/39ff43f4-b67a-41e1-ac40-d567fb73d6f0/%5B05%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO%20%20%20Mercado%20Pago%20-%20Tap%201_v2_22s_Raphael.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559222000&amp;usg=AOvVaw2db4Mu2CBDg8JjWb7nj0dI",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/0f43def5-5d95-4962-b12e-122c1ee5cdea/%5B06%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20-%20Tap%201_v4_27s_VitoriaRodrigues.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559223010&amp;usg=AOvVaw0ZPDHoFQrhrObrAdTs_JYs",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/1dcbe017-b1ec-4f72-ba21-af99b7cdddcc/%5B08%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20-%20Tap%201_v2_17s_Vit%C3%B3ria_rodrigres.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559224001&amp;usg=AOvVaw1X5sPUumE8h4mf-QNtSSGl",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/80bf703b-774f-4a8b-afcb-30d57ea20c79/%5B01%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20%20%20Mercado%20Pago%20Point%20Smart_v2_30s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559224979&amp;usg=AOvVaw0jUtGixisdQ4uVLHz29jbP",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/54c9827a-f82b-4f68-82d8-4f5ac42868ad/%5B02%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20Point%20Smart_v2_56s_MarceloKlain.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559225886&amp;usg=AOvVaw3ZuSObcxkpKpdQO8AcRd3l",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/33f49b5e-bf3f-4f91-acda-de90820b9050/%5B03%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20%20%20Mercado%20Pago%20Point%20Smart_v3_14s_Marcelo%20Klein.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559226893&amp;usg=AOvVaw1ZW7OR4cymeB7uBQjsBpHU",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/83424729-87e8-4d9a-be72-1a9475581949/%5B04%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20%20%20Mercado%20Pago%20Point%20Smart_v1_21s_Antonio%20Bastos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559227841&amp;usg=AOvVaw1I12f0sQxzgEgldoqlVlO-",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/517ec2f7-ae21-4eeb-8390-aecda6d16048/%5B05%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20Point%20Smart_v3_26s_AntonioBastos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559228802&amp;usg=AOvVaw19jT8YLi_txTqwcN0POmz_",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/f9e9a0da-1a7a-421d-9920-485367d9250a/%5B06%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO_v3_55s_Marcelo_Klein.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559229723&amp;usg=AOvVaw2Kmoq1g-BlxoxMuz9E3iER",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/83f1ceca-92fc-4d61-a332-ea9beb344607/%5B07%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20%20%20Mercado%20Pago%20Point%20Smart_v3_33s_.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559230791&amp;usg=AOvVaw2zT8zb3wLdb5ZCcFUosWUA",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/fe91369a-69f5-4188-b5c3-4bc423650efd/%5B08%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20Point%20Smart_v2_29s_antonio_basto.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559231758&amp;usg=AOvVaw2lHfLEVN8gByxXn124DNl-",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/a56a5731-59da-4c0a-aabb-dadbe43d0862/%5B02%5D%20%5BP47%5D%5BNN%5D%20MERCADO%20PAGO%20Mercado%20Pago_v2_35s_Daniela_Caste.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559232708&amp;usg=AOvVaw2CkSv7nPipDsW_1-uC9xRT",
+        "https://t9007008605.p.clickup-attachments.com/t9007008605/bd445597-d09a-450f-a245-a8f28bdafdde/%5B05%5D%20%5BP47%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20-%20Conta%20PJ%20(2025-09-04)_v3_39s_Andr%C3%A9_Lemos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559233686&amp;usg=AOvVaw1GpvKBLVQbWGwBBctgKt3M"
+      ]
+    }
+  },
+  "current_compilation": "Movida",
+  "completed_compilations": [
+    "Drogasil",
+    "Agibank",
+    "Livelo",
+    "Bravecto",
+    "Bradesco",
+    "LG",
+    "Claro",
+    "Faculdade Est cio",
+    "Mercado Pago",
+    "Magazine Luiza",
+    "Dominos",
+    "Allfluence"
+  ]
+}
