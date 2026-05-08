@@ -905,9 +905,20 @@ button { font-family: inherit; }
   pointer-events: none;
 }
 
-/* iframe (YouTube hover preview): scale leve para cortar letterbox e dar zoom no hover */
+/* iframe (YouTube hover preview): JS dimensiona width/height absolutos com aspect 16:9
+   para cobrir o thumb. Aqui apenas centralizamos e damos zoom suave no hover. */
+iframe.trabalhos__hover-video {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+iframe.trabalhos__hover-video.active {
+  transform: translate(-50%, -50%);
+}
+
 .trabalhos__item:hover iframe.trabalhos__hover-video.active {
-  transform: scale(1.4);
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 .trabalhos__hover-video.active {

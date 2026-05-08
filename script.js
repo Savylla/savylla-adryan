@@ -2393,6 +2393,24 @@ items.forEach(item => {
       hoverVideo.className = 'trabalhos__hover-video';
       thumb.insertBefore(hoverVideo, playIcon);
     }
+    // iframe YouTube: dimensiona com aspect 16:9 cobrindo o thumb (overflow corta excesso)
+    if (hoverVideo.tagName === 'IFRAME') {
+      const rect = thumb.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) {
+        const playerAspect = 16 / 9;
+        const cardAspect = rect.width / rect.height;
+        let w, h;
+        if (cardAspect < playerAspect) {
+          h = rect.height;
+          w = h * playerAspect;
+        } else {
+          w = rect.width;
+          h = w / playerAspect;
+        }
+        hoverVideo.style.width = `${w}px`;
+        hoverVideo.style.height = `${h}px`;
+      }
+    }
     hoverTimeout = setTimeout(() => {
       if (hoverVideo.tagName === 'IFRAME') {
         hoverVideo.classList.add('active');
