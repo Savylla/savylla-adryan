@@ -1699,7 +1699,7 @@ iframe.trabalhos__hover-video.active {
 
 @media (max-width: 480px) {
   .hero__title { font-size: clamp(3.5rem, 16vw, 5rem); line-height: 1.05; }
-  .sobre__stats { flex-direction: column; gap: 20px; }
+  .sobre__stats { flex-direction: column; gap: 20px; align-items: center; text-align: center; }
   .trabalhos__filtros { gap: 6px; }
   .trabalhos__filtro { padding: 10px 16px; font-size: 0.75rem; min-height: 44px; }
 }
