@@ -698,56 +698,56 @@ const projetos = [
       "Período": "Fev - Ago 2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/07f45d42-291f-40b1-8a89-598cfac9a63e/%5B07%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v1_29s_Daniela.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559070957&amp;usg=AOvVaw2P-ruilgXtdg2tSbagQrkv", direcao: true, talento: "Daniela Castelo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0dd44d27-5cc6-413b-85f0-01516aa0f085/%5B05%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v5_29s_Debora_Mel.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559071835&amp;usg=AOvVaw0Qw0oqmTu8hCVqZrtI-Y0v", talento: "Débora Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/490bc9f6-647d-45f3-9fcf-55f34b5195b9/%5B06%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v3_32s_DeboraMelo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559072704&amp;usg=AOvVaw2l4nCnmg6u8G3ErTwvhWu-", talento: "Débora Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ead54170-dfb6-4a08-b64a-f9641fe0ad13/%5B04%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v5_Daniela%20Castelo_55s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559073871&amp;usg=AOvVaw2NXYiqMXV_gKFOebLZuW2q", talento: "Daniela Castelo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/247f3721-3bd1-41d3-af5f-95f81ab39a9c/%5B03%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v2_24s_Frederico_Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559074856&amp;usg=AOvVaw2XidhjZ7y7vvsRGGPI5teQ", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a9aae3b7-c5ee-4170-890d-1cf0f4cf642f/%5B10%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v3_46s_Frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559075756&amp;usg=AOvVaw0cYn6DvVlsGEpWant77GBu", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/09a62d04-bbd1-448c-a32c-a4b237cca86e/%5B02%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v2_41s_Quezia.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559076828&amp;usg=AOvVaw2OSUP2F_LPYYsqWXq0-R-z", direcao: true, talento: "Quézia Castro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/62def742-ba4c-4010-875e-17372125481d/%5B08%5D%5BP02%5D%5BNN%5D%20Raia%20-%20Drogasil%20Varejar_v4_37s_Quezia%20Fernandes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559077816&amp;usg=AOvVaw0bUQRUaQACM5SOPpdvilKN", direcao: true, talento: "Quézia Castro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c3104f63-b86f-4658-bc7d-14e8acc5bd91/%5B01%5D%20%5BP05%5D%5BNN%5D%20RAIA%20%20Drogasil%20Dia%20das%20M%C3%A3es_v3_39s_Clara_Giffoni.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559078751&amp;usg=AOvVaw1V2rio7bR09Lt8OKzSm62j", talento: "Clara Giffoni" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/bee811b5-5ca4-4573-987c-8396bd0f9b02/%5B01%5D%20%5BP04%5D%5BNN%5D%20RAIA%20%20%20Drogasil%20-%20Bond%20Repair_v3_21s_Julia%20Helen.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559079596&amp;usg=AOvVaw20z_w2IMrbJ1HQzuWjd79T", talento: "Julia Helen" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/cd45e2da-7e21-49b3-9543-e2a8f48468da/%5B07%5D%20%5BP04%5D%5BNN%5D%20RAIA%20%20%20Drogasil%20-%20Bond%20Repair_v3_44s_Julia%20Helen.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559080631&amp;usg=AOvVaw2qFsguGwa5PwI6u8GS2LCu", talento: "Julia Helen" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0e1888cc-e6ea-418d-8575-3126f762799c/%5B09%5D%5BP04%5D%5BNN%5D%20RAIA%20%7C%20Drogasil%20-%20Bond%20Repair_v2_41s_JuliaHelen.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559081577&amp;usg=AOvVaw3DVRXp7tMjWh1uiQOYqi9Z", talento: "Julia Helen" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c4becab0-59ab-40f2-ba78-cbc750adf986/%5B13%5D%20%5BP04%5D%5BNN%5D%20RAIA%20%20Drogasil%20-%20Bond%20Repair_v4_38s_JULIA_HELEN.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559082633&amp;usg=AOvVaw2dnbdSlKdoJEebBg_yh5G-", talento: "Julia Helen" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ae3cfc34-b38b-4221-b366-304ca23af65d/%5B06%5D%20%5BP09%5D%5BNN%5D%20RAIA%20Dia%20dos%20namorados%20Drogasil_v4_44s_LARISSA_VENTURINI.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559083632&amp;usg=AOvVaw1TLjBkZR7LMLOxxGe3kcuZ", direcao: true, talento: "Larissa Venturini" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/79772753-a2b4-4174-8a18-84f21cb77949/%5B03%5D%20%5BP09%5D%5BNN%5D%20RAIA%20%20%20Dia%20dos%20namorados%20-%20Drogasil_v2_39s_Larissa%20Venturini.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559084621&amp;usg=AOvVaw241K-VIaFNkCpMFF-VnlJ6", direcao: true, talento: "Larissa Venturini" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/3c7c68df-8f82-4d37-adce-34c2f8d45b11/%5B02%5D%20%5BP09%5D%5BNN%5D%20RAIA%20%20%20Dia%20dos%20namorados%20-%20Drogasil_v2_54s_Larissa%20Venturini.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559085633&amp;usg=AOvVaw139FsF1sY-lmkrheGyqiYG", direcao: true, talento: "Larissa Venturini" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/48e8e70d-d861-498c-bb0f-af163512beaa/%5B01%5D%20%5BP09%5D%5BNN%5D%20RAIA%20-%20Dia%20dos%20namorados%20-%20Drogasil_v5_50s_LarissaVenturini.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559086625&amp;usg=AOvVaw166jUcVfGaj3CNCwWgiMco", direcao: true, talento: "Larissa Venturini" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f93d09fc-5f7c-4b85-927c-5da62f2b9af1/essa%20%C3%A9%20a%20matem%C3%A1tica%20que%20eu%20gosto_v1_30s-Yago.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559087567&amp;usg=AOvVaw1fDgNZSyJnW4gHuJNCBW0r", talento: "Yago Capita" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c0fb5c15-f73c-4300-b2cc-ebed92430e62/%5B01%5D%20%5BP14%5D%5BNN%5D%20RAIA%20%20Black%20Fraldas%20-%20Drogasil_v3_31s_Andrei_Lamberg.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559088449&amp;usg=AOvVaw2mSo4SWSCC7nrSUxO237iH", talento: "Andrei Lamberg" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8b326ba4-5a6f-40f1-937c-58b103f7f844/%5B06%5D%20%5BP14%5D%5BNN%5D%20RAIA%20-%20Black%20Fraldas%20-%20Drogasil_v2_18s_Andrei.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559089302&amp;usg=AOvVaw0PbWe85vDVRO0pTYpqCKo5", talento: "Andrei Lamberg" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2b49c1f5-0e2d-487e-9811-7bd6a39d472e/%5B07%5D%20%5BP14%5D%5BNN%5D%20RAIA%20%20%20Black%20Fraldas%20-%20Drogasil_v3_41s_Andrei%20Lamberg.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559090187&amp;usg=AOvVaw0_cHJvxuwYhaFomkZnuJ1t", talento: "Andrei Lamberg" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/3710b9ee-6bfc-4548-93a7-74da1e850806/%5B01%5D%20%5BP16%5D%5BNN%5D%20RAIA%20%20%20AlwaysOn%20Perfumaria%20JUL%20-%20Drogasil_v1_35s_Murillo%20Amorim.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559091105&amp;usg=AOvVaw29m4wZWgF7e0cmnjYFTDCB", talento: "Murilo Amorim" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/dc824298-c28c-4157-aa59-70e8ab8cadcd/%5B03%5D%20%5BP16%5D%5BNN%5D%20RAIA%20-%20AlwaysOn%20Perfumaria-JUL%20-%20Drogasil_v3_35s_Murillo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559091987&amp;usg=AOvVaw0gvH3ceOcfsWo2-UolJKxp", talento: "Murilo Amorim" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c7166ae2-bb72-4064-bb6c-1c61a8c73106/%5B04%5D%20%5BP16%5D%5BNN%5D%20RAIA%20AlwaysOn%20PerfumariaJUL%20-%20Drogasil_v1_45s_Murilo_Amorim.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559092891&amp;usg=AOvVaw0LmkvvuzFrHhko92GfbVe3", talento: "Murilo Amorim" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1d34b5fe-bf4b-4ab2-a7b8-2c437cafcc22/%5B08%5D%20%5BP16%5D%5BNN%5D%20RAIA%20%20AlwaysOn%20PerfumariaJUL%20-%20Drogasil_v2_20s_Murilo_Amorim.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559093943&amp;usg=AOvVaw3p5QF01WogDmNEgMuQ6ccg", talento: "Murilo Amorim" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ab86e5c3-c371-4fac-a756-9a8ee04fd452/%5B05%5D%20%5BP16%5D%5BNN%5D%20RAIA%20%20AlwaysOn%20PerfumariaJUL%20-%20Drogasil_v6_52s_Thays_Godinho_Ribeiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559095136&amp;usg=AOvVaw3M5aTUbL18ny0reHYrHIzN", talento: "Thays Godinho Ribeiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7bb85e4c-3da2-4f4a-851e-38a557a8ef46/%5B02%5D%20%5BP16%5D%5BNN%5D%20RAIA%20%20%20AlwaysOn%20Perfumaria%20JUL%20-%20Drogasil_v3_47s_Thays%20Godinho%20Ribeiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559096092&amp;usg=AOvVaw0XLvfFBFOp2c1QDkUqpBAt", talento: "Thays Godinho Ribeiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8bba1e70-e456-4bb7-b034-6c61a4f4d031/%5B06%5D%20%5BP16%5D%5BNN%5D%20RAIA%20%20%20AlwaysOn%20Perfumaria%20JUL%20-%20Drogasil_v2_36s_Thays%20Godinho.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559096966&amp;usg=AOvVaw15djCgfaGPZPh1059D57lL", talento: "Thays Godinho Ribeiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/49cdcbcf-3014-4424-9949-f91745ed7c34/%5B07%5D%20%5BP16%5D%5BNN%5D%20RAIA%20%20AlwaysOn%20PerfumariaJUL%20-%20Drogasil_v3_38s_Thays_Godinho.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559097859&amp;usg=AOvVaw39ElrtM3Eidjc-Dik5Cvfk", talento: "Thays Godinho Ribeiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/3d579141-eb4f-405d-961a-37bc0ab40207/%5B01%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil_v2_34s_Anny%20Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559098791&amp;usg=AOvVaw0pLQYPP6XW7EAk9I9dEYyj", talento: "Anny Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/41aa8c31-8550-40ae-b765-a2432cdb6828/%5B02%5D%20%5BP18%5D%5BNN%5D%20RAIA%20-%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil_v2_42s_Anny_Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559099700&amp;usg=AOvVaw07dpLEuY73mGxNNvxEKmW5", talento: "Anny Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/34eb3b92-a76b-457b-831f-a268bf24caac/%5B03%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil%20_v1_55s_Qu%C3%A9ren-hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559100784&amp;usg=AOvVaw23rSII1_xXIaQuovpZzw8H", direcao: true, talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/9eaeb63a-7ce8-489f-b18b-e861ac4a9c28/%5B04%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil%20_v1_57s_Anny%20Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559101750&amp;usg=AOvVaw3zxwZo6Hk3U8BBFcxHoEkD", talento: "Anny Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/29e4a983-ded1-47f7-82de-8a3aa86864f0/%5B05%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil_v2_19s_Anny.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559102668&amp;usg=AOvVaw0JO9Ut6d4bCix_AXcCPKxT", talento: "Anny Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/789b04e3-6b88-4974-9d8f-213ee8028021/%5B06%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil_v3_54s_Qu%C3%A9ren-hapuque%20Fernandes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559103595&amp;usg=AOvVaw2sXo3vXwyXrB2T_MpCLwLA", direcao: true, talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/da80564b-0524-4867-a10b-73843a2293e5/%5B07%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil_v1_30s_Qu%C3%A9ren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559104543&amp;usg=AOvVaw3v_OmQXPsVh9r2GrzT8MQZ", direcao: true, talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/3e3195e1-e0ee-46fc-a886-6856fd0e2bde/%5B08%5D%20%5BP18%5D%5BNN%5D%20RAIA%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Drogasil_v3_48s_Queren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559105473&amp;usg=AOvVaw28HrXR71F-9osiXRRh9X5M", direcao: true, talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c8c556b6-0093-4209-a248-a66875a0d537/%5B01%5D%20%5BP20%5D%5BNN%5D%20RAIA%20-%20Cuidado%20que%20vale%20mais%20-%20Drogasil_v4_49s_LiviaLima.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559106323&amp;usg=AOvVaw0rXUr2aNcauH3StvDCt-Q7", talento: "Lívia Lima" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/6fdba7a5-0a0d-4bf5-b3ef-f42d3d6f08d6/%5B02%5D%20%5BP20%5D%5BNN%5D%20RAIA%20%20%20Cuidado%20que%20vale%20mais%20%20%20Drogasil_v2_46s_frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559107258&amp;usg=AOvVaw1BCEZQIyLwFOiw7F9gheGQ", talento: "Lívia Lima" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/88069cee-c153-4fb8-9beb-5c78b91ae99b/%5B03%5D%20%5BP20%5D%5BNN%5D%20RAIA%20%20%20Cuidado%20que%20vale%20mais%20%20%20Drogasil_v2_53s_Frederico%20Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559108133&amp;usg=AOvVaw135BUyWiTCNW06C0NflzOR", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/056e9f78-7ab7-40b5-ba52-c7171a7cc5d3/%5B04%5D%20%5BP20%5D%5BNN%5D%20RAIA%20%20%20Cuidado%20que%20vale%20mais%20%20%20Drogasil_v3_43s_Livia%20Lima.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559109029&amp;usg=AOvVaw1xc4DbwOxUyD9sOxX6_AH5", talento: "Lívia Lima" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/62111e2b-7407-416d-b6b4-232e148dcd52/%5B05%5D%20%5BP20%5D%5BNN%5D%20RAIA%20-%20Cuidado%20que%20vale%20mais%20-%20Drogasil_v3_31s_Frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559109927&amp;usg=AOvVaw0lme_pKoBC5dYBC2PlqhHn", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/fb442bcf-693a-4ecd-9bc9-b2c3921f3587/%5B06%5D%20%5BP20%5D%5BNN%5D%20RAIA%20-%20Cuidado%20que%20vale%20mais%20-%20Drogasil_v3_46s_FredericoVolkaman.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559110883&amp;usg=AOvVaw2RtFDmg9w23IepY0GIDWXv", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1a961381-bb06-48ee-8b2e-ce5095f51597/%5B07%5D%20%5BP20%5D%5BNN%5D%20RAIA%20Cuidado%20que%20vale%20mais%20Drogasil_v5_51_Livia_Lima.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559111891&amp;usg=AOvVaw1Kxj1GY0ATalvN-aSfrKiH", talento: "Lívia Lima" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/098d04f3-811a-43da-b6dd-8d6736c95601/%5B08%5D%20%5BP20%5D%5BNN%5D%20RAIA%20Cuidado%20que%20vale%20mais%20Drogasil_v1_36s_Frederico_Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559112760&amp;usg=AOvVaw0WXMG6ZX3P-aCng9pDugvO", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7ab15ea3-e80c-417e-a3cf-6ddca79ef23e/%5B01%5D%20%5BP22%5D%5BNN%5D%20RAIA%20-%20OTC%20-%20Ciclo%20Gripal%20%20Drogasil_v6_54s_Yago.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559113657&amp;usg=AOvVaw1eaVIPl3lRtRcCQMGxnj_U", talento: "Yago Capita" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b74a83ba-ddc4-4454-8a75-8b8ad0d2269f/%5B03%5D%20%5BP22%5D%5BNN%5D%20RAIA%20-%20OTC%20-%20Ciclo%20Gripal%20%20Drogasil_v4_34s_Yago.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559114531&amp;usg=AOvVaw0G9iobjyKfBks7pHA3rHOF", talento: "Yago Capita" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7b8b98ea-c3ab-483b-abb0-09a73d03fd23/%5B07%5D%20%5BP22%5D%5BNN%5D%20RAIA%20%20%20OTC%20-%20Ciclo%20Gripal%20%20Drogasil_v3_34s_Yago%20Capita.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559115410&amp;usg=AOvVaw2wyJ4FQA5z97FbfrpZKfiD", talento: "Yago Capita" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/74b8cdf1-a505-4b53-87b2-b92182165310/%5B08%5D%20%5BP22%5D%5BNN%5D%20RAIA%20OTC%20Ciclo%20Gripal%20Drogasil_v4_48s_Yago_Capita.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559116376&amp;usg=AOvVaw20Mg6JLwZ-Tg88sAESr_Hl", talento: "Yago Capita" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b5ce8235-b15c-4172-893f-336054717aa5/%5B03%5D%20%5BP24%5D%5BNN%5D%20RAIA%20-%20Marcas%20Coreanas%20-%20Drogasil_v2_27s_Carolina_cruz.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559117310&amp;usg=AOvVaw0ZCBE-6DRudqnAsDHN_WX_", talento: "Carolina Cruz" }
+      { youtubeId: "5rciUtPVuL0", direcao: true, talento: "Daniela Castelo" },
+      { youtubeId: "iSFowsarqrQ", talento: "Débora Melo" },
+      { youtubeId: "CfLLQlnjgkg", talento: "Débora Melo" },
+      { youtubeId: "C_1KwT9qjWo", talento: "Daniela Castelo" },
+      { youtubeId: "tTeTbjNalJY", talento: "Frederico Volkmann" },
+      { youtubeId: "DlqE5_TP6L0", talento: "Frederico Volkmann" },
+      { youtubeId: "Pwqr0TFxOAo", direcao: true, talento: "Quézia Castro" },
+      { youtubeId: "MSv7PkJwgvU", direcao: true, talento: "Quézia Castro" },
+      { youtubeId: "HN4I6uBSLuY", talento: "Clara Giffoni" },
+      { youtubeId: "9jKktlUZVqc", talento: "Julia Helen" },
+      { youtubeId: "X4SLuPfPzlQ", talento: "Julia Helen" },
+      { youtubeId: "JAsHoP3Y214", talento: "Julia Helen" },
+      { youtubeId: "VwR9ksjnl0w", talento: "Julia Helen" },
+      { youtubeId: "ThbjiI7GgVI", direcao: true, talento: "Larissa Venturini" },
+      { youtubeId: "4Uofj7ZBmtw", direcao: true, talento: "Larissa Venturini" },
+      { youtubeId: "3vt2ctF6ZBg", direcao: true, talento: "Larissa Venturini" },
+      { youtubeId: "Oo5AF_iUASU", direcao: true, talento: "Larissa Venturini" },
+      { youtubeId: "bCQmkH50a8s", talento: "Yago Capita" },
+      { youtubeId: "VUx0Rxx0_no", talento: "Andrei Lamberg" },
+      { youtubeId: "ZCgxHei4D6I", talento: "Andrei Lamberg" },
+      { youtubeId: "tMDNOb91s1Q", talento: "Andrei Lamberg" },
+      { youtubeId: "fopYpuObULw", talento: "Murilo Amorim" },
+      { youtubeId: "UbxUor7dgD4", talento: "Murilo Amorim" },
+      { youtubeId: "PNNXRIiaq5U", talento: "Murilo Amorim" },
+      { youtubeId: "3vRmgWKQ-KI", talento: "Murilo Amorim" },
+      { youtubeId: "wTgDYMoxXkY", talento: "Thays Godinho Ribeiro" },
+      { youtubeId: "NVcXhACOIx4", talento: "Thays Godinho Ribeiro" },
+      { youtubeId: "GbXPStW3ICo", talento: "Thays Godinho Ribeiro" },
+      { youtubeId: "WID5OYWU8xY", talento: "Thays Godinho Ribeiro" },
+      { youtubeId: "wV5lv_6-grk", talento: "Anny Melo" },
+      { youtubeId: "BJvLyfX2h5A", talento: "Anny Melo" },
+      { youtubeId: "n9aPlT6_KqE", direcao: true, talento: "Quéren Hapuque" },
+      { youtubeId: "9bpjUvES1K4", talento: "Anny Melo" },
+      { youtubeId: "zyTZ9ZawHDQ", talento: "Anny Melo" },
+      { youtubeId: "WzLgP64ctkw", direcao: true, talento: "Quéren Hapuque" },
+      { youtubeId: "nxfehOV9_vE", direcao: true, talento: "Quéren Hapuque" },
+      { youtubeId: "an_wiA3e7mU", direcao: true, talento: "Quéren Hapuque" },
+      { youtubeId: "73HEDSjMaq0", talento: "Lívia Lima" },
+      { youtubeId: "-WnlPFEMdFg", talento: "Lívia Lima" },
+      { youtubeId: "O_Y6-vdgDDY", talento: "Frederico Volkmann" },
+      { youtubeId: "_aTr2OMEiPs", talento: "Lívia Lima" },
+      { youtubeId: "dpBXykL1CRM", talento: "Frederico Volkmann" },
+      { youtubeId: "y5_iDsHXKRE", talento: "Frederico Volkmann" },
+      { youtubeId: "gexMpN0aSZE", talento: "Lívia Lima" },
+      { youtubeId: "cZurkdSZDec", talento: "Frederico Volkmann" },
+      { youtubeId: "W2SpYLt4d9A", talento: "Yago Capita" },
+      { youtubeId: "OIC_kkT4u-o", talento: "Yago Capita" },
+      { youtubeId: "GL8dWgbun18", talento: "Yago Capita" },
+      { youtubeId: "tx2GDqTC7r4", talento: "Yago Capita" },
+      { youtubeId: "k58aVMVH9Sw", talento: "Carolina Cruz" }
     ],
     galeria: []
   },
@@ -768,54 +768,54 @@ const projetos = [
       "Período": "Mar - Out 2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4ad93d6f-324b-4cf4-9c7d-e675d7874324/%5B07%5D%20%5BP36%5D%5BCH%5DMercado%20Pago%20-%20TTCX-TESTES-SELLERS_v5_9s_NaluMoura.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559187447&amp;usg=AOvVaw1vTv-AqE_bHXXWZPO2MNDm", direcao: true, talento: "Nalu Moura" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e82ccb06-502a-484d-b369-d61c964d4c80/%5B08%5D%20%5BP36%5D%5BCH%5DMercado%20Pago%20-%20TTCX-TESTE-SELLERS_v4_53s_NaluMoreira.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559188501&amp;usg=AOvVaw1xqg44mol2ygC64sTgjCvW", direcao: true, talento: "Nalu Moura" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2663a671-a0c2-4a68-8bbf-86f3824922e5/%5B07%5D%20%5BP39%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Junio%20Users_v3_39s_Nalu%20Moura.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559189452&amp;usg=AOvVaw1s51FIsW82Gv2-w4bU66ig", talento: "Nalu Moura" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/6feda22c-7685-4e54-99e1-ef45163ea2e1/%5B21%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO_v1_30s_Daniela_Castelo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559190522&amp;usg=AOvVaw1JXO1khTUPDMpaLivn9pKO", talento: "Daniela Castelo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/01a6445e-935d-45cf-9931-aeb58dd425bc/%5B22%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v2_22s_Daniela_castelo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559191494&amp;usg=AOvVaw0ea23aNJzz6JDLvxdlah1D", talento: "Daniela Castelo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/15dbfa46-cce5-4a90-8b8a-e08387c6c968/%5B23%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v1_31s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559192414&amp;usg=AOvVaw1Ihx78TajKejBdBgos627u", talento: "Daniela Castelo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f90a997c-972d-40c3-8e69-4fe42661841d/%5B24%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_35s_DanielaCastelo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559193380&amp;usg=AOvVaw3lnqMlEU_fUivqPxh_UdjE", talento: "Daniela Castelo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/3817b547-4709-4fd1-915a-df78cd565ea5/%5B25%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v2_37s_Raphael%20Monteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559194528&amp;usg=AOvVaw0ps6C030pEOM7Z7FGp_R4X", direcao: true, talento: "Raphael Monteiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4f1a2bd1-feb0-4605-a829-bfec3f8badd2/%5B26%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_23s_RhafaelMonteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559195461&amp;usg=AOvVaw10wS0fkQfXVeLLaUJf9uzE", talento: "Raphael Monteiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/5ae24548-5fbd-4c3a-9188-6d1b23b91fb7/%5B27%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v2_28s_Raphael%20Monteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559196457&amp;usg=AOvVaw2FUfZkyeJWdDSuAhks82Ct", talento: "Raphael Monteiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/86d232d2-f0cb-45ef-b068-493e969114cc/%5B28%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_23s_RhafaelMonteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559197506&amp;usg=AOvVaw3UAMxeti7ihSvI6vDcBDnB", talento: "Raphael Monteiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b19ef0f9-e55d-4913-bbd3-ce05bad37cf4/%5B29%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO_v3_30s_Maria_Sousa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559198439&amp;usg=AOvVaw1Jd4zFchYXYCg5MhGjoOsV", talento: "Maria Souza" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1f98f2f9-ed54-49ee-b5fd-15268731889b/%5B30%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v3_33s_Joa%CC%83o%20Mendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559199333&amp;usg=AOvVaw1H1WmVGA7HJru5_M90JLRi", talento: "João Mendes" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/04a1f8d0-41cf-48b9-8a53-e5c454aaec9c/%5B31%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v1_24s_Maria%20Eduarda.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559200229&amp;usg=AOvVaw2tTAeRGXDNoUQcUiGDiitc", talento: "Maria Souza" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8d97fcde-a8e9-45dd-a9d2-356ab049cd39/%5B32%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v2_22s_Maria%20Eduarda%20Sousa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559201258&amp;usg=AOvVaw0r64xicGzkqkJdlR6O2wA5", talento: "Maria Souza" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4057363d-c0b7-46d9-a403-3965887b3167/%5B33%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO_v3_30s_Joao_Mendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559202336&amp;usg=AOvVaw0KP-e4YXdyygYiqOasDjCT", talento: "João Mendes" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/cf7dc35f-6609-4f54-b8b9-16cbc1aa1da1/%5B34%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v2_20s_Jo%C3%A3oMendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559203348&amp;usg=AOvVaw0fqzY99XDQH5C06FqwHESW", talento: "João Mendes" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/16bb4105-0140-4c44-a45a-39b00149ef2e/%5B35%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct%20_v1_13s_Jo%C3%A3o%20Mendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559204320&amp;usg=AOvVaw3oj1iuec0ynwsG5dPd-CqB", talento: "João Mendes" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2a124479-533c-4059-a48c-670761dfa0a2/%5B36%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v2_30s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559205345&amp;usg=AOvVaw3Bfy3riTORLB1Lmaw-wfwq", talento: "Maria Souza" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/eb542d1e-790c-4f60-bddd-a97863713ee2/%5B45%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20MLB%20Individuals%20Sep-Oct_v2_19s_Loretta%20Martins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559206354&amp;usg=AOvVaw0Yie2WtEOnFPh9hr32aoXw", talento: "Loretta Martins" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4eb27e4a-410d-47cf-9e6c-b8fe22c2d024/%5B46%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_27sLorettaMartins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559207330&amp;usg=AOvVaw3xDeeR5be0UEwOGV1vF_VT", talento: "Loretta Martins" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8838206c-8763-4809-a047-9dab2d1b426a/%5B47%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_23s_Loretta_martins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559208316&amp;usg=AOvVaw37gWzz2YU6nAMF8u6LjsrT", talento: "Loretta Martins" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/41b606a4-1aab-4bf9-802a-023072e95820/%5B48%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v4_35s_Loretta%20Martins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559209312&amp;usg=AOvVaw0Bq8cqw48A6ROE8QIxlsu4", talento: "Loretta Martins" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/948d953c-f3f4-49bc-89b2-3f33fd5a45d2/%5B49%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v2_25s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559210267&amp;usg=AOvVaw1LqUOwIIkNMnhYpE0UGyJI", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2a696331-5819-4768-89b8-3c02b5c90553/%5B50%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v1_29s_frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559211226&amp;usg=AOvVaw0nrnCHNhJxGzCP5a-tmb_k", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/fdc70a95-88a8-4098-94eb-dc436ba7d535/%5B51%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20%20%20MLB%20%20%20Individuals%20Sep%20Oct_v2_23s_Frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559212142&amp;usg=AOvVaw2kLrD-IIUJNdS8br3_hUXF", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7260d6e5-49d5-4aed-9b0c-5fa7bc316381/%5B52%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v4_22s_FredericoVolkam.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559213100&amp;usg=AOvVaw3gAbc94RVHmo-0e1-LAXZf", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c11674a3-aef8-44e5-a997-4b37066c57e5/%5B53%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_21s_RenenTeiva.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559213990&amp;usg=AOvVaw13RklT9bMExeOobE3ihkZo", talento: "Renan Teiva" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1d187cff-08de-4d54-a855-95286f2ef289/%5B54%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20-%20MLB%20-%20Individuals%20Sep-Oct_v3_20s_Renan_Telva.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559214907&amp;usg=AOvVaw1QkhF_oZrhQvh_i3o8eCgj", talento: "Renan Teiva" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/043aff5c-68bb-441c-8d2c-6761e93aa12a/%5B55%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO%20MLB%20Individuals%20SepOct_v2_28s_Renan%20Teiva.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559215970&amp;usg=AOvVaw07_Z6Z6L6anS1ayiprJv8O", talento: "Renan Teiva" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/035b2783-7663-4771-9ce5-3f9aea82c056/%5B56%5D%20%5BP44%5D%5BCH%5D%20MERCADO%20PAGO_v1_27s_Renan_Teiva.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559216908&amp;usg=AOvVaw1o4oHpIcLy7MW1AVLQxOa0", talento: "Renan Teiva" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c3188400-804c-42da-8422-d9311a1fc42c/%5B01%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20-%20Tap%201_v3_35s_Vit%C3%B3ria_Rodrigues.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559217856&amp;usg=AOvVaw3FUkLHk8rGYT9c5CkcAA82", talento: "Vitória Rodrigues" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2a84f06f-1f22-4de3-a886-e5a31b238ee3/%5B02%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO_v3_31s_Raphael_Monteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559218833&amp;usg=AOvVaw2qligG2FAfuq-twvfs9IVh", talento: "Raphael Monteiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d6e68c5c-6bba-4c7c-976d-cd865cff9aef/%5B03%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO%20Mercado%20Pago_v1_27s_.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559219889&amp;usg=AOvVaw2o3DgDq4ZfVzwkokAmgfzE", talento: "Raphael Monteiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/afac0389-7e1a-46f6-9a08-517a8fce8226/%5B04%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO%20Mercado%20Pago_v2_28s_Vit%C3%B3ria_Rodrigues.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559220936&amp;usg=AOvVaw2r7-SmA_hQa6YxF9GrLLAt", talento: "Vitória Rodrigues" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/39ff43f4-b67a-41e1-ac40-d567fb73d6f0/%5B05%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO%20%20%20Mercado%20Pago%20-%20Tap%201_v2_22s_Raphael.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559222000&amp;usg=AOvVaw2db4Mu2CBDg8JjWb7nj0dI", talento: "Raphael Monteiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0f43def5-5d95-4962-b12e-122c1ee5cdea/%5B06%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20-%20Tap%201_v4_27s_VitoriaRodrigues.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559223010&amp;usg=AOvVaw0ZPDHoFQrhrObrAdTs_JYs", talento: "Vitória Rodrigues" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1dcbe017-b1ec-4f72-ba21-af99b7cdddcc/%5B08%5D%20%5BP45%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20-%20Tap%201_v2_17s_Vit%C3%B3ria_rodrigres.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559224001&amp;usg=AOvVaw1X5sPUumE8h4mf-QNtSSGl", talento: "Vitória Rodrigues" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/80bf703b-774f-4a8b-afcb-30d57ea20c79/%5B01%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20%20%20Mercado%20Pago%20Point%20Smart_v2_30s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559224979&amp;usg=AOvVaw0jUtGixisdQ4uVLHz29jbP", talento: "Antônio Bastos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/54c9827a-f82b-4f68-82d8-4f5ac42868ad/%5B02%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20Point%20Smart_v2_56s_MarceloKlain.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559225886&amp;usg=AOvVaw3ZuSObcxkpKpdQO8AcRd3l", talento: "Marcelo Klein" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/33f49b5e-bf3f-4f91-acda-de90820b9050/%5B03%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20%20%20Mercado%20Pago%20Point%20Smart_v3_14s_Marcelo%20Klein.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559226893&amp;usg=AOvVaw1ZW7OR4cymeB7uBQjsBpHU", talento: "Marcelo Klein" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/83424729-87e8-4d9a-be72-1a9475581949/%5B04%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20%20%20Mercado%20Pago%20Point%20Smart_v1_21s_Antonio%20Bastos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559227841&amp;usg=AOvVaw1I12f0sQxzgEgldoqlVlO-", talento: "Antônio Bastos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/517ec2f7-ae21-4eeb-8390-aecda6d16048/%5B05%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20Point%20Smart_v3_26s_AntonioBastos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559228802&amp;usg=AOvVaw19jT8YLi_txTqwcN0POmz_", talento: "Antônio Bastos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f9e9a0da-1a7a-421d-9920-485367d9250a/%5B06%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO_v3_55s_Marcelo_Klein.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559229723&amp;usg=AOvVaw2Kmoq1g-BlxoxMuz9E3iER", talento: "Marcelo Klein" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/83f1ceca-92fc-4d61-a332-ea9beb344607/%5B07%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20%20%20Mercado%20Pago%20Point%20Smart_v3_33s_.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559230791&amp;usg=AOvVaw2zT8zb3wLdb5ZCcFUosWUA", talento: "Marcelo Klein" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/fe91369a-69f5-4188-b5c3-4bc423650efd/%5B08%5D%20%5BP46%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20Point%20Smart_v2_29s_antonio_basto.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559231758&amp;usg=AOvVaw2lHfLEVN8gByxXn124DNl-", talento: "Antônio Bastos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a56a5731-59da-4c0a-aabb-dadbe43d0862/%5B02%5D%20%5BP47%5D%5BNN%5D%20MERCADO%20PAGO%20Mercado%20Pago_v2_35s_Daniela_Caste.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559232708&amp;usg=AOvVaw2CkSv7nPipDsW_1-uC9xRT", talento: "Daniela Castelo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/bd445597-d09a-450f-a245-a8f28bdafdde/%5B05%5D%20%5BP47%5D%5BNN%5D%20MERCADO%20PAGO%20-%20Mercado%20Pago%20-%20Conta%20PJ%20(2025-09-04)_v3_39s_Andr%C3%A9_Lemos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559233686&amp;usg=AOvVaw1GpvKBLVQbWGwBBctgKt3M", talento: "André Lemos" }
+      { youtubeId: "dxdNxe9Zzg4", direcao: true, talento: "Nalu Moura" },
+      { youtubeId: "9iCdW6UJc-o", direcao: true, talento: "Nalu Moura" },
+      { youtubeId: "zxeRSTxanAY", talento: "Nalu Moura" },
+      { youtubeId: "d0qnoEjHgOM", talento: "Daniela Castelo" },
+      { youtubeId: "m4u72jlB-Tw", talento: "Daniela Castelo" },
+      { youtubeId: "-o7dERVmDUA", talento: "Daniela Castelo" },
+      { youtubeId: "lXiBZ6NHzHM", talento: "Daniela Castelo" },
+      { youtubeId: "ckrM_e-58Zs", direcao: true, talento: "Raphael Monteiro" },
+      { youtubeId: "vEAYovMcRnM", talento: "Raphael Monteiro" },
+      { youtubeId: "DoWeEwO9Eb8", talento: "Raphael Monteiro" },
+      { youtubeId: "F4qxnn5gmHM", talento: "Raphael Monteiro" },
+      { youtubeId: "FgF_fDoVYXk", talento: "Maria Souza" },
+      { youtubeId: "W3cPrLIoQms", talento: "João Mendes" },
+      { youtubeId: "og-ujl2b2X4", talento: "Maria Souza" },
+      { youtubeId: "vVuiNZk6zKc", talento: "Maria Souza" },
+      { youtubeId: "bMkx1BOe44U", talento: "João Mendes" },
+      { youtubeId: "sYB5NegUsbk", talento: "João Mendes" },
+      { youtubeId: "mKAlH0IPnYs", talento: "João Mendes" },
+      { youtubeId: "hvzXSqK7ysk", talento: "Maria Souza" },
+      { youtubeId: "oE_jYqTHzAU", talento: "Loretta Martins" },
+      { youtubeId: "cBGTodEPCuU", talento: "Loretta Martins" },
+      { youtubeId: "XuL7wexZg6g", talento: "Loretta Martins" },
+      { youtubeId: "v6esQrHSqlU", talento: "Loretta Martins" },
+      { youtubeId: "ez-at7lP7HY", talento: "Frederico Volkmann" },
+      { youtubeId: "yVjto8K7BqQ", talento: "Frederico Volkmann" },
+      { youtubeId: "RWnOjv4W9po", talento: "Frederico Volkmann" },
+      { youtubeId: "TTP5YQles-k", talento: "Frederico Volkmann" },
+      { youtubeId: "z490SYGwyBE", talento: "Renan Teiva" },
+      { youtubeId: "rI1Avy1hz1c", talento: "Renan Teiva" },
+      { youtubeId: "bhDld0yNZUw", talento: "Renan Teiva" },
+      { youtubeId: "jInRNm1CRSw", talento: "Renan Teiva" },
+      { youtubeId: "Od1BqBgoJ9c", talento: "Vitória Rodrigues" },
+      { youtubeId: "6xUcrJaAO10", talento: "Raphael Monteiro" },
+      { youtubeId: "mO27JR1aYGw", talento: "Raphael Monteiro" },
+      { youtubeId: "0T9tXKLZG2I", talento: "Vitória Rodrigues" },
+      { youtubeId: "dFBLa-oVYV0", talento: "Raphael Monteiro" },
+      { youtubeId: "SfxQcOjKLU4", talento: "Vitória Rodrigues" },
+      { youtubeId: "izoH41Te-Vw", talento: "Vitória Rodrigues" },
+      { youtubeId: "xDe-4vMFMGM", talento: "Antônio Bastos" },
+      { youtubeId: "-NSvoAL99pM", talento: "Marcelo Klein" },
+      { youtubeId: "cwhzu-foUs0", talento: "Marcelo Klein" },
+      { youtubeId: "NT3ixIxn9Fc", talento: "Antônio Bastos" },
+      { youtubeId: "Y3Ha-wHWAiA", talento: "Antônio Bastos" },
+      { youtubeId: "0UvgfcS8l34", talento: "Marcelo Klein" },
+      { youtubeId: "TtfjanvFocw", talento: "Marcelo Klein" },
+      { youtubeId: "ratqvzQX73Y", talento: "Antônio Bastos" },
+      { youtubeId: "CVmumik2hnw", talento: "Daniela Castelo" },
+      { youtubeId: "Mh_TPDkDH70", talento: "André Lemos" }
     ],
     galeria: []
   },
@@ -836,37 +836,37 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b8379034-823e-415a-8167-91e1b5b29621/%5B04%5D%20%5BP51%5D%5BCH%5D%20MAGALU%20%20Top%20View%20Payday%20Abril%2025_v1_45s_Leticia_Machado.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559261038&amp;usg=AOvVaw0n5CBcfQ1ZsuSpSCqbPjDk", talento: "Letícia Machado" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/18004192-c81d-42c5-aeb2-840e557ccdf6/%5B05%5D%20%5BP50%5D%5BCH%5D%20MAGALU%20%20%20PayDay%20Abril%2025_v2_27s_Karol.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559262287&amp;usg=AOvVaw0NmQE0uYY7cQ4HEls5UAny", direcao: true, talento: "Karol Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ce8a0043-b5e6-4bd3-9212-c23b2648380d/%5B04%5D%20%5BP50%5D%5BCH%5D%20MAGALU%20%20%20PayDay%20Abril%2025_v1_41s_Julia%20Helen.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559263421&amp;usg=AOvVaw2p6bN0Fj4Qho1k96GmoPQN", direcao: true, talento: "Julia Helen" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/58d95c7b-ee5f-46b1-85b0-67c1e1e57401/%5B06%5D%20%5BP50%5D%5BCH%5D%20MAGALU%20%20%20PayDay%20Abril%2025_v3_27s_Karol.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559264523&amp;usg=AOvVaw3B3gJmDBZ2yl84Cb_e5xND", direcao: true, talento: "Karol Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b0570488-b981-432f-b704-0de17b24d743/%5B16%5D%20%5BP50%5D%5BCH%5D%20MAGALU%20-%20PayDay%20Abril%2025_v3_32s_Julia_helen.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559265701&amp;usg=AOvVaw3IpDkhGsm8S3g7CowNIylG", direcao: true, talento: "Julia Helen" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1e54fd04-3717-4e6a-97f6-7270719ef538/%5B15%5D%20%5BP50%5D%5BCH%5D%20MAGALU%20%20%20PayDay%20Abril%2025_v2_20s_Drico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559266907&amp;usg=AOvVaw3mpLufzkiyH2mNwxAjOdFz", direcao: true, talento: "Drico Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/57be187b-2301-4800-bcea-041a2b69139b/%5B10%5D%20%5BP50%5D%5BCH%5D%20MAGALU%20-%20PayDay%20Abril%2025_v2_20s_Drico_alves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559268059&amp;usg=AOvVaw2d2ICdvg2vVOnIZSq2l1DF", direcao: true, talento: "Drico Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d17e58f2-3d32-46e4-8747-ca57fd6775f3/%5B09%5D%20%5BP53%5D%5BCH%5D%20MAGALU%20-%20Magalu%20-%20REVIEW%20DE%20PRODUTO_v3_58s_DricoAlvez_1.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559269073&amp;usg=AOvVaw1k40c_RqiUnzyljCJCQieG", talento: "Drico Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/48bae3bc-4b84-48ca-8d1f-6ed4cbaf4c4f/%5B04%5D%20%5BP53%5D%5BCH%5D%20MAGALU%20%7C%20Magalu%20-%20REVIEW%20DE%20PRODUTO_v3_33s_SamiaAbreu.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559270096&amp;usg=AOvVaw1Y_JJZ35eiugqAKvA3eEDE", talento: "Samia Abreu" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/9262d2c6-77ce-41d6-8ff9-9405105a7281/%5B08%5D%20%5BP53%5D%5BCH%5D%20MAGALU%20-%20Magalu%20-%20REVIEW%20DE%20PRODUTO_v4_44s_Drico_Alves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559271156&amp;usg=AOvVaw0w6Y5Ri6EgJKfA2061jYBg", talento: "Drico Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4cb78576-d1ef-4e8b-ba2c-2eb241652e77/%5B03%5D%20%5BP53%5D%5BCH%5D%20MAGALU%20%20Magalu%20-%20REVIEW%20DE%20PRODUTO_v3_30s_Samia_Abreu.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559272251&amp;usg=AOvVaw2TzHXepKhoNis4uUJsVQ5X", talento: "Samia Abreu" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/038b463a-4f6f-4650-8aae-8ce2f6254cf8/%5B02%5D%20%5BP53%5D%5BCH%5D%20MAGALU%20%20%20Magalu%20-%20REVIEW%20DE%20PRODUTO_v1_29s_Pedro%20Pires.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559273325&amp;usg=AOvVaw3t-cdgJMOifOJaVSMHyNvJ", talento: "Pedro Pires" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e483e880-8734-4377-a828-2a78eb640565/%5B03%5D%20%5BP56%5D%5BNN%5D%20MAGALU%20%20S%C3%A3o%20Jo%C3%A3o%20-%20Junho%2025_v2_37s_Bruna_Noronha.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559274462&amp;usg=AOvVaw2CTIh8cX8urLmyx1vSYrZT", direcao: true, talento: "Bruna Noronha" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/283101a3-ac65-4297-bc8b-c77cc1c33292/%5B04%5D%20%5BP56%5D%5BNN%5D%20MAGALU%20%20S%C3%A3o%20Jo%C3%A3o%20-%20Junho%2025_v1_29s_BRUNA_NORONHA.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559275591&amp;usg=AOvVaw0zdcD5D_oD-kMLUUD2g6PH", direcao: true, talento: "Bruna Noronha" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/34654a9b-5ef4-4571-991f-05cd6884a31a/%5B02%5D%20%5BP56%5D%5BNN%5D%20MAGALU%20%20%20S%C3%A3o%20Jo%C3%A3o%20-%20Junho%2025_v2_31s_Bruna%20Noronha.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559276716&amp;usg=AOvVaw2daFI70BYOB8_zN3Uu07K5", direcao: true, talento: "Bruna Noronha" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7f43d893-416f-4637-9af8-982d7679d750/%5B01%5D%20%5BP56%5D%5BNN%5D%20MAGALU%20%20%20S%C3%A3o%20Jo%C3%A3o%20-%20Junho%2025_v1_21s_Bruna%20Noronha.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559277807&amp;usg=AOvVaw2vIYw1HsVRcA2kJ6KD3CP0", direcao: true, talento: "Bruna Noronha" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/209641c3-bc70-4e1a-ac7a-9ec6e10a6638/%5B01%5D%20%5BP57%5D%5BNN%5D%20MAGALU%20-%20Compra%20Premiada%20Magalu_v2_37s_LaraGay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559278843&amp;usg=AOvVaw2zL8LbvilOGmovkusWfvm3", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/36ef0115-2795-4ccc-a7e2-92f3a54f8851/%5B02%5D%20%5BP57%5D%5BNN%5D%20MAGALU%20%20%20Compra%20Premiada%20Magalu_v2_32s_Lara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559279810&amp;usg=AOvVaw1tylrfFZbr3BUHJ_XLoDgs", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2a6f2fbf-0e1f-4855-8edd-e5ba5f95599d/%5B03%5D%20%5BP57%5D%5BNN%5D%20MAGALU%20%20%20Compra%20Premiada%20Magalu_v6_47s_Lara%20Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559280911&amp;usg=AOvVaw1xtcuqkKJRLDIY9YHBXMnr", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/cd0501a4-081d-4567-8fe0-b03ca4fb9ad6/%5B04%5D%20%5BP57%5D%5BNN%5D%20MAGALU%20-%20Compra%20Premiada%20Magalu_v4_32s_Lara_Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559281882&amp;usg=AOvVaw39VC4IbjydvaqcnI4FI9F6", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7d53f17e-597e-4c40-8a0d-e46a33c7db0d/%5B02%5D%20%5BP58%5D%5BNN%5D%20MAGALU%20-%20Compra%20Premiada%20Magalu%20Agosto_v5_25s_Qu%C3%A9ren%20Hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559282909&amp;usg=AOvVaw2q7VXNKQjmEPiQze-u70d9", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/86995a8c-d093-4d31-8870-dd98631ffbd7/%5B03%5D%20%5BP58%5D%5BNN%5D%20MAGALU%20Compra%20Premiada_v2_29s_Queren_Hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559284062&amp;usg=AOvVaw31K6Ray_PQSpsdFpRGCf_m", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/067106bc-9d0c-4dbe-bc36-378dec984b57/%5B04%5D%20%5BP58%5D%5BNN%5D%20MAGALU%20-%20Compra%20Premiada%20Magalu%20Agosto_v4_30s_Qu%C3%A9ren%20Hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559285128&amp;usg=AOvVaw2N33D6qaNAGomXhqH-g0sJ", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/03db00e3-f763-44fd-a87d-671a1edcaa86/%5B01%5D%20%5BP61%5D%5BNN%5D%20%20%20%20Magalu%20Black%20das%20Blacks_v3_21s_Lara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559286215&amp;usg=AOvVaw2l_oEhybRqfbDwGhEuwupH", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/74dd3028-06f1-4e30-bf83-f00deb7874d3/%5B02%5D%20%5BP61%5D%5BNN%5D%20%20%20%20Magalu%20Black%20das%20Blacks_v3_21s_Lara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559287291&amp;usg=AOvVaw2F6E2uHmNAiVOGHEhaHWqB", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/9e114541-6ddd-49c5-bed3-228dde5cc846/%5B03%5D%20%5BP61%5D%5BNN%5D%20%20-%20Magalu%20Black%20das%20Blacks_v3_19s_Lara_Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559288301&amp;usg=AOvVaw07ILOenMjIqtSXG04vuZRe", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/dd01e4b1-ffc3-44fe-b7f7-783a05b31225/%5B04%5D%20%5BP61%5D%5BNN%5D%20%20-%20Magalu%20Black%20das%20Blacks_v5_16sLaraGay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559289296&amp;usg=AOvVaw0_18sabtmghJEyJpe_k_W4", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d966c754-468a-4c81-960e-c728716d8b37/%5B01%5D%20%5BP90%5D%5BNN%5D%20MAGALU%20%20%20Magalu%20Black%20das%20Blacks_v4_44s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559290467&amp;usg=AOvVaw1R8mCnHx1_4Tk22dzkpmEJ", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/cb2c3bda-eaf6-4a2e-84fd-85bdbb502a71/%5B02%5D%20%5BP90%5D%5BNN%5D%20MAGALU%20%20%20Magalu%20Black%20das%20Blacks_v5_25s_Lara%20Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559291606&amp;usg=AOvVaw1yiXI-OJTl9RTfDDm36tTg", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/562f993b-0c65-4f93-8053-06d91a74f498/%5B03%5D%20%5BP90%5D%5BNN%5D%20MAGALU%20-%20Magalu%20Black%20das%20Blacks_v1_26s_LaraGay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559292622&amp;usg=AOvVaw1kxnvVfYcyGo5UZIByrlME", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e3d6b8bb-a9e0-476b-a06a-0bb0fc4102fe/%5B04%5D%20%5BP90%5D%5BNN%5D%20MAGALU%20%20%20Magalu%20Black%20das%20Blacks_v5_27s_Lara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559293747&amp;usg=AOvVaw1jVhvzFh3rEbVUZT7jVHam", talento: "Lara Gay" }
+      { youtubeId: "-f56zYQ3fDA", talento: "Letícia Machado" },
+      { youtubeId: "6ZMZNKIWJ4c", direcao: true, talento: "Karol Alves" },
+      { youtubeId: "Aq1O9dt5xWI", direcao: true, talento: "Julia Helen" },
+      { youtubeId: "nmyY1x5cS_Y", direcao: true, talento: "Karol Alves" },
+      { youtubeId: "o38LV90mbXA", direcao: true, talento: "Julia Helen" },
+      { youtubeId: "ukGK-l6WyMU", direcao: true, talento: "Drico Alves" },
+      { youtubeId: "Yzyqr_sNQNk", direcao: true, talento: "Drico Alves" },
+      { youtubeId: "KVFNqq-0B6M", talento: "Drico Alves" },
+      { youtubeId: "GQn-bgQy1XU", talento: "Samia Abreu" },
+      { youtubeId: "uyJf71ov1Uo", talento: "Drico Alves" },
+      { youtubeId: "NzpLW_es2JA", talento: "Samia Abreu" },
+      { youtubeId: "k3ozkk3OZVM", talento: "Pedro Pires" },
+      { youtubeId: "LoOTy7du6Iw", direcao: true, talento: "Bruna Noronha" },
+      { youtubeId: "7Z1O-UByi_M", direcao: true, talento: "Bruna Noronha" },
+      { youtubeId: "OqvXQHW-CTs", direcao: true, talento: "Bruna Noronha" },
+      { youtubeId: "0PY15VxyeTU", direcao: true, talento: "Bruna Noronha" },
+      { youtubeId: "5jbZ5utFLyY", talento: "Lara Gay" },
+      { youtubeId: "d2t2Pi6X0XQ", talento: "Lara Gay" },
+      { youtubeId: "WQqyTjkW67I", talento: "Lara Gay" },
+      { youtubeId: "3-hSdScDuqM", talento: "Lara Gay" },
+      { youtubeId: "cFIjWD32UB0", talento: "Quéren Hapuque" },
+      { youtubeId: "872RY8rhtxw", talento: "Quéren Hapuque" },
+      { youtubeId: "vPQww1qTQrs", talento: "Quéren Hapuque" },
+      { youtubeId: "yDUXW76PUmk", talento: "Lara Gay" },
+      { youtubeId: "aQG2M8aLwfA", talento: "Lara Gay" },
+      { youtubeId: "ugzawOFiRLg", talento: "Lara Gay" },
+      { youtubeId: "nrWPZMy85Ys", talento: "Lara Gay" },
+      { youtubeId: "7G_XcintAnE", talento: "Lara Gay" },
+      { youtubeId: "GbRmuDDoU9M", talento: "Lara Gay" },
+      { youtubeId: "KS0rgWmvGzc", talento: "Lara Gay" },
+      { youtubeId: "g-MEwRKpeT4", talento: "Lara Gay" }
     ],
     galeria: []
   },
@@ -887,70 +887,70 @@ const projetos = [
       "Período": "Mar - Ago 2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ec910313-cab0-4ce1-8f2b-ecd1bf90d895/%5B10%5D%5BP01%5D%5BNN%5D%20Raia%20-%20Raia%20Varejar_v2_34s_Loretta%20Martins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559118199&amp;usg=AOvVaw18pkd5GMx-KXRJ6A9_-0-m", talento: "Loretta Martins" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e224f812-3cac-4ed1-abb3-805451551d51/%5B08%5D%5BP01%5D%5BNN%5D%20Raia%20-%20Raia%20Varejar_v2_23_Loretta%20Martins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559119056&amp;usg=AOvVaw1QJLYjYDNv_kzK1OCRUyPi", talento: "Loretta Martins" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4aaf3b12-86c9-4f0e-8dc5-eb25448b8de0/%5B05%5D%5BP01%5D%5BNN%5D%20Raia%20-%20Raia%20Varejar_v3_38s_Frederico%20Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559119896&amp;usg=AOvVaw3M3xiSRpP1es44dYSTrFcV", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/641aa6a0-a186-48d1-87b7-54cb45e77128/%5B09%5D%5BP01%5D%5BNN%5D%20Raia%20-%20Raia%20Varejar_v42_40s_Frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559120761&amp;usg=AOvVaw1-I38q1pntCCdjcuRkFGef", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1c006628-7b04-43e8-b3b6-6d784b3c1cbf/%5B01%5D%5BP01%5D%5BNN%5D%20Raia%20-%20Raia%20Varejar_v3_31s._Quezia%20Fernandes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559121766&amp;usg=AOvVaw2_4VfGSWsLByAHIyZDmovM", direcao: true, talento: "Quézia Castro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/514abac4-fcd7-404d-adde-6c1e6f654e2e/%5B04%5D%5BP01%5D%5BNN%5D%20Raia%20-%20Raia%20Varejar_v2_48s_QueziaFernandesDeCastro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559122699&amp;usg=AOvVaw3HO6g50ffRvpyWkV7LLv0k", direcao: true, talento: "Quézia Castro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/65492609-9233-494e-a082-57aae25f5f81/%5B02%5D%5BP01%5D%5BNN%5D%20Raia%20-%20Raia%20Varejar_v9_55s_AnaClaudiaPadilha.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559123561&amp;usg=AOvVaw24eEs35WX9I8n0XykhVU_C", talento: "Ana Claudia Padilha" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c3104f63-b86f-4658-bc7d-14e8acc5bd91/%5B01%5D%20%5BP05%5D%5BNN%5D%20RAIA%20%20Drogasil%20Dia%20das%20M%C3%A3es_v3_39s_Clara_Giffoni.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559124546&amp;usg=AOvVaw21MuIf2s80Dyy1HPBdxY72", talento: "Clara Giffoni" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e296eaf5-a6bf-4a18-9a30-6994d5b2fa9e/%5B02%5D%20%5BP06%5D%5BNN%5D%20RAIA%20-Raia-Dia-das-Maes-_v5_54s_FredericoVolkamn.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559125564&amp;usg=AOvVaw3jIVfNUGogLQZjdYqcxnqo", direcao: true, talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8658e096-9603-40cb-98ab-0053f40a4f33/%5B07%5D%20%5BP06%5D%5BNN%5D%20RAIA%20%20%20Raia%20Dia%20das%20M%C3%A3es_v2_44s_Frederico%20Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559126570&amp;usg=AOvVaw3r4YhfMyVsz28tjChTStvk", direcao: true, talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4a6a1e27-4d28-48c5-9aad-08c9664b6a7e/%5B08%5D%20%5BP06%5D%5BNN%5D%20RAIA%20-%20Raia%20Dia%20das%20M%C3%A3es_v5_46s_Frederico_Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559127633&amp;usg=AOvVaw14b6p-4RuZ4Ncvw-ltnXtE", direcao: true, talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ee256f93-b3d4-41a2-94d9-789bc2a23862/%5B06%5D%20%5BP06%5D%5BNN%5D%20RAIA%20Raia%20Dia%20das%20M%C3%A3es_v3_39s_Frederico%20Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559128716&amp;usg=AOvVaw3ndfVHzMyNg0aTU25VNRiL", direcao: true, talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/718d321e-cba7-44cd-a3a8-62bba22e206c/%5B04%5D%20%5BP06%5D%5BNN%5D%20RAIA%20%20Raia%20Dia%20das%20M%C3%A3es_v4_50s_CLARA%20GIFONI.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559129678&amp;usg=AOvVaw1gSeUj6D2AubVMrZrfg9eB", talento: "Clara Giffoni" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2b2f6599-3c29-43cf-b19d-68d197cab5a9/%5B04%5D%20%5BP07%5D%5BNN%5D%20RAIA%20%20%20Ciclo%20gripal%20OTC%20-%20Raia_v2_59s_Quezia.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559130735&amp;usg=AOvVaw1u-Ym5TwzYTwXIJ1n7EBsl", direcao: true, talento: "Quézia Castro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/bb82715b-b3a1-4c59-898d-930ac4a1d9cc/%5B02%5D%20%5BP07%5D%5BNN%5D%20RAIA%20-%20Ciclo%20gripal%20OTC%20-%20Raia_v4_48s_Quezia_Fernandes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559131768&amp;usg=AOvVaw2zn0Co0q6JJeIksA5ePhVG", direcao: true, talento: "Quézia Castro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/6cf51d0c-75a0-4d7e-9536-c26e52ce74aa/%5B05%5D%20%5BP07%5D%5BNN%5D%20RAIA%20%20%20Ciclo%20gripal%20OTC%20-%20Raia_v5_58s_Quezia%20Fernandes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559132726&amp;usg=AOvVaw0Vp_YgdE4FD9JloP2KncDx", direcao: true, talento: "Quézia Castro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f4b9c99f-d042-4eb6-afd1-9c72429446cf/%5B08%5D%20%5BP07%5D%5BNN%5D%20RAIA%20%20%20Ciclo%20gripal%20OTC%20-%20Raia%20_v4_40s_Quezia.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559133710&amp;usg=AOvVaw08fEfa0LJ1HdVI_B0_M3vI", direcao: true, talento: "Quézia Castro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7cd1e6b7-9a1c-4fe6-8b9e-31d22c39628f/%5B05%5D%20%5BP10%5D%5BNN%5D%20RAIA%20%20%20Dia%20dos%20namorados%20Raia_v3_43s_Frederico%20Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559134711&amp;usg=AOvVaw1Hfw8wWWvoiHQ1KHbGgfTv", direcao: true, talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/73eb8b44-e303-457e-8ac8-d606b50d0041/%5B04%5D%20%5BP10%5D%5BNN%5D%20RAIA%20%20%20Dia%20dos%20namorados%20Raia_v2_41s_Frederico%20Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559135737&amp;usg=AOvVaw1dZzwyqcS_qjiVvNfNUswb", direcao: true, talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/984bdef6-2eae-4322-a834-eae4f6fa8bb3/%5B06%5D%20%5BP10%5D%5BNN%5D%20RAIA%20%20%20Dia%20dos%20namorados%20Raia_v3_25s_Frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559136662&amp;usg=AOvVaw2C0NzBJWAWUgrgmb1Vvj1I", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/dfffdb35-1f1e-480a-bfac-442cd5fdd7df/%5B06%5D%20%5BP12%5D%5BNN%5D%20RAIA%20-%20Needs%20Raia_v4_33s_Carol_Gomes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559137582&amp;usg=AOvVaw2SahJyVfD-2QKUae0vGTVH", direcao: true, talento: "Carol Gomes" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4e9a4ea6-f15e-4764-8463-866dc939dea8/%5B01%5D%20%5BP12%5D%5BNN%5D%20RAIA%20%20%20Needs%20Raia_v1_39s_Carol%20Gomes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559138462&amp;usg=AOvVaw0QeorhQ3l9FggMs-rzR-RO", talento: "Carol Gomes" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0f7c567e-4513-4740-9c9b-19908998ad36/%5B08%5D%20%5BP12%5D%5BNN%5D%20RAIA%20-%20Needs%20Raia_v3_58s_Carol_Gomes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559139327&amp;usg=AOvVaw0XiTiNjjansyoUc3B5DrJO", talento: "Carol Gomes" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/eb73d759-130e-4102-8592-b6692ea926f8/%5B03%5D%20%5BP12%5D%5BNN%5D%20RAIA%20%20%20Needs%20Raia_v2_47s_Carol%20Gomes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559140217&amp;usg=AOvVaw3aoPi1OyDCUZX7sm1FKLst", talento: "Carol Gomes" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c1ece51c-6e53-4151-950e-fe0d72c520df/%5B01%5D%20%5BP13%5D%5BNN%5D%20RAIA%20%20%20Black%20Fraldas%20-%20Raia_v2_24s_Carolina.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559141276&amp;usg=AOvVaw2r62Yf7G1LgKhzVa1dUHsr", talento: "Carolina Malagutti" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d88c1d84-4b16-40bc-a142-b5d3a04d9013/%5B05%5D%20%5BP13%5D%5BNN%5D%20RAIA%20%20Black%20Fraldas%20-%20Raia_v1_35s_Carolina%20Malagutti.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559142336&amp;usg=AOvVaw3915o0ZiTa5TTsBch2TksB", talento: "Carolina Malagutti" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/3a515267-5276-411e-a024-59a0f8760981/%5B06%5D%20%5BP13%5D%5BNN%5D%20RAIA%20%20%20Black%20Fraldas%20-%20Raia_v1_50s_Carolina%20Malagutti.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559143364&amp;usg=AOvVaw2pQhsJ038dFb7u00GNBD3M", talento: "Carolina Malagutti" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e02258e3-3709-4488-b7dd-c79f5d972046/%5B07%5D%20%5BP13%5D%5BNN%5D%20RAIA%20-%20Black%20Fraldas%20-%20Raia_v2_22s_Carolina%20Malagutti-.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559144270&amp;usg=AOvVaw3dmEvmn_p4n5VkNAfQBbi1", talento: "Carolina Malagutti" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/422a935c-0a6f-4b8c-b408-ab531bffa464/%5B08%5D%20%5BP13%5D%5BNN%5D%20RAIA%20%20%20Black%20Fraldas%20-%20Raia%20_v1_27s_Loretta%20Martins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559145177&amp;usg=AOvVaw3nihXP3JVLlp1VMTqVw24e", talento: "Loretta Martins" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d04f90f7-6f60-41c3-bddd-6684bfeae071/%5B02%5D%20%5BP14%5D%5BNN%5D%20RAIA%20-%20Black%20Fraldas%20-%20Drogasil_v2_23s_MarianaBraga.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559146226&amp;usg=AOvVaw2qStD8bI8qkjwC9QMDthhf", talento: "Mariana Braga" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/613c8abd-d382-4f85-ba1c-33bae37d6280/%5B03%5D%20%5BP14%5D%5BNN%5D%20RAIA%20%20%20Black%20Fraldas%20-%20Drogasil_v1_32s_Mariana.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559147175&amp;usg=AOvVaw2MBBzncRJnPQqqIBvtat-e", talento: "Mariana Braga" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/9da14ec3-51da-4e68-8960-85cfb5eee87d/%5B05%5D%20%5BP14%5D%5BNN%5D%20RAIA%20%20Black%20Fraldas%20-%20Drogasil_v2_36s_Mariana_Braga.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559148190&amp;usg=AOvVaw3yuQPuyKPwtfXdLeHI5T8m", talento: "Mariana Braga" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/cbcf499e-d72b-4610-8fd0-4531f52996f3/%5B04%5D%20%5BP14%5D%5BNN%5D%20RAIA%20%20%20Black%20Fraldas%20-%20Drogasil_v3_20s_Andrei%20Lamberg.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559149166&amp;usg=AOvVaw147_WdIZrxDyBuNcMkd-DK", talento: "Andrei Lamberg" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f6f1a55c-eb3c-4093-9038-05ec093b32df/%5B08%5D%20%5BP14%5D%5BNN%5D%20RAIA%20%20%20Black%20Fraldas%20-%20Drogasil%20_v2_25s_Mariana%20Braga.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559150157&amp;usg=AOvVaw3At_RhXSi5KVfO9rbemnG-", talento: "Mariana Braga" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0daf44c6-c008-4905-b67b-93f0570c5b30/%5B01%5D%20%5BP15%5D%5BNN%5D%20RAIA%20%20AlwaysOn%20PerfumariaJUL_v4_43s_Julia_Nogueira.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559151125&amp;usg=AOvVaw2_De7AUXTYyvs8Oe3b1VSv", talento: "Julia Nogueira" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0daf44c6-c008-4905-b67b-93f0570c5b30/%5B01%5D%20%5BP15%5D%5BNN%5D%20RAIA%20%20AlwaysOn%20PerfumariaJUL_v4_43s_Julia_Nogueira.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559152136&amp;usg=AOvVaw1jtNujTEcN9YW_maiWxePI", talento: "Julia Nogueira" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/5f7d5c75-aa1a-4116-a713-c05662d67c11/%5B02%5D%20%5BP15%5D%5BNN%5D%20RAIA%20-%20AlwaysOn%20Perfumaria-JUL%20-%20Raia_v3_33s_Rodrigo_Rabello.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559153117&amp;usg=AOvVaw3wPXIApbx2qGoihuqXgT_U", talento: "Rodrigo Rabello" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/775000f7-42fc-4032-b245-f6016a04dc8f/%5B03%5D%20%5BP15%5D%5BNN%5D%20RAIA%20%20%20AlwaysOn%20Perfumaria%20JUL%20-%20Raia_v1_23s_Rodrigo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559154054&amp;usg=AOvVaw0etueMMGDBrXLUnV9_o3bL", talento: "Rodrigo Rabello" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a5c1ce61-339c-4dde-98c3-c1f941a04108/%5B04%5D%20%5BP15%5D%5BNN%5D%20RAIA%20%20%20AlwaysOn%20Perfumaria%20JUL%20-%20Raia_v2_50s_Julia%20Nogueira.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559155019&amp;usg=AOvVaw1jMw26CbA9k1iKDGYLxNbB", talento: "Julia Nogueira" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1ef6b021-6c9e-491a-8465-c6dc40b7e45b/%5B05%5D%20%5BP15%5D%5BNN%5D%20RAIA%20%20%20AlwaysOn%20Perfumaria%20JUL%20-%20Raia_v2_50s_Julia%20Nogueira.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559155965&amp;usg=AOvVaw1kXrPlOY6HVtS4-RIFoTEL", talento: "Julia Nogueira" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0246f0d1-8cb7-4c26-9f91-167f02505293/%5B06%5D%20%5BP15%5D%5BNN%5D%20RAIA%20-%20AlwaysOn%20Perfumaria-JUL%20-%20Raia_v6_27s_JuliaNogueira.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559156927&amp;usg=AOvVaw2_OIo6xUelaAlVKrE9YvR7", talento: "Julia Nogueira" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ad5858b4-e044-4c55-b4cc-de013a8ddd67/%5B07%5D%20%5BP15%5D%5BNN%5D%20RAIA%20%20AlwaysOn%20PerfumariaJUL%20-%20Raia_v3_40s_Rodrigo_Rabello.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559157903&amp;usg=AOvVaw2wgawA-LX7kupybHU19OOw", talento: "Rodrigo Rabello" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2582a684-39e7-41b5-a13c-f1a32b4c9760/%5B08%5D%20%5BP15%5D%5BNN%5D%20RAIA%20-%20AlwaysOn%20Perfumaria-JUL%20-%20Raia_v3_28s_Rodrigo_Rabello.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559158913&amp;usg=AOvVaw0dy-NCge2uez_zzSq6Wv-G", talento: "Rodrigo Rabello" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/464859a6-029c-4080-9280-5d75435af932/%5B01%5D%20%5BP17%5D%5BNN%5D%20RAIA%20-%20Autosservic%CC%A7o%20AlwaysOn%20Infantil%20-%20Raia_v3_30s_GabrielPeregrino.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559159937&amp;usg=AOvVaw1BYlsvyBYczk3UqvXI6Cgx", talento: "Gabriel Peregrino" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0b03ec86-064e-46b9-aac8-9d7621471728/%5B02%5D%20%5BP17%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Raia_v2_28s_karol.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559161017&amp;usg=AOvVaw1BTeJO0rFTNztC6ATa0xLg", talento: "Karol Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c312e6c7-b029-4b2e-b4b8-7a18e4841dcf/%5B03%5D%20%5BP17%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Raia_v1_20s_gabriel.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559161994&amp;usg=AOvVaw2BmR7URx7FSBf3vBPWZqOV", talento: "Gabriel Peregrino" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/af6062b6-47de-4725-bf29-c5ef7b3d25bf/%5B04%5D%20%5BP17%5D%5BNN%5D%20RAIA%20Autosservi%C3%A7o%20AlwaysOn%20Infantil_v1_31s_Karol_Alves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559163007&amp;usg=AOvVaw1jy8HESe0ZIHJBZAxHvnHC", talento: "Karol Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2548ae5e-8772-41fe-8d7c-736d81159619/%5B05%5D%20%5BP17%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Raia_v1_41s_Karol%20Alves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559164014&amp;usg=AOvVaw3Dco9LVNr86tY2qzNIBRgI", talento: "Karol Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/00a9431b-edfc-42f1-a994-379cffa17ca5/%5B06%5D%20%5BP17%5D%5BNN%5D%20RAIA%20-%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Raia_v2_36s_Gabriel_Peregrino.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559165009&amp;usg=AOvVaw0c40WuCYzrkcwGlPSfThYI", talento: "Gabriel Peregrino" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b34ab298-199d-42c3-9ff1-c554ab65dd5b/%5B07%5D%20%5BP17%5D%5BNN%5D%20RAIA%20-%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Raia_v2_52s_Karol_Alves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559165972&amp;usg=AOvVaw3vtoGdt8uezT75ECVroKNC", talento: "Karol Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d7bad9f4-26e0-48e7-b431-b1d12c5094f5/%5B08%5D%20%5BP17%5D%5BNN%5D%20RAIA%20%20%20Autosservi%C3%A7o%20AlwaysOn%20Infantil%20-%20Raia%20_v2_22s_Gabriel%20Peregrino.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559167041&amp;usg=AOvVaw0ZxsZx816xfqf5ipO8mhuX", talento: "Gabriel Peregrino" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8ada61bc-b962-4f99-b801-4d07083ca5b4/%5B01%5D%20%5BP19%5D%5BNN%5D%20RAIA%20%20Cuidado%20que%20vale%20mais%20%20Raia_v2_29s_Ismael-Gotthardi.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559168047&amp;usg=AOvVaw2QPI5S1RgIx77y8e1lh7ZT", talento: "Ismael Gotthardi" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b66a4bff-77b3-4d63-99df-fb1211d7a410/%5B02%5D%20%5BP19%5D%5BNN%5D%20RAIA%20%20%20Cuidado%20que%20vale%20mais%20%20%20Raia_v3_21s_J%C3%BAlia%20Horta.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559169100&amp;usg=AOvVaw1KVGAsa5fYPNL0dUxkgdOv", talento: "Júlia Horta" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/53eef26f-2d89-45b5-9ded-619d910bb00f/%5B03%5D%20%5BP19%5D%5BNN%5D%20RAIA%20-%20Cuidado%20que%20vale%20mais%20-%20Raia_v5_47s_Ismael.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559170013&amp;usg=AOvVaw1RqNiG_JBoxVqo7TFp4CKl", talento: "Ismael Gotthardi" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e632aaee-cf48-4d66-8e6b-04e61c1408a1/%5B04%5D%20%5BP19%5D%5BNN%5D%20RAIA%20%20%20Cuidado%20que%20vale%20mais%20%20%20Raia_v2_26s_Julia.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559171057&amp;usg=AOvVaw1jRggahEAvI9lzmG-KkZAq", talento: "Júlia Horta" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/56e2c313-6d47-43ef-bea3-207af24c870d/%5B05%5D%20%5BP19%5D%5BNN%5D%20RAIA%20%20%20Cuidado%20que%20vale%20mais%20%20%20Raia_v1_44s_Ismael%20Gotthardi.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559172034&amp;usg=AOvVaw2yMP7nAVxPrU7WhQvzUw61", talento: "Ismael Gotthardi" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4a42e8d0-9792-4be2-a7b6-bee6151fbd66/%5B06%5D%20%5BP19%5D%5BNN%5D%20RAIA%20-%20Cuidado%20que%20vale%20mais%20-%20Raia_v2_41s_Ismael.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559173029&amp;usg=AOvVaw3N2ewHDHTVtqvtJMA76Lbv", talento: "Ismael Gotthardi" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/72276f37-3518-4b4a-94d8-ab9cd770fd34/%5B07%5D%20%5BP19%5D%5BNN%5D%20RAIA%20-%20Cuidado%20que%20vale%20mais%20-%20Raia%20v3_55s_JuliaHorta.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559174041&amp;usg=AOvVaw2evsOM5-WoT3S58O-1ZECS", talento: "Júlia Horta" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/3a5cd887-5e8e-4b49-9d83-91617e4f7d16/%5B08%5D%20%5BP19%5D%5BNN%5D%20RAIA%20-%20Cuidado%20que%20vale%20mais%20-%20Raia_v2_46s_Julia_Horta.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559175091&amp;usg=AOvVaw05yW7dnfDyD_QJF3x3aybi", talento: "Júlia Horta" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e2b8ab85-a983-4802-9a9e-7889c30af691/%5B01%5D%20%5BP21%5D%5BNN%5D%20RAIA%20-%20OTC%20-%20Ciclo%20Gripal%20Raia_v3_52s_LaraGay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559176046&amp;usg=AOvVaw0TQ30bujsA7G-L_Tu5x8UL", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c813cd0f-bf4c-40dd-b3c8-7f535cb0adce/%5B02%5D%20%5BP21%5D%5BNN%5D%20RAIA%20%20%20OTC%20-%20Ciclo%20Gripal%20Raia_v5_32s_Lara%20Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559176967&amp;usg=AOvVaw33C5FTfZiv64uH2rAcTI5t", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d26a363b-4f1b-4ce9-a656-e06daebe3f5f/%5B05%5D%20%5BP21%5D%5BNN%5D%20RAIA%20OTC%20Ciclo%20Gripal%20Raia_v2_43s_Lara_Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559177857&amp;usg=AOvVaw3gDhe8Fkk0EVtDyMcdnsqO", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a4ed81a2-2ee4-46e5-97ec-02a854f90a2a/%5B07%5D%20%5BP21%5D%5BNN%5D%20RAIA%20-%20OTC%20-%20Ciclo%20Gripal%20Raia%20_v3_34s_Lara_gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559178742&amp;usg=AOvVaw1gnAOK9pN0VNRLoKGQyPLR", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/bd3f4582-91b1-4a0e-9995-71f3849feab2/%5B04%5D%20%5BP23%5D%5BNN%5D%20RAIA%20-%20Marcas%20Coreanas%20-%20Raia_v4_39s_ClaraGiofoni.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559179698&amp;usg=AOvVaw3h8_yjltlR7cGuhHxGDEED", talento: "Clara Giffoni" }
+      { youtubeId: "NEHleVfNaZQ", talento: "Loretta Martins" },
+      { youtubeId: "Hef2F2YkWBY", talento: "Loretta Martins" },
+      { youtubeId: "dmVpaBDXIqI", talento: "Frederico Volkmann" },
+      { youtubeId: "bxIgQU1I9RE", talento: "Frederico Volkmann" },
+      { youtubeId: "2dy78GzXYmI", direcao: true, talento: "Quézia Castro" },
+      { youtubeId: "etwKYRii-PQ", direcao: true, talento: "Quézia Castro" },
+      { youtubeId: "1joTeMnRzns", talento: "Ana Claudia Padilha" },
+      { youtubeId: "PExvD8hVBlQ", talento: "Clara Giffoni" },
+      { youtubeId: "gY-Qb8YOP1A", direcao: true, talento: "Frederico Volkmann" },
+      { youtubeId: "STDiMaj-5hE", direcao: true, talento: "Frederico Volkmann" },
+      { youtubeId: "433JzW9eKY0", direcao: true, talento: "Frederico Volkmann" },
+      { youtubeId: "IsYjN2K7zkw", direcao: true, talento: "Frederico Volkmann" },
+      { youtubeId: "3u9MuBy1MA8", talento: "Clara Giffoni" },
+      { youtubeId: "LgtyB5yGwk0", direcao: true, talento: "Quézia Castro" },
+      { youtubeId: "3JxtXPL1IkQ", direcao: true, talento: "Quézia Castro" },
+      { youtubeId: "NrwwmOnYfUk", direcao: true, talento: "Quézia Castro" },
+      { youtubeId: "9Kc2cyKRb7Q", direcao: true, talento: "Quézia Castro" },
+      { youtubeId: "kGZHDLwl_5E", direcao: true, talento: "Frederico Volkmann" },
+      { youtubeId: "E4wm7LWDHGA", direcao: true, talento: "Frederico Volkmann" },
+      { youtubeId: "rEGK16dni-8", talento: "Frederico Volkmann" },
+      { youtubeId: "kW0yqcZoiMs", direcao: true, talento: "Carol Gomes" },
+      { youtubeId: "4gqaftd-Wno", talento: "Carol Gomes" },
+      { youtubeId: "1Ptzf4q0f-0", talento: "Carol Gomes" },
+      { youtubeId: "-m7qP5pd9xQ", talento: "Carol Gomes" },
+      { youtubeId: "-SiLgbLMipY", talento: "Carolina Malagutti" },
+      { youtubeId: "IdynLiO1-Dk", talento: "Carolina Malagutti" },
+      { youtubeId: "879bcwYfPKg", talento: "Carolina Malagutti" },
+      { youtubeId: "metF5HqeBy0", talento: "Carolina Malagutti" },
+      { youtubeId: "DVo5UwG7zSU", talento: "Loretta Martins" },
+      { youtubeId: "oSLYs1TB22A", talento: "Mariana Braga" },
+      { youtubeId: "ZUQlSJj1fAE", talento: "Mariana Braga" },
+      { youtubeId: "THQYuflaSYU", talento: "Mariana Braga" },
+      { youtubeId: "PYQ-HQhlDFU", talento: "Andrei Lamberg" },
+      { youtubeId: "3tsSZqYuNlQ", talento: "Mariana Braga" },
+      { youtubeId: "9Bu4B6Vjcns", talento: "Julia Nogueira" },
+      { youtubeId: "K-FR4hVqPRc", talento: "Julia Nogueira" },
+      { youtubeId: "ud2cfUj3zzk", talento: "Rodrigo Rabello" },
+      { youtubeId: "skn_frmGPg4", talento: "Rodrigo Rabello" },
+      { youtubeId: "pipzmvZqiuU", talento: "Julia Nogueira" },
+      { youtubeId: "mGz7jWVNDqw", talento: "Julia Nogueira" },
+      { youtubeId: "QBQx_zq-m6w", talento: "Julia Nogueira" },
+      { youtubeId: "13_ulJahCIA", talento: "Rodrigo Rabello" },
+      { youtubeId: "6NqxW-978Y4", talento: "Rodrigo Rabello" },
+      { youtubeId: "KnAVcVZXizM", talento: "Gabriel Peregrino" },
+      { youtubeId: "3ZK9KNnVUuE", talento: "Karol Alves" },
+      { youtubeId: "udU_zSYwp38", talento: "Gabriel Peregrino" },
+      { youtubeId: "Wv1lnqe9b94", talento: "Karol Alves" },
+      { youtubeId: "KkDAblY2_qM", talento: "Karol Alves" },
+      { youtubeId: "Pa63ewjV_Ig", talento: "Gabriel Peregrino" },
+      { youtubeId: "VJFGHtAWCWQ", talento: "Karol Alves" },
+      { youtubeId: "58ygYoOz_y4", talento: "Gabriel Peregrino" },
+      { youtubeId: "PfB7avwrrAs", talento: "Ismael Gotthardi" },
+      { youtubeId: "P8DqRIRCrPE", talento: "Júlia Horta" },
+      { youtubeId: "ga8O04wMf40", talento: "Ismael Gotthardi" },
+      { youtubeId: "VcvxRWe8mkI", talento: "Júlia Horta" },
+      { youtubeId: "4vFmVzr2fyM", talento: "Ismael Gotthardi" },
+      { youtubeId: "KfAy2GJmw0I", talento: "Ismael Gotthardi" },
+      { youtubeId: "69XENhu2ZLQ", talento: "Júlia Horta" },
+      { youtubeId: "BVxlxR_CRKc", talento: "Júlia Horta" },
+      { youtubeId: "JbdzrKKP6Qw", talento: "Lara Gay" },
+      { youtubeId: "bM1w0WL-N4I", talento: "Lara Gay" },
+      { youtubeId: "oOh-g3OiCWo", talento: "Lara Gay" },
+      { youtubeId: "yypqTjCPpfs", talento: "Lara Gay" },
+      { youtubeId: "DWEWlJZtEUY", talento: "Clara Giffoni" }
     ],
     galeria: []
   },
@@ -971,17 +971,17 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1da50ebb-0b75-4769-a7d2-f2183863dd27/%5B01%5D%20%5BP03%5D%5BNN%5D%20BRADESCO%20%20%20Sala%20de%20Performance%20-%20Abertura%20de%20Contas%20PF_v3_50s_Pedro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559446233&amp;usg=AOvVaw1m-wuY9tyBlqRYMdvndGrx", talento: "Pedro Zurawski" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/92492774-d77d-48af-bc42-680885138a2a/%5B02%5D%20%5BP03%5D%5BNN%5D%20BRADESCO%20Sala%20de%20Performance%20-%20Abertura%20de%20Contas%20PF_v3_26s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559447420&amp;usg=AOvVaw3XN3k6JOU2B5o4cKibPvA4", talento: "Pedro Zurawski" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e1a21a2d-0419-4708-9e04-2e551829a06e/%5B03%5D%20%5BP03%5D%5BNN%5D%20BRADESCO%20%20%20Sala%20de%20Performance%20-%20Abertura%20de%20Contas%20PF_v2_19s_Pedro%20Zurawski.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559448617&amp;usg=AOvVaw2JUSw2iBizfDl_WEy4xhKc", talento: "Pedro Zurawski" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0eb06898-8522-4189-8fa5-b9915d04627a/%5B04%5D%20%5BP03%5D%5BNN%5D%20BRADESCO%20-%20Sala%20de%20Performance%20-%20Abertura%20de%20Contas%20PF_v7_34s_Pedro%20Zurawski.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559449893&amp;usg=AOvVaw2DXBoV8UJEOcEn1ZQyZDJ7", talento: "Pedro Zurawski" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/108ef842-4eab-4344-bf0f-08eaf061ae9d/%5B01%5D%20%5BP04%5D%5BNN%5D%20BRADESCO%20%20%20NetNew%20-%20LIME_v3_38s_Jorge%20Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559451262&amp;usg=AOvVaw2-SJ5Etr5rZ-FeDVV269sz", talento: "Jorge Hissa" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/91fa7565-3a51-401c-ad36-d507fe36a3e0/%5B03%5D%20%5BP04%5D%5BNN%5D%20BRADESCO%20%20%20NetNew%20-%20LIME_v2_33s_Jorge.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559452656&amp;usg=AOvVaw1-04VkJB4GG6aR3nUlh7U8", talento: "Jorge Hissa" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2ec98c10-ce8c-4de0-babd-9d3b232de711/%5B04%5D%20%5BP04%5D%5BNN%5D%20BRADESCO%20-%20NetNew%20-%20LIME_v4_17s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559454011&amp;usg=AOvVaw302jW_-8OxX1o0eoBdkUg5", talento: "Jorge Hissa" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b13072b5-7ab6-4d08-8dc5-f76dd2fdb8c9/%5B05%5D%20%5BP04%5D%5BNN%5D%20BRADESCO_v3_39s_Pedro_Ruivo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559455230&amp;usg=AOvVaw1ZAc6Mq4qWdNbntuTtjiJ8", talento: "Pedro Ruivo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8c0bb94a-5dd2-4e88-878d-a98ab2665377/%5B06%5D%20%5BP04%5D%5BNN%5D%20BRADESCO%20%20%20NetNew%20-%20LIME_v3_29s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559456298&amp;usg=AOvVaw1TkXEfkAh5Km_WDGHd6xQZ", talento: "Jorge Hissa" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/281d003c-6723-4972-b6a2-5b90e5018faf/%5B07%5D%20%5BP04%5D%5BNN%5D%20BRADESCO%20%20%20NetNew%20-%20LIME_v3_11s_Pedro%20Ruivo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559457457&amp;usg=AOvVaw3Cvja_dKK_yoefC-uvN-yR", talento: "Pedro Ruivo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c46fb27f-ed7e-4ac4-86bb-423c4567bd97/%5B08%5D%20%5BP04%5D%5BNN%5D%20BRADESCO%20%20%20NetNew%20-%20LIME_v2_15s_Pedro%20Ruivo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559458644&amp;usg=AOvVaw1uNCraiXy6XYe1x-d03vux", talento: "Pedro Ruivo" }
+      { youtubeId: "M17yhOXbkcU", talento: "Pedro Zurawski" },
+      { youtubeId: "I1PYDVfc2A4", talento: "Pedro Zurawski" },
+      { youtubeId: "DDXT9lkQUK4", talento: "Pedro Zurawski" },
+      { youtubeId: "1NCpqO2JDYA", talento: "Pedro Zurawski" },
+      { youtubeId: "xiM6_X6yALw", talento: "Jorge Hissa" },
+      { youtubeId: "EJCbUlPcEsw", talento: "Jorge Hissa" },
+      { youtubeId: "R_eMeHFFFVM", talento: "Jorge Hissa" },
+      { youtubeId: "UdgJsE0Lyu0", talento: "Pedro Ruivo" },
+      { youtubeId: "2t6zKJiidyo", talento: "Jorge Hissa" },
+      { youtubeId: "7F-XTs7O2VE", talento: "Pedro Ruivo" },
+      { youtubeId: "SDL5JRfZU9o", talento: "Pedro Ruivo" }
     ],
     galeria: []
   },
@@ -1002,20 +1002,20 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8ee3186a-b6ad-42b2-9555-6e4cd6e9996e/%5B01%5D%20%5BP12%5D%5BNN%5D%20NETSHOES_TTCX%20APP_NS_120325_v2_59s_Adam_Pereira.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559234670&amp;usg=AOvVaw3ONGyFAz4dj7GqZ9Xa5Q-a", direcao: true, talento: "Adam Pereira" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d37641c6-f4fe-4d99-a8dc-468e83a66acf/%5B01%5D%20%5BP13%5D%5BNN%5D%20NETSHOES%20-%20NS%20TTCX%20-%20VSA%20RTG%207D%20-%20JUN25_v2_35s_Livia%20Lima.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559235724&amp;usg=AOvVaw2uAFt5CJqkcUUD424J7ZeT", direcao: true, talento: "Lívia Lima" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4618ac61-1a46-40a7-bae4-513696a6bddb/%5B01%5D%20%5BP14%5D%5BNN%5D%20NETSHOES%20-%20TTCX%20APP%20-%20NS%2010-06-25_v1_26s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559236668&amp;usg=AOvVaw3UzrbuDIT0QwI2nhwPF7Wy", talento: "Mariana Braga" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a2209761-6999-4cb2-9e20-9eea4e1cf2b2/%5B02%5D%20%5BP14%5D%5BNN%5D%20NETSHOES%20%20%20TTCX%20APP%20%20%20NS%2010%2006%2025_v1_29s_.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559237688&amp;usg=AOvVaw2NcHQSO4-Og9i4iOjCyNUX", talento: "Mariana Braga" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/9af3bbf4-290e-43b7-a65a-39eeea1f4ab7/%5B03%5D%20%5BP14%5D%5BNN%5D%20NETSHOES%20%20%20TTCX%20APP%20%20%20NS%2010%2006%2025_v1_38s_.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559238787&amp;usg=AOvVaw0UuyjRhVNhgkJaqyCDxYFX", talento: "Mariana Braga" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/542423a1-f6f1-4979-b264-9afc9513c999/%5B04%5D%20%5BP14%5D%5BNN%5D%20NETSHOES%20%20%20TTCX%20APP%20%20%20NS%2010%2006%2025_v1_29s_Mariana%20Braga.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559239739&amp;usg=AOvVaw1jW75NPwO5aZO1s6wSkVlx", talento: "Mariana Braga" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f55bac19-fc7f-466a-bf19-720f84ee4611/%5B02%5D%20%5BP15%5D%5BNN%5D%20NETSHOES%20%20%20NS%20-%20TTCX%20%20%20Briefing%20Mar_v3_19s_Ana%20Claudia.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559240810&amp;usg=AOvVaw2PdyccdOlWgbV79v88St40", direcao: true, talento: "Ana Claudia Padilha" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d1c5b073-6f05-467b-a5e8-fb0bcbf7fdf2/%5B04%5D%20%5BP15%5D%5BNN%5D%20NETSHOES%20%20%20NS%20-%20TTCX%20%20%20Briefing%20Maratona%20PAYDAY%2008%202025_v1_48s_Ana%20Claudia.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559241889&amp;usg=AOvVaw0o_a9sh_4nfVtF0UE_KHd2", direcao: true, talento: "Ana Claudia Padilha" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/73aed43a-f4a8-4997-b95c-bec4b99341b7/%5B07%5D%20%5BP15%5D%5BNN%5D%20NETSHOES%20-%20NS%20-%20TTCX%20-%20Briefing%20Maratona-PAYDAY%2008-2025_v2_40s_AnaClaudia.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559242977&amp;usg=AOvVaw3R6pxuUKilX2gKfzcadviy", direcao: true, talento: "Ana Claudia Padilha" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/81ca9b5c-6a52-433c-b2b0-d572c90a87e8/%5B08%5D%20%5BP15%5D%5BNN%5D%20NETSHOES%20-%20NS%20-%20TTCX%20-%20Briefing%20Maratona-PAYDAY%2008-2025_v4_41s_Ana_Claudia.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559244090&amp;usg=AOvVaw37LhtzyH3KW5CgvtTadmyP", direcao: true, talento: "Ana Claudia Padilha" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/08dc0a92-0c93-4a4d-be30-ae9c64af61b9/%5B03%5D%20%5BP16%5D%5BNN%5D%20NETSHOES%20-%20Netshoes%20-%20campanha%20brand-consideration_v1_13s_Frederico.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559245094&amp;usg=AOvVaw2VA6WCTDS0iztfa_HXlbyH", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0b1a71c5-43c5-48ac-aa88-31f8826016a4/%5B04%5D%20%5BP16%5D%5BNN%5D%20NETSHOES%20%20%20Netshoes%20-%20campanha%20brand-consideration%20_v1_24s_Fred%20Soares.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559246066&amp;usg=AOvVaw0CGeBmOt0onLmgJA5-LeOf", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c056c609-2a0b-44d7-bebc-d5c6e481000a/%5B05%5D%20%5BP16%5D%5BNN%5D%20NETSHOES%2000_v2_35s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559247126&amp;usg=AOvVaw2PikiROPMF4-XajDexgUQT", talento: "Frederico Volkmann" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/704f8d90-d83e-440f-909a-7526fc1d4393/%5B06%5D%20%5BP16%5D%5BNN%5D%20NETSHOES%20%20%20Netshoes%20-%20campanha%20brand-consideration_v3_18s_Frederico%20Volkmann.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559248164&amp;usg=AOvVaw3gip-VRR5ObRTmfmtfCSuj", talento: "Frederico Volkmann" }
+      { youtubeId: "euSotih5hqs", direcao: true, talento: "Adam Pereira" },
+      { youtubeId: "UOhP1uIfD3k", direcao: true, talento: "Lívia Lima" },
+      { youtubeId: "7zsuUDj6fws", talento: "Mariana Braga" },
+      { youtubeId: "TKbhu1ePwgA", talento: "Mariana Braga" },
+      { youtubeId: "ph6-fETnA7g", talento: "Mariana Braga" },
+      { youtubeId: "VX3XeDdLe4A", talento: "Mariana Braga" },
+      { youtubeId: "2v7iO26xlTA", direcao: true, talento: "Ana Claudia Padilha" },
+      { youtubeId: "ZkgDj_WIA8Y", direcao: true, talento: "Ana Claudia Padilha" },
+      { youtubeId: "I5QmoGohwPI", direcao: true, talento: "Ana Claudia Padilha" },
+      { youtubeId: "pI1O5y1Mxps", direcao: true, talento: "Ana Claudia Padilha" },
+      { youtubeId: "5rYCACBOAYY", talento: "Frederico Volkmann" },
+      { youtubeId: "vC3ObmufVpo", talento: "Frederico Volkmann" },
+      { youtubeId: "uH4KK0HTjHI", talento: "Frederico Volkmann" },
+      { youtubeId: "I3OYnOGyxJs", talento: "Frederico Volkmann" }
     ],
     galeria: []
   },
@@ -1036,11 +1036,11 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7f13990f-4f7d-4fed-840a-42e93ffb475d/%5B13%5D%20%5BP02%5D%5BNN%5D%20LG%20%20%20LG%20do%20Brasil%20(2025%2003%2024)_v2_42s_Karol%20Alves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559249310&amp;usg=AOvVaw2mvHWBMMs15ofZF9kczzbb", direcao: true, talento: "Karol Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/6484c532-af74-4c27-aa6a-f99a4106ae90/%5B14%5D%20%5BP02%5D%5BNN%5D%20LG%20-%20LG%20do%20Brasil%20(2025-03-24)_v2_41s_Clara_Griffoni.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559250408&amp;usg=AOvVaw0r4fpyaGoLMLhtCUHo6-Tk", talento: "Clara Giffoni" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/fd7a3ec0-ad2e-48eb-a652-3af5016155e2/%5B11%5D%20%5BP02%5D%5BNN%5D%20LG-LG-do-Brasi2025-03-24_v3_50s_Karolalves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559251570&amp;usg=AOvVaw2FEz7fDGV9pB3j7nXwfKoU", direcao: true, talento: "Karol Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/14a5d158-9b4b-4a83-a53a-14777e589d35/%5B16%5D%20%5BP02%5D%5BNN%5D%20LG%20%20%20LG%20do%20Brasil%20(2025%2003%2024)_v2_59s_Karol%20Alves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559252624&amp;usg=AOvVaw2-C7h0_IXWs5GWzuIajYpq", direcao: true, talento: "Karol Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7ffb5427-b64e-4ee4-99cb-226b9d2ac0ba/%5B06%5D%20%5BP02%5D%5BNN%5D%20LG%20%20%20LG%20do%20Brasil%20(2025%2003%2024)%20_v2_35s_Karol.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559253743&amp;usg=AOvVaw2iGAEd0phVD3tcWL5kiwia", direcao: true, talento: "Karol Alves" }
+      { youtubeId: "6HhYfAefd88", direcao: true, talento: "Karol Alves" },
+      { youtubeId: "l5PiIUoa8Is", talento: "Clara Giffoni" },
+      { youtubeId: "otPsDTAN-iM", direcao: true, talento: "Karol Alves" },
+      { youtubeId: "36jEg7uyN4g", direcao: true, talento: "Karol Alves" },
+      { youtubeId: "topA6s23vLk", direcao: true, talento: "Karol Alves" }
     ],
     galeria: []
   },
@@ -1061,12 +1061,12 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b4ed0e2d-225f-4c28-bc86-8cef599edf9a/%5B03%5D%20%5BP02%5D%5BCH%5D%20UBER%20%20%20Creators_Core%20Demand%202.0_18%20Mar%2025_v1_39s_Juliana%20Da%20Silva.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559254693&amp;usg=AOvVaw3UzH3HOh_U1nhktb3xLSXy", talento: "Juliana Da Silva" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b9546329-0d1d-49b7-b3c6-d5a743042543/%5B04%5D%20%5BP02%5D%5BCH%5D%20UBER%20%20%20Creators_Core%20Demand%202.0_18%20Mar%2025_v2_20s_Juliana%20da%20Silva.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559255664&amp;usg=AOvVaw1Tl0bnBefChqJ7t-f3si9-", talento: "Juliana Da Silva" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ca627286-cf2b-47c9-8b64-8511158a7fcf/%5B01%5D%20%5BP05%5D%5BNN%5D%20UBER%20-%20Uber%20para%20Empresas%20(2025-09-26)_v4_23s_Qu%C3%A9ren%20Hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559256814&amp;usg=AOvVaw0s9w05sNTHxUfBG4FOA0rS", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/00777d27-9bb9-4b5f-82dd-461f3568a240/%5B02%5D%20%5BP05%5D%5BNN%5D%20UBER%20Uber%20para%20Empresas_v3_38s_Qu%C3%A9ren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559257820&amp;usg=AOvVaw1nybh8H25KqQ6r-9TdgheW", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/61fb5eea-cc8d-4b05-95e8-da8f76026368/%5B03%5D%20%5BP05%5D%5BNN%5D%20UBER%20-%20Uber%20para%20Empresas%20(2025-09-26)_v4_46s_Qu%C3%A9ren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559258903&amp;usg=AOvVaw2y6tUM9uZFVtnwxKLU8LQn", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/bcf3d17e-e521-4df8-a332-1d17e8d448c7/%5B04%5D%20%5BP05%5D%5BNN%5D%20UBER%20%20%20Uber%20para%20Empresas%20(2025%2009%2026)_v5_48s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559259991&amp;usg=AOvVaw2GOCsolWJ-rMZDPQebpHAO", talento: "Quéren Hapuque" }
+      { youtubeId: "ZT8eawnV8p4", talento: "Juliana Da Silva" },
+      { youtubeId: "P6SkAXCI41g", talento: "Juliana Da Silva" },
+      { youtubeId: "zTDNCe8lSjs", talento: "Quéren Hapuque" },
+      { youtubeId: "Y7AiWpRCHcA", talento: "Quéren Hapuque" },
+      { youtubeId: "MvX5EXOkXqg", talento: "Quéren Hapuque" },
+      { youtubeId: "ntZ5FZcphzM", talento: "Quéren Hapuque" }
     ],
     galeria: []
   },
@@ -1087,10 +1087,10 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7faa4e5e-4b2b-43e6-bdf7-ecbf1bf7aaee/%5B02%5D%20%5BP01%5D%5BCH%5D%20CAROLINA%20HERRERA%20%20-%20Carolina%20herrera%20(2025-06-27)_v3_36s_Kiara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559430907&amp;usg=AOvVaw2xuIoao_VaCHNi35djKvYF", talento: "Khiara" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/aed0a065-bb6b-4b59-9735-bfe4132c4eb8/%5B03%5D%20%5BP01%5D%5BCH%5D%20Carolina%20herrera%20(2025%2006%2027)_V2_21s_Drico%20Alves.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559432231&amp;usg=AOvVaw2le6h3fBvSwUiWZKJWaFHW", talento: "Drico Alves" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/178c93d3-dbab-49cf-97a5-8db92f0e6149/%5B04%5D%20%5BP01%5D%5BCH%5D%20CAROLINA%20HERRERA%20%20-%20Carolina%20herrera%20(2025-06-27)_v3_40s_DiogoMalta.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559433562&amp;usg=AOvVaw1jg2PPqoYGxybb8GTsX-Pl", talento: "Diogo Malta" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f5c0bc2f-1a30-4a88-8032-c2e115ac1eb5/%5B05%5D%20%5BP01%5D%5BCH%5D%20CAROLINA%20HERRERA%20%20-%20Carolina%20herrera%20(2025-06-27)_v2_20s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559434815&amp;usg=AOvVaw0M0FbzhcLEOBu1M3snP7Fn", talento: "Diogo Malta" }
+      { youtubeId: "S0j8u7mk5m0", talento: "Khiara" },
+      { youtubeId: "qLu3vudI7As", talento: "Drico Alves" },
+      { youtubeId: "7ASm4zJXidk", talento: "Diogo Malta" },
+      { youtubeId: "cF1syOFPE7M", talento: "Diogo Malta" }
     ],
     galeria: []
   },
@@ -1111,13 +1111,13 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/60ecfe8b-6a3f-4120-b06e-162df66dcbbf/%5B06%5D%20%5BP06%5D%5BCH%5D%20NESTLE%CC%81%20%20%20Break%20digno%20de%20cinema!%20%E2%80%93%20KitKat%20Cereal%20%2B%20TikTok%20%2B%20Cinemark_01_v4_35s_LucasLeal.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559362710&amp;usg=AOvVaw3Zed0zL_SYCxZ5YjQW5sjG", talento: "Lucas Leal Souza" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/5272986f-5e0f-4e20-9a5d-1fccee645768/%5B06%5D%20%5BP06%5D%5BCH%5D%20NESTLE%CC%81%20-%20Break%20digno%20de%20cinema!%20%E2%80%93%20KitKat%20Cereal%20%2B%20TikTok%20%2B%20Cinemark_02_v4_30s_LucasLeal.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559363981&amp;usg=AOvVaw1bxO2pjkvW-75L7pl_c-90", talento: "Lucas Leal Souza" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d67276bd-5db2-4caa-b3af-71fb0c100474/%5B09%5D%20%5BP06%5D%5BCH%5D%20NESTLE%CC%81%20%20%20Break%20digno%20de%20cinema!%20%E2%80%93%20KitKat%20Cereal_v5_22s_Lucas%20Leal.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559365334&amp;usg=AOvVaw000ewjnQFaB256MdRMbMyT", talento: "Lucas Leal Souza" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/50bd0f58-ffc9-4281-ae35-a9e49365af5d/%5B05%5D%20%5BP06%5D%5BCH%5D%20NESTLE%CC%81%20-%20Break%20digno%20de%20cinema!%20KitKat%20Cereal%20%2B%20TikTok%20%2B%20Cinemark_v7_15s_Alessandro%20Cerqueira.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559366665&amp;usg=AOvVaw26IgmBRlKNFndljLfTfq8D", talento: "Alessandro Cerqueira" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/6ac23daa-5c38-47e9-b919-8082bfd4f6f3/%5B12%5D%20%5BP06%5D%5BCH%5D%20NESTL%C3%89%20%20%20Break%20digno%20de%20cinema!%20%E2%80%93%20KitKat%20Cereal%20%2B%20TikTok%20%2B%20Cinemark_v1_59s_Alessandro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559367923&amp;usg=AOvVaw2CKgK6DVXL0xw7aRJTujT_", talento: "Alessandro Cerqueira" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/cd932122-4918-4165-ba0a-1b74d40f3ed6/%5B10%5D%20%5BP01%5D%5BCH%5D%20NUTREN%20%20%20Guia%20Pr%C3%A1tico%20do%20Poder%20das%20Vitaminas_v3_17s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559369085&amp;usg=AOvVaw2ad-oCiD-AFQyjnskvSxm1", talento: "Tati Infante" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8df60563-79ce-4d59-ad67-2a8829372106/%5B09%5D%20%5BP01%5D%5BCH%5D%20NUTREN%20-%20Guia%20Pr%C3%A1tico%20do%20Poder%20das%20Vitaminas_v6_34s_TatiInfante.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559370268&amp;usg=AOvVaw3v3mIzrfHJRVd90mvhk4Kl", talento: "Tati Infante" }
+      { youtubeId: "RQiKHx6hAmI", talento: "Lucas Leal Souza" },
+      { youtubeId: "zJKsB2zMy58", talento: "Lucas Leal Souza" },
+      { youtubeId: "bAM16jswkMg", talento: "Lucas Leal Souza" },
+      { youtubeId: "K9r_trZzBJ8", talento: "Alessandro Cerqueira" },
+      { youtubeId: "YG6fXxkGmdM", talento: "Alessandro Cerqueira" },
+      { youtubeId: "Zyl1AMK-wHs", talento: "Tati Infante" },
+      { youtubeId: "6HoHOCyhWf4", talento: "Tati Infante" }
     ],
     galeria: []
   },
@@ -1138,10 +1138,10 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0b8cc255-ddc6-4e71-bff8-99a7ce63c212/%5BP07%5D%5B03%5D%20TikTok%20ON%20-%20Philips%20-%20Beauty_v1_34s_Luiza%20Veloso.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559180721&amp;usg=AOvVaw3Iys-Ilh7uSu6tP5l9J3zy", direcao: true, talento: "Luiza Veloso" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e668d967-0b42-4cb6-8fb6-f0ced7b4d16f/%5BP07%5D%5B04%5D%20TikTok%20ON%20-%20Philips%20-%20Beauty_v3_26s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559181684&amp;usg=AOvVaw1qc4gpgVgb5Ice-RnJIk89", direcao: true, talento: "Luiza Veloso" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/70b76d3e-f19b-4c1f-b646-13061f97c310/%5BP07%5D%5B05%5D%20TikTok%20ON%20-%20Philips%20-%20Male%20Grooming_v1_28s_Rodrigo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559182556&amp;usg=AOvVaw31P2mpCZGH-krctkIN3eSH", talento: "Rodrigo Rabello" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c159c422-904f-4e30-ab58-884eb478597f/%5BP07%5D%5B06%5D%20TikTok%20ON%20-%20Philips%20-%20Male%20Grooming_v3_19s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559183452&amp;usg=AOvVaw1squ_snxDKkxEByf9hYxjf", talento: "Rodrigo Rabello" }
+      { youtubeId: "TMiHks55BgA", direcao: true, talento: "Luiza Veloso" },
+      { youtubeId: "OdCiyIQH-rE", direcao: true, talento: "Luiza Veloso" },
+      { youtubeId: "rtLXU60r4Qc", talento: "Rodrigo Rabello" },
+      { youtubeId: "8PUTeD8Aj5U", talento: "Rodrigo Rabello" }
     ],
     galeria: []
   },
@@ -1162,8 +1162,8 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e3994362-1293-4a50-b00d-6c55b18df9bb/%5B09%5D%20%5BP06%5D%5BCH%5D%20Intimus%20-%20Creative%20Incubator%20(Fevereiro)_v3_25s_MARIA_KROPOTOFF.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559184435&amp;usg=AOvVaw0c6rCsv2RdfEJezccVRChm", direcao: true, talento: "Maria Luíza Kropotoff" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/86db63ca-383f-4d1b-9047-2cc81dd5b7b7/%5B10%5D%20%5BP06%5D%5BCH%5DIntimus-CreativeIncubator-%5BFevereiro%5D_v3_58s_MariaLuizaKropotoff.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559185540&amp;usg=AOvVaw0Lh1ssrfoqzt8xJUqdHVbN", direcao: true, talento: "Maria Luíza Kropotoff" }
+      { youtubeId: "Xn5h4xDTY6g", direcao: true, talento: "Maria Luíza Kropotoff" },
+      { youtubeId: "tL6MSoLIWPs", direcao: true, talento: "Maria Luíza Kropotoff" }
     ],
     galeria: []
   },
@@ -1184,14 +1184,14 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7b2c95ad-3d0e-4a09-936e-ab48be5c09ad/%5B01%5D%20%5BP04%5D%5BNN%5D%20DOMINOS%20%20%20TTCX%20Agosto%2025_v1_35s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559437072&amp;usg=AOvVaw1S8AAdGnt7J3Y1PVpGSFUT", talento: "Jorge Hissa" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ae34a567-33aa-418f-bffc-0790836dc92f/%5B02%5D%20%5BP04%5D%5BNN%5D%20DOMINOS%20%20%20TTCX%20Agosto%2025_v1_37s_Jorge%20Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559438192&amp;usg=AOvVaw2A3jl6Gh0SjyfiuTZ5nMP3", talento: "Jorge Hissa" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1b859f65-4a73-47c4-8470-43c9d18fbea6/%5B03%5D%20%5BP04%5D%5BNN%5D%20DOMINOS%20%20%20TTCX%20Agosto%2025_v4_59s_Jorge%20Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559439307&amp;usg=AOvVaw16-W_IIuKctbP54j-N78lo", talento: "Jorge Hissa" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b9493fa5-9358-4034-addf-a4661c11ddfa/%5B04%5D%20%5BP04%5D%5BNN%5D%20DOMINOS%20-%20TTCX%20Agosto-25_v4_42s_Jorge_Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559440430&amp;usg=AOvVaw3SuJvPih5p5GmdimvcpWbW", talento: "Jorge Hissa" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/5f258762-057f-4667-9b12-5ac7f41635ab/%5B01%5D%20%5BP05%5D%5BNN%5D%20DOMINOS%20%20%20TTCX%20Agosto%2025_v3_33s_Jorge%20Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559441481&amp;usg=AOvVaw1Vl8RFn8NeSN47ESHt7pUq", talento: "Jorge Hissa" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/56cf2d04-2ec1-4e3c-b566-390f5ac955b2/%5B02%5D%20%5BP05%5D%5BNN%5D%20DOMINOS%20-%20TTCX%20Agosto-25_v6_40s_JorgeHissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559442571&amp;usg=AOvVaw2PCaPv9Qx-4TpFz4pAyX0g", talento: "Jorge Hissa" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f13c6340-e3b5-4b86-9b8d-e949c0990e21/%5B03%5D%20%5BP05%5D%5BNN%5D%20DOMINOS%20%20%20TTCX%20Agosto%2025_V5_24S_JORGE.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559443772&amp;usg=AOvVaw0mU4LkMOFfA85oL7fhpx1G", talento: "Jorge Hissa" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/191be07b-fdf6-4935-a679-1b67c1764ea6/%5B04%5D%20%5BP05%5D%5BNN%5D%20DOMINOS%20-%20TTCX%20Agosto-25_v5_27s_Jorge_Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559444946&amp;usg=AOvVaw33L-Udmed4_FSNc65yeK9m", talento: "Jorge Hissa" }
+      { youtubeId: "o0mx1oSki2k", talento: "Jorge Hissa" },
+      { youtubeId: "pNVspyGAHms", talento: "Jorge Hissa" },
+      { youtubeId: "Pe50lqGN3zw", talento: "Jorge Hissa" },
+      { youtubeId: "TqrsjTIEqhY", talento: "Jorge Hissa" },
+      { youtubeId: "7C1QEG2m29k", talento: "Jorge Hissa" },
+      { youtubeId: "NgqudglKjYY", talento: "Jorge Hissa" },
+      { youtubeId: "7XygUZFTdI8", talento: "Jorge Hissa" },
+      { youtubeId: "jmZ7Uab2hpY", talento: "Jorge Hissa" }
     ],
     galeria: []
   },
@@ -1212,18 +1212,18 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/664a0489-05a6-466f-956a-af433f153d08/%5B01%5D%20%5BP08%5D%5BNN%5D%20SERASA%20Sau%CC%81de%20do%20Seu%20Nego%CC%81cio_v3_31s_Raphael_Monteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559403566&amp;usg=AOvVaw0gzJ2zJdndZDipiUevWJeF", talento: "Raphael Monteiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/58a09f33-3cc0-48e7-a740-efa46783a85e/%5B02%5D%20%5BP08%5D%5BNN%5D%20SERASA%20-%20Sa%C3%BAde%20do%20Seu%20Neg%C3%B3cio_v5_40s_RaphaelMonteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559404670&amp;usg=AOvVaw1Cn_ber6oiulPeG-RSSvbg", talento: "Raphael Monteiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a62a40f9-1526-4ad8-9015-840a51429bad/%5B03%5D%20%5BP08%5D%5BNN%5D%20SERASA%20-%20Sa%C3%BAde%20do%20Seu%20Neg%C3%B3cio_v4_29s_Raphael.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559406090&amp;usg=AOvVaw2CzcLS61tvFnSbYhfEsnpo", talento: "Raphael Monteiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/5e7a9c3c-965e-4740-b8f7-0b18da278e63/%5B04%5D%20%5BP08%5D%5BNN%5D%20SERASA%20%20%20Sa%C3%BAde%20do%20Seu%20Neg%C3%B3cio_v2_44s_Raphael%20Monteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559407358&amp;usg=AOvVaw1iYqiILCR3ltQmPr8sgnLr", talento: "Raphael Monteiro" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b8ebffff-a168-493b-b3ff-c13a72d58f62/%5B01%5D%20%5BP09%5D%5BNN%5D%20SERASA%20-%20Campanha%20stalker%20-%20Net%20New%20Recomenda_v6_57s_DeboraMelo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559408511&amp;usg=AOvVaw06O2Vc5n-yQ8hurbDY2ODc", talento: "Débora Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e52514d6-8808-4863-9082-69c3d11f78bd/%5B02%5D%20%5BP09%5D%5BNN%5D%20SERASA%20%20%20Campanha%20stalker%20-%20Net%20New%20Recomenda%20_v5_45s_Debora%20Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559409635&amp;usg=AOvVaw0rQkE7OrHEwzzBzFy2l2p9", talento: "Débora Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a14426e6-ad12-4c8c-989c-8dca24c8e172/%5B03%5D%20%5BP09%5D%5BNN%5D%20SERASA%20%20%20Campanha%20stalker%20-%20Net%20New%20Recomenda_v3_34s_Debora.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559410709&amp;usg=AOvVaw2SKg1iFGBYj6yUxA0x3Y9d", talento: "Débora Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a0c13a61-1141-496e-95fa-2f064ef7e3ae/%5B04%5D%20%5BP09%5D%5BNN%5D%20SERASA%20-%20Campanha%20stalker%20-%20Net%20New%20Recomenda_v5_32s_Debora_Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559411830&amp;usg=AOvVaw0-qYhW_SATCxD2DDwGzRiC", talento: "Débora Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/73c52990-87f5-496e-bc62-4d53f48d82d9/%5B01%5D%20%5BP11%5D%5BNN%5D%20SERASA%20%20%20Campanha%20%23SemSustos%20PME%20-%20Consulta%20CPF%20CNPJ_v5_21s_Qu%C3%A9ren%20Hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559412937&amp;usg=AOvVaw2rPpIm1_5MpsT0wxzhw4lp", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/efec1d3b-907c-42d5-ae23-133867111726/%5B02%5D%20%5BP11%5D%5BNN%5D%20SERASA%20Campanha%20%23SemSustos_v8_27s_Queren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559414033&amp;usg=AOvVaw3aR2Bv8z5_r1dIGdZWBtS7", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/26283daf-6720-4519-9e32-9f6bf117dad4/%5B03%5D%20%5BP11%5D%5BNN%5D%20SERASA%20%20%20Campanha%20%23SemSustos%20PME%20-%20Consulta%20CPF%20CNPJ_v5_25s_Qu%C3%A9ren%20Hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559415188&amp;usg=AOvVaw0M4QnuKb5kr_RsTu98r5FA", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b6cc677f-a509-43e2-804f-ccd0c633574e/%5B04%5D%20%5BP11%5D%5BNN%5D%20SERASA%20Campanha%20%23SemSustos_v10_22s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559416279&amp;usg=AOvVaw32RMlN6khE4yk4ug163-ID", talento: "Quéren Hapuque" }
+      { youtubeId: "FK1GiTPrnt4", talento: "Raphael Monteiro" },
+      { youtubeId: "rprRW3ReCoo", talento: "Raphael Monteiro" },
+      { youtubeId: "1-VmKHjpzfs", talento: "Raphael Monteiro" },
+      { youtubeId: "iBLVYhc1lNQ", talento: "Raphael Monteiro" },
+      { youtubeId: "LJs7g6_08vs", talento: "Débora Melo" },
+      { youtubeId: "9xypUfGo5nE", talento: "Débora Melo" },
+      { youtubeId: "cfWFu7zlyFQ", talento: "Débora Melo" },
+      { youtubeId: "ISe7rscHKVw", talento: "Débora Melo" },
+      { youtubeId: "aJYINzKnweI", talento: "Quéren Hapuque" },
+      { youtubeId: "gbVcmDSMZ90", talento: "Quéren Hapuque" },
+      { youtubeId: "Tu1D2ugM_mA", talento: "Quéren Hapuque" },
+      { youtubeId: "uqw2XmN7Vjw", talento: "Quéren Hapuque" }
     ],
     galeria: []
   },
@@ -1244,14 +1244,14 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/447681c5-e977-4a26-872b-a42baae2b95a/%5B01%5D%20%5BP10%5D%5BNN%5D%20MOVIDA%20-%20TTCX%20Seminovos%20Movida_v2_32s_Marcelo%20Klein.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559417351&amp;usg=AOvVaw1QvRkWO_Vr3I_zSfUCHGIP", talento: "Marcelo Klein" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/3d051cd3-3a88-4a81-ba0d-0b876529787b/%5B02%5D%20%5BP10%5D%5BNN%5D%20MOVIDA%20%20%20TTCX%20Seminovos%20Movida%20_v1_43s_Marcelo%20Klein.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559418415&amp;usg=AOvVaw3dhqbipQCCIu6rkkedOYwc", talento: "Marcelo Klein" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d52f7347-8a70-4ed8-bb00-06360268510e/%5B03%5D%20%5BP10%5D%5BNN%5D%20MOVIDA%20-%20TTCX%20Seminovos%20Movida_v1_30s_Marcelo%20Klein.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559419481&amp;usg=AOvVaw3_d2H1HDfp68DP2MPdnyB2", talento: "Marcelo Klein" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/6bd99acd-0c2d-4e93-9606-42fe92e20a56/%5B04%5D%20%5BP10%5D%5BNN%5D%20MOVIDA%20%20%20TTCX%20Seminovos%20Movida_v2_50s_Clara%20Giffoni.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559420643&amp;usg=AOvVaw3B5DSde63SjLyjoJ40sPhB", talento: "Clara Giffoni" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/118e301a-0e41-4dbd-9790-5bccadfd6556/%5B05%5D%20%5BP10%5D%5BNN%5D%20MOVIDA%20%20%20TTCX%20Seminovos%20Movida_v2_41s_Clara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559421697&amp;usg=AOvVaw1vCj0E1ChdNAIeSML2nRA-", talento: "Clara Giffoni" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4335549b-d59c-4fcc-b258-2f8d3a8c6843/%5B06%5D%20%5BP10%5D%5BNN%5D%20MOVIDA%20%20%20TTCX%20Seminovos%20Movida_v2_41s_Marcelo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559422756&amp;usg=AOvVaw3OsK4dIXAKh-Y3eYrDGttN", talento: "Marcelo Klein" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a784512e-557f-44c5-aa4f-159d364129cd/%5B07%5D%20%5BP10%5D%5BNN%5D%20MOVIDA%20-%20TTCX%20Seminovos%20Movida_v2_32s_Clara%20Giffoni.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559423844&amp;usg=AOvVaw18Uz3FNNfuBX7_-F8ro1JS", talento: "Clara Giffoni" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/5dce58c7-5c64-4d33-a2f8-b1ce09c8a763/%5B08%5D%20%5BP10%5D%5BNN%5D%20MOVIDA%20TTCX%20Seminovos%20Movida_v2_31s_Clara_Giffoni.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559424941&amp;usg=AOvVaw0ehXpY5-UU4ySUgTz7XzWP", talento: "Clara Giffoni" }
+      { youtubeId: "3yGiT5qdrys", talento: "Marcelo Klein" },
+      { youtubeId: "JsT9oAogP4o", talento: "Marcelo Klein" },
+      { youtubeId: "CD0-WI3Cl6Q", talento: "Marcelo Klein" },
+      { youtubeId: "IxfzC-BVmVA", talento: "Clara Giffoni" },
+      { youtubeId: "cdVMwx2pjwQ", talento: "Clara Giffoni" },
+      { youtubeId: "fjBwFzbjzgw", talento: "Marcelo Klein" },
+      { youtubeId: "1vJz6i2Oysw", talento: "Clara Giffoni" },
+      { youtubeId: "8zVNOrVPzZs", talento: "Clara Giffoni" }
     ],
     galeria: []
   },
@@ -1272,10 +1272,10 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a7e3ac6b-df5c-49be-9158-650fd6c6fdbc/%5B01%5D%20%5BP20%5D%5BNN%5D%20KABUM%20-%20TTCX%20-%20KaBuM!%20-%20Brand%20Consideration%20(08-2025)_v2_35s_Lara_Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559426086&amp;usg=AOvVaw0pINXJZyqlpf5lNeAfZe-f", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c20bec49-e01b-4a4e-875e-7a81a33d430d/%5B03%5D%20%5BP20%5D%5BNN%5D%20KABUM%20%20%20TTCX%20%20%20KaBuM!%20%20%20Brand%20Consideratio_v1_24s_Lara%20Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559427199&amp;usg=AOvVaw1R_iW88h1lcyOzGxSj-OaO", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2c3108ab-ada2-4888-88d2-6bbd7de20d11/%5B06%5D%20%5BP20%5D%5BNN%5D%20KABUM%20-%20TTCX%20-%20KaBuM!%20-%20Brand%20Consideration%20(08-2025)_v2_27s_Lara%20Gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559428368&amp;usg=AOvVaw0ijviDhHxNVVRUKoUSIosT", talento: "Lara Gay" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/20587ced-b949-49ce-9615-b28cb3e790e6/%5B07%5D%20%5BP20%5D%5BNN%5D%20KABUM%20-%20TTCX%20-%20KaBuM!%20-%20Brand%20Consideration%20(08-2025)_v3_35s_Lara_gay.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559429601&amp;usg=AOvVaw3dqGVTiLxKuyvO4qGpfS8X", talento: "Lara Gay" }
+      { youtubeId: "49QCUcSAKuA", talento: "Lara Gay" },
+      { youtubeId: "Y6SqHlpv3RM", talento: "Lara Gay" },
+      { youtubeId: "MURgCVfDNbg", talento: "Lara Gay" },
+      { youtubeId: "l_NFuiXX8Hs", talento: "Lara Gay" }
     ],
     galeria: []
   },
@@ -1296,16 +1296,16 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/08082c39-05e3-40f8-9284-8d15cddf330d/%5B01%5D%20%5BP01%5D%5BNN%5D%20NEOENERGIA%20-%20NEOENERGIA%20COELBA_CLIENTES_v4_23s_ISMAEL.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559392098&amp;usg=AOvVaw3T62fTG5yawuTetDGjfiyl", talento: "Ismael Gotthardi" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2294bb5f-d232-4b81-a762-ba55ad2a7b59/%5B02%5D%20%5BP01%5D%5BNN%5D%20NEOENERGIA%20-%20NEOENERGIA%20COELBA_CLIENTES_v4_39s_Ismael.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559393282&amp;usg=AOvVaw0ZhPC7KPtPVSn9aFiHKoEq", talento: "Ismael Gotthardi" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e1c56375-8a89-4937-9cbc-bdacc48b3186/%5B03%5D%20%5BP01%5D%5BNN%5D%20NEOENERGIA%20-%20NEOENERGIA%20COELBA_CLIENTES_v4_27s_Ismael.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559394399&amp;usg=AOvVaw3oWZqq_IzK8HWgFXrx35om", talento: "Ismael Gotthardi" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c4eb88e9-25d5-4d6b-a8a5-cb3307fa2abf/%5B04%5D%20%5BP01%5D%5BNN%5D%20NEOENERGIA%20COELBA_CLIENTES_v2_35s_Ismael.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559395521&amp;usg=AOvVaw2uecKVCDoSt7Hr6q3VKYbT", talento: "Ismael Gotthardi" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f55ba733-0559-4b49-ac0d-24b1849f600b/%5B01%5D%20%5BP02%5D%5BNN%5D%20NEOENERGIA%20%20%20NEOENERGIA%20BRASILIA_CLIENTES_v2_37s_Julia.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559396642&amp;usg=AOvVaw0LDtDubYtz128-BDai706G", talento: "Júlia Horta" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4b0b43c8-4acf-414e-b770-f16862fecec0/%5B02%5D%20%5BP02%5D%5BNN%5D%20NEOENERGIA%20%20%20NEOENERGIA%20BRASILIA_CLIENTES_v1_32s_Julia%20Horta.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559397766&amp;usg=AOvVaw0ryBrpeyo4oPaAH65eNv-O", talento: "Júlia Horta" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f5f07b46-1412-411d-8859-b865e472ff26/%5B03%5D%20%5BP02%5D%5BNN%5D%20NEOENERGIA%20NEOENERGIA%20BRASILIA_CLIENTES_v4_32s_JULIA_HORTA.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559398895&amp;usg=AOvVaw0AYGoH1o6CnBzp_Leo12oa", talento: "Júlia Horta" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0865c709-4d88-4e6b-a052-18517850c498/%5B04%5D%20%5BP02%5D%5BNN%5D%20NEOENERGIA%20%20%20NEOENERGIA%20BRASILIA_CLIENTES_v5_22s_J%C3%BAlia%20Horta.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559400131&amp;usg=AOvVaw2ZTCPF8L9iXD9sJJi6neEf", talento: "Júlia Horta" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/fd35bc72-47ea-4e76-936b-b4866c162fb2/%5B03%5D%20%5BP04%5D%5BNN%5D%20NEOENERGIA%20%20%20NEOENERGIA%20PERNAMBUCO_CLIENTES_v3_33s_Hannah%20Beatriz.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559401277&amp;usg=AOvVaw3edWt487ICkpYKpqPZgb-I", talento: "Hannah Beatriz" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/484bd793-3939-43af-9203-ac9aead5b2fb/%5B04%5D%20%5BP04%5D%5BNN%5D%20NEOENERGIA%20-%20NEOENERGIA%20PERNAMBUCO_CLIENTES_v3_48s_Hannah.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559402463&amp;usg=AOvVaw3pu-q5PWjMoc7Vj8iZTP0f", talento: "Hannah Beatriz" }
+      { youtubeId: "HrIE4gV11jA", talento: "Ismael Gotthardi" },
+      { youtubeId: "53jQhy1RTXA", talento: "Ismael Gotthardi" },
+      { youtubeId: "RQUdYKJSFD4", talento: "Ismael Gotthardi" },
+      { youtubeId: "TGVVJxBPTHQ", talento: "Ismael Gotthardi" },
+      { youtubeId: "U79hizyMLaM", talento: "Júlia Horta" },
+      { youtubeId: "4x6q0joaIvc", talento: "Júlia Horta" },
+      { youtubeId: "PVuKOKW0TMw", talento: "Júlia Horta" },
+      { youtubeId: "bL1QKnbPACg", talento: "Júlia Horta" },
+      { youtubeId: "2JwwXfYXo4k", talento: "Hannah Beatriz" },
+      { youtubeId: "p6FXXTSpL0E", talento: "Hannah Beatriz" }
     ],
     galeria: []
   },
@@ -1326,11 +1326,11 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/cc9a3d7b-c8ac-404c-a87f-afdb44d391fe/%5B03%5D%20%5BP02%5D%5BCH%5D%20CLARO%20%20%20Claro%20Prezao_v6_35s_nalu.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559385073&amp;usg=AOvVaw0fchhkY9rvU26QuR9fDBnR", talento: "Nalu Moura" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2b4005c8-8867-4c36-ac40-23b5c37e0daa/%5B01%5D%20%5BP04%5D%5BNN%5D%20CLARO%20%20%20Claro%20controle%20em%20Net%20New_v4_46s_Vinicius%20Scribel.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559386186&amp;usg=AOvVaw3TSJ-nxpetZiE1V3IYZ0Av", talento: "Vinicius Scribel" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/20a358cc-2b72-402b-ae52-db6b2d17d643/%5B02%5D%20%5BP04%5D%5BNN%5D%20CLARO%20-%20Claro%20controle%20em%20Net%20New_v11_50s_Vinicius%20Scribel.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559387461&amp;usg=AOvVaw3s4oQueeLzevjrRL1zWpWy", talento: "Vinicius Scribel" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1554afc0-e193-41ec-a1c7-ce0d9e6ab17d/%5B03%5D%20%5BP04%5D%5BNN%5D%20CLARO%20%20%20Claro%20controle%20em%20Net%20New_v6_52s_Vinicius%20Scribel.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559388734&amp;usg=AOvVaw3jTDCNXY5aTWJ8Om0PeKjH", talento: "Vinicius Scribel" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d07c6fab-4d5c-4943-ade0-474a484f4a88/%5B04%5D%20%5BP04%5D%5BNN%5D%20CLARO%20%20%20Claro%20controle%20em%20Net%20New_v6_45s_Vinicius%20Scribel.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559389950&amp;usg=AOvVaw3cT4Nj0isfeZSLTAWWCY-3", talento: "Vinicius Scribel" }
+      { youtubeId: "WQKvY6xmOhs", talento: "Nalu Moura" },
+      { youtubeId: "RzaWv1-lxQ0", talento: "Vinicius Scribel" },
+      { youtubeId: "Hl5U6xSQ-o0", talento: "Vinicius Scribel" },
+      { youtubeId: "TNwbZRTjOZI", talento: "Vinicius Scribel" },
+      { youtubeId: "OTFYJYOT2Uo", talento: "Vinicius Scribel" }
     ],
     galeria: []
   },
@@ -1351,10 +1351,10 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/16555f2c-c8f9-4b2e-8454-c211dd398acd/%5B01%5D%20%5BP01%5D%5BNN%5D%20VANS%20-%20Vans%20Brasil%20(2025-06-09)_v3_31s_Jasmim_Avelino.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559391026&amp;usg=AOvVaw0E5OsKhKzPGNnRZpRcZfFb", talento: "Jasmim Avelino" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/571df829-ebfc-4aec-b9e3-af639458a676/%5B02%5D%20%5BP01%5D%5BNN%5D%20VANS%20%20%20Vans%20Brasil%20(2025%2006%2009)_v2_20s_Jasmin.mp4?authz_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImFybjphd3M6a21zOnVzLWVhc3QtMjo1MTQzMDg2NDE1OTI6YWxpYXMvYXR0YWNobWVudHMvYXV0aC8xIiwidHlwIjoiSldUIn0.eyJhdWQiOjg3OTEwMDc1LCJleHAiOjE3NzMzNDYzODQsInN1YiI6Imh0dHBzOi8vdDkwMDcwMDg2MDUucC5jbGlja3VwLWF0dGFjaG1lbnRzLmNvbS90OTAwNzAwODYwNS81NzFkZjgyOS1lYmZjLTRhZWMtYjllMy1hZjYzOTQ1OGE2NzYvJTVCMDIlNUQlMjAlNUJQMDElNUQlNUJOTiU1RCUyMFZBTlMlMjAlMjAlMjBWYW5zJTIwQnJhc2lsJTIwKDIwMjUlMjAwNiUyMDA5KV92Ml8yMHNfSmFzbWluLm1wNCIsIm1heFVzYWdlIjoxLCJyYW5kIjoiVDB4TyJ9.0RHhJrLP6MDbZrTrhiTyeWTdaWBpSUWIMCCo036PoaE&view=open", talento: "Jasmim Avelino" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/67855fe4-4d72-4b58-85ff-10c835e60b93/%5B03%5D%20%5BP01%5D%5BNN%5D%20VANS%20%20%20Vans%20Brasil%20(2025%2006%2009)_v2_52s_Jasmim%20Avelino.mp4?view=open", talento: "Jasmim Avelino" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/75e258b0-d8cf-4038-987b-f50bb440b56d/%5B04%5D%20%5BP01%5D%5BNN%5D%20VANS%20-%20Vans%20Brasil%20(2025-06-09)_v2_20s_JasmimAvelino.mp4?view=open", talento: "Jasmim Avelino" }
+      { youtubeId: "GMGoiJaMvo4", talento: "Jasmim Avelino" },
+      { youtubeId: "UMCTBg0Aog0", talento: "Jasmim Avelino" },
+      { youtubeId: "HoHtVzNKMMY", talento: "Jasmim Avelino" },
+      { youtubeId: "IV1yjTzWiUI", talento: "Jasmim Avelino" }
     ],
     galeria: []
   },
@@ -1375,8 +1375,8 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/aa01d5fb-244a-44bf-92c9-998352146995/%5B01%5D%20%5BP02%5D%5BCH%5D%20BETNACIONAL%20-%20Betnacional%20TTCX%20-%20June%202025_v6_26s_WesleyJesus.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559382912&amp;usg=AOvVaw0y_FaMfJ5PZD1j8D-OPNCu", talento: "Wesley Jesus" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ef6def79-567b-47d7-acd3-9efc55e1abfd/%5B02%5D%20%5BP02%5D%5BCH%5D%20BETNACIONAL%20%20Betnacional%20TTCX%20-%20June%202025_v2_41s_Wesley_Jesus.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559384058&amp;usg=AOvVaw3GXllgYyUmveFBPop5dt2u", talento: "Wesley Jesus" }
+      { youtubeId: "V1j8_wTIHJM", talento: "Wesley Jesus" },
+      { youtubeId: "BBOBwlA6fF0", talento: "Wesley Jesus" }
     ],
     galeria: []
   },
@@ -1397,17 +1397,17 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/11170c6e-c430-4f01-95b5-cf5885246fe0/%5B02%5D%20%5BP01%5D%5BNN%5D%20BRAVECTO%20-%202025%20Bravecto%20Brasil%20%5Bregional%5D_v2_40s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559371371&amp;usg=AOvVaw3now2AYpvRk10aeEwhtNMU", talento: "Cachorro - Yago" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/6a95c00b-1ef9-424d-9b53-39bf272ed325/%5B01%5D%20%5BP01%5D%5BNN%5D%20BRAVECTO%20%20%202025%20Bravecto%20Brasil%20%5Bregional%5D_v3_27s_%C3%8Dgor%20Arvelos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559372414&amp;usg=AOvVaw1goDLlLVXRoUXe-xu87uDi", talento: "Ígor Arvelos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ac6ca81b-92c9-478c-bea4-960f22d06584/%5B01%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%202025%20Bravecto%20Brasil%20II_v1_34s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559373462&amp;usg=AOvVaw1gy7Ai1fxA5DVKvf4kD7wO", talento: "Whisky - Yago" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/98b919cc-3c0a-470a-aba1-3952654021e5/%5B02%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20%20%202025%20Bravecto%20Brasil%20II_v1_25s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559374484&amp;usg=AOvVaw2-FSYmzdOpqkKnCVlILirD", talento: "Loretta Martins" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/88f833dd-776d-4b2b-8903-c909cb7ae394/%5B04%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20%20%202025%20Bravecto%20Brasil%20II_v3_21s_loretta.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559375504&amp;usg=AOvVaw15jRxG2esXybJRIb1hgD-E", talento: "Loretta Martins" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/554efbdf-5744-4895-82b2-115e33aecc6f/%5B05%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20%20%202025%20Bravecto%20Brasil%20II_v2_42s_Jorge.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559376576&amp;usg=AOvVaw1Yry59KC9r-sz7ZTbAPJcg", talento: "Jorge Hissa" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c0fb4f38-55fe-4929-bf53-cc3efc60170f/%5B06%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20-%202025%20Bravecto%20Brasil%20II_v3_32s_Yago.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559377606&amp;usg=AOvVaw3iDkw94E__BrVYH9Qhvmzi", talento: "Cachorro - Yago" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a74e590f-5b9a-4969-8aab-87c8dc7ab5f5/%5B07%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20%20%202025%20Bravecto%20Brasil%20II_v3_27s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559378651&amp;usg=AOvVaw3Mg1BNXygH5KdhXmsLDALu", talento: "Cachorro - Yago" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/cd3681d3-3635-464f-ae34-8ba89321d692/%5B08%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20-%202025%20Bravecto%20Brasil%20II_v3_24s_Loretta_Martins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559379697&amp;usg=AOvVaw3UHAvjLlo37oUla5o56Ojf", talento: "Loretta Martins" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/327926bd-61be-4e81-9d7f-565260cc81cf/%5B09%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20-%202025%20Bravecto%20Brasil%20II_v4_26s_LorettaMartins.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559380766&amp;usg=AOvVaw2aZUEobPKnRYkxYCCYA_vz", talento: "Loretta Martins" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0b1379bc-4c09-40ef-b02a-87c1c4e9be97/%5B10%5D%20%5BP04%5D%5BNN%5D%20BRAVECTO%20%20%202025%20Bravecto%20Brasil%20II_v3_31s_Jorge%20Hissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559381858&amp;usg=AOvVaw1L4tTGYPOZQ0xvusJ-TYoO", talento: "Jorge Hissa" }
+      { youtubeId: "lH-SgFOGpJY", talento: "Cachorro - Yago" },
+      { youtubeId: "8DOQ9eNbuGU", talento: "Ígor Arvelos" },
+      { youtubeId: "iXMJt6yicoE", talento: "Whisky - Yago" },
+      { youtubeId: "DrcgiaJ2K6o", talento: "Loretta Martins" },
+      { youtubeId: "L9DDlLiVsqc", talento: "Loretta Martins" },
+      { youtubeId: "vR6PoRlKxO4", talento: "Jorge Hissa" },
+      { youtubeId: "7s8ah4HarJI", talento: "Cachorro - Yago" },
+      { youtubeId: "rvWxO415PTw", talento: "Cachorro - Yago" },
+      { youtubeId: "P0qRbPVlkcY", talento: "Loretta Martins" },
+      { youtubeId: "y_DVjSTJGkA", talento: "Loretta Martins" },
+      { youtubeId: "C8LcFan2gAs", talento: "Jorge Hissa" }
     ],
     galeria: []
   },
@@ -1512,16 +1512,16 @@ const projetos = [
     instagram: "https://www.instagram.com/allfluence/",
     website: "https://www.allfluence.com.br/",
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/fc9d155a-efc6-49ba-98a5-5aedb5bda954/%5BSM%5D%5BR02%5D%5B10%5D%20Coisas%20que%20me%20d%C3%A3o%20arrepio_v2-1_15s_Yago%20Capita.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559060511&amp;usg=AOvVaw2LVCJMzO0L6GXm57wK6Rd8", talento: "Yago Capita" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/3e5c224a-8167-4026-966e-669841a7cdcc/%5BSM%5D%5BR02%5D%5B10%5D%20Coisas%20que%20me%20d%C3%A3o%20arrepio_v2-2_15s_Yago%20Capita.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559061508&amp;usg=AOvVaw1gi8Gk9EPKJIb2lmKOeKDe", talento: "Yago Capita" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/cf67f0d3-169a-4323-89ab-768fb361dc13/%5BSM%5D%5BR02%5D%5B10%5D%20Coisas%20que%20me%20d%C3%A3o%20arrepio_v2-3_13s_Yago%20Capita.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559062501&amp;usg=AOvVaw1OZ-K1aKzTqXTalSeqcGjS", talento: "Yago Capita" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7f023b6c-c1f4-4b6f-94bd-94b29c3dcee8/%5BSM%5D%5BR02%5D%5B09%5D%20Mantra%20de%20Marketing_v3_25s_Pedro_Valerio_Yago_Capita.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559063398&amp;usg=AOvVaw3PYFPDu4ZWpVnWKNsyfat9", talento: "Yago Capita Pedro Valério" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/6eb9932c-ed8e-4bdd-b182-74d2290c4f41/%5BSM%5D%5BR02%5D%5B07%5D%20Erro%20Windows%20-%20Solicita%C3%A7%C3%A3o%20de%20acesso_v1_07s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559064376&amp;usg=AOvVaw38lUcvspWpTfIMYjBJztPs", talento: "Yago Capita" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d4d14eaa-f457-48f5-8b66-cdb45febc318/%5BSM%5D%5BR02%5D%5B12%5D%20Equipe%20Unida%2C%20chefe%20Orgulhoso_v3_20s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559065430&amp;usg=AOvVaw3u3PatNXjeSpFs_GeQLzo7", direcao: true, talento: "Camille Ana Claudia Padilha Savylla" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/3bdc96f0-17f6-4363-86ff-31a85e5b263e/%5BSM%5D%5BR02%5D%5B14%5D_v2_24s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559066525&amp;usg=AOvVaw2dfyXW8Vb8XrYk1cUmlPSe", talento: "Yago Capita Camille Ana Claudia Padilha Savylla" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d8b3b6a3-dd26-41b7-934d-a94d0881c99f/%5BSM%5D%5BR02%5D%5B17%5D%20Como%20eu%20fa%C3%A7o%20para%20ter%20uma%20equipe%20focada%20numa%20apresenta%C3%A7%C3%A3o_v1_07s_1.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559067727&amp;usg=AOvVaw3wuTpjTQQC1OwUemVmeTJ7", direcao: true, talento: "Camille Ana Claudia Padilha Savylla" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/85b07bae-3832-4cfa-a2fc-76ab428bd0f3/%5BSM%5D%5BR03%5D%5B02%5D_v1_36s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559068838&amp;usg=AOvVaw1bgb-DYUxdZwjW9OQ2NU8v", direcao: true, talento: "Camille Ana Claudia Padilha Savylla" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/fb5dcee7-fd25-4789-962d-c732145a582e/%5BSM%5D%5BE13%5D%20Confra%20-%20Trend%20-Jet2Holidays-%20remix_v1_10s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559070002&amp;usg=AOvVaw0Y8aOaQZWjgE9gqlIVOCgB", direcao: true, talento: "Equipe Allfluence" },
+      { youtubeId: "1heeu4JlBrs", talento: "Yago Capita" },
+      { youtubeId: "CmNwHyH0wso", talento: "Yago Capita" },
+      { youtubeId: "QLF4xBQ30jo", talento: "Yago Capita" },
+      { youtubeId: "fMHNZbbcQJE", talento: "Yago Capita Pedro Valério" },
+      { youtubeId: "wKvkhHMKs2s", talento: "Yago Capita" },
+      { youtubeId: "zlgZVZlnYys", direcao: true, talento: "Camille Ana Claudia Padilha Savylla" },
+      { youtubeId: "mATBN8ULM6o", talento: "Yago Capita Camille Ana Claudia Padilha Savylla" },
+      { youtubeId: "fwhdF2NlIpY", direcao: true, talento: "Camille Ana Claudia Padilha Savylla" },
+      { youtubeId: "1kdog5TY15k", direcao: true, talento: "Camille Ana Claudia Padilha Savylla" },
+      { youtubeId: "JKvGdRN-eeE", direcao: true, talento: "Equipe Allfluence" },
       { url: "assets/projetos/oscar/video-1.mp4", talento: "Oscar 2026 - Produção com IA" }
     ],
     galeria: []
@@ -1543,7 +1543,7 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b9f0ef4f-31de-48cb-a6e7-e2982d0199e0/%5B03%5D%20%5BP01%5D%20VELOE%20-%20Veloe%20Go-PJ-VPO_v2_53s_Raphael%20Monteiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559186494&amp;usg=AOvVaw0ZXAffOKxhYR_azvBYEuXy", talento: "Raphael Monteiro" }
+      { youtubeId: "mV13Vf1yRzg", talento: "Raphael Monteiro" }
     ],
     galeria: []
   },
@@ -1564,14 +1564,14 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/41765364-6390-463f-849d-6f714ae6a092/%5B06%5D%5BP01%5D%5BNN%5D%20AGIBANK%20Agibank%20(2025%2003%2006)_v3_48s_ISADORA_CECATTO.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559296874&amp;usg=AOvVaw2sdrB1mNyNteqDXgtPwIeh", talento: "Isadora Cecatto" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d6b57b83-cf77-4b13-80af-53043678a203/%5B07%5D%5BP01%5D%5BNN%5D%20AGIBANK%20%20Agibank%20(20250306)_v6_32s_Isadora_Cecatto.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559297895&amp;usg=AOvVaw3QEhiJXa6dXkIFGFUxjHHr", talento: "Isadora Cecatto" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/6dbb787b-174e-409c-a9e1-a0399f1f5a95/%5B08%5D%5BP01%5D%5BNN%5D%20AGIBANK%20-%20Agibank%20(2025-03-06)_v2_34s_Isadora_Cecatto.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559299118&amp;usg=AOvVaw1NwB0CXyJRSyZnQo6oYvkE", direcao: true, talento: "Isadora Cecatto" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/0542518f-008b-407c-929c-eddd9c1e23d7/%5B04%5D%5BP01%5D%5BNN%5D%20AGIBANK%20Agibank%20(20250306)_v3_25s_Debora%20Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559300302&amp;usg=AOvVaw24e1Me4iiBSmemkh5IOLAf", direcao: true, talento: "Isadora Cecatto" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ae6d698a-5aa6-42c0-9ee2-828bc8fc2880/%5B03%5D%5BP01%5D%5BNN%5D%20AGIBANK%20-%20Agibank%20(2025-03-06)_v3_24s_Debora_Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559301429&amp;usg=AOvVaw1zZuVmpj5NLgosNz9jHyCF", direcao: true, talento: "Débora Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/96698954-22f2-49bd-a0cc-b0ade753f033/%5B05%5D%5BP01%5D%5BNN%5D%20AGIBANK%20%20%20Agibank%20(2025%2003%2006)_v1_28s_Isadora%20Cecatto.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559302573&amp;usg=AOvVaw2PgZBeX6I6xVRpNC9ZO-tG", direcao: true, talento: "Débora Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ae41bd56-8f92-4561-a97e-e06379725ec3/%5B02%5D%5BP01%5D%5BNN%5D%20AGIBANK%20-%20Agibank%20(2025-03-06)_v4_36s_DeboraMello.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559303621&amp;usg=AOvVaw3ZhetxxNDs4dRfdlJUKRNd", direcao: true, talento: "Débora Melo" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/bc592bf4-6021-49d6-930a-49c137ee1756/%5B01%5D%5BP01%5D%5BNN%5D%20AGIBANK%20%20Agibank%20(2025%2003%2006)_v1_45s_Debora%20Melo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559304779&amp;usg=AOvVaw37Kp9VCj2sxLUOd16LewdP", direcao: true, talento: "Débora Melo" }
+      { youtubeId: "srXIpTh6Ips", talento: "Isadora Cecatto" },
+      { youtubeId: "O0xg4LJcnTY", talento: "Isadora Cecatto" },
+      { youtubeId: "h5ZbUewydlE", direcao: true, talento: "Isadora Cecatto" },
+      { youtubeId: "EReFfZhL_r4", direcao: true, talento: "Isadora Cecatto" },
+      { youtubeId: "vHKHH4UBFPg", direcao: true, talento: "Débora Melo" },
+      { youtubeId: "AV3vjr8SrSI", direcao: true, talento: "Débora Melo" },
+      { youtubeId: "yp5di3n_lM8", direcao: true, talento: "Débora Melo" },
+      { youtubeId: "-rruV4XAFxM", direcao: true, talento: "Débora Melo" }
     ],
     galeria: []
   },
@@ -1592,16 +1592,16 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e5089455-5021-42fc-967f-9004b67b84e4/%5B04%5D%20%5BP11%5D%5BNN%5D%20LIVELO%20%20%20Club%20Livelo%20(2025%2004%2030)_v3_27s_Qu%C3%A9ren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559305812&amp;usg=AOvVaw3BSTY6SCK7lDMt-EVWcnt4", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1d9dcc75-414c-40f4-91e8-5c519c01d13e/%5B01%5D%20%5BP12%5D%5BNN%5D%20LIVELO%20%20%20Pontos%20Viram%20Dinheiro%20(2025%2005%2019)_v2_28s_Queren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559306826&amp;usg=AOvVaw1aTxkIaBkOE9QaruALY_O6", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1218d8ef-1221-41fb-b869-b760723e2e3a/%5B02%5D%20%5BP12%5D%5BNN%5D%20LIVELO%20%20%20Pontos%20Viram%20Dinheiro%20(2025%2005%2019)_v4_37s_Queren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559307855&amp;usg=AOvVaw1kefJROTL-qOG2DW33CEW_", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e242d9a3-d64e-4ac4-945a-69ad115f4164/%5B03%5D%20%5BP12%5D%5BNN%5D%20LIVELO%20-%20Pontos%20Viram%20Dinheiro%20(2025-05-19)_v3_40s-Qu%C3%A9remFernandes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559308884&amp;usg=AOvVaw2AbIkUOqqWVP0XewQbxJBk", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/389efea9-128c-4cfb-9445-a8285bbd134d/%5B04%5D%20%5BP12%5D%5BNN%5D%20LIVELO%20-%20Pontos%20Viram%20Dinheiro%20(2025-05-19)_v2_39s_Queren%20Hapuque.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559309874&amp;usg=AOvVaw1WHLTZzwcnifuVVct7I5Yr", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b3e24740-e878-4779-a5ad-0d2be0f16a97/%5B01%5D%20%5BP13%5D%5BNN%5D%20LIVELO%20%20%20Livelo%20(2025%2005%2019)_v3_35s_Queren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559310950&amp;usg=AOvVaw1H0JSqxr2DgTZHcaxVDy27", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/130f8068-7180-4037-9f83-c310e01a20fc/%5B02%5D%20%5BP13%5D%5BNN%5D%20LIVELO%20-%20Livelo%20(2025-05-19)_v4_23s_Queren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559311953&amp;usg=AOvVaw3qbNr6J8OUXgiRxmUg-tLd", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1f05ad42-7b3f-46d9-846f-069716982a43/%5B03%5D%20%5BP13%5D%5BNN%5D%20LIVELO%20%20%20Livelo%20(2025%2005%2019)_v3_20s_Qu%C3%A9ren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559313045&amp;usg=AOvVaw2UajnboPPaNopMyLwVe3cO", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c6e59360-22e0-4f92-9031-9237ecd0a92a/%5B04%5D%20%5BP13%5D%5BNN%5D%20LIVELO%20-%20Livelo%20(2025-05-19)_v2_30s-Qu%C3%A9ren.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559314058&amp;usg=AOvVaw1tHFgFsTzT0dsb71Kmwvgj", talento: "Quéren Hapuque" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/226cc88f-cd13-4b30-8613-a60e2ee8ae06/%5B04%5D%20%5BP14%5D%5BCH%5D%20LIVELO%20%20%20Livelo%20Educacional%20-%20Brand%20Mission_v5_52s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559315092&amp;usg=AOvVaw2cic3bGFID94eyDsJFdSek", talento: "Letícia Pedro" }
+      { youtubeId: "XIu7SO5hxZo", talento: "Quéren Hapuque" },
+      { youtubeId: "lSF5HQzfglE", talento: "Quéren Hapuque" },
+      { youtubeId: "-V-9LwVRXpo", talento: "Quéren Hapuque" },
+      { youtubeId: "5KDSlaL1t_w", talento: "Quéren Hapuque" },
+      { youtubeId: "lZBe8nEN6hk", talento: "Quéren Hapuque" },
+      { youtubeId: "v-7Jdnsf1tg", talento: "Quéren Hapuque" },
+      { youtubeId: "RENf_JTMZ5A", talento: "Quéren Hapuque" },
+      { youtubeId: "IptEabWDjW0", talento: "Quéren Hapuque" },
+      { youtubeId: "BUz4VewUxJ0", talento: "Quéren Hapuque" },
+      { youtubeId: "wsDZVmBUrNo", talento: "Letícia Pedro" }
     ],
     galeria: []
   },
@@ -1622,10 +1622,10 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b12fb52c-3677-4894-8c96-ca23b1f7d11d/%5B01%5D%20%5BP01%5D%5BNN%5D%20BABYSEC%20-%20Babysec%20Shortinho%20Talentos%20Maio_v3_52s_Gabriel_Peregrino.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559316227&amp;usg=AOvVaw36vfhhAyJ_YS3VTlQ66a8Q", talento: "Gabriel Peregrino" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/aa953e6b-52a5-4199-b070-d78784c2d406/%5B05%5D%20%5BP01%5D%5BNN%5D%20BABYSEC%20%20%20Babysec%20Shortinho%20Talentos%20Maio_v3_51s_Gabriel%20Peregrino.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559317264&amp;usg=AOvVaw3aoc3j9RK7_CvB4wBBSjiB", direcao: true, talento: "Gabriel Peregrino" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/bbb923e6-71dd-44a3-a162-709090088da5/%5B06%5D%20%5BP01%5D%5BNN%5D%20BABYSEC%20%20%20Babysec%20Shortinho%20Talentos%20Maio_v3_20s_Gabriel.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559318301&amp;usg=AOvVaw2y3XcKxOoYB2AGjxq0Jr72", direcao: true, talento: "Gabriel Peregrino" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/35d13306-f13b-4034-a0a0-e9b877415079/%5B08%5D%20%5BP01%5D%5BNN%5D%20BABYSEC%20-%20Babysec%20Shortinho%20Talentos%20Maio_v4_16s_Pedro_peregrino.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559319387&amp;usg=AOvVaw1Z1QiJoDjuAa1hB_v1eaVZ", direcao: true, talento: "Gabriel Peregrino" }
+      { youtubeId: "9BZS3t242m0", talento: "Gabriel Peregrino" },
+      { youtubeId: "jP0vGWfg3Vc", direcao: true, talento: "Gabriel Peregrino" },
+      { youtubeId: "J58_VMwT7E4", direcao: true, talento: "Gabriel Peregrino" },
+      { youtubeId: "Km8Mw4ew1sE", direcao: true, talento: "Gabriel Peregrino" }
     ],
     galeria: []
   },
@@ -1646,10 +1646,10 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f38db0af-b842-476c-a8fa-34db4b0e9a39/%5B01%5D%20%5BP02%5D%5BNN%5D%20GA.MA%20%20%20%5BJunho%5D%20%C3%93leos%20Essenciais_v2_44s_Larissa.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559320424&amp;usg=AOvVaw1IfjhfNIekFulTIzuvJWWm", direcao: true, talento: "Larissa Venturini" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/efa1ac84-5f82-41a0-8dfc-36ff7270bf99/%5B02%5D%20%5BP02%5D%5BNN%5D%20GA.MA%20%5BJunho%5D%20%C3%93leos%20Essenciais_v2_52s_LARISSA_VENTURINI.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559321549&amp;usg=AOvVaw0pq-BZuqPtLYkMXK5wxDeI", direcao: true, talento: "Larissa Venturini" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/2c8c125c-fce4-49f6-904c-afa3d2216f26/%5B03%5D%20%5BP02%5D%5BNN%5D%20GA.MA%20%20%20%5BJunho%5D%20%C3%93leos%20Essenciais_v6_46s_Larissa%20Venturini.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559322632&amp;usg=AOvVaw2oUOx6Wyxj3pU51KovBli8", direcao: true, talento: "Larissa Venturini" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/85037e7f-2607-4147-9fcc-b5d464209a62/%5B04%5D%20%5BP02%5D%5BNN%5D%20GA.MA%20%20%20%5BJunho%5D%20%C3%93leos%20Essenciais_v4_38s_Larissa%20Venturini.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559323752&amp;usg=AOvVaw0M13rwUI6KeaVmVFkgjY5E", direcao: true, talento: "Larissa Venturini" }
+      { youtubeId: "OFMijRGWQcw", direcao: true, talento: "Larissa Venturini" },
+      { youtubeId: "G_ggKHUkqJ8", direcao: true, talento: "Larissa Venturini" },
+      { youtubeId: "TFU6R7oTlUQ", direcao: true, talento: "Larissa Venturini" },
+      { youtubeId: "pJfBXKSByCc", direcao: true, talento: "Larissa Venturini" }
     ],
     galeria: []
   },
@@ -1670,10 +1670,10 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/30080104-5807-4147-953a-9c3d4b0ddc4d/%5B02%5D%20%5BP01%5D%5BNN%5D%20BULLSBET%20-%20Bullsbet%20(2025-05-19)_v1_24s_Antonio_Bastos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559324872&amp;usg=AOvVaw0fCCAhTq96uCn42Pnm9wU5", direcao: true, talento: "Antônio Bastos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/33e7bb26-d019-47a5-800e-45069953403d/%5B03%5D%20%5BP01%5D%5BNN%5D%20BULLSBET%20%20%20Bullsbet%20(2025%2005%2019)_v2_15s_Antonio%20Bastos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559325977&amp;usg=AOvVaw1wdfTdH3d1JJKvti74u0So", direcao: true, talento: "Antônio Bastos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/af2c7e3d-b59a-443c-afe2-6e0bab2c0435/%5B04%5D%20%5BP01%5D%5BNN%5D%20BULLSBET%20-%20Bullsbet%20(2025-05-19)_v5_20s-AntonioBasto.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559327144&amp;usg=AOvVaw2-81Vx1eaoQZGayJXrsOsr", direcao: true, talento: "Antônio Bastos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b12d4b57-73ae-4fc5-a9b4-f2b775d841eb/%5B01%5D%20%5BP01%5D%5BNN%5D%20BULLSBET%20%20%20Bullsbet%20(2025%2005%2019)_v2_45s_Antonio%20Bastos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559328314&amp;usg=AOvVaw3EPRMLKv399EMYIunxdeNm", direcao: true, talento: "Antônio Bastos" }
+      { youtubeId: "H2tWDso6ScE", direcao: true, talento: "Antônio Bastos" },
+      { youtubeId: "MvwBEtwZ6XM", direcao: true, talento: "Antônio Bastos" },
+      { youtubeId: "nLsCifRsfVA", direcao: true, talento: "Antônio Bastos" },
+      { youtubeId: "TRxWckgUgwU", direcao: true, talento: "Antônio Bastos" }
     ],
     galeria: []
   },
@@ -1694,30 +1694,30 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a5c14998-6369-4821-acf7-7f95089ae0d9/%5B08%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20-%20Est%C3%A1cio%20-%20Fundo%20-%20Maio-25_v6_30sLarissaTravassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559329427&amp;usg=AOvVaw37ArBu8eaz5GplcohvAWN6", direcao: true, talento: "Larissa Travassos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/63ff8e9e-63b4-4669-b211-7e6e4f7c3c94/%5B01%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20%20%20Est%C3%A1cio%20-%20Fundo%20-%20Maio%2025_v4_24s_Larissa%20Travassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559330651&amp;usg=AOvVaw31WU_U5XwH-EFjJeqQAHvf", direcao: true, talento: "Larissa Travassos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/454ce9af-89e2-4223-aaa0-ea5dff2b5091/%5B02%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20%20Est%C3%A1cio%20-%20Fundo%20-%20Maio25_v5_34s_Joao_Mendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559331752&amp;usg=AOvVaw0dfJse1KlO9MOKnmdKSNwz", direcao: true, talento: "João Mendes" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/75bc1540-d3cb-456d-b528-d5a13809cece/%5B03%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20%20%20Est%C3%A1cio%20-%20Fundo%20-%20Maio%2025_v6_23s_Larissa_1.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559332900&amp;usg=AOvVaw20yAUNqbIn9ZZGX2E_i7pp", direcao: true, talento: "Larissa Travassos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/91ff7db1-6601-46a1-b221-bce8e9d1aea5/%5B04%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20-%20Est%C3%A1cio%20-%20Fundo%20-%20Maio-25_v9_20s-Jo%C3%A3oMendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559334142&amp;usg=AOvVaw1zIYQS6AeX2ayw-xUYwfn1", direcao: true, talento: "João Mendes" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/897d5d93-8cfa-4baf-99bb-361891894922/%5B05%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20%20Est%C3%A1cio%20-%20Fundo%20-%20Maio25_v7_34s_Joao_Mendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559335277&amp;usg=AOvVaw3qsxCUNJY6yYl1MwYPaMgc", direcao: true, talento: "João Mendes" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/03c4c5ea-bf47-48f9-b0d4-f46d844fabf1/%5B06%5D%20%5BP01%5D%5BNN%5D%20ESTACIO%20%20%20Est%C3%A1cio%20-%20Fundo%20-%20Maio%2025_v5_31s_Larissa%20Travassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559336381&amp;usg=AOvVaw2N3E_nrnyRg8uI2CfIBqEL", talento: "Larissa Travassos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/3ef6377e-7e99-49b9-93a0-c55c32a0f1d2/%5B07%5D%20%5BP04%5D%5BNN%5D%20ESTACIO%20%20%20Est%C3%A1cio%20-%20Fundo%20-%20Maio%2025_v4_33s_Jo%C3%A3o%20Mendes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559337628&amp;usg=AOvVaw3d1CKdP3jbgI7VO_3sPvgZ", direcao: true, talento: "João Mendes" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/395a2e6d-11dc-4bdf-9a74-09ff9686853a/%5B01%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20-%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v6_36s_MarianaBraga.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559338906&amp;usg=AOvVaw3bSBk5Jah_rFN3Ka6H6g-b", talento: "Mariana Braga" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f20d3934-936e-47a0-a692-c756590ef71a/%5B02%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20-%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v7_38s_MarianaBraga.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559339969&amp;usg=AOvVaw2m5rPGxW9TVEagMcAx9SCe", talento: "Mariana Braga" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4afd33a5-ca5e-40c4-9ce6-a0310ee67be3/%5B03%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20%20%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v4_31s_Mariana%20Braga.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559340988&amp;usg=AOvVaw2lGwrzyFh0Jx56rcPqxbxq", talento: "Mariana Braga" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/5024686e-13e9-4089-9aeb-ea946e1c9095/%5B04%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20-%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v3_34sRodrigoRabello.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559342014&amp;usg=AOvVaw1umSMd0NR9wab7cq8yqM8p", talento: "Rodrigo Rabello" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/febdb296-d595-4b8f-a9e6-cca20025d356/%5B05%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20%20%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v6_37s_Rodrigo%20Rabello.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559343059&amp;usg=AOvVaw2QYcnMbelblPsr2iq9avmG", talento: "Rodrigo Rabello" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/15a70316-e00b-403f-a26a-1948e1ec6807/%5B06%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20%20%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v5_26s_Rodrigo%20Rabello.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559344529&amp;usg=AOvVaw1NasVPtlAO_mIBVespj1BP", talento: "Rodrigo Rabello" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a4e0c25b-1ceb-47ad-b5ce-7ee0e7c75468/%5B07%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v6_39s_Rodrigo_Rabello_Ribeiro.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559346080&amp;usg=AOvVaw2lC8YGEoCPreaGkKLKVhmh", talento: "Rodrigo Rabello" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/fdc3f24a-faee-434c-a446-d9c5f96f75d9/%5B08%5D%20%5BP05%5D%5BNN%5D%20ESTACIO%20P%C3%B3s%20Est%C3%A1cio%20-%20Junho%202025_v6_42s_Mariana_Braga.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559347342&amp;usg=AOvVaw0lat_bH2y0kMn4ENVZe6yv", talento: "Mariana Braga" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b3c0877f-dda8-4879-90a0-f944b4265104/%5B01%5D%20%5BP06%5D%5BNN%5D%20ESTACIO%20-%20Est%C3%A1cio%20-%20Performance%20-%20Outubro-2025_v5_21sLarissaTravassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559348514&amp;usg=AOvVaw1JbozECf5zUDbf_10FsJ5X", talento: "Larissa Travassos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/b04116bb-30de-4d13-ab3d-e7fd2f739290/%5B02%5D%20%5BP06%5D%5BNN%5D%20ESTACIO_v4_29s_Larissa_Travassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559349840&amp;usg=AOvVaw3QI5lxkDMEnPhTi7x9JFvm", talento: "Larissa Travassos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/9ca36de2-cad9-4614-9adc-8939a6518163/%5B03%5D%20%5BP06%5D%5BNN%5D%20ESTACIO%20-%20Est%C3%A1cio%20-%20Performance%20-%20Outubro-2025_v6_34s_FernandaPenha.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559350886&amp;usg=AOvVaw0jMAGCL8-1SAmbM9MuzwUW", talento: "Fernanda Penna" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4cb76fbb-17ce-417d-ada6-5b2e3f52e062/%5B04%5D%20%5BP06%5D%5BNN%5D%20ESTACIO%20-%20Est%C3%A1cio%20-%20Performance%20-%20Outubro-2025_v4_27s_Fernanda_Penna.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559351987&amp;usg=AOvVaw0DSZT8TdKpfIFLx6s2HRSB", talento: "Fernanda Penna" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/bc7a5e38-eb1e-46df-a49b-a21172bc2399/%5B05%5D%20%5BP06%5D%5BNN%5D%20ESTACIO%20-%20Est%C3%A1cio%20-%20Performance%20-%20Outubro-2025_v5_44s_Larissa_travassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559353161&amp;usg=AOvVaw0sSyWLfa8ZECZAoDHagqLh", talento: "Larissa Travassos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d51ce586-98f6-4353-87a8-1e0e05c0f90d/%5B06%5D%20%5BP06%5D%5BNN%5D%20ESTACIO_v6_41s_Larissa_Travassos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559354445&amp;usg=AOvVaw3duD9BT8D8BClCbrNaR8kF", talento: "Larissa Travassos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8d963fbe-3615-498b-92f2-ba535ff944b0/%5B07%5D%20%5BP06%5D%5BNN%5D%20ESTACIO_v4_36s_Fernanda_Penna.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559355463&amp;usg=AOvVaw1-P8LAZkMHXfvcz5_E9T3F", talento: "Fernanda Penna" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/aece9183-b7d9-4e08-924d-76615113aa66/%5B08%5D%20%5BP06%5D%5BNN%5D%20ESTACIO%20%20%20Est%C3%A1cio%20-%20Performance%20-%20Outubro%202025_v3_44s_Fernanda.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559356568&amp;usg=AOvVaw3yi2vc3CTO-0g9QTRam_wT", talento: "Fernanda Penna" }
+      { youtubeId: "ein__DWHnh0", direcao: true, talento: "Larissa Travassos" },
+      { youtubeId: "3wWNUjj6ELI", direcao: true, talento: "Larissa Travassos" },
+      { youtubeId: "jxHghz1u2OI", direcao: true, talento: "João Mendes" },
+      { youtubeId: "kRs4zbA0B-U", direcao: true, talento: "Larissa Travassos" },
+      { youtubeId: "m7DLJqcJecU", direcao: true, talento: "João Mendes" },
+      { youtubeId: "zcFKV5W4YgE", direcao: true, talento: "João Mendes" },
+      { youtubeId: "2MHPFeMDlHo", talento: "Larissa Travassos" },
+      { youtubeId: "C8fOvcxr_7E", direcao: true, talento: "João Mendes" },
+      { youtubeId: "4VjXFp7PK4c", talento: "Mariana Braga" },
+      { youtubeId: "TqXiHSydBEw", talento: "Mariana Braga" },
+      { youtubeId: "aQjrIn8v7gI", talento: "Mariana Braga" },
+      { youtubeId: "cz2A4uSbQOI", talento: "Rodrigo Rabello" },
+      { youtubeId: "Y4yW1to3re8", talento: "Rodrigo Rabello" },
+      { youtubeId: "FBE1MW1hyvg", talento: "Rodrigo Rabello" },
+      { youtubeId: "ZuonxxzGqcE", talento: "Rodrigo Rabello" },
+      { youtubeId: "UBiPwU0Kkzw", talento: "Mariana Braga" },
+      { youtubeId: "zPrMXgucQFU", talento: "Larissa Travassos" },
+      { youtubeId: "Sx-Rylazlh4", talento: "Larissa Travassos" },
+      { youtubeId: "ii1zsUCsKaw", talento: "Fernanda Penna" },
+      { youtubeId: "-TQwyN3Eg6E", talento: "Fernanda Penna" },
+      { youtubeId: "-HkT1-b3EjM", talento: "Larissa Travassos" },
+      { youtubeId: "mxX3cv0Dqj0", talento: "Larissa Travassos" },
+      { youtubeId: "-Eclfq86EGo", talento: "Fernanda Penna" },
+      { youtubeId: "L4Kli6X2Mis", talento: "Fernanda Penna" }
     ],
     galeria: []
   },
@@ -1738,10 +1738,10 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8e0173ef-1d12-4e89-a6b9-1c64ba75ef35/%5B01%5D%20%5BP01%5D%5BNN%5D%20REALS%20BET%20%20%20Reals%20Bet%20(2025%2005%2030)_v4_44s_Pablo.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559357758&amp;usg=AOvVaw1B74BlPCR6HXpHdV685LgX", direcao: true, talento: "Pablo Sant'Anna" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8df1d07a-1bf6-4392-8e7a-09cd525a57dc/%5B02%5D%20%5BP01%5D%5BNN%5D%20REALS%20BET%20%20%20Reals%20Bet%20(2025%2005%2030)_v4_49s_Pablo%20Sant&#39;Anna.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559359004&amp;usg=AOvVaw2hMVvD4OaKJcR7w7Mdw25D", direcao: true, talento: "Pablo Sant'Anna" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/4b360130-4bed-4432-9e88-dd9ef8d1908c/%5B03%5D%20%5BP01%5D%5BNN%5D%20REALS%20BET%20-%20Reals%20Bet%20(2025-05-30)_v2_55s-PabloSantAna.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559360181&amp;usg=AOvVaw0JUcJL0xG3VyTy31pcwWBs", direcao: true, talento: "Pablo Sant'Anna" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/5fc72b68-69fa-4296-9245-3fd87295f8e2/%5B04%5D%20%5BP01%5D%5BNN%5D%20REALS%20BET%20-%20Reals%20Bet%20(2025-05-30)_v3_47s_Pablo_Sant&#39;Anna.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559361490&amp;usg=AOvVaw3ddfREXBiqsGBXkLsR0JHw", direcao: true, talento: "Pablo Sant'Anna" }
+      { youtubeId: "daS4IjfpigA", direcao: true, talento: "Pablo Sant'Anna" },
+      { youtubeId: "SB9TvZa4G-A", direcao: true, talento: "Pablo Sant'Anna" },
+      { youtubeId: "l5rExGkiRTo", direcao: true, talento: "Pablo Sant'Anna" },
+      { youtubeId: "4YAsshDgYrE", direcao: true, talento: "Pablo Sant'Anna" }
     ],
     galeria: []
   },
@@ -1762,8 +1762,8 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/89fd8531-74f9-4e4c-ba66-97f2bd6ec158/%5B01%5D%20%5BP01%5D%5BNN%5D%20SORRISO%20%20%20NET%20NEW%20-%20CHALLENGE_v5_37s_Khiara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559459830&amp;usg=AOvVaw04agp9dgCtiJ9OMcyiyZVc", talento: "Khiara" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/6c58ba61-ced2-4e5e-b3f4-b7327b533155/%5B02%5D%20%5BP01%5D%5BNN%5D%20SORRISO%20-%20NET%20NEW%20-%20CHALLENGE_v8_47s_Kiara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559461066&amp;usg=AOvVaw3F22C12zIOsYVDhD3KfIlH", talento: "Khiara" }
+      { youtubeId: "2k59DKam2Ak", talento: "Khiara" },
+      { youtubeId: "75A3rMytAQE", talento: "Khiara" }
     ],
     galeria: []
   },
@@ -1784,8 +1784,8 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/7f7abf33-534a-4359-aba0-a0dab20e85ea/%5B03%5D%20%5BP03%5D%5BCH%5D%20TRAMONTINA%20%20%20Tramontina%202025%20%20%20TTCX%20Nova%20Marca_v8_41s_Tati%20Infante.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559462360&amp;usg=AOvVaw37mMwEOfMS4z7orcbPsX2J", talento: "Tati Infante" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/d9159069-9109-4c1d-a8c8-6196c023c9fc/%5B04%5D%20%5BP03%5D%5BCH%5D%20TRAMONTINA%20%20%20Tramontina%202025%20%20%20TTCX%20Nova%20Marca_v3_26s_Tati.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559463623&amp;usg=AOvVaw2__YHuhAmvhq4mabNhGnKh", talento: "Tati Infante" }
+      { youtubeId: "9cN0JeeCHgc", talento: "Tati Infante" },
+      { youtubeId: "RMPKvAVqwJ8", talento: "Tati Infante" }
     ],
     galeria: []
   },
@@ -1806,14 +1806,14 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/3b8b05dc-8362-4769-9e7b-85bd3b95cf03/%5B01%5D%20%5BP01%5D%5BNN%5D%20SOFTYS%20KITCHEN_v6_29s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559464787&amp;usg=AOvVaw0Tfdx56jdY8MXo81l7D1HE", talento: "Ígor Arvelos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1b372551-693c-4499-9c68-d811e493acd7/%5B02%5D%20%5BP01%5D%5BNN%5D%20SOFTYS%20KITCHEN%20Softys%20Kitchen%20(20250924)_v2_20s_Igor%20Arvelos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559465961&amp;usg=AOvVaw0z1_OT5Qf-SqNhx2Y843Fy", talento: "Ígor Arvelos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e3647ece-8a9b-4c0c-b9a2-3794cab18da8/%5B03%5D%20%5BP01%5D%5BNN%5D%20SOFTYS%20KITCHEN%20-%20Softys%20Kitchen%20(2025-09-24)_v1_39s_Leticia_Machado.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559467118&amp;usg=AOvVaw23hZtpn9VX8B5aeEmLsaSo", talento: "Letícia Machado" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/5ea16bc8-80fe-46f3-ab26-0afba545b09d/%5B04%5D%20%5BP01%5D%5BNN%5D%20SOFTYS%20KITCHEN_v2_37s_Igor.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559468163&amp;usg=AOvVaw1y6bmyZ40LHqtzj5F6ukJm", talento: "Ígor Arvelos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/37bd30e7-6614-477c-bd5b-367a594a8f21/%5B05%5D%20%5BP01%5D%5BNN%5D%20SOFTYS%20KITCHEN%20-%20Softys%20Kitchen%20(2025-09-24)_v2_20s_LeticiaMachado.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559469376&amp;usg=AOvVaw2iwOyMezc-fUqQ6DRlpZeS", talento: "Letícia Machado" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/bdfcc082-20a3-4591-96c0-5ed905ff3806/%5B06%5D%20%5BP01%5D%5BNN%5D%20SOFTYS%20KITCHEN_v2_52s_Leticia%20Machado%20de%20Matos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559470522&amp;usg=AOvVaw3OGvVdrE4jDzKYL5zizb9Z", talento: "Letícia Machado" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f8138185-76cb-45ed-a019-dc9fea49db86/%5B07%5D%20%5BP01%5D%5BNN%5D%20SOFTYS%20KITCHEN%20-%20Softys%20Kitchen%20(2025-09-24)_v2_19s_Igor_Arvelos.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559471662&amp;usg=AOvVaw3rEhlLJ-s0Ib6JCtbrXVq4", talento: "Ígor Arvelos" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ec7dc0b3-1312-44de-bae3-abcbbf951f3f/%5B08%5D%20%5BP01%5D%5BNN%5D%20SOFTYS%20KITCHEN%20Softys%20Kitchen%20(20250924)_v1_25s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559472844&amp;usg=AOvVaw2u9A2xBZooOiZdzbt0wv3p", talento: "Letícia Machado" }
+      { youtubeId: "kt4bPfBPMYw", talento: "Ígor Arvelos" },
+      { youtubeId: "SifzvaTS70Y", talento: "Ígor Arvelos" },
+      { youtubeId: "1PnTyixd9VM", talento: "Letícia Machado" },
+      { youtubeId: "B_2bS-q02n8", talento: "Ígor Arvelos" },
+      { youtubeId: "Nj75nnQPwtE", talento: "Letícia Machado" },
+      { youtubeId: "lx8l6P-GmEI", talento: "Letícia Machado" },
+      { youtubeId: "nqgNfNBQ4mc", talento: "Ígor Arvelos" },
+      { youtubeId: "lyrgIE4SHbM", talento: "Letícia Machado" }
     ],
     galeria: []
   },
@@ -1834,10 +1834,10 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/a0b072fd-ea5a-414d-96e1-42478035214f/%5B01%5D%5BP04%5D%5BNN%5D%20%20-%20aiq_ttcx_oc_v4_19s_Yago.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559473910&amp;usg=AOvVaw1hJ3DwznoMwDTUTtc7a2Cm", talento: "Yago Capita" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1b8bc4cf-21e1-477b-8d86-8688b2c6cc08/%5B02%5D%5BP04%5D%5BNN%5D%20%20%20%20aiq_ttcx_oc_v4_22s_yago.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559474975&amp;usg=AOvVaw2NRpaZBNYIn0Z0ENR9iFja", talento: "Yago Capita" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/f748b9c8-9e91-4e4d-a7ab-4aae1c55ccc5/%5B03%5D%5BP04%5D%5BNN%5D%20aiq_ttcx_oc_v5_47s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559476130&amp;usg=AOvVaw3B9ZZRt38BzgC76bxjOhwl", talento: "Yago Capita" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/df9aac1f-285f-4f3a-ba63-717894d33f5a/%5B04%5D%5BP04%5D%5BNN%5D%20%20%20%20aiq_ttcx_oc_v3_43_Yago.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559477208&amp;usg=AOvVaw1JsxtgJjt77ls8PH6zk4qb", talento: "Yago Capita" }
+      { youtubeId: "yDwK_0ma93s", talento: "Yago Capita" },
+      { youtubeId: "NDl-BKL_jQA", talento: "Yago Capita" },
+      { youtubeId: "jJlTNW5L8r8", talento: "Yago Capita" },
+      { youtubeId: "iTBwPlIWLwo", talento: "Yago Capita" }
     ],
     galeria: []
   },
@@ -1858,7 +1858,7 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/da3a7c5a-53f9-48fd-88bf-4833c83703d6/%5B03%5D%20%5BP02%5D%5BCH%5D%20BRIT%C3%82NIA%20%20%20Philco%20Extreme%20-%20Brand%20Mission%20Mega_v2_58s_Khiara.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559478354&amp;usg=AOvVaw02FMkgdIkLm6v_MFL1_YQt", talento: "Khiara" }
+      { youtubeId: "ozhdJtYqrTs", talento: "Khiara" }
     ],
     galeria: []
   },
@@ -1879,14 +1879,14 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/cca51772-4fc5-4c99-bce4-8c000cbad358/%5B01%5D%20%5BP01%5D%5BNN%5D%20MYCON%20-%20Net%20New%20-%20Mensal%20(Janeiro%202026)_v3_39s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559479492&amp;usg=AOvVaw1O8BbeDmGjn1vidBrraFEt", talento: "Adam Pereira" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/c03dced2-777f-4d7c-97ba-0f62a0212735/%5B02%5D%20%5BP01%5D%5BNN%5D%20MYCON%20-%20Net%20New%20-%20Mensal%20(Janeiro%202026)_v3_21s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559480568&amp;usg=AOvVaw3Xmmd9WSi_cP6QG1C7VNsK", talento: "Malu Medina" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/1e163d12-e7d6-4f36-95cb-3478fb4b6aed/%5B03%5D%20%5BP01%5D%5BNN%5D%20MYCON%20%20%20Net%20New%20-%20Mensal%20(Janeiro%202026)_v3_48s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559481635&amp;usg=AOvVaw3bCO-XXDUCgZTPvsZQOrPq", talento: "Adam Pereira" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/e92331cb-12eb-4be1-aad3-f2d01b9e6902/%5B04%5D%20%5BP01%5D%5BNN%5D%20MYCON%20%20%20Net%20New%20-%20Mensal%20(Janeiro%202026)_v3_26s_Malu.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559483009&amp;usg=AOvVaw1icaMpAApLDGz5WHYkiQ6c", talento: "Malu Medina" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/931d5494-1822-4d43-b54f-e96f8f32fa4a/%5B05%5D%20%5BP01%5D%5BNN%5D%20MYCON%20%20%20Net%20New%20-%20Mensal%20(Janeiro%202026)_v2_17s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559484178&amp;usg=AOvVaw1JsH7IJ-JkblL5beORvq9C", talento: "Adam Pereira" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/5952744d-28ff-4284-a808-003c75695b78/%5B06%5D%20%5BP01%5D%5BNN%5D%20MYCON%20Net%20New%20Mensal%20(Janeiro%202026)_v4_23s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559485315&amp;usg=AOvVaw2VeqfdjlRNWEKWaDQdzOfs", talento: "Malu Medina" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/8eca60b6-7147-422b-8874-3eb0517b971a/%5B07%5D%20%5BP01%5D%5BNN%5D%20MYCON%20%20%20Net%20New%20-%20Mensal%20(Janeiro%202026)_v3_55s_Malu%20Medina.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559486481&amp;usg=AOvVaw0u4BLWTnhLBS1ooxJEW5to", talento: "Malu Medina" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/06c1c2a8-3567-42b8-93a0-635300721645/%5B08%5D%20%5BP01%5D%5BNN%5D%20MYCON%20-%20Net%20New%20-%20Mensal%20(Janeiro%202026)_v3_35s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559487636&amp;usg=AOvVaw1mOJ7iwWsqYezU4Y0-x3uY", talento: "Adam Pereira" }
+      { youtubeId: "KArk5ZJES3A", talento: "Adam Pereira" },
+      { youtubeId: "dYoqcyU082E", talento: "Malu Medina" },
+      { youtubeId: "49Wu2PZjiTY", talento: "Adam Pereira" },
+      { youtubeId: "x7xXZs3LeEw", talento: "Malu Medina" },
+      { youtubeId: "gQvE6zuFLR4", talento: "Adam Pereira" },
+      { youtubeId: "MGnkhl2Dx84", talento: "Malu Medina" },
+      { youtubeId: "4swS2g9mh80", talento: "Malu Medina" },
+      { youtubeId: "tdXXqQLKeCA", talento: "Adam Pereira" }
     ],
     galeria: []
   },
@@ -1930,8 +1930,8 @@ const projetos = [
     instagram: "https://www.instagram.com/cassino.bet.br/",
     website: "https://cassino.bet.br/",
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/cf10efe3-8209-46e7-8f8b-3b0bf93a49e2/%5B03%5D%20%5BP01%5D%5BCH%5D%20CASSINO.BET%20%20%20Cassino.bet%20(2025%2004%2008)_v1_32s_Jo%C3%A3o%20Victor.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559294793&amp;usg=AOvVaw2Hmd_IiU2SEG4ph7WkNvXl", talento: "João Victor" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/48488677-9c83-449c-838c-f0303c5a2a41/%5B04%5D%20%5BP01%5D%5BCH%5D%20CASSINO.BET%20%20Cassino_v1_25s_Jota.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559295816&amp;usg=AOvVaw1vW1-QHmLsN6qetjrSoiuw", talento: "João Victor" }
+      { youtubeId: "thP2xd7T1ok", talento: "João Victor" },
+      { youtubeId: "XNKlYL9lKBA", talento: "João Victor" }
     ],
     galeria: []
   }
@@ -2102,16 +2102,16 @@ function openModal(id) {
 
   if (p.videoId && !p.videoId.startsWith('VIDEO_ID') && p.videoId !== '') {
     videoEl.style.display = '';
-    videoEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${encodeURIComponent(p.videoId)}?rel=0" allow="encrypted-media" allowfullscreen></iframe>`;
+    videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(p.videoId)}" params="rel=0&modestbranding=1&mute=1" style="width:100%;height:100%;"></lite-youtube>`;
   } else if (hasVideos) {
     videoEl.style.display = '';
     if (displayVideos[0].youtubeId) {
-      videoEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${encodeURIComponent(displayVideos[0].youtubeId)}?rel=0&autoplay=1" allow="autoplay; encrypted-media" allowfullscreen style="width:100%;height:100%;border:none;"></iframe>`;
+      videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(displayVideos[0].youtubeId)}" params="rel=0&modestbranding=1&mute=1" style="width:100%;height:100%;"></lite-youtube>`;
     } else {
       videoEl.innerHTML = `<video controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${sanitizeURL(displayVideos[0].url)}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
     }
     if (displayVideos[0].talento) {
-      videoEl.innerHTML += `<div class="modal__video-talent">${escapeHTML(displayVideos[0].talento)}</div>`;
+      videoEl.insertAdjacentHTML('beforeend', `<div class="modal__video-talent">${escapeHTML(displayVideos[0].talento)}</div>`);
     }
   } else if (p.galeria && p.galeria.length > 0) {
     // Photography project: show hero image instead of video placeholder
@@ -2221,12 +2221,19 @@ function openModal(id) {
       `;
       card.addEventListener('click', () => {
         if (v.youtubeId) {
-          videoEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${encodeURIComponent(v.youtubeId)}?rel=0&autoplay=1" allow="autoplay; encrypted-media" allowfullscreen style="width:100%;height:100%;border:none;"></iframe>`;
+          videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(v.youtubeId)}" params="rel=0&modestbranding=1&mute=1" style="width:100%;height:100%;"></lite-youtube>`;
         } else {
           videoEl.innerHTML = `<video controls autoplay playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${sanitizeURL(v.url)}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
         }
         if (v.talento) {
-          videoEl.innerHTML += `<div class="modal__video-talent">${escapeHTML(v.talento)}</div>`;
+          videoEl.insertAdjacentHTML('beforeend', `<div class="modal__video-talent">${escapeHTML(v.talento)}</div>`);
+        }
+        // Autoplay imediato no card click (gesto do usuario ja existe)
+        if (v.youtubeId) {
+          const lyt = videoEl.querySelector('lite-youtube');
+          if (lyt && typeof lyt.activate === 'function') {
+            requestAnimationFrame(() => lyt.activate());
+          }
         }
         galeriaEl.querySelectorAll('.modal__video-card').forEach(c => c.classList.remove('active'));
         card.classList.add('active');
@@ -2412,13 +2419,15 @@ if (showreelEl) {
   showreelEl.addEventListener('click', () => {
     const vid = showreelEl.dataset.videoId;
     if (vid && vid !== 'VIDEO_ID') {
-      const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube.com/embed/${vid}?autoplay=1&rel=0`;
-      iframe.allow = 'autoplay; encrypted-media';
-      iframe.allowFullscreen = true;
-      iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
-      showreelEl.parentNode.appendChild(iframe);
+      const lyt = document.createElement('lite-youtube');
+      lyt.setAttribute('videoid', vid);
+      lyt.setAttribute('params', 'rel=0&modestbranding=1&mute=1');
+      lyt.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;';
+      showreelEl.parentNode.appendChild(lyt);
       showreelEl.remove();
+      if (typeof lyt.activate === 'function') {
+        requestAnimationFrame(() => lyt.activate());
+      }
     }
   });
 }

@@ -1037,6 +1037,18 @@ button { font-family: inherit; }
 
 .modal__video iframe { width: 100%; height: 100%; border: none; }
 
+/* Lite-youtube embed: preenche containers (override do max-width:720px e ::after 16:9 hack) */
+.modal__video lite-youtube,
+.showreel__video lite-youtube {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+.modal__video lite-youtube::after,
+.showreel__video lite-youtube::after {
+  display: none;
+}
+
 .modal__body { padding: 48px; }
 
 .modal__cat {
