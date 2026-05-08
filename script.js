@@ -2364,41 +2364,58 @@ items.forEach(item => {
 
   const firstVideo = projeto.videos[0];
   if (!firstVideo.url && !firstVideo.youtubeId) return;
-  // Only local/direct URLs work for hover preview (not YouTube embeds)
-  if (!firstVideo.url) return;
 
   let hoverVideo = null;
   let hoverTimeout = null;
   const thumb = item.querySelector('.trabalhos__thumb');
   const thumbImg = thumb.querySelector('img');
+  const playIcon = thumb.querySelector('.trabalhos__play-icon');
 
   item.addEventListener('mouseenter', () => {
     if (!hoverVideo) {
-      hoverVideo = document.createElement('video');
-      hoverVideo.src = firstVideo.url;
-      hoverVideo.muted = true;
-      hoverVideo.loop = true;
-      hoverVideo.playsInline = true;
-      hoverVideo.preload = 'metadata';
+      if (firstVideo.youtubeId) {
+        // YouTube: iframe com autoplay+mute+loop (loop requer playlist=mesmoId)
+        const id = encodeURIComponent(firstVideo.youtubeId);
+        hoverVideo = document.createElement('iframe');
+        hoverVideo.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&controls=0&loop=1&playlist=${id}&modestbranding=1&playsinline=1&rel=0&disablekb=1&iv_load_policy=3`;
+        hoverVideo.allow = 'autoplay; encrypted-media';
+        hoverVideo.setAttribute('frameborder', '0');
+        hoverVideo.setAttribute('aria-hidden', 'true');
+        hoverVideo.tabIndex = -1;
+      } else {
+        hoverVideo = document.createElement('video');
+        hoverVideo.src = firstVideo.url;
+        hoverVideo.muted = true;
+        hoverVideo.loop = true;
+        hoverVideo.playsInline = true;
+        hoverVideo.preload = 'metadata';
+      }
       hoverVideo.className = 'trabalhos__hover-video';
-      thumb.insertBefore(hoverVideo, thumb.querySelector('.trabalhos__play-icon'));
+      thumb.insertBefore(hoverVideo, playIcon);
     }
     hoverTimeout = setTimeout(() => {
-      hoverVideo.currentTime = 0;
-      hoverVideo.play().then(() => {
+      if (hoverVideo.tagName === 'IFRAME') {
         hoverVideo.classList.add('active');
         if (thumbImg) thumbImg.style.opacity = '0';
-      }).catch(() => {
-        if (hoverVideo) hoverVideo.classList.remove('active');
-        if (thumbImg) thumbImg.style.opacity = '1';
-      });
+      } else {
+        hoverVideo.currentTime = 0;
+        hoverVideo.play().then(() => {
+          hoverVideo.classList.add('active');
+          if (thumbImg) thumbImg.style.opacity = '0';
+        }).catch(() => {
+          if (hoverVideo) hoverVideo.classList.remove('active');
+          if (thumbImg) thumbImg.style.opacity = '1';
+        });
+      }
     }, 300);
   });
 
   item.addEventListener('mouseleave', () => {
     clearTimeout(hoverTimeout);
     if (hoverVideo) {
-      hoverVideo.pause();
+      if (hoverVideo.tagName === 'VIDEO') {
+        hoverVideo.pause();
+      }
       hoverVideo.classList.remove('active');
       if (thumbImg) thumbImg.style.opacity = '1';
     }
@@ -2738,9 +2755,14 @@ lightboxTrack.addEventListener('touchend', (e) => {
       while (cachedVideos.length > MAX_CACHED) {
         const oldest = cachedVideos.shift();
         if (oldest.el && oldest.el.parentNode) {
-          oldest.el.pause();
-          oldest.el.removeAttribute('src');
-          oldest.el.load();
+          if (oldest.el.tagName === 'VIDEO') {
+            oldest.el.pause();
+            oldest.el.removeAttribute('src');
+            oldest.el.load();
+          } else if (oldest.el.tagName === 'IFRAME') {
+            // Para parar o player YouTube e liberar recursos
+            oldest.el.src = 'about:blank';
+          }
           oldest.el.remove();
         }
       }
