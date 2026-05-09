@@ -2651,21 +2651,7 @@ if ('IntersectionObserver' in window) {
   });
 })();
 
-// Marquee infinito de clientes (P2.4) — clona itens para loop seamless
-(function setupClientesMarquee() {
-  const grid = document.querySelector('.clientes__marquee .clientes__grid');
-  if (!grid) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  Array.from(grid.children).forEach(it => {
-    const clone = it.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    clone.setAttribute('tabindex', '-1');
-    clone.classList.add('clientes__item--clone');
-    grid.appendChild(clone);
-  });
-})();
-
-document.querySelectorAll('.clientes__item:not(.clientes__item--clone)').forEach(item => {
+document.querySelectorAll('.clientes__item').forEach(item => {
   item.setAttribute('tabindex', '0');
   item.setAttribute('role', 'button');
 

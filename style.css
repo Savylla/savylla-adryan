@@ -923,49 +923,7 @@ button { font-family: inherit; }
 .clientes__grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
-}
-
-/* Marquee infinito (P2.4) — substitui o grid em desktop por scroll horizontal animado */
-.clientes__marquee {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
-}
-
-.clientes__marquee .clientes__grid {
-  display: flex;
-  flex-wrap: nowrap;
-  width: max-content;
-  gap: 16px;
-  animation: clientes-marquee 90s linear infinite;
-}
-
-.clientes__marquee:hover .clientes__grid,
-.clientes__marquee:focus-within .clientes__grid {
-  animation-play-state: paused;
-}
-
-.clientes__marquee .clientes__item {
-  flex: 0 0 auto;
-  min-width: 200px;
-}
-
-@keyframes clientes-marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .clientes__marquee { mask-image: none; -webkit-mask-image: none; overflow: visible; }
-  .clientes__marquee .clientes__grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    width: 100%;
-    animation: none;
-  }
+  gap: 14px;
 }
 
 .clientes__item {
@@ -974,32 +932,39 @@ button { font-family: inherit; }
   align-items: center;
   justify-content: center;
   padding: 12px 20px;
-  background: rgba(91, 142, 201, 0.06);
-  border: 1px solid rgba(91, 142, 201, 0.12);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
   cursor: pointer;
-  transition: all 0.4s var(--ease);
+  transition: transform 0.45s var(--ease), background 0.4s var(--ease), border-color 0.4s var(--ease), box-shadow 0.45s var(--ease);
   height: 120px;
   overflow: hidden;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
-.clientes__item:hover {
-  background: rgba(91, 142, 201, 0.14);
-  border-color: rgba(91, 142, 201, 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(91, 142, 201, 0.12);
+.clientes__item:hover,
+.clientes__item:focus-visible {
+  background: rgba(107, 163, 224, 0.10);
+  border-color: rgba(107, 163, 224, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(107, 163, 224, 0.18), 0 0 0 1px rgba(107, 163, 224, 0.15) inset;
 }
 
 .clientes__logo {
   max-width: 140px;
   max-height: 55px;
   object-fit: contain;
-  opacity: 0.7;
-  transition: all 0.4s var(--ease);
+  opacity: 0.78;
+  filter: brightness(1.04);
+  transition: opacity 0.4s var(--ease), filter 0.4s var(--ease), transform 0.45s var(--ease);
 }
 
-.clientes__item:hover .clientes__logo {
+.clientes__item:hover .clientes__logo,
+.clientes__item:focus-visible .clientes__logo {
   opacity: 1;
+  filter: brightness(1.18) saturate(1.08);
+  transform: scale(1.06);
 }
 
 .clientes__fallback {
@@ -1018,28 +983,21 @@ button { font-family: inherit; }
   color: var(--accent);
 }
 
+@media (max-width: 1024px) {
+  .clientes__grid { grid-template-columns: repeat(5, 1fr); gap: 12px; }
+}
+
 @media (max-width: 768px) {
   .clientes { padding: 80px 20px; }
-  .clientes__marquee { mask-image: none; -webkit-mask-image: none; overflow: visible; }
-  .clientes__marquee .clientes__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    gap: 10px;
-    animation: none;
-  }
-  .clientes__marquee .clientes__item { min-width: 0; }
-  .clientes__marquee .clientes__item--clone { display: none; }
-  .clientes__grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
-  .clientes__item { padding: 20px 12px; min-height: 80px; }
+  .clientes__grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .clientes__item { padding: 20px 12px; height: 100px; }
   .clientes__logo { max-width: 100px; max-height: 40px; }
 }
 
 @media (max-width: 480px) {
-  .clientes__marquee .clientes__grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .clientes__grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .clientes__item { padding: 18px 10px; min-height: 70px; border-radius: 8px; }
-  .clientes__logo { max-width: 85px; max-height: 34px; }
+  .clientes__grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .clientes__item { padding: 16px 10px; height: 84px; border-radius: 10px; }
+  .clientes__logo { max-width: 80px; max-height: 34px; }
 }
 
 /* ========================================
