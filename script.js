@@ -2440,10 +2440,31 @@ items.forEach(item => {
   });
 });
 
+// Focus trap helper — wrappa Tab dentro do container ativo (WCAG 2.1.2)
+function trapFocus(container, e) {
+  if (e.key !== 'Tab') return;
+  const focusables = container.querySelectorAll(
+    'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+  );
+  if (!focusables.length) return;
+  const first = focusables[0];
+  const last = focusables[focusables.length - 1];
+  if (e.shiftKey && document.activeElement === first) {
+    last.focus();
+    e.preventDefault();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    first.focus();
+    e.preventDefault();
+  }
+}
+
 modalClose.addEventListener('click', closeModal);
 modal.querySelector('.modal__backdrop').addEventListener('click', closeModal);
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && !lightbox.classList.contains('active')) closeModal();
+  if (modal.classList.contains('active')) {
+    if (e.key === 'Escape' && !lightbox.classList.contains('active')) closeModal();
+    else if (!lightbox.classList.contains('active')) trapFocus(modal, e);
+  }
 });
 
 // ----------------------------------------
@@ -2671,6 +2692,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowLeft') lightboxGoTo(-1);
   if (e.key === 'ArrowRight') lightboxGoTo(1);
+  trapFocus(lightbox, e);
 });
 
 // Touch swipe support

@@ -120,13 +120,13 @@
   --bg-card: #111b2e;
   --bg-elevated: #162236;
   --text: #e2e8f2;
-  --text-dim: #8a9bb8;
-  --text-muted: #6b7fa0;
+  --text-dim: #a3b3ce;
+  --text-muted: #9eb1cc;
   --accent: #5b8ec9;
   --accent-light: #7aacdf;
   --accent-glow: rgba(91, 142, 201, 0.15);
-  --border: rgba(91, 142, 201, 0.1);
-  --border-light: rgba(91, 142, 201, 0.2);
+  --border: rgba(255, 255, 255, 0.18);
+  --border-light: rgba(255, 255, 255, 0.32);
 
   /* Fontes padronizadas: IBM Plex Sans (corpo) + IBM Plex Sans Condensed (display) */
   --font-display: 'IBM Plex Sans Condensed', 'Inter', sans-serif;

@@ -56,3 +56,21 @@ upload_log.txt
 .aiox-core/local/
 .claude/settings.local.json
 .aiox/install-log.txt
+
+# YouTube/API tokens & progress files (NEVER commit)
+youtube_api_token*.json
+*_progress.json
+audit_*.json
+ghost_videos*.json
+selenium_*report.json
+portfolio_canonical.json
+pdf_portfolio_entries.json
+fix_*report.json
+playlist_manager_report.json
+channel_state.json
+
+# Validation screenshots (local only)
+hover-*.png
+modal-*.png
+title-*.png
+stats-*.png
