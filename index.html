@@ -31,7 +31,7 @@
   <meta name="twitter:image" content="https://savylla.github.io/savylla-adryan/assets/og-image.jpg">
 
   <!-- Security -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com https://img.youtube.com; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://formsubmit.co; frame-src https://www.youtube-nocookie.com https://www.youtube.com; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://i.ytimg.com https://img.youtube.com; media-src 'self' blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://formsubmit.co; frame-src https://www.youtube-nocookie.com https://www.youtube.com; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), camera=(), microphone=(), geolocation=(), payment=(), usb=()">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -40,6 +40,8 @@
   <link rel="icon" href="assets/favicon.ico">
 
   <!-- Preconnect & DNS prefetch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.youtube.com">
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
   <link rel="preconnect" href="https://i.ytimg.com">
@@ -48,8 +50,9 @@
 
   <!-- Preload críticos para LCP -->
   <link rel="preload" as="image" href="assets/bg-poster.jpg" fetchpriority="high">
-  <link rel="preload" as="font" href="assets/fonts/IBMPlexSans-Regular.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="font" href="assets/fonts/IBMPlexSans_Condensed-Bold.woff2" type="font/woff2" crossorigin>
+
+  <!-- Tipografia moderna: Instrument Serif Italic (display) + Inter Tight (UI/corpo) -->
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/lib/lite-yt-embed.css">
   <link rel="stylesheet" href="style.css">
@@ -98,6 +101,9 @@
 
   <!-- Skip navigation -->
   <a href="#main-content" class="skip-link">Pular para conteúdo</a>
+
+  <!-- Scroll progress vertical (CSS scroll-driven, fallback graceful) -->
+  <div class="scroll-progress" aria-hidden="true"></div>
 
   <!-- Global Background Video (mobile carrega só o poster — source com media query) -->
   <div class="global-bg">
@@ -216,6 +222,7 @@
   <section class="clientes" id="clientes">
     <div class="clientes__container">
       <h2 class="clientes__title">Marcas que <span class="display-font accent">acreditam</span> no meu trabalho</h2>
+      <div class="clientes__marquee" aria-label="Marcas com as quais Savylla Adryan trabalhou">
       <div class="clientes__grid">
         <div class="clientes__item" data-name="Drogasil">
           <img src="assets/logos/drogasil.webp" alt="Drogasil" class="clientes__logo" loading="lazy" decoding="async">
@@ -414,6 +421,7 @@
           <img src="assets/logos/forca-da-terra.webp" alt="Força da Terra" class="clientes__logo" loading="lazy" decoding="async" style="max-height:90px;max-width:200px">
           <span class="clientes__fallback" style="display:none">Força da Terra</span>
         </div>
+      </div>
       </div>
     </div>
   </section>
