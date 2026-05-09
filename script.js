@@ -2637,14 +2637,20 @@ if ('IntersectionObserver' in window) {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const targets = document.querySelectorAll('.btn, .header__cta');
   targets.forEach(el => {
-    el.style.transition = 'transform 0.4s var(--ease)';
+    el.addEventListener('mouseenter', () => {
+      // Durante hover, transform reage rápido pra acompanhar mousemove sem lerp
+      // Ordem CSS: background, color, border-color, box-shadow, transform
+      el.style.transitionDuration = '0.3s, 0.3s, 0.3s, 0.3s, 0.08s';
+    });
     el.addEventListener('mousemove', (e) => {
       const rect = el.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
-      el.style.transform = `translate(${x * 0.18}px, ${y * 0.18}px)`;
+      el.style.transform = `translate(${x * 0.14}px, ${y * 0.14}px)`;
     });
     el.addEventListener('mouseleave', () => {
+      // No mouseleave restaura transition mais lenta e zera transform → lerp suave
+      el.style.transitionDuration = '';
       el.style.transform = '';
     });
   });
