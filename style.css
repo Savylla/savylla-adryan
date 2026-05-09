@@ -610,11 +610,11 @@ button { font-family: inherit; }
 .hero__title {
   font-family: 'Instrument Serif', 'Bonheur Royale', serif;
   font-style: italic;
-  font-size: clamp(5rem, 14vw, 12rem);
+  font-size: clamp(4rem, 10vw, 9rem);
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.05;
   letter-spacing: 0px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   color: #ffffff;
 }
 
