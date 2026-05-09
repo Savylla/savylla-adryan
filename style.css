@@ -137,6 +137,48 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Custom cursor "lente" (P3.3) — vira PLAY sobre cards de trabalhos */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: difference;
+  transition: width 0.3s var(--ease), height 0.3s var(--ease), margin 0.3s var(--ease), background 0.3s var(--ease), border-color 0.3s var(--ease);
+  will-change: transform;
+  opacity: 0;
+}
+.custom-cursor.cursor--ready { opacity: 1; }
+.custom-cursor.cursor--play {
+  width: 76px;
+  height: 76px;
+  margin: -38px 0 0 -38px;
+  background: rgba(255, 255, 255, 0.96);
+  border-color: transparent;
+}
+.custom-cursor.cursor--play::after {
+  content: 'PLAY';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: #000;
+  mix-blend-mode: normal;
+}
+@media (hover: none), (pointer: coarse) { .custom-cursor { display: none; } }
+@media (prefers-reduced-motion: reduce) { .custom-cursor { display: none; } }
+
 /* Scroll progress indicator vertical (P2.6) — CSS scroll-driven */
 .scroll-progress {
   position: fixed;
@@ -166,6 +208,38 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .scroll-progress { display: none; }
+}
+
+/* Mesh gradient blobs (P3.6) — backgrounds animados nas seções principais */
+.sobre, .quote, .contato {
+  position: relative;
+}
+.sobre::after,
+.quote::after,
+.contato::after {
+  content: '';
+  position: absolute;
+  inset: -10%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(107, 163, 224, 0.10), transparent 35%),
+    radial-gradient(circle at 80% 70%, rgba(143, 190, 237, 0.08), transparent 35%),
+    radial-gradient(circle at 50% 90%, rgba(91, 142, 201, 0.06), transparent 35%);
+  filter: blur(60px);
+  animation: mesh-float 24s ease-in-out infinite alternate;
+}
+.sobre__container,
+.quote__inner,
+.contato__container {
+  position: relative;
+  z-index: 1;
+}
+@keyframes mesh-float {
+  to { transform: translate(24px, -18px) scale(1.06); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sobre::after, .quote::after, .contato::after { animation: none; }
 }
 
 /* Grain/noise overlay global — textura analógica de filme (P2.2) */
@@ -546,6 +620,26 @@ button { font-family: inherit; }
 }
 
 .hero__title-line { display: block; }
+
+/* Hero text-reveal por palavra (P3.1) — cascata editorial ao load */
+.hero__title .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: hero-word-reveal 0.9s var(--ease) forwards;
+}
+.hero__title-line:nth-child(1) .word:nth-child(1) { animation-delay: 0.1s; }
+.hero__title-line:nth-child(1) .word:nth-child(2) { animation-delay: 0.28s; }
+.hero__title-line:nth-child(2) .word:nth-child(1) { animation-delay: 0.46s; }
+.hero__title-line:nth-child(2) .word:nth-child(2) { animation-delay: 0.64s; }
+
+@keyframes hero-word-reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__title .word { opacity: 1; transform: none; animation: none; }
+}
 
 .hero__title .display-font {
   font-family: 'Instrument Serif', 'Bonheur Royale', serif;

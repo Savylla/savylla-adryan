@@ -2340,18 +2340,56 @@ let lastFocusedElement = null;
 
 function openModalWithFocus(id) {
   lastFocusedElement = document.activeElement;
-  openModal(id);
+  // P3.7: pushState para modal compartilhável + integração com View Transitions (P3.5)
+  if (location.hash !== `#projeto-${id}`) {
+    history.pushState({ modalId: id }, '', `#projeto-${id}`);
+  }
+  if (document.startViewTransition) {
+    document.startViewTransition(() => openModal(id));
+  } else {
+    openModal(id);
+  }
 }
 
 function closeModal() {
-  modal.classList.remove('active');
-  document.body.style.overflow = '';
-  document.getElementById('modalVideo').innerHTML = '';
-  if (lastFocusedElement) {
-    lastFocusedElement.focus();
-    lastFocusedElement = null;
+  // P3.7: limpar hash quando fechar
+  if (location.hash.startsWith('#projeto-')) {
+    history.pushState(null, '', location.pathname + location.search);
+  }
+  const doClose = () => {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    document.getElementById('modalVideo').innerHTML = '';
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+      lastFocusedElement = null;
+    }
+  };
+  if (document.startViewTransition) {
+    document.startViewTransition(doClose);
+  } else {
+    doClose();
   }
 }
+
+// P3.7: popstate handler — back/forward navega entre modal e site
+window.addEventListener('popstate', (e) => {
+  const m = location.hash.match(/^#projeto-(\d+)$/);
+  if (m) {
+    const id = parseInt(m[1]);
+    if (!modal.classList.contains('active')) openModal(id);
+  } else if (modal.classList.contains('active')) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    document.getElementById('modalVideo').innerHTML = '';
+  }
+});
+
+// P3.7: ao load, se hash referenciar projeto, abrir modal
+document.addEventListener('DOMContentLoaded', () => {
+  const m = location.hash.match(/^#projeto-(\d+)$/);
+  if (m) openModal(parseInt(m[1]));
+});
 
 items.forEach(item => {
   // Accessibility: make items keyboard-navigable
@@ -2570,6 +2608,49 @@ if ('IntersectionObserver' in window) {
 // ----------------------------------------
 // Clientes -> Modal
 // ----------------------------------------
+// Custom cursor "lente" (P3.3) — vira PLAY sobre cards de trabalhos
+(function setupCustomCursor() {
+  if (window.matchMedia('(hover: none)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const cursor = document.createElement('div');
+  cursor.className = 'custom-cursor';
+  cursor.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(cursor);
+  let raf;
+  document.addEventListener('mousemove', (e) => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      cursor.classList.add('cursor--ready');
+    });
+  });
+  document.addEventListener('mouseleave', () => cursor.classList.remove('cursor--ready'));
+  document.querySelectorAll('.trabalhos__item').forEach(item => {
+    item.addEventListener('mouseenter', () => cursor.classList.add('cursor--play'));
+    item.addEventListener('mouseleave', () => cursor.classList.remove('cursor--play'));
+  });
+})();
+
+// Magnetic hover em CTAs (P3.4) — translate sutil seguindo o cursor
+(function setupMagneticCTAs() {
+  if (window.matchMedia('(hover: none)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const targets = document.querySelectorAll('.btn, .header__cta');
+  targets.forEach(el => {
+    el.style.transition = 'transform 0.4s var(--ease)';
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      el.style.transform = `translate(${x * 0.18}px, ${y * 0.18}px)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = '';
+    });
+  });
+})();
+
 // Marquee infinito de clientes (P2.4) — clona itens para loop seamless
 (function setupClientesMarquee() {
   const grid = document.querySelector('.clientes__marquee .clientes__grid');
