@@ -2608,7 +2608,7 @@ if ('IntersectionObserver' in window) {
 // ----------------------------------------
 // Clientes -> Modal
 // ----------------------------------------
-// Custom cursor "lente" (P3.3) — vira PLAY sobre cards de trabalhos
+// Custom cursor "PLAY" (P3.3) — só visível sobre cards de vídeo
 (function setupCustomCursor() {
   if (window.matchMedia('(hover: none)').matches) return;
   if (window.matchMedia('(pointer: coarse)').matches) return;
@@ -2618,17 +2618,16 @@ if ('IntersectionObserver' in window) {
   cursor.setAttribute('aria-hidden', 'true');
   document.body.appendChild(cursor);
   let raf;
-  document.addEventListener('mousemove', (e) => {
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(() => {
-      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-      cursor.classList.add('cursor--ready');
-    });
-  });
-  document.addEventListener('mouseleave', () => cursor.classList.remove('cursor--ready'));
+  // Tracking só ativa quando o cursor está sobre um card (poupa rAF fora)
   document.querySelectorAll('.trabalhos__item').forEach(item => {
     item.addEventListener('mouseenter', () => cursor.classList.add('cursor--play'));
     item.addEventListener('mouseleave', () => cursor.classList.remove('cursor--play'));
+    item.addEventListener('mousemove', (e) => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      });
+    });
   });
 })();
 
