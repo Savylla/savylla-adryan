@@ -2068,13 +2068,26 @@ const items = document.querySelectorAll('.trabalhos__item');
 let activeFilter = 'todos';
 filtros.forEach(btn => {
   btn.addEventListener('click', () => {
-    filtros.forEach(b => b.classList.remove('active'));
+    filtros.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     activeFilter = btn.dataset.filter;
+    let visibleCount = 0;
     items.forEach(item => {
       const categories = (item.dataset.category || '').split(' ');
-      item.classList.toggle('hidden', activeFilter !== 'todos' && !categories.includes(activeFilter));
+      const hidden = activeFilter !== 'todos' && !categories.includes(activeFilter);
+      item.classList.toggle('hidden', hidden);
+      if (!hidden) visibleCount++;
     });
+    if (typeof announceStatus === 'function') {
+      const label = btn.textContent.trim();
+      announceStatus(visibleCount === 0
+        ? `Nenhum projeto na categoria ${label}.`
+        : `Exibindo ${visibleCount} ${visibleCount === 1 ? 'projeto' : 'projetos'} na categoria ${label}.`);
+    }
   });
 });
 
@@ -2439,6 +2452,42 @@ items.forEach(item => {
     }
   });
 });
+
+// ----------------------------------------
+// Helpers de a11y: status messages + pause bg video (WCAG 4.1.3 / 2.2.2)
+// ----------------------------------------
+function announceStatus(msg) {
+  const el = document.getElementById('liveStatus');
+  if (!el) return;
+  // Force re-announce mesmo se mensagem repete
+  el.textContent = '';
+  setTimeout(() => { el.textContent = msg; }, 50);
+}
+
+(function setupBgVideoToggle() {
+  const btn = document.getElementById('bgVideoToggle');
+  const video = document.getElementById('globalBgVideo');
+  if (!btn || !video) return;
+  const pauseIcon = btn.querySelector('.bg-video-toggle__pause');
+  const playIcon = btn.querySelector('.bg-video-toggle__play');
+  btn.addEventListener('click', () => {
+    if (video.paused) {
+      video.play().catch(() => {});
+      btn.setAttribute('aria-label', 'Pausar vídeo de fundo');
+      btn.setAttribute('aria-pressed', 'false');
+      pauseIcon.style.display = '';
+      playIcon.style.display = 'none';
+      announceStatus('Vídeo de fundo retomado.');
+    } else {
+      video.pause();
+      btn.setAttribute('aria-label', 'Retomar vídeo de fundo');
+      btn.setAttribute('aria-pressed', 'true');
+      pauseIcon.style.display = 'none';
+      playIcon.style.display = '';
+      announceStatus('Vídeo de fundo pausado.');
+    }
+  });
+})();
 
 // Focus trap helper — wrappa Tab dentro do container ativo (WCAG 2.1.2)
 function trapFocus(container, e) {

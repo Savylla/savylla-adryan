@@ -3,17 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Savylla Adryan | Produção Audiovisual</title>
-  <meta name="description" content="Savylla Adryan - Filmmaker, Direção, Designer e Fotografia. Portfólio profissional audiovisual.">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Savylla Adryan | Produção Audiovisual">
-  <meta property="og:description" content="Filmmaker, Direção, Designer e Fotografia. Portfólio profissional audiovisual.">
+  <!-- SEO básico -->
+  <title>Savylla Adryan — Filmmaker e Diretora Audiovisual | Portfólio</title>
+  <meta name="description" content="Filmmaker, diretora, fotógrafa e designer com 10 anos de experiência audiovisual para Drogasil, Bradesco, Magazine Luiza, Mercado Pago e Carolina Herrera.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="author" content="Savylla Adryan">
+  <meta name="theme-color" content="#0b1120">
+  <link rel="canonical" href="https://savylla.github.io/savylla-adryan/">
+
+  <!-- Open Graph (URLs absolutas obrigatórias) -->
+  <meta property="og:title" content="Savylla Adryan — Filmmaker e Diretora Audiovisual">
+  <meta property="og:description" content="10 anos de experiência audiovisual. 500+ produções para grandes marcas brasileiras.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://savylla.github.io/savylla-adryan/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Savylla Adryan">
+  <meta property="og:image" content="https://savylla.github.io/savylla-adryan/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Savylla Adryan — Filmmaker e Diretora Audiovisual">
 
-  <!-- Security: Content Security Policy -->
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Savylla Adryan — Filmmaker e Diretora Audiovisual">
+  <meta name="twitter:description" content="10 anos de experiência audiovisual. Portfólio com 500+ produções para grandes marcas.">
+  <meta name="twitter:image" content="https://savylla.github.io/savylla-adryan/assets/og-image.jpg">
+
+  <!-- Security -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com https://img.youtube.com; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://formsubmit.co; frame-src https://www.youtube-nocookie.com https://www.youtube.com; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), camera=(), microphone=(), geolocation=(), payment=(), usb=()">
@@ -22,31 +39,82 @@
   <!-- Favicon -->
   <link rel="icon" href="assets/favicon.ico">
 
-  <!-- Preconnect -->
+  <!-- Preconnect & DNS prefetch -->
   <link rel="preconnect" href="https://www.youtube.com">
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
   <link rel="preconnect" href="https://i.ytimg.com">
   <link rel="preconnect" href="https://img.youtube.com">
   <link rel="dns-prefetch" href="https://formsubmit.co">
 
-  <!-- Preload fontes críticas -->
-  <link rel="preload" href="assets/fonts/BonheurRoyale-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Preload críticos para LCP -->
+  <link rel="preload" as="image" href="assets/bg-poster.jpg" fetchpriority="high">
+  <link rel="preload" as="font" href="assets/fonts/IBMPlexSans-Regular.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="assets/fonts/IBMPlexSans_Condensed-Bold.woff2" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="assets/lib/lite-yt-embed.css">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Schema.org Person + ProfessionalService (CreativeWorks injetados via JS) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://savylla.github.io/savylla-adryan/#person",
+        "name": "Savylla Adryan",
+        "alternateName": "Savylla",
+        "jobTitle": "Filmmaker e Diretora Audiovisual",
+        "description": "Filmmaker, diretora, fotógrafa e designer com 10 anos de experiência em produção audiovisual para grandes marcas brasileiras.",
+        "image": "https://savylla.github.io/savylla-adryan/assets/perfil.webp",
+        "url": "https://savylla.github.io/savylla-adryan/",
+        "sameAs": [
+          "https://www.instagram.com/savyllaadryan/",
+          "https://www.youtube.com/@savyllaadryan"
+        ],
+        "knowsAbout": ["Filmmaking","Direção Audiovisual","Fotografia","Design Gráfico","Produção com IA","Edição de Vídeo"],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Allfluence",
+          "url": "https://allfluence.com.br"
+        }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://savylla.github.io/savylla-adryan/#service",
+        "name": "Savylla Adryan — Produção Audiovisual",
+        "image": "https://savylla.github.io/savylla-adryan/assets/og-image.jpg",
+        "url": "https://savylla.github.io/savylla-adryan/",
+        "founder": { "@id": "https://savylla.github.io/savylla-adryan/#person" },
+        "areaServed": { "@type": "Country", "name": "Brasil" },
+        "priceRange": "$$$",
+        "serviceType": ["Direção Audiovisual","Filmmaker","Fotografia","Design"]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <!-- Skip navigation -->
   <a href="#main-content" class="skip-link">Pular para conteúdo</a>
 
-  <!-- Global Background Video -->
+  <!-- Global Background Video (mobile carrega só o poster — source com media query) -->
   <div class="global-bg">
-    <video autoplay muted loop playsinline preload="none" poster="assets/bg-poster.jpg" aria-hidden="true">
-      <source src="assets/bg-video-compressed.mp4" type="video/mp4">
+    <video id="globalBgVideo" autoplay muted loop playsinline preload="none" poster="assets/bg-poster.jpg" aria-hidden="true">
+      <source src="assets/bg-video-compressed.mp4" type="video/mp4" media="(min-width: 768px)">
     </video>
     <div class="global-bg__overlay"></div>
   </div>
+
+  <!-- Pausar/retomar bg video (WCAG 2.2.2 + 2.3.3) -->
+  <button id="bgVideoToggle" class="bg-video-toggle" type="button" aria-label="Pausar vídeo de fundo" aria-pressed="false">
+    <svg class="bg-video-toggle__pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+    <svg class="bg-video-toggle__play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><polygon points="6,4 20,12 6,20"/></svg>
+  </button>
+
+  <!-- Status messages para leitores de tela (a11y dynamic feedback) -->
+  <div id="liveStatus" role="status" aria-live="polite" class="sr-only"></div>
 
   <!-- Side Labels -->
   <button class="side-label side-label--left" id="sideMenu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navOverlay">MENU</button>
@@ -354,13 +422,13 @@
   <section class="trabalhos" id="trabalhos">
     <div class="trabalhos__header">
       <h2 class="trabalhos__title">Meus <span class="display-font accent">projetos</span></h2>
-      <div class="trabalhos__filtros">
-        <button class="trabalhos__filtro active" data-filter="todos">Tudo</button>
-        <button class="trabalhos__filtro" data-filter="video">Vídeo</button>
-        <button class="trabalhos__filtro" data-filter="direcao">Direção</button>
-        <button class="trabalhos__filtro" data-filter="fotografia">Fotografia</button>
-        <button class="trabalhos__filtro" data-filter="design">Design</button>
-        <button class="trabalhos__filtro" data-filter="ia">IA</button>
+      <div class="trabalhos__filtros" role="group" aria-label="Filtrar projetos por categoria">
+        <button class="trabalhos__filtro active" data-filter="todos" aria-pressed="true">Tudo</button>
+        <button class="trabalhos__filtro" data-filter="video" aria-pressed="false">Vídeo</button>
+        <button class="trabalhos__filtro" data-filter="direcao" aria-pressed="false">Direção</button>
+        <button class="trabalhos__filtro" data-filter="fotografia" aria-pressed="false">Fotografia</button>
+        <button class="trabalhos__filtro" data-filter="design" aria-pressed="false">Design</button>
+        <button class="trabalhos__filtro" data-filter="ia" aria-pressed="false">IA</button>
       </div>
     </div>
 
@@ -1061,19 +1129,19 @@
         <input type="text" name="_honey" style="display:none">
         <div class="contato__field">
           <label for="campo-nome" class="sr-only">Seu nome</label>
-          <input type="text" id="campo-nome" name="nome" placeholder="Seu nome" required>
+          <input type="text" id="campo-nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
         </div>
         <div class="contato__field">
           <label for="campo-email" class="sr-only">Seu email</label>
-          <input type="email" id="campo-email" name="email" placeholder="Seu email" required>
+          <input type="email" id="campo-email" name="email" placeholder="Seu email" autocomplete="email" inputmode="email" required>
         </div>
         <div class="contato__field">
           <label for="campo-assunto" class="sr-only">Assunto</label>
-          <input type="text" id="campo-assunto" name="assunto" placeholder="Assunto">
+          <input type="text" id="campo-assunto" name="assunto" placeholder="Assunto" autocomplete="off">
         </div>
         <div class="contato__field">
           <label for="campo-mensagem" class="sr-only">Sua mensagem</label>
-          <textarea id="campo-mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+          <textarea id="campo-mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" autocomplete="off" required></textarea>
         </div>
         <button type="submit" class="btn">Enviar Mensagem</button>
       </form>

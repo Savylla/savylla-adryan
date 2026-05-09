@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/lib/
+
+Sitemap: https://savylla.github.io/savylla-adryan/sitemap.xml
