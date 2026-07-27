@@ -208,7 +208,7 @@ checklists:
 # Propose Modification - AIOX Developer Task
 
 ## Purpose
-Create and submit modification proposals for collaborative review and approval within the Sinkra AIOX framework.
+Create and submit modification proposals for collaborative review and approval within the Synkra AIOX framework.
 
 ## Command Pattern
 ```

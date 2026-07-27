@@ -1,5 +1,5 @@
 {
-  "version": "5.0.3",
+  "version": "5.3.0",
   "installedAt": "2026-03-31T12:13:34.484Z",
   "mode": "project-development",
   "fileHashes": {
@@ -59,5 +59,9 @@
     "user-guide.md": "sha256:7da0c760ea094eed7ce04a1f12fa977f29f90e8e7a9b8824c671cdfc9ddede6e",
     "working-in-the-brownfield.md": "sha256:bc8fbfa2e922cebf6f8c63e52805854c31bcabf18f9d6c749a25b5f59d5d238d"
   },
-  "customized": []
+  "customized": [
+    "core-config.yaml"
+  ],
+  "updatedAt": "2026-07-27T00:00:00.000Z",
+  "upstream": "https://github.com/SynkraAI/aiox-core"
 }

@@ -1,6 +1,6 @@
 /**
  * MCP Workflow Template
- * Sinkra AIOX Framework
+ * Synkra AIOX Framework
  * Version: 1.0.0
  *
  * This template demonstrates how to create Code Mode workflows

@@ -1,8 +1,8 @@
-# Guia do Usuário Sinkra AIOX
+# Guia do Usuário Synkra AIOX
 
 ## Visão Geral
 
-O Sinkra AIOX é um framework de desenvolvimento full stack orientado por agentes de IA que implementa uma metodologia ágil única. Este guia explica como usar o Sinkra AIOX de forma eficaz através de suas duas fases principais: **Planejamento** e **Desenvolvimento**.
+O Synkra AIOX é um framework de desenvolvimento full stack orientado por agentes de IA que implementa uma metodologia ágil única. Este guia explica como usar o Synkra AIOX de forma eficaz através de suas duas fases principais: **Planejamento** e **Desenvolvimento**.
 
 ### As Duas Inovações Chave
 
@@ -81,7 +81,7 @@ Se você está contribuindo para o AIOX-FullStack em si:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/SinkraAI/aiox-core
+git clone https://github.com/SynkraAI/aiox-core
 cd aiox-core
 
 # Instale dependências
@@ -225,7 +225,7 @@ npx aiox-core@latest install --force-upgrade
 
 ## Fluxo de Trabalho de Planejamento e Execução
 
-O Sinkra AIOX usa uma abordagem de duas fases que separa planejamento estratégico de implementação tática:
+O Synkra AIOX usa uma abordagem de duas fases que separa planejamento estratégico de implementação tática:
 
 ### Fase 1: Planejamento (Interface Web)
 
@@ -477,7 +477,7 @@ O **po** (Product Owner) gerencia o backlog:
 
 ## Capacidades do Test Architect (QA Agent)
 
-O agente **qa** do Sinkra AIOX inclui capacidades avançadas de arquitetura de testes:
+O agente **qa** do Synkra AIOX inclui capacidades avançadas de arquitetura de testes:
 
 ### 1. Perfil de Risco e Priorização
 
@@ -587,7 +587,7 @@ O agente **qa** monitora:
 
 ## Sistema de Preferências Técnicas
 
-O Sinkra AIOX permite configurar preferências técnicas que influenciam decisões dos agentes:
+O Synkra AIOX permite configurar preferências técnicas que influenciam decisões dos agentes:
 
 ### Definir Preferências
 
@@ -817,7 +817,7 @@ O agente @github-devops funciona com QUALQUER repositório git:
 @github-devops
 *detect-repo
 # Output:
-# Repository: github.com/SinkraAI/aiox-core
+# Repository: github.com/SynkraAI/aiox-core
 # Mode: framework-development
 # Quality Gates: Testes do framework AIOX
 ```
@@ -1132,7 +1132,7 @@ Todos os critérios atendidos
 
 ## Trabalhando em Projetos Brownfield
 
-Ao integrar Sinkra AIOX em projetos existentes:
+Ao integrar Synkra AIOX em projetos existentes:
 
 ### 1. Análise Inicial
 
@@ -1230,7 +1230,7 @@ Ao integrar Sinkra AIOX em projetos existentes:
 
 ## Meta-Agentes
 
-O Sinkra AIOX inclui meta-agentes para orquestração:
+O Synkra AIOX inclui meta-agentes para orquestração:
 
 ### aiox-master
 
@@ -1278,7 +1278,7 @@ O **aiox-developer** é o meta-agente para o próprio AIOX:
 
 ### Squads
 
-O Sinkra AIOX suporta squads para domínios específicos:
+O Synkra AIOX suporta squads para domínios específicos:
 
 **Disponíveis durante instalação**:
 - **hybrid-ops** - Metodologia Pedro Valério (operações híbridas humano-agente)
@@ -1325,7 +1325,7 @@ Workflows: data-analysis.yml, ml-model.yml
 
 ### Criar Templates Customizados
 
-Adicione templates próprios em `aiox-core/templates/`:
+Adicione templates próprios em `.aiox-core/product/templates/`:
 
 ```markdown
 ---
@@ -1392,7 +1392,7 @@ Use este checklist para garantir que está seguindo o workflow corretamente:
 - [Trabalhando em Brownfield](./working-in-the-brownfield.md)
 
 ### Suporte
-- [GitHub Issues](https://github.com/SinkraAI/aiox-core/issues)
+- [GitHub Issues](https://github.com/SynkraAI/aiox-core/issues)
 
 ### Exemplos
 Veja `Squads/` para exemplos de:
@@ -1405,5 +1405,5 @@ Veja `Squads/` para exemplos de:
 
 **Nota**: Este guia é uma visão geral. Para detalhes específicos de implementação, consulte a documentação técnica na pasta `docs/`.
 
-*Sinkra AIOX User Guide v2.0*
+*Synkra AIOX User Guide v2.0*
 *Última atualização: Janeiro 2025*

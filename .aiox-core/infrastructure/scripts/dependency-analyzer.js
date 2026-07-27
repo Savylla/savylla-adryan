@@ -1,5 +1,5 @@
 /**
- * Dependency Analyzer for Sinkra AIOX
+ * Dependency Analyzer for Synkra AIOX
  * Analyzes and resolves dependencies between components
  * @module dependency-analyzer
  */

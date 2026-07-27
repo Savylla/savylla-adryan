@@ -1,11 +1,11 @@
-# Sinkra AIOX Development Rules for Claude Code
+# Synkra AIOX Development Rules for Claude Code
 
-You are working with Sinkra AIOX, an AI-Orchestrated System for Full Stack Development.
+You are working with Synkra AIOX, an AI-Orchestrated System for Full Stack Development.
 
 <!-- AIOX-MANAGED-START: core-framework -->
 ## Core Framework Understanding
 
-Sinkra AIOX is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
+Synkra AIOX is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
 <!-- AIOX-MANAGED-END: core-framework -->
 
 <!-- AIOX-MANAGED-START: constitution -->
@@ -353,4 +353,4 @@ npm run trace -- workflow-name
 - Document breaking changes prominently
 
 ---
-*Sinkra AIOX Claude Code Configuration v2.0*
+*Synkra AIOX Claude Code Configuration v2.0*

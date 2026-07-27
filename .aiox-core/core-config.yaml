@@ -67,10 +67,15 @@ decisionLogging:
   performance:
     maxOverhead: 50
 toolsLocation: .aiox-core/tools
-scriptsLocation: .aiox-core/scripts
+scriptsLocation:
+  core: .aiox-core/core
+  development: .aiox-core/development/scripts
+  infrastructure: .aiox-core/infrastructure/scripts
+  legacy: .aiox-core/scripts
 dataLocation: .aiox-core/data
 elicitationLocation: .aiox-core/elicitation
 squadsLocation: squads
+squadsTemplateLocation: templates/squad
 mindsLocation: outputs/minds
 projectStatus:
   enabled: true
@@ -103,11 +108,33 @@ boundary:
     - .aiox-core/development/agents/*/MEMORY.md
     - .aiox-core/core/config/schemas/**
     - .aiox-core/core/config/template-overrides.js
+synapse:
+  # Total SynapseEngine layer pipeline budget. Override per process with
+  # AIOX_SYNAPSE_PIPELINE_TIMEOUT_MS. Valid range: 1-30000.
+  pipelineTimeoutMs: 100
+  session:
+    staleTTLHours: 168 # 7 days — sessions older than this are cleaned up on first prompt
 agentIdentity:
   greeting:
+    preference: auto
     contextDetection: true
     sessionDetection: hybrid
     workflowDetection: hardcoded
     performance:
       gitCheckCache: true
       gitCheckTTL: 300
+
+# Context-tracker dynamic model registry (Issue #605).
+# Consumed by .aiox-core/core/synapse/context/context-tracker.js.
+models:
+  active: claude-sonnet-4-6
+  registry:
+    claude-opus-4-6:
+      contextWindow: 1000000
+      avgTokensPerPrompt: 1500
+    claude-sonnet-4-6:
+      contextWindow: 200000
+      avgTokensPerPrompt: 1500
+    claude-haiku-4-5:
+      contextWindow: 200000
+      avgTokensPerPrompt: 1200

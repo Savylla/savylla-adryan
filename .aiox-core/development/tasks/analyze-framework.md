@@ -1,7 +1,7 @@
 # Task: Analyze Framework
 
 ## Description
-Performs comprehensive analysis of the Sinkra AIOX framework to identify improvement opportunities, performance bottlenecks, component redundancies, and usage patterns.
+Performs comprehensive analysis of the Synkra AIOX framework to identify improvement opportunities, performance bottlenecks, component redundancies, and usage patterns.
 
 ## Execution Modes
 

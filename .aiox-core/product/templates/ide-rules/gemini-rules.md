@@ -1,4 +1,4 @@
-# Gemini Rules - Sinkra AIOX
+# Gemini Rules - Synkra AIOX
 
 Este arquivo define as instrucoes do projeto para Gemini CLI neste repositorio.
 

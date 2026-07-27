@@ -465,4 +465,4 @@ app.MapPost("/orders", async (PlaceOrderRequest request, PlaceOrderHandler handl
 
 ---
 
-_AIOX Tech Preset - Sinkra AIOX Framework_
+_AIOX Tech Preset - Synkra AIOX Framework_

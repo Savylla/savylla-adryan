@@ -1,5 +1,5 @@
 /**
- * Batch Component Creator for Sinkra AIOX
+ * Batch Component Creator for Synkra AIOX
  * Creates multiple related components in a single operation
  * @module batch-creator
  */

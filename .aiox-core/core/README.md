@@ -1,6 +1,6 @@
 # AIOX Core Module
 
-> Central runtime module providing essential framework functionality for Sinkra AIOX.
+> Central runtime module providing essential framework functionality for Synkra AIOX.
 
 **Version:** 2.0.0
 **Created:** Story 2.2 - Core Module Creation
@@ -12,7 +12,7 @@ The Core module contains the foundational runtime components that all other AIOX
 
 ## Installation
 
-The core module is automatically available within the Sinkra AIOX framework:
+The core module is automatically available within the Synkra AIOX framework:
 
 ```javascript
 // CommonJS
@@ -226,4 +226,4 @@ Scripts that import these modules have been updated to reference the new paths.
 
 ---
 
-*Sinkra AIOX Core Module v2.0.0*
+*Synkra AIOX Core Module v2.0.0*

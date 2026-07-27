@@ -474,4 +474,4 @@ pub async fn create_order(
 
 ---
 
-_AIOX Tech Preset - Sinkra AIOX Framework_
+_AIOX Tech Preset - Synkra AIOX Framework_

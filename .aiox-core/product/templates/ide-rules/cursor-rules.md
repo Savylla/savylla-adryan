@@ -1,6 +1,11 @@
-# Sinkra AIOX Development Rules for Cursor
+---
+description: Synkra AIOX global rules loaded on every Cursor conversation
+alwaysApply: true
+---
 
-You are working with Sinkra AIOX, an AI-Orchestrated System for Full Stack Development.
+# Synkra AIOX Development Rules for Cursor
+
+You are working with Synkra AIOX, an AI-Orchestrated System for Full Stack Development.
 
 ## Core Development Rules
 
@@ -112,4 +117,4 @@ async function operation() {
 ```
 
 ---
-*Sinkra AIOX Cursor Configuration v1.0* 
+*Synkra AIOX Cursor Configuration v2.0*

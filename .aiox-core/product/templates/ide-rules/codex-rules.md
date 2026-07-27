@@ -1,4 +1,4 @@
-# AGENTS.md - Sinkra AIOX (Codex CLI)
+# AGENTS.md - Synkra AIOX (Codex CLI)
 
 Este arquivo define as instrucoes do projeto para o Codex CLI.
 

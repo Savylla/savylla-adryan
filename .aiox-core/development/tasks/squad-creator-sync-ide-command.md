@@ -392,7 +392,7 @@ Summary:
 - `*create-squad` - Criar novo squad
 - `*validate-squad` - Validar estrutura do squad
 - `*install-expansion-commands` - Instalar commands (versão anterior)
-- `*sync-squad-sinkra` - Sincronizar para Sinkra marketplace
+- `*sync-squad-synkra` - Sincronizar para Synkra marketplace
 
 ## Changelog
 

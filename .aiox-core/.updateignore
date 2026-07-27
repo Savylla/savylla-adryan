@@ -1,0 +1,19 @@
+# Paths under .aiox-core/ that `update-aiox.sh` must NEVER overwrite.
+#
+# One relative path per line (no leading `.aiox-core/`). A trailing `/` marks a
+# directory prefix. Blank lines and `#` comments are ignored.
+#
+# When upstream ships a different version of a protected file, the update writes
+# it alongside as `<file>.upstream-new` instead of overwriting, so the diff can
+# be merged by hand.
+#
+# This file itself does not exist upstream, so it survives every update.
+
+# Project configuration: upstream ships the framework repo's own contributor-mode
+# config (frameworkProtection: false, foreign pvMindContext, unused IDEs/MCP).
+# Overwriting this silently breaks the project install.
+core-config.yaml
+
+# Local fixes to the updater (rsync fallback, protected-path handling).
+# Without this line the script would overwrite itself on first run.
+scripts/update-aiox.sh

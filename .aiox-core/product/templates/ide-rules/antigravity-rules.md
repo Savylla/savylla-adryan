@@ -1,6 +1,6 @@
-# Sinkra AIOX Development Rules for AntiGravity
+# Synkra AIOX Development Rules for AntiGravity
 
-You are working with Sinkra AIOX, an AI-Orchestrated System for Full Stack Development.
+You are working with Synkra AIOX, an AI-Orchestrated System for Full Stack Development.
 
 ## Core Development Rules
 
@@ -112,4 +112,4 @@ async function operation() {
 ```
 
 ---
-*Sinkra AIOX AntiGravity Configuration v1.0*
+*Synkra AIOX AntiGravity Configuration v1.0*

@@ -1,6 +1,6 @@
 # AIOX Workflows
 
-This directory contains workflow definitions for the Sinkra AIOX framework. Workflows define multi-step processes that can be executed by AIOX agents.
+This directory contains workflow definitions for the Synkra AIOX framework. Workflows define multi-step processes that can be executed by AIOX agents.
 
 ## Available Workflows
 
@@ -67,10 +67,17 @@ workflow:
   metadata:
     elicit: true  # If user interaction required
     confirmation_required: true
-  steps:
-    - id: step-1
-      name: Step name
-      description: What this step does
+  sequence:
+    - step: step_slug
+      id: step-1
+      agent: responsible-agent
+      action: What this step does
+      next: next-step-id
+
+  # Optional compatibility metadata (non-executable)
+  phases:
+    - phase_1: Discovery
+    - phase_2: Execution
 ```
 
 ## Best Practices

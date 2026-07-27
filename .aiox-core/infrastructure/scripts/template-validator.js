@@ -1,5 +1,5 @@
 /**
- * Template Validator for Sinkra AIOX
+ * Template Validator for Synkra AIOX
  * Validates component templates for required structure and placeholders
  * @module template-validator
  */

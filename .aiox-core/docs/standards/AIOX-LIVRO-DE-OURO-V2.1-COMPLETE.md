@@ -6,7 +6,7 @@
 **Status:** Living Document
 **Última Atualização:** 2025-12-09
 **Mantido Por:** AIOX Framework Team + Community
-**Repositório Principal:** `SinkraAI/aiox-core`
+**Repositório Principal:** `SynkraAI/aiox-core`
 
 ---
 
@@ -59,7 +59,7 @@ Este documento é a **versão consolidada v4.2** que incorpora todas as mudança
 │   ═══════════════════════                                               │
 │                                                                         │
 │   ┌────────────────────────────────────────────────────────────────┐   │
-│   │  SinkraAI/aiox-core (Commons Clause)                         │   │
+│   │  SynkraAI/aiox-core (Commons Clause)                         │   │
 │   │  ─────────────────────────────────────                         │   │
 │   │  • Core Framework & Orchestration Engine                       │   │
 │   │  • 11 Base Agents (Dex, Luna, Aria, Quinn, etc.)              │   │
@@ -75,7 +75,7 @@ Este documento é a **versão consolidada v4.2** que incorpora todas as mudança
 │   │                          │                          │              │
 │   ▼                          │                          ▼              │
 │   ┌─────────────────────┐    │    ┌─────────────────────────────┐     │
-│   │ SinkraAI/         │    │    │ SinkraAI/mcp-ecosystem    │     │
+│   │ SynkraAI/         │    │    │ SynkraAI/mcp-ecosystem    │     │
 │   │ aiox-squads (MIT)   │    │    │ (Apache 2.0)                │     │
 │   │ ─────────────────   │    │    │ ──────────────────────────  │     │
 │   │ • ETL Squad         │    │    │ • Docker MCP Toolkit        │     │
@@ -88,7 +88,7 @@ Este documento é a **versão consolidada v4.2** que incorpora todas as mudança
 │   ════════════════════════   │                                         │
 │                              │                                         │
 │   ┌─────────────────────┐    │    ┌─────────────────────────────┐     │
-│   │ SinkraAI/mmos     │    │    │ SinkraAI/certified-       │     │
+│   │ SynkraAI/mmos     │    │    │ SynkraAI/certified-       │     │
 │   │ (Proprietary + NDA) │    │    │ partners (Proprietary)      │     │
 │   │ ─────────────────   │    │    │ ──────────────────────────  │     │
 │   │ • MMOS Minds        │    │    │ • Premium Squads            │     │
@@ -606,10 +606,10 @@ npm install @aiox/mcp-presets
 
 ```bash
 # New project (Greenfield)
-$ npx @SinkraAI/aiox@latest init
+$ npx @SynkraAI/aiox@latest init
 
 # Existing project (Brownfield)
-$ npx @SinkraAI/aiox migrate v2.0-to-v4.0.4
+$ npx @SynkraAI/aiox migrate v2.0-to-v4.0.4
 ```
 
 ### First Steps
@@ -633,9 +633,9 @@ $ aiox task develop-story --story=1.1
 ```bash
 # Clone all repos
 mkdir -p ~/Workspaces/AIOX && cd ~/Workspaces/AIOX
-gh repo clone SinkraAI/aiox-core
-gh repo clone SinkraAI/aiox-squads
-gh repo clone SinkraAI/mcp-ecosystem
+gh repo clone SynkraAI/aiox-core
+gh repo clone SynkraAI/aiox-squads
+gh repo clone SynkraAI/mcp-ecosystem
 
 # Link for local development
 cd aiox-core && npm install && npm link

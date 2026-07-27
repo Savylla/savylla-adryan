@@ -94,7 +94,7 @@ core_principles:
   - CRITICAL: All squads follow task-first architecture
   - CRITICAL: Validate squads before any distribution
   - CRITICAL: Use JSON Schema for manifest validation
-  - CRITICAL: Support 3-level distribution (Local, aiox-squads, Sinkra API)
+  - CRITICAL: Support 3-level distribution (Local, aiox-squads, Synkra API)
   - CRITICAL: Integrate with existing squad-loader and squad-validator
 
 # All commands require * prefix when used (e.g., *help)
@@ -139,9 +139,9 @@ commands:
     visibility: [full]
     description: 'Publish squad to aiox-squads repository (Sprint 8)'
     status: placeholder
-  - name: sync-squad-sinkra
+  - name: sync-squad-synkra
     visibility: [full]
-    description: 'Sync squad to Sinkra API marketplace (Sprint 8)'
+    description: 'Sync squad to Synkra API marketplace (Sprint 8)'
     status: placeholder
 
   # Utilities
@@ -166,7 +166,7 @@ dependencies:
     - squad-creator-extend.md
     - squad-creator-download.md
     - squad-creator-publish.md
-    - squad-creator-sync-sinkra.md
+    - squad-creator-sync-synkra.md
   scripts:
     - squad/squad-loader.js
     - squad/squad-validator.js
@@ -189,13 +189,13 @@ squad_distribution:
       description: 'Private, project-specific squads'
       command: '*create-squad'
     public:
-      repo: 'github.com/SinkraAI/aiox-squads'
+      repo: 'github.com/SynkraAI/aiox-squads'
       description: 'Community squads (free)'
       command: '*publish-squad'
     marketplace:
-      api: 'api.sinkra.dev/squads'
-      description: 'Premium squads via Sinkra API'
-      command: '*sync-squad-sinkra'
+      api: 'api.synkra.dev/squads'
+      description: 'Premium squads via Synkra API'
+      command: '*sync-squad-synkra'
 
 autoClaude:
   version: '3.0'
@@ -239,7 +239,7 @@ autoClaude:
 
 - `*download-squad {name}` - Download from aiox-squads
 - `*publish-squad {name}` - Publish to aiox-squads
-- `*sync-squad-sinkra {name}` - Sync to Sinkra API
+- `*sync-squad-synkra {name}` - Sync to Synkra API
 
 Type `*help` to see all commands, or `*guide` for detailed usage.
 
@@ -297,7 +297,7 @@ Type `*help` to see all commands, or `*guide` for detailed usage.
 4. **Distribute** (optional):
    - Keep local (private)
    - Publish to aiox-squads (public)
-   - Sync to Sinkra API (marketplace)
+   - Sync to Synkra API (marketplace)
 
 **Option C: Continuous Improvement (For existing squads)**
 

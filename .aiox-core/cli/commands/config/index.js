@@ -295,7 +295,7 @@ function splitL1(config) {
 
   // metadata (framework portion)
   if (config.markdownExploder !== undefined) l1.markdownExploder = config.markdownExploder;
-  l1.metadata = { name: 'Sinkra AIOX', framework_version: '3.12.0' };
+  l1.metadata = { name: 'Synkra AIOX', framework_version: '3.12.0' };
 
   // resource_locations (Section 3)
   if (config.toolsLocation) l1.resource_locations = { tools_dir: config.toolsLocation };
@@ -415,7 +415,7 @@ function splitL4(config) {
   // mcp_configuration (Section 5)
   if (config.mcp) l4.mcp = config.mcp;
 
-  // coderabbit secrets/machine (Section 9 - machine portion)
+  // coderabbit secret and machine config (Section 9 - machine portion)
   if (config.coderabbit_integration) {
     const cr = config.coderabbit_integration;
     const l4cr = {};

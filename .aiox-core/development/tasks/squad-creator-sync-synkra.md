@@ -1,5 +1,5 @@
 ---
-task: Sync Squad to Sinkra
+task: Sync Squad to Synkra
 responsavel: "@squad-creator"
 responsavel_type: agent
 atomic_layer: task
@@ -10,7 +10,7 @@ version: 1.0.0
 Entrada: |
   - squad_path: Caminho do squad para sincronizar (obrigatório)
   - visibility: public | private (default: private)
-  - official: Flag para marcar como oficial (--official, apenas SinkraAI)
+  - official: Flag para marcar como oficial (--official, apenas SynkraAI)
   - dry_run: Preview sem sincronizar (--dry-run)
 Saida: |
   - sync_result: Resultado do sync (created | updated | skipped)
@@ -21,13 +21,13 @@ Checklist:
   - "[x] Validar squad localmente"
   - "[x] Obter token de autenticação"
   - "[x] Calcular checksum"
-  - "[x] Enviar para Sinkra API"
+  - "[x] Enviar para Synkra API"
   - "[x] Exibir URL do marketplace"
 ---
 
-# *sync-squad-sinkra
+# *sync-squad-synkra
 
-Sincroniza um squad local para o Sinkra API marketplace.
+Sincroniza um squad local para o Synkra API marketplace.
 
 ## Uso
 
@@ -35,21 +35,21 @@ Sincroniza um squad local para o Sinkra API marketplace.
 @squad-creator
 
 # Sync privado (apenas workspace)
-*sync-squad-sinkra ./squads/meu-squad
+*sync-squad-synkra ./squads/meu-squad
 
 # Sync público (visível para todos)
-*sync-squad-sinkra ./squads/meu-squad --public
+*sync-squad-synkra ./squads/meu-squad --public
 
 # Preview sem sincronizar
-*sync-squad-sinkra ./squads/meu-squad --dry-run
+*sync-squad-synkra ./squads/meu-squad --dry-run
 
 # Sync com verbosidade
-*sync-squad-sinkra ./squads/meu-squad --verbose
+*sync-squad-synkra ./squads/meu-squad --verbose
 ```
 
 ## Autenticação
 
-Requer autenticação com Sinkra API:
+Requer autenticação com Synkra API:
 
 ```bash
 export SYNKRA_API_TOKEN="seu-token"
@@ -58,12 +58,12 @@ export SYNKRA_API_TOKEN="seu-token"
 Ou configure em `.env`:
 
 ```env
-SYNKRA_API_URL=https://api.sinkra.dev/api
+SYNKRA_API_URL=https://api.synkra.dev/api
 SYNKRA_API_TOKEN=seu-token
 ```
 
 Para obter um token:
-1. Acesse https://sinkra.dev/settings/api-keys
+1. Acesse https://synkra.dev/settings/api-keys
 2. Crie uma nova API key com permissões de sync
 3. Configure a variável de ambiente
 
@@ -71,7 +71,7 @@ Para obter um token:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
- *sync-squad-sinkra
+ *sync-squad-synkra
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📦 Squad: ./squads/meu-squad/
@@ -85,11 +85,11 @@ Step 1: Local Validation
 Step 2: Calculate Checksum
   ✓ Checksum: a1b2c3d4e5f6...
 
-Step 3: Sync to Sinkra API
+Step 3: Sync to Synkra API
   ✓ Visibility: private
-  ✓ API URL: https://api.sinkra.dev/api
+  ✓ API URL: https://api.synkra.dev/api
 
-Syncing to Sinkra API...
+Syncing to Synkra API...
 
 ✅ Squad synced successfully!
 
@@ -99,7 +99,7 @@ Syncing to Sinkra API...
 
 Next steps:
   - View squad: *describe-squad meu-squad
-  - Make public: *sync-squad-sinkra ./squads/meu-squad --public
+  - Make public: *sync-squad-synkra ./squads/meu-squad --public
 ```
 
 ## Flags
@@ -110,14 +110,14 @@ Next steps:
 | `--private` | Mantém squad privado (apenas workspace) | true |
 | `--dry-run` | Preview sem enviar para API | false |
 | `--verbose` | Output detalhado | false |
-| `--official` | Marca como squad oficial (apenas SinkraAI team) | false |
+| `--official` | Marca como squad oficial (apenas SynkraAI team) | false |
 | `--force` | Ignora warnings e força sync | false |
 
 ## Workflow
 
 ```
 ┌──────────────────────────────────────────────────┐
-│              *sync-squad-sinkra                   │
+│              *sync-squad-synkra                   │
 ├──────────────────────────────────────────────────┤
 │                                                   │
 │  1. Parse Arguments                               │
@@ -228,7 +228,7 @@ const checksum = crypto.createHash('sha256')
 
 // 6. Check authentication
 const apiToken = process.env.SYNKRA_API_TOKEN;
-const apiUrl = process.env.SYNKRA_API_URL || 'https://api.sinkra.dev/api';
+const apiUrl = process.env.SYNKRA_API_URL || 'https://api.synkra.dev/api';
 
 if (!apiToken) {
   error('SYNKRA_API_TOKEN not set. See task docs for authentication.');
@@ -247,7 +247,7 @@ DRY RUN - Would sync:
   return;
 }
 
-// 8. Call Sinkra API
+// 8. Call Synkra API
 const response = await fetch(`${apiUrl}/squads/sync`, {
   method: 'POST',
   headers: {
@@ -278,7 +278,7 @@ if (result.success) {
   `);
 
   if (flags.public) {
-    output(`  URL: https://sinkra.dev/squads/${result.data.squad_id}`);
+    output(`  URL: https://synkra.dev/squads/${result.data.squad_id}`);
   }
 } else {
   error(`Sync failed: ${result.error}`);
@@ -292,7 +292,7 @@ if (result.success) {
 | `squad.yaml not found` | Caminho inválido | Verifique o path do squad |
 | `Validation failed` | Squad não passa na validação | Execute `*validate-squad` primeiro |
 | `SYNKRA_API_TOKEN not set` | Token não configurado | Configure a variável de ambiente |
-| `401 Unauthorized` | Token inválido ou expirado | Gere novo token em sinkra.dev |
+| `401 Unauthorized` | Token inválido ou expirado | Gere novo token em synkra.dev |
 | `403 Forbidden` | Sem permissão para operação | Verifique permissões da API key |
 | `Squad not found or not owned` | Tentando atualizar squad de outro workspace | Verifique ownership |
 
@@ -305,7 +305,7 @@ if (result.success) {
 
 ## Related Story
 
-- **SQS-5:** SquadSyncService for Sinkra API (Sprint 8)
+- **SQS-5:** SquadSyncService for Synkra API (Sprint 8)
 
 ## Changelog
 

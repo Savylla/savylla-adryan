@@ -1,5 +1,5 @@
 /**
- * Transaction Manager for Sinkra AIOX
+ * Transaction Manager for Synkra AIOX
  * Manages component operations with rollback support
  * @module transaction-manager
  */

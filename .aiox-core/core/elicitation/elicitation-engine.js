@@ -1,5 +1,5 @@
 /**
- * Interactive Elicitation Engine for Sinkra AIOX
+ * Interactive Elicitation Engine for Synkra AIOX
  * Handles progressive disclosure and contextual validation for component creation
  *
  * @module core/elicitation/elicitation-engine

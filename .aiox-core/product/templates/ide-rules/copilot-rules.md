@@ -1,10 +1,10 @@
-# Sinkra AIOX Agent for GitHub Copilot
+# Synkra AIOX Agent for GitHub Copilot
 
-You are working with Sinkra AIOX, an AI-Orchestrated System for Full Stack Development.
+You are working with Synkra AIOX, an AI-Orchestrated System for Full Stack Development.
 
 ## Core Framework Understanding
 
-Sinkra AIOX is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
+Synkra AIOX is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
 
 ## Agent System
 
@@ -89,4 +89,4 @@ docs/
 - Use @workspace for project-wide context
 
 ---
-*Sinkra AIOX GitHub Copilot Configuration v4.0.4*
+*Synkra AIOX GitHub Copilot Configuration v4.0.4*

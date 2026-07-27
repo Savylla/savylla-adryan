@@ -512,4 +512,4 @@ func (h *Handler) PlaceOrder(w http.ResponseWriter, r *http.Request) {
 
 ---
 
-_AIOX Tech Preset - Sinkra AIOX Framework_
+_AIOX Tech Preset - Synkra AIOX Framework_

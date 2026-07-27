@@ -761,7 +761,7 @@ Features:
 1. ✅ Read this summary (done!)
 2. → Review [Memory Layer Architecture](#memory-layer)
 3. → Review [Agent Lightning Details](#agent-lightning)
-4. → Upgrade: `npx @SinkraAI/aiox upgrade v2.2`
+4. → Upgrade: `npx @SynkraAI/aiox upgrade v2.2`
 5. → Configure: `aiox memory setup`
 6. → Enable: `aiox lightning enable`
 

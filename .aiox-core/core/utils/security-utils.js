@@ -1,5 +1,5 @@
 /**
- * Security Utilities for Sinkra AIOX
+ * Security Utilities for Synkra AIOX
  * Provides centralized security functions for input validation and sanitization
  *
  * @module security-utils

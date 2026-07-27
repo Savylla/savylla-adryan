@@ -3,7 +3,7 @@ const path = require('path');
 const chalk = require('chalk');
 
 /**
- * Component search utility for Sinkra AIOX framework
+ * Component search utility for Synkra AIOX framework
  * Finds and searches components across the framework
  */
 class ComponentSearch {

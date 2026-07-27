@@ -1,8 +1,8 @@
-# Sinkra AIOX Meta-Agent Troubleshooting Guide
+# Synkra AIOX Meta-Agent Troubleshooting Guide
 
 ## Overview
 
-This guide helps diagnose and resolve common issues when using the Sinkra AIOX meta-agent for component creation and management.
+This guide helps diagnose and resolve common issues when using the Synkra AIOX meta-agent for component creation and management.
 
 ## Table of Contents
 

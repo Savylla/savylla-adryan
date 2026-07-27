@@ -521,10 +521,16 @@ cli_checks:
         macos: 'curl -fsSL https://coderabbit.ai/install.sh | bash'
         linux: 'curl -fsSL https://coderabbit.ai/install.sh | bash'
       note: |
-        WINDOWS USERS: CodeRabbit CLI runs in WSL, not native Windows.
-        - Requires WSL with Ubuntu/Debian distribution
-        - Binary located at ~/.local/bin/coderabbit (inside WSL)
-        - All coderabbit commands must use: wsl bash -c 'command'
+        Cross-platform CodeRabbit CLI (Issue #731):
+        - macOS/Linux: CodeRabbit runs natively. Binary at ~/.local/bin/coderabbit
+          or anywhere on PATH. Invoke directly — no wrapper needed.
+        - Windows: CodeRabbit runs through WSL (no native Windows binary today).
+          Requires WSL with Ubuntu/Debian; binary at ~/.local/bin/coderabbit
+          inside WSL; commands wrapped as `wsl bash -c '...'`.
+        - The aiox-core runtime auto-detects the host (`process.platform`) and
+          builds the right command shape. Override with `installation_mode:
+          'wsl' | 'native'` in `quality-gate-config.yaml` only if detection
+          is wrong.
         - See: docs/guides/coderabbit/README.md for full setup guide
       verification:
         windows: "wsl bash -c '~/.local/bin/coderabbit --version'"
@@ -728,7 +734,7 @@ Visibility:
   2. Private (recommended)
 
 GitHub Organization/Username:
-  Found organizations: SinkraAI
+  Found organizations: SynkraAI
   Or use personal account: your-username
 
 Select owner: _
@@ -794,7 +800,7 @@ temp/
 @"
 # $PROJECT_NAME
 
-> Created with Sinkra AIOX
+> Created with Synkra AIOX
 
 ## Getting Started
 
@@ -817,7 +823,7 @@ npm run dev
 git add .
 git commit -m "chore: initial project setup
 
-- Initialize Sinkra AIOX project structure
+- Initialize Synkra AIOX project structure
 - Add .gitignore with standard exclusions
 - Add README.md with project placeholder
 
@@ -909,7 +915,7 @@ if (-not (Test-Path "package.json")) {
 {
   "name": "$PROJECT_NAME",
   "version": "0.1.0",
-  "description": "Created with Sinkra AIOX",
+  "description": "Created with Synkra AIOX",
   "scripts": {
     "dev": "echo 'Add your dev script'",
     "build": "echo 'Add your build script'",

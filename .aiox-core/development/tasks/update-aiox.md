@@ -31,7 +31,7 @@ git checkout -- .aiox-core/                                         # Cancel cha
 
 The script uses sparse clone + file comparison:
 
-1. **Clone upstream** - Sparse shallow clone of SinkraAI/aiox-core (only `.aiox-core/`)
+1. **Clone upstream** - Sparse shallow clone of SynkraAI/aiox-core (only `.aiox-core/`)
 2. **Compare files** - Uses `comm` for O(n) file list comparison
 3. **Backup local-only** - Files that exist only locally are backed up
 4. **Sync** - Copy upstream files, restore local-only files

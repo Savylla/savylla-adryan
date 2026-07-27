@@ -71,7 +71,7 @@ Community:
 *download-squad etl-squad
 
 Downloading: etl-squad@1.0.0
-  Source: github.com/SinkraAI/aiox-squads/packages/etl-squad
+  Source: github.com/SynkraAI/aiox-squads/packages/etl-squad
   Target: ./squads/etl-squad/
 
 ✓ Downloaded 12 files
@@ -127,7 +127,7 @@ The registry.json in aiox-squads contains:
         "name": "etl-squad",
         "version": "1.0.0",
         "description": "ETL pipeline automation",
-        "author": "SinkraAI"
+        "author": "SynkraAI"
       }
     ],
     "community": [
