@@ -1977,7 +1977,16 @@ document.querySelectorAll('.clientes__logo').forEach(img => {
 // Lazy load contato background video
 // ----------------------------------------
 const contatoBgVideo = document.getElementById('contatoBgVideo');
-if (contatoBgVideo) {
+// Mesmo critério do vídeo global do topo (que usa media="(min-width: 768px)" no
+// <source>): abaixo disso fica só o poster. Antes este vídeo baixava ~900KB no
+// celular enquanto o outro era poupado.
+function deveCarregarVideoDeFundo() {
+  if (window.matchMedia('(max-width: 767px)').matches) return false;
+  const conexao = navigator.connection;
+  if (conexao && conexao.saveData) return false;
+  return true;
+}
+if (contatoBgVideo && deveCarregarVideoDeFundo()) {
   const videoObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -2079,6 +2088,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const filtros = document.querySelectorAll('.trabalhos__filtro');
 const items = document.querySelectorAll('.trabalhos__item');
 
+// Quantos projetos aparecem antes de "Carregar Mais". Compartilhado com o
+// bloco de paginação lá embaixo para o anúncio bater com o que está na tela.
+const PROJETOS_POR_PAGINA = 12;
+
 let activeFilter = 'todos';
 filtros.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -2098,9 +2111,14 @@ filtros.forEach(btn => {
     });
     if (typeof announceStatus === 'function') {
       const label = btn.textContent.trim();
-      announceStatus(visibleCount === 0
-        ? `Nenhum projeto na categoria ${label}.`
-        : `Exibindo ${visibleCount} ${visibleCount === 1 ? 'projeto' : 'projetos'} na categoria ${label}.`);
+      // A paginação corta em PROJETOS_POR_PAGINA; anunciar o total do filtro
+      // dizia "44 projetos" com 12 na tela.
+      const exibidos = Math.min(visibleCount, PROJETOS_POR_PAGINA);
+      let msg;
+      if (visibleCount === 0) msg = `Nenhum projeto na categoria ${label}.`;
+      else if (exibidos < visibleCount) msg = `Exibindo ${exibidos} de ${visibleCount} projetos na categoria ${label}. Use o botão Carregar Mais para ver o restante.`;
+      else msg = `Exibindo ${visibleCount} ${visibleCount === 1 ? 'projeto' : 'projetos'} na categoria ${label}.`;
+      announceStatus(msg);
     }
   });
 });
@@ -2274,7 +2292,9 @@ function openModal(id) {
         }
         galeriaEl.querySelectorAll('.modal__video-card').forEach(c => c.classList.remove('active'));
         card.classList.add('active');
-        modal.querySelector('.modal__content').scrollTo({ top: 0, behavior: 'smooth' });
+        // Quem rola é o .modal (overflow-y:auto); o .modal__content não tem
+        // scroll próprio, então chamar scrollTo nele não fazia nada.
+        modal.scrollTo({ top: 0, behavior: 'smooth' });
       });
       galeriaEl.appendChild(card);
     });
@@ -2290,7 +2310,7 @@ function openModal(id) {
         img.loading = 'lazy';
         img.style.cssText = 'width:100%;border-radius:8px;cursor:pointer;';
         img.onerror = function() { this.alt = 'Imagem indisponível'; this.style.opacity = '0.3'; };
-        img.addEventListener('click', () => openLightbox(p.galeria, i));
+        tornarFotoAcessivel(img, p.galeria, i, p.nome);
         galeriaEl.appendChild(img);
       });
     }
@@ -2316,8 +2336,9 @@ function openModal(id) {
       img.src = sanitizeURL(src);
       img.alt = escapeHTML(p.nome);
       img.loading = 'lazy';
+      img.style.cursor = 'pointer';
       img.onerror = function() { this.alt = 'Imagem indisponível'; this.style.opacity = '0.3'; };
-      img.addEventListener('click', () => openLightbox(galeriaList, i));
+      tornarFotoAcessivel(img, galeriaList, i, p.nome);
       galeriaEl.appendChild(img);
     });
 
@@ -2781,8 +2802,59 @@ function showProjectPicker(projs) {
 // ----------------------------------------
 // Form
 // ----------------------------------------
+// O e-mail fica quebrado em data-user/data-dominio e só é remontado quando
+// alguém clica. Montá-lo no carregamento deixaria o endereço no DOM, onde
+// raspadores que executam JavaScript ainda o encontrariam; exigindo interação,
+// ele não existe em lugar nenhum até uma pessoa de verdade pedir.
+function montarEmail(el) {
+  const user = el?.dataset.user;
+  const dominio = el?.dataset.dominio;
+  return (user && dominio) ? `${user}@${dominio}` : '';
+}
+
+// Seção Contato: botão "Mostrar e-mail" vira o endereço clicável.
+document.querySelectorAll('.email-revelar').forEach(botao => {
+  botao.addEventListener('click', () => {
+    const endereco = montarEmail(botao);
+    if (!endereco) return;
+    const link = document.createElement('a');
+    link.href = 'mailto:' + endereco;
+    link.textContent = endereco;
+    botao.replaceWith(link);
+    // Mantém o teclado no lugar: quem acionou o botão continua no elemento
+    // que tomou o seu lugar, em vez de perder o foco para o body.
+    link.focus();
+    if (typeof announceStatus === 'function') announceStatus('E-mail exibido: ' + endereco);
+  });
+});
+
+// Rodapé: o ícone abre o cliente de e-mail no primeiro clique, sem etapa extra.
+document.querySelectorAll('.email-abrir').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const endereco = montarEmail(link);
+    if (!endereco) return;
+    e.preventDefault();
+    window.location.href = 'mailto:' + endereco;
+  });
+});
+
+// String aleatória do FormSubmit ("Invisible emails"): substitui o endereço de
+// destino na URL, então o e-mail não existe em nenhum ponto do front-end — nem
+// no HTML, nem aqui. Só o FormSubmit sabe para onde encaminhar.
+// Para trocar de destino, gere uma nova string confirmando outro endereço lá.
+const FORMSUBMIT_TOKEN = '6c5430f84d0c32ffe3e7e326393fcb61';
+
+function endpointFormSubmit(viaAjax) {
+  return 'https://formsubmit.co/' + (viaAjax ? 'ajax/' : '') + FORMSUBMIT_TOKEN;
+}
+
 const contatoForm = document.getElementById('contatoForm');
 if (contatoForm) {
+  // Preenche o action para preservar o submit nativo como fallback; o envio
+  // normal continua sendo via fetch, logo abaixo.
+  contatoForm.setAttribute('action', endpointFormSubmit(false));
+
+
   contatoForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -2798,7 +2870,7 @@ if (contatoForm) {
     const timeout = setTimeout(() => controller.abort(), 15000);
 
     try {
-      const res = await fetch('https://formsubmit.co/ajax/savyllaadryan@gmail.com', {
+      const res = await fetch(endpointFormSubmit(true), {
         method: 'POST',
         body: new FormData(form),
         headers: { 'Accept': 'application/json' },
@@ -2853,7 +2925,12 @@ document.addEventListener('mousedown', e => {
   if (e.target.closest('.modal__galeria img, .modal__video-card')) e.preventDefault();
 });
 
+// Quem abriu o lightbox, para devolver o foco ao fechar (senão ele cai no body
+// e o usuário de teclado volta ao topo da página).
+let lbLastFocused = null;
+
 function openLightbox(images, startIndex) {
+  lbLastFocused = document.activeElement;
   lbImages = images;
   lbIndex = startIndex || 0;
   showLightboxImage();
@@ -2869,6 +2946,19 @@ function closeLightbox() {
     document.body.style.overflow = '';
   }
   lightboxTrack.innerHTML = '';
+  if (lbLastFocused && document.contains(lbLastFocused)) lbLastFocused.focus();
+  lbLastFocused = null;
+}
+
+// Fotos da galeria são <img> puras: sem isto o lightbox só abre por mouse.
+function tornarFotoAcessivel(img, lista, indice, nomeProjeto) {
+  img.tabIndex = 0;
+  img.setAttribute('role', 'button');
+  img.setAttribute('aria-label', `Ampliar foto ${indice + 1} de ${lista.length} — ${nomeProjeto}`);
+  img.addEventListener('click', () => openLightbox(lista, indice));
+  img.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(lista, indice); }
+  });
 }
 
 function showLightboxImage() {
@@ -2918,7 +3008,7 @@ lightboxTrack.addEventListener('touchend', (e) => {
 // "Carregar Mais" — limita projetos visíveis
 // ----------------------------------------
 (function() {
-  const INITIAL_VISIBLE = 12;
+  const INITIAL_VISIBLE = PROJETOS_POR_PAGINA;
   const grid = document.getElementById('trabalhosGrid');
   const loadMoreBtn = document.getElementById('loadMoreBtn');
   const loadMoreWrap = loadMoreBtn ? loadMoreBtn.parentElement : null;
@@ -2945,11 +3035,24 @@ lightboxTrack.addEventListener('touchend', (e) => {
   applyLimit();
 
   loadMoreBtn.addEventListener('click', () => {
+    const visiveisAntes = allItems.filter(i => !i.classList.contains('hidden') && i.style.display !== 'none');
     grid.dataset.expanded = 'true';
     allItems.forEach(item => {
       if (!item.classList.contains('hidden')) item.style.display = '';
     });
     if (loadMoreWrap) loadMoreWrap.classList.add('hidden');
+
+    // O botão some ao ser clicado: sem isto o foco cai no body e o usuário de
+    // teclado perde o lugar. Manda o foco para o primeiro projeto revelado.
+    const primeiroNovo = allItems.filter(i => !i.classList.contains('hidden'))[visiveisAntes.length];
+    if (primeiroNovo) {
+      primeiroNovo.setAttribute('tabindex', primeiroNovo.getAttribute('tabindex') || '0');
+      primeiroNovo.focus({ preventScroll: true });
+    }
+    if (typeof announceStatus === 'function') {
+      const total = allItems.filter(i => !i.classList.contains('hidden')).length;
+      announceStatus(`Todos os ${total} projetos foram carregados.`);
+    }
   });
 
   // Re-apply on filter change

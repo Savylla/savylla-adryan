@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO básico -->
-  <title>Savylla Adryan — Filmmaker e Diretora Audiovisual | Portfólio</title>
-  <meta name="description" content="Filmmaker, diretora, fotógrafa e designer com 10 anos de experiência audiovisual para Drogasil, Bradesco, Magazine Luiza, Mercado Pago e Carolina Herrera.">
+  <title>Savylla Adryan — Filmmaker e Diretor Audiovisual | Portfólio</title>
+  <meta name="description" content="Filmmaker, diretor, fotógrafo e designer com 10 anos de experiência audiovisual para Drogasil, Bradesco, Magazine Luiza, Mercado Pago e Carolina Herrera.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
   <meta name="author" content="Savylla Adryan">
   <meta name="theme-color" content="#0b1120">
   <link rel="canonical" href="https://savylla.github.io/savylla-adryan/">
 
   <!-- Open Graph (URLs absolutas obrigatórias) -->
-  <meta property="og:title" content="Savylla Adryan — Filmmaker e Diretora Audiovisual">
+  <meta property="og:title" content="Savylla Adryan — Filmmaker e Diretor Audiovisual">
   <meta property="og:description" content="10 anos de experiência audiovisual. 500+ produções para grandes marcas brasileiras.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://savylla.github.io/savylla-adryan/">
@@ -22,11 +22,11 @@
   <meta property="og:image" content="https://savylla.github.io/savylla-adryan/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Savylla Adryan — Filmmaker e Diretora Audiovisual">
+  <meta property="og:image:alt" content="Savylla Adryan — Filmmaker e Diretor Audiovisual">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Savylla Adryan — Filmmaker e Diretora Audiovisual">
+  <meta name="twitter:title" content="Savylla Adryan — Filmmaker e Diretor Audiovisual">
   <meta name="twitter:description" content="10 anos de experiência audiovisual. Portfólio com 500+ produções para grandes marcas.">
   <meta name="twitter:image" content="https://savylla.github.io/savylla-adryan/assets/og-image.jpg">
 
@@ -67,8 +67,8 @@
         "@id": "https://savylla.github.io/savylla-adryan/#person",
         "name": "Savylla Adryan",
         "alternateName": "Savylla",
-        "jobTitle": "Filmmaker e Diretora Audiovisual",
-        "description": "Filmmaker, diretora, fotógrafa e designer com 10 anos de experiência em produção audiovisual para grandes marcas brasileiras.",
+        "jobTitle": "Filmmaker e Diretor Audiovisual",
+        "description": "Filmmaker, diretor, fotógrafo e designer com 10 anos de experiência em produção audiovisual para grandes marcas brasileiras.",
         "image": "https://savylla.github.io/savylla-adryan/assets/perfil.webp",
         "url": "https://savylla.github.io/savylla-adryan/",
         "sameAs": [
@@ -954,7 +954,7 @@
 
       <article class="trabalhos__item" data-category="video" data-id="67">
         <div class="trabalhos__thumb">
-          <video src="assets/projetos/devassas/capa.mp4" muted preload="metadata"></video>
+          <video src="assets/projetos/devassas/capa.mp4" muted loop playsinline preload="metadata"></video>
           <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">
@@ -1075,10 +1075,13 @@
 
   <div class="modal" id="projetoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
     <div class="modal__backdrop"></div>
+    <!-- Fora do .modal__content para poder ser position:fixed — dentro dele o
+         transform da animação criaria um containing block e o botão rolaria
+         junto com o conteúdo, sumindo em galerias longas. -->
+    <button class="modal__close" id="modalClose" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
     <div class="modal__content">
-      <button class="modal__close" id="modalClose" aria-label="Fechar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
       <div class="modal__video" id="modalVideo"></div>
       <div class="modal__body">
         <span class="modal__cat accent" id="modalCategoria"></span>
@@ -1114,7 +1117,10 @@
         <div class="contato__info">
           <div class="contato__info-item">
             <span class="contato__info-label">Email</span>
-            <a href="mailto:savyllaadryan@gmail.com">savyllaadryan@gmail.com</a>
+            <!-- O endereço só é montado após um clique real: assim ele não fica
+                 no HTML cru nem no DOM inicial, fora do alcance de raspadores
+                 (inclusive dos que executam JS). -->
+            <button type="button" class="email-revelar" data-user="savyllaadryan" data-dominio="gmail.com">Mostrar e-mail</button>
           </div>
           <div class="contato__info-item">
             <span class="contato__info-label">Localização</span>
@@ -1128,7 +1134,10 @@
           </a>
         </div>
       </div>
-      <form class="contato__form" id="contatoForm" action="https://formsubmit.co/savyllaadryan@gmail.com" method="POST">
+      <!-- O destino é a string aleatória do FormSubmit (FORMSUBMIT_TOKEN no
+           script.js), preenchida no action em runtime. O e-mail não aparece
+           nem aqui nem no JS: quem recebe as mensagens só o FormSubmit sabe. -->
+      <form class="contato__form" id="contatoForm" method="POST">
         <input type="hidden" name="_subject" value="Nova mensagem do portfólio">
         <input type="hidden" name="_captcha" value="true">
         <input type="hidden" name="_template" value="table">
@@ -1169,7 +1178,7 @@
         <a href="https://www.instagram.com/savyllaadryan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
         </a>
-        <a href="mailto:savyllaadryan@gmail.com" aria-label="Email">
+        <a class="email-abrir" data-user="savyllaadryan" data-dominio="gmail.com" href="#contato" aria-label="Enviar e-mail">
           <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </a>
       </div>

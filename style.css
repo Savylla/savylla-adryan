@@ -1249,9 +1249,12 @@ iframe.trabalhos__hover-video.active {
 .modal.active .modal__content { transform: translateY(0); }
 
 .modal__close {
-  position: absolute;
+  /* fixed (não absolute): acompanha a rolagem para continuar alcançável em
+     galerias longas. O max() alinha ao canto do .modal__content (max 960px)
+     em telas largas e encosta na margem da tela em telas estreitas. */
+  position: fixed;
   top: 20px;
-  right: 20px;
+  right: max(32px, calc(50vw - 452px));
   z-index: 10;
   width: 44px;
   height: 44px;
@@ -1738,6 +1741,29 @@ iframe.trabalhos__hover-video.active {
 
 .contato__info-item a:hover { color: var(--text); }
 
+/* Botão "Mostrar e-mail": veste-se como os demais dados de contato, mas com
+   sublinhado tracejado para sinalizar que é uma ação, não um texto. */
+.email-revelar {
+  /* padding vertical dá ao alvo de toque uma altura confortável no celular e
+     afasta o tracejado do texto */
+  padding: 2px 0 5px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px dashed var(--accent);
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.email-revelar:hover,
+.email-revelar:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
 .contato__social {
   display: flex;
 }
@@ -1778,7 +1804,9 @@ iframe.trabalhos__hover-video.active {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  /* 16px é o mínimo: abaixo disso o Safari no iOS dá zoom automático ao focar
+     o campo e o layout sai do lugar. */
+  font-size: 1rem;
   transition: border-color 0.3s;
   outline: none;
 }
@@ -1920,7 +1948,6 @@ iframe.trabalhos__hover-video.active {
 
   .trabalhos { padding: 80px 20px; }
   .trabalhos__header { flex-direction: column; align-items: flex-start; }
-  .trabalhos__grid { columns: 1; }
 
   .showreel { padding: 80px 20px; }
 
@@ -1939,6 +1966,12 @@ iframe.trabalhos__hover-video.active {
   .footer__inner { flex-direction: column; gap: 8px; text-align: center; }
 
   .nav-overlay__link::before { display: none; }
+}
+
+/* Coluna única só em telas realmente estreitas. Em tablet retrato (768px) duas
+   colunas evitam cards de ~1300px de altura e uma rolagem interminável. */
+@media (max-width: 600px) {
+  .trabalhos__grid { columns: 1; }
 }
 
 @media (max-width: 480px) {
