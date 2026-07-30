@@ -20,11 +20,17 @@ import re
 import html
 import subprocess
 import shutil
+import unicodedata
 from pathlib import Path
 from urllib.parse import unquote
+from collections import defaultdict
 
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+
+from google.oauth2.credentials import Credentials
+from google.auth.transport.requests import Request
+from googleapiclient.discovery import build as build_youtube_api
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -40,7 +46,7 @@ PROGRESS_FILE = "upload_progress.json"  # Same as the working uploader
 RESULTS_FILE = "youtube_results.json"
 
 # YouTube upload settings
-UPLOAD_DELAY = 20
+UPLOAD_DELAY = 5
 UPLOAD_TIMEOUT = 900  # 15 min per video
 
 # Anti-Shorts: pillarbox converts vertical (9:16) to horizontal (16:9)
@@ -49,6 +55,252 @@ UPLOAD_TIMEOUT = 900  # 15 min per video
 
 # Chrome debug port
 CHROME_DEBUG_PORT = 9555
+
+# Cache of playlists that failed to be created (avoid retrying every video)
+_playlist_create_failed = set()
+
+# YouTube Data API - playlist cache {name: playlist_id}
+_playlist_cache = {}
+_youtube_api = None
+_api_disabled = False  # True apos falha de credencial: impede fluxo OAuth interativo
+TOKEN_FILE = "token.json"
+CLIENT_SECRET_FILE = "client_secret.json"
+YT_SCOPES = ["https://www.googleapis.com/auth/youtube"]
+
+
+def _save_yt_credentials(creds):
+    """Save OAuth2 credentials to token.json."""
+    token_data = {
+        "token": creds.token,
+        "refresh_token": creds.refresh_token,
+        "token_uri": creds.token_uri,
+        "client_id": creds.client_id,
+        "client_secret": creds.client_secret,
+        "scopes": list(creds.scopes) if creds.scopes else YT_SCOPES,
+        "expiry": creds.expiry.isoformat() + "Z" if creds.expiry else None,
+    }
+    with open(TOKEN_FILE, "w") as f:
+        json.dump(token_data, f, indent=2)
+
+
+def get_youtube_api():
+    """Get or create YouTube Data API service (singleton)."""
+    global _youtube_api
+    # Desligado apos falha irrecuperavel de credencial: sem isto, cada chamada
+    # seguinte cairia no fluxo OAuth interativo (run_local_server) e travaria
+    # uma execucao nao supervisionada.
+    if _api_disabled:
+        return None
+    if _youtube_api is not None:
+        return _youtube_api
+
+    creds = None
+
+    # Try loading existing token
+    if os.path.exists(TOKEN_FILE):
+        try:
+            with open(TOKEN_FILE, "r") as f:
+                token_data = json.load(f)
+            creds = Credentials(
+                token=token_data.get("token"),
+                refresh_token=token_data.get("refresh_token"),
+                token_uri=token_data.get("token_uri"),
+                client_id=token_data.get("client_id"),
+                client_secret=token_data.get("client_secret"),
+                scopes=token_data.get("scopes", YT_SCOPES),
+            )
+        except Exception:
+            creds = None
+
+    # Try refreshing
+    if creds and creds.expired and creds.refresh_token:
+        try:
+            creds.refresh(Request())
+            _save_yt_credentials(creds)
+        except Exception:
+            creds = None
+
+    # If still invalid, try OAuth flow
+    if not creds or not creds.valid:
+        if os.path.exists(CLIENT_SECRET_FILE):
+            try:
+                from google_auth_oauthlib.flow import InstalledAppFlow
+                print("[API] Token invalido. Abrindo navegador para re-autenticacao...")
+                flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRET_FILE, YT_SCOPES)
+                creds = flow.run_local_server(port=8090, open_browser=True)
+                _save_yt_credentials(creds)
+                print("[API] Re-autenticacao concluida.")
+            except Exception as e:
+                print(f"[API] OAuth flow falhou: {str(e)[:80]}")
+                return None
+        else:
+            print("[API] token.json invalido e client_secret.json ausente - playlists NAO serao atribuidas")
+            return None
+
+    try:
+        _youtube_api = build_youtube_api("youtube", "v3", credentials=creds)
+        print("[API] YouTube Data API v3 conectada com sucesso")
+        return _youtube_api
+    except Exception as e:
+        print(f"[API] Falha ao conectar API: {str(e)[:80]}")
+        return None
+
+
+def load_playlist_cache():
+    """Load all existing playlists from the channel into cache."""
+    global _playlist_cache
+    youtube = get_youtube_api()
+    if not youtube:
+        return
+
+    print("[API] Carregando playlists existentes do canal...")
+    _playlist_cache = {}
+    next_page = None
+
+    while True:
+        request = youtube.playlists().list(
+            part="snippet",
+            mine=True,
+            maxResults=50,
+            pageToken=next_page,
+        )
+        response = request.execute()
+
+        for item in response.get("items", []):
+            name = item["snippet"]["title"]
+            pid = item["id"]
+            # If duplicate name, keep the first one (oldest)
+            if name not in _playlist_cache:
+                _playlist_cache[name] = pid
+
+        next_page = response.get("nextPageToken")
+        if not next_page:
+            break
+
+    print(f"[API] {len(_playlist_cache)} playlists carregadas no cache")
+    for name, pid in sorted(_playlist_cache.items()):
+        print(f"  - {name} ({pid})")
+
+
+def api_find_or_create_playlist(playlist_name):
+    """Find existing playlist or create new one via API. Returns playlist_id or None."""
+    youtube = get_youtube_api()
+    if not youtube:
+        return None
+
+    # Check cache first
+    if playlist_name in _playlist_cache:
+        return _playlist_cache[playlist_name]
+
+    # Not in cache - create it (with retry for rate limits)
+    for attempt in range(4):
+        try:
+            print(f"  [API] Criando playlist '{playlist_name}'{'...' if attempt == 0 else f' (tentativa {attempt + 1}/4)...'}")
+            request = youtube.playlists().insert(
+                part="snippet,status",
+                body={
+                    "snippet": {
+                        "title": playlist_name,
+                        "description": f"Portfolio Savylla Adryan - {playlist_name.replace('Portfolio - ', '')}",
+                    },
+                    "status": {
+                        "privacyStatus": "unlisted",
+                    },
+                },
+            )
+            response = request.execute()
+            pid = response["id"]
+            _playlist_cache[playlist_name] = pid
+            print(f"  [API] Playlist criada: {playlist_name} ({pid})")
+            return pid
+        except Exception as e:
+            err_str = str(e)
+            if '429' in err_str or 'quota' in err_str.lower() or 'rate' in err_str.lower():
+                if attempt < 3:
+                    wait = (attempt + 1) * 15
+                    print(f"  [API] Rate limit (429) - aguardando {wait}s antes de tentar novamente...")
+                    time.sleep(wait)
+                    continue
+            print(f"  [API] Erro ao criar playlist '{playlist_name}': {err_str[:80]}")
+            return None
+    print(f"  [API] Erro: rate limit persistente para '{playlist_name}'")
+    return None
+
+
+def api_add_video_to_playlist(playlist_id, video_id):
+    """Add a video to a playlist via API."""
+    youtube = get_youtube_api()
+    if not youtube:
+        return False
+
+    try:
+        youtube.playlistItems().insert(
+            part="snippet",
+            body={
+                "snippet": {
+                    "playlistId": playlist_id,
+                    "resourceId": {
+                        "kind": "youtube#video",
+                        "videoId": video_id,
+                    },
+                },
+            },
+        ).execute()
+        return True
+    except Exception as e:
+        error_str = str(e)
+        if "duplicate" in error_str.lower() or "already" in error_str.lower():
+            print(f"  [API] Video {video_id} ja esta na playlist")
+            return True
+        print(f"  [API] Erro ao adicionar video {video_id} a playlist: {error_str[:80]}")
+        return False
+
+# Fix broken accents from client_videos.json (encoding issues in source data)
+ACCENT_FIXES = {
+    # Client names
+    "Atacad o": "Atacadão",
+    "Faculdade Est cio": "Faculdade Estácio",
+    "For\ufffda da Terra": "Força da Terra",
+    "Philco Brit nia": "Philco Britânia",
+    "Nestl /": "Nestlé /",
+    # Talento/title name fragments (applied globally)
+    "Jo o Mendes": "João Mendes",
+    "Jo o Victor": "João Victor",
+    "Joa\u0303o": "João",  # combining tilde
+    "D bora Melo": "Débora Melo",
+    "D bora Mel": "Débora Mel",  # truncated in filenames
+    "Andr Lemos": "André Lemos",
+    "Maria Lu za": "Maria Luíza",
+    "Lu za Kropotoff": "Luíza Kropotoff",
+    "Qu ren Hapuque": "Quéren Hapuque",
+    "Let cia Pedro": "Letícia Pedro",
+    "Vit ria Rodrigues": "Vitória Rodrigues",
+    "J lia Horta": "Júlia Horta",
+    "Val rio": "Valério",
+    "For\ufffda da Terra": "Força da Terra",
+    "Cabe\ufffda": "Cabeça",
+    "Pablo Sant Anna": "Pablo Sant'Anna",
+    "Isadora cecatto": "Isadora Cecatto",
+    "Est cio": "Estácio",
+    "Brit nia": "Britânia",
+    # HTML entities that survive in filenames
+    "Joa&#771;o": "João",
+}
+
+
+def fix_accents(text):
+    """Fix broken accents and HTML entities in text."""
+    text = html.unescape(text)  # Fix &Iacute; &#771; etc.
+    text = unicodedata.normalize('NFC', text)  # a + combining tilde -> ã
+    # Apply manual fixes for corrupted chars
+    for broken, fixed in ACCENT_FIXES.items():
+        if broken in text:
+            text = text.replace(broken, fixed)
+    return text
+
+
+
+# (Phase 0 playlist pre-creation removed - CSS selectors broken in current YouTube Studio)
 
 
 # =============================================================
@@ -80,8 +332,8 @@ def create_driver():
         subprocess.run(["taskkill", "/F", "/IM", "chrome.exe"],
                        capture_output=True, timeout=10)
         time.sleep(3)
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"  [AVISO] taskkill falhou: {str(e)[:60]}")
 
     chrome_cmd = [
         chrome_path,
@@ -90,11 +342,13 @@ def create_driver():
         "--disable-blink-features=AutomationControlled",
         "--no-first-run",
         "--no-default-browser-check",
+        "--disable-gpu",
+        "--disable-software-rasterizer",
         "--log-level=3",
     ]
     print(f"[BROWSER] Iniciando Chrome (porta {CHROME_DEBUG_PORT})...")
     subprocess.Popen(chrome_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    time.sleep(10)
+    time.sleep(12)
 
     options = Options()
     options.add_experimental_option("debuggerAddress", f"127.0.0.1:{CHROME_DEBUG_PORT}")
@@ -120,6 +374,40 @@ def create_driver():
 
 def clean_url(url):
     return html.unescape(url)
+
+
+def source_key(url):
+    """Chave normalizada de um arquivo-fonte, para deteccao de duplicata.
+
+    Usa o nome do arquivo (sem query string, sem escape de URL, minusculo).
+    O mesmo criterio do fallback de migrate_clickup_to_youtube.py: a URL do
+    ClickUp carrega parametros volateis (ust/usg), entao comparar a URL crua
+    deixa duplicata passar.
+    """
+    if not url:
+        return None
+    limpo = clean_url(url).split("?")[0]
+    nome = unquote(limpo.split("/")[-1]).strip().lower()
+    return nome or None
+
+
+def build_source_index(results):
+    """Indexa fontes ja enviadas: {chave_do_arquivo: (video_id, cliente)}.
+
+    Evita reenviar o mesmo arquivo — foi assim que 9 videos duplicados
+    entraram no canal e precisaram ser apagados manualmente depois.
+    """
+    idx = {}
+    for cliente, vids in results.items():
+        for v in vids:
+            vid = v.get("video_id")
+            if not vid or vid == "UPLOADED_NO_ID" or len(vid) != 11:
+                continue
+            for campo in ("original_url", "source_url"):
+                k = source_key(v.get(campo))
+                if k:
+                    idx.setdefault(k, (vid, cliente))
+    return idx
 
 
 def extract_video_name(url):
@@ -204,7 +492,7 @@ def pad_video_to_avoid_shorts(filepath):
         cmd = [
             "ffmpeg", "-y", "-i", filepath,
             "-vf", f"pad={out_w}:{out_h}:(ow-iw)/2:0:black",
-            "-c:v", "libx264", "-crf", "17", "-preset", "medium",
+            "-c:v", "libx264", "-crf", "23", "-preset", "ultrafast",
             "-c:a", "copy",
             "-movflags", "+faststart",
             pillarbox_path
@@ -222,7 +510,7 @@ def pad_video_to_avoid_shorts(filepath):
             cmd_retry = [
                 "ffmpeg", "-y", "-i", filepath,
                 "-vf", f"pad={out_w}:{out_h}:(ow-iw)/2:0:black",
-                "-c:v", "libx264", "-crf", "17", "-preset", "medium",
+                "-c:v", "libx264", "-crf", "23", "-preset", "ultrafast",
                 "-c:a", "aac", "-b:a", "192k",
                 "-movflags", "+faststart",
                 pillarbox_path
@@ -396,23 +684,56 @@ def download_via_browser(driver, url, filepath):
 
 def download_via_curl(url, filepath):
     try:
+        download_url = url
+
+        # Google Drive sharing links: convert to direct download URL
+        gdrive_match = re.search(r'drive\.google\.com/file/d/([^/]+)', url)
+        if gdrive_match:
+            file_id = gdrive_match.group(1)
+            download_url = f"https://drive.google.com/uc?export=download&id={file_id}"
+            print(f"(GDrive) ", end="", flush=True)
+
         result = subprocess.run(
-            ["curl", "-sL", "--max-time", "120", "--connect-timeout", "15",
-             "-o", filepath, url],
-            timeout=150,
+            ["curl", "-sL", "--max-time", "180", "--connect-timeout", "15",
+             "-o", filepath, download_url],
+            timeout=210,
             capture_output=True
         )
         if result.returncode == 0 and is_valid_video(filepath):
             size_mb = os.path.getsize(filepath) / (1024 * 1024)
             print(f"OK ({size_mb:.1f} MB)")
             return True
-        else:
-            print(f"FALHOU (arquivo invalido ou curl erro)")
+
+        # Google Drive large files need confirm token to bypass virus scan warning
+        if gdrive_match and os.path.exists(filepath):
             try:
-                os.remove(filepath)
+                with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                    content = f.read(10000)
+                confirm_match = re.search(r'confirm=([0-9A-Za-z_-]+)', content)
+                if confirm_match or 'download_warning' in content or 'virus scan' in content.lower():
+                    token = confirm_match.group(1) if confirm_match else 't'
+                    confirm_url = f"https://drive.google.com/uc?export=download&confirm={token}&id={file_id}"
+                    os.remove(filepath)
+                    print(f"(confirm) ", end="", flush=True)
+                    result = subprocess.run(
+                        ["curl", "-sL", "--max-time", "180", "--connect-timeout", "15",
+                         "-o", filepath, confirm_url],
+                        timeout=210,
+                        capture_output=True
+                    )
+                    if result.returncode == 0 and is_valid_video(filepath):
+                        size_mb = os.path.getsize(filepath) / (1024 * 1024)
+                        print(f"OK ({size_mb:.1f} MB)")
+                        return True
             except Exception:
                 pass
-            return False
+
+        print(f"FALHOU (arquivo invalido ou curl erro)")
+        try:
+            os.remove(filepath)
+        except Exception:
+            pass
+        return False
     except subprocess.TimeoutExpired:
         print("TIMEOUT (>120s)")
         try:
@@ -453,7 +774,8 @@ def collect_existing_video_ids(driver):
             return Array.from(ids);
         """)
         return set(ids) if ids else set()
-    except Exception:
+    except Exception as e:
+        print(f"  [AVISO] collect_existing_video_ids falhou: {str(e)[:80]}")
         return set()
 
 
@@ -510,6 +832,7 @@ def check_daily_limit(driver):
         limit_hit = driver.execute_script("""
             var allEls = document.querySelectorAll('span, p, yt-formatted-string, .error-short, .error-message');
             for (var el of allEls) {
+                if (el.offsetParent === null) continue;
                 var txt = (el.textContent || '').trim();
                 if (txt.length < 10 || txt.length > 300) continue;
                 if (el.children.length > 5) continue;
@@ -589,7 +912,12 @@ def verify_upload_started(driver, timeout=30):
                     return None
                 print(f" ({started})")
                 return 'ok'
-        except Exception:
+        except Exception as e:
+            err_str = str(e).lower()
+            if 'session' in err_str or 'disconnected' in err_str or 'connection' in err_str:
+                print(f"\n  [ERRO FATAL] Sessao do browser perdida: {str(e)[:80]}")
+                return None
+            # DOM errors are expected during page transitions
             pass
         time.sleep(2)
     return None
@@ -600,7 +928,7 @@ def upload_video_selenium(driver, filepath, title, description, known_ids, clien
     abs_path = os.path.abspath(filepath)
 
     driver.get("https://studio.youtube.com")
-    time.sleep(5)
+    time.sleep(3)
 
     if "accounts.google.com" in driver.current_url:
         if not ensure_logged_in(driver):
@@ -638,7 +966,7 @@ def upload_video_selenium(driver, filepath, title, description, known_ids, clien
             print("  [ERRO] Nao encontrou botao 'Criar'")
             return None
         print(f"  [OK] Botao Criar: {clicked}")
-        time.sleep(3)
+        time.sleep(1.5)
     except Exception as e:
         print(f"  [ERRO] Nao encontrou botao 'Criar': {e}")
         return None
@@ -661,7 +989,7 @@ def upload_video_selenium(driver, filepath, title, description, known_ids, clien
             print("  [ERRO] Nao encontrou opcao 'Enviar videos'")
             return None
         print(f"  [OK] Menu upload: {clicked}")
-        time.sleep(4)
+        time.sleep(2)
     except Exception as e:
         print(f"  [ERRO] Nao encontrou opcao 'Enviar videos': {e}")
         return None
@@ -702,12 +1030,17 @@ def upload_video_selenium(driver, filepath, title, description, known_ids, clien
 
     time.sleep(3)
 
-    # Set title
+    # Set title (with retry — YouTube Studio form can take a while to render)
     try:
-        time.sleep(8)
-        textboxes = driver.find_elements(By.CSS_SELECTOR, "#textbox[contenteditable='true']")
-        if not textboxes:
-            textboxes = driver.find_elements(By.CSS_SELECTOR, "#textbox")
+        textboxes = []
+        for attempt in range(6):
+            time.sleep(3)
+            textboxes = driver.find_elements(By.CSS_SELECTOR, "#textbox[contenteditable='true']")
+            if not textboxes:
+                textboxes = driver.find_elements(By.CSS_SELECTOR, "#textbox")
+            if textboxes:
+                break
+            print(f"  [RETRY] Aguardando campos de texto... ({attempt+1}/6)")
 
         if textboxes:
             title_box = textboxes[0]
@@ -752,321 +1085,10 @@ def upload_video_selenium(driver, filepath, title, description, known_ids, clien
     except Exception as e:
         print(f"  [AVISO] Erro ao definir titulo: {e}")
 
-    # Add to client playlist (proven logic from organize_playlists.py)
-    if client_name:
-        playlist_name = f"Portfolio - {client_name}"
-        try:
-            time.sleep(1)
-
-            # Open playlist dialog via ytcp-video-metadata-playlists
-            opened = driver.execute_script("""
-                var comp = document.querySelector('ytcp-video-metadata-playlists');
-                if (comp) {
-                    var trigger = comp.querySelector('ytcp-text-dropdown-trigger, [role="button"]');
-                    if (trigger) { trigger.click(); return 'clicked'; }
-                    comp.click();
-                    return 'clicked_comp';
-                }
-                return 'not_found';
-            """)
-
-            if 'clicked' in str(opened):
-                time.sleep(3)
-
-                # Scroll iron-list to load all playlists (virtual scrolling only renders visible items)
-                driver.execute_script("""
-                    var dialog = document.querySelector('ytcp-playlist-dialog');
-                    if (!dialog) return;
-                    var ironList = dialog.querySelector('tp-yt-iron-list');
-                    if (ironList) {
-                        for (var scrollPos = 0; scrollPos <= ironList.scrollHeight; scrollPos += 32) {
-                            ironList.scrollTop = scrollPos;
-                        }
-                        ironList.scrollTop = 0;
-                    }
-                """)
-                time.sleep(1)
-
-                # Try to select existing playlist
-                playlist_result = driver.execute_script("""
-                    var targetName = arguments[0];
-                    var dialog = document.querySelector('ytcp-playlist-dialog');
-                    if (!dialog) return 'no_dialog';
-
-                    var groups = dialog.querySelectorAll('ytcp-checkbox-group');
-                    for (var group of groups) {
-                        var nameSpan = group.querySelector('span.checkbox-label, span.label, span.label-text');
-                        var txt = nameSpan ? nameSpan.textContent.trim() : '';
-                        if (!txt) {
-                            var lbl = group.querySelector('label');
-                            txt = lbl ? lbl.textContent.trim() : '';
-                        }
-
-                        if (txt.includes(targetName)) {
-                            var cbDiv = group.querySelector('div[role="checkbox"]');
-                            var isChecked = cbDiv && cbDiv.getAttribute('aria-checked') === 'true';
-                            if (isChecked) return 'already_checked';
-
-                            var label = group.querySelector('label.ytcp-checkbox-label, label');
-                            if (label) { label.click(); return 'clicked_label'; }
-                            group.click();
-                            return 'clicked_group';
-                        }
-                    }
-
-                    // Fallback: search all labels
-                    var labels = dialog.querySelectorAll('label.ytcp-checkbox-label');
-                    for (var label of labels) {
-                        var txt = (label.textContent || '').trim();
-                        if (txt.includes(targetName)) {
-                            label.click();
-                            return 'clicked_fallback_label';
-                        }
-                    }
-
-                    return 'not_found';
-                """, playlist_name)
-
-                print(f"  [PLAYLIST] Select: {playlist_result}")
-
-                # If playlist not found, create it via 2-step dropdown flow
-                if playlist_result == 'not_found':
-                    print(f"  [PLAYLIST] Criando '{playlist_name}'...")
-
-                    # Step 1: Click dropdown button
-                    driver.execute_script("""
-                        var dialog = document.querySelector('ytcp-playlist-dialog');
-                        if (!dialog) return;
-                        var dropBtn = dialog.querySelector('.new-playlist-button button');
-                        if (dropBtn) dropBtn.click();
-                    """)
-                    time.sleep(2)
-
-                    # Step 2: Click "Nova playlist" menu item
-                    clicked_item = driver.execute_script("""
-                        var item = document.querySelector('tp-yt-paper-item[test-id="new_playlist"]');
-                        if (item) { item.click(); return 'clicked'; }
-                        // Fallback: look for any menu item with "nova playlist" / "new playlist" text
-                        var items = document.querySelectorAll('tp-yt-paper-item, [role="menuitem"], [role="option"]');
-                        for (var i of items) {
-                            var txt = (i.textContent || '').toLowerCase();
-                            if (txt.includes('nova playlist') || txt.includes('new playlist')) {
-                                i.click();
-                                return 'clicked_fallback';
-                            }
-                        }
-                        return 'not_found';
-                    """)
-                    time.sleep(5)
-
-                    if clicked_item in ('clicked', 'clicked_fallback'):
-                        # Step 3: Focus title textbox with retry
-                        focused = 'no_creation_dialog'
-                        for retry in range(8):
-                            focused = driver.execute_script("""
-                                // Look inside ytcp-playlist-dialog for creation form
-                                var pd = document.querySelector('ytcp-playlist-dialog');
-                                if (pd) {
-                                    // The creation form has a textbox inside ytcp-form-input-container
-                                    var selectors = [
-                                        '#create-playlist-form #textbox',
-                                        '#create-playlist-form div[contenteditable]',
-                                        'ytcp-playlist-creation div[contenteditable]',
-                                        'ytcp-playlist-creation #textbox',
-                                        '.create-playlist-form #textbox',
-                                        'div[aria-label*="tulo"]',
-                                        'div[aria-label*="itle"]',
-                                        'div[aria-label*="Título"]',
-                                        'div[aria-label*="Title"]',
-                                        'div[aria-label*="playlist"]',
-                                        'ytcp-form-input-container div[contenteditable]',
-                                        '.input-container div[contenteditable]'
-                                    ];
-                                    for (var sel of selectors) {
-                                        var el = pd.querySelector(sel);
-                                        if (el && el.offsetParent !== null) {
-                                            el.focus();
-                                            el.click();
-                                            el.textContent = '';
-                                            return 'focused:' + sel;
-                                        }
-                                    }
-                                }
-
-                                // Fallback: any visible tp-yt-paper-dialog
-                                var dialogs = document.querySelectorAll('tp-yt-paper-dialog');
-                                for (var d of dialogs) {
-                                    if (d.offsetHeight > 50 && getComputedStyle(d).display !== 'none') {
-                                        var tb = d.querySelector('#textbox[contenteditable], div[contenteditable="true"], div[role="textbox"]');
-                                        if (tb && tb.offsetParent !== null) {
-                                            tb.focus();
-                                            tb.click();
-                                            tb.textContent = '';
-                                            return 'focused_dialog';
-                                        }
-                                    }
-                                }
-
-                                // Last fallback: any #textbox inside playlist area
-                                var allTb = document.querySelectorAll('ytcp-playlist-dialog #textbox, ytcp-playlist-dialog div[contenteditable="true"]');
-                                for (var el of allTb) {
-                                    if (el.offsetParent !== null && el.offsetHeight > 0 && el.offsetHeight < 100) {
-                                        el.focus();
-                                        el.click();
-                                        el.textContent = '';
-                                        return 'focused_last';
-                                    }
-                                }
-                                return 'no_creation_dialog';
-                            """)
-                            if 'focused' in str(focused):
-                                break
-                            time.sleep(2)  # wait and retry
-
-                        if 'focused' in str(focused):
-                            # Step 4: Type playlist name via JS + keyboard fallback
-                            time.sleep(0.5)
-                            # Set via JS first
-                            driver.execute_script("""
-                                var el = document.activeElement;
-                                if (el && el.contentEditable === 'true') {
-                                    el.textContent = '';
-                                    el.innerText = arguments[0];
-                                    el.dispatchEvent(new Event('input', {bubbles: true}));
-                                    el.dispatchEvent(new Event('change', {bubbles: true}));
-                                }
-                            """, playlist_name)
-                            # Also send via keyboard to ensure registration
-                            try:
-                                active = driver.switch_to.active_element
-                                active.send_keys(Keys.END)
-                            except Exception:
-                                pass
-                            time.sleep(2)
-
-                            # Step 4b: Set visibility to "Não listada" / "Unlisted"
-                            unlisted_result = driver.execute_script("""
-                                // Search in ytcp-playlist-dialog first (primary), then tp-yt-paper-dialog (fallback)
-                                var containers = [];
-                                var pd = document.querySelector('ytcp-playlist-dialog');
-                                if (pd) containers.push(pd);
-                                var dialogs = document.querySelectorAll('tp-yt-paper-dialog');
-                                for (var d of dialogs) {
-                                    if (d.offsetHeight > 50 && getComputedStyle(d).display !== 'none') {
-                                        containers.push(d);
-                                    }
-                                }
-                                for (var d of containers) {
-                                    var dropdowns = d.querySelectorAll('tp-yt-paper-dropdown-menu, ytcp-dropdown-trigger, ytcp-text-dropdown-trigger, .dropdown-trigger-text, #visibility-dropdown, [class*="visibility"]');
-                                    for (var dd of dropdowns) {
-                                        var txt = (dd.textContent || '').toLowerCase();
-                                        if (txt.includes('public') || txt.includes('pública') || txt.includes('público') ||
-                                            txt.includes('privad') || txt.includes('private') ||
-                                            txt.includes('unlisted') || txt.includes('não listada') || txt.includes('não listado')) {
-                                            var trigger = dd.querySelector('#trigger, .dropdown-trigger, button') || dd;
-                                            trigger.click();
-                                            return 'opened_dropdown';
-                                        }
-                                    }
-                                }
-                                return 'no_visibility_dropdown';
-                            """)
-                            print(f"  [PLAYLIST] Visibility dropdown: {unlisted_result}")
-                            time.sleep(3)
-
-                            if unlisted_result == 'opened_dropdown':
-                                set_unlisted = driver.execute_script("""
-                                    var items = document.querySelectorAll('tp-yt-paper-item, [role="option"], [role="menuitem"]');
-                                    for (var item of items) {
-                                        var txt = (item.textContent || '').toLowerCase();
-                                        if (txt.includes('unlisted') || txt.includes('não listada') ||
-                                            txt.includes('não listado') || txt.includes('nao listada') || txt.includes('nao listado')) {
-                                            item.click();
-                                            return 'set_unlisted';
-                                        }
-                                    }
-                                    return 'unlisted_not_found';
-                                """)
-                                print(f"  [PLAYLIST] Set unlisted: {set_unlisted}")
-                                time.sleep(2)
-
-                            # Step 5: Click "Criar" in the creation dialog
-                            created = driver.execute_script("""
-                                // Search in ytcp-playlist-dialog first (primary), then tp-yt-paper-dialog (fallback)
-                                var containers = [];
-                                var pd = document.querySelector('ytcp-playlist-dialog');
-                                if (pd) containers.push(pd);
-                                var dialogs = document.querySelectorAll('tp-yt-paper-dialog');
-                                for (var d of dialogs) {
-                                    if (d.offsetHeight > 50 && getComputedStyle(d).display !== 'none') {
-                                        containers.push(d);
-                                    }
-                                }
-                                for (var d of containers) {
-                                    var btns = d.querySelectorAll('ytcp-button, button, #create-playlist-button');
-                                    for (var b of btns) {
-                                        var txt = (b.textContent || '').trim().toLowerCase();
-                                        if (txt === 'criar' || txt === 'create') {
-                                            var disabled = b.hasAttribute('disabled') || b.getAttribute('aria-disabled') === 'true';
-                                            if (!disabled) { b.click(); return 'created'; }
-                                            return 'criar_disabled';
-                                        }
-                                    }
-                                }
-                                return 'no_criar_btn';
-                            """)
-                            time.sleep(5)
-                            print(f"  [PLAYLIST] Create: {created}")
-                            if created == 'created':
-                                print(f"  [OK] Playlist criada: {playlist_name}")
-                            else:
-                                print(f"  [AVISO] Falha ao criar playlist: {created}")
-                        else:
-                            print(f"  [AVISO] Nao focou no titulo: {focused}")
-                    else:
-                        print(f"  [AVISO] Menu 'Nova playlist' nao encontrado")
-                elif 'clicked' in str(playlist_result):
-                    print(f"  [OK] Playlist selecionada: {playlist_name}")
-                elif playlist_result == 'already_checked':
-                    print(f"  [OK] Playlist ja marcada: {playlist_name}")
-                else:
-                    print(f"  [AVISO] Playlist resultado: {playlist_result}")
-
-                # Close playlist dialog - "Concluir" / "Done"
-                time.sleep(2)
-                close_result = driver.execute_script("""
-                    var dialog = document.querySelector('ytcp-playlist-dialog');
-                    if (dialog) {
-                        var allElements = dialog.querySelectorAll('ytcp-button, button, div');
-                        for (var el of allElements) {
-                            var txt = (el.textContent || '').trim().toLowerCase();
-                            if (txt === 'concluir' || txt === 'done') {
-                                el.click();
-                                return 'closed: ' + txt;
-                            }
-                        }
-                    }
-
-                    // Fallback: any visible "Concluir"/"Done" that is NOT #done-button
-                    var allBtns = document.querySelectorAll('ytcp-button, button');
-                    for (var b of allBtns) {
-                        if (b.id === 'done-button') continue;
-                        if (b.offsetParent === null) continue;
-                        var txt = (b.textContent || '').trim().toLowerCase();
-                        if (txt === 'concluir' || txt === 'done') {
-                            b.click();
-                            return 'closed_fallback: ' + txt;
-                        }
-                    }
-                    return 'no_close_btn';
-                """)
-                print(f"  [PLAYLIST] Fechar dialog: {close_result}")
-                time.sleep(1)
-            else:
-                print(f"  [AVISO] Nao encontrou seletor de playlists: {opened}")
-        except Exception as e:
-            print(f"  [AVISO] Erro ao definir playlist: {str(e)[:60]}")
-
+    # NOTE: Playlist assignment is now handled AFTER upload via YouTube Data API
+    # (see main loop - api_add_video_to_playlist call after getting video_id)
+    # Old Selenium playlist logic removed — it caused duplicate playlists due to
+    # virtual scrolling in YouTube Studio not loading all playlists reliably.
     # Set "Not made for kids"
     try:
         time.sleep(1)
@@ -1092,7 +1114,7 @@ def upload_video_selenium(driver, filepath, title, description, known_ids, clien
     # Navigate: Details -> Video elements -> Checks -> Visibility (3 Next clicks)
     for step in range(3):
         try:
-            time.sleep(2)
+            time.sleep(1)
             driver.execute_script("""
                 var btn = document.querySelector('#next-button');
                 if (btn) btn.click();
@@ -1100,6 +1122,24 @@ def upload_video_selenium(driver, filepath, title, description, known_ids, clien
             time.sleep(1)
         except Exception:
             break
+
+    # Verify we reached the visibility page
+    time.sleep(1)
+    on_visibility_page = driver.execute_script("""
+        var radios = document.querySelectorAll('tp-yt-paper-radio-button');
+        for (var r of radios) {
+            var txt = (r.textContent || '').toLowerCase();
+            if (txt.includes('unlisted') || txt.includes('nao listado') || txt.includes('não listado') ||
+                txt.includes('public') || txt.includes('privat')) {
+                return true;
+            }
+        }
+        return false;
+    """)
+    if not on_visibility_page:
+        print("  [ERRO] Nao chegou na pagina de visibilidade - ABORTANDO upload")
+        close_upload_dialog(driver)
+        return None
 
     # Set visibility to Unlisted
     try:
@@ -1120,9 +1160,13 @@ def upload_video_selenium(driver, filepath, title, description, known_ids, clien
         if set_unlisted:
             print("  [OK] Visibilidade: nao listado")
         else:
-            print("  [AVISO] Nao encontrou opcao 'nao listado'")
+            print("  [ERRO] Nao encontrou opcao 'nao listado' - ABORTANDO upload para evitar video publico")
+            close_upload_dialog(driver)
+            return None
     except Exception:
-        print("  [AVISO] Nao conseguiu definir como nao listado")
+        print("  [ERRO] Nao conseguiu definir como nao listado - ABORTANDO upload para evitar video publico")
+        close_upload_dialog(driver)
+        return None
 
     # Wait for upload to complete
     print("  [UPLOAD] Aguardando upload completar...")
@@ -1220,8 +1264,9 @@ def upload_video_selenium(driver, filepath, title, description, known_ids, clien
 
             if status.get('error'):
                 err_lower = status['error'].lower()
-                if any(w in err_lower for w in ['limite', 'limit', 'cota', 'quota']) and \
-                   any(w in err_lower for w in ['diário', 'diario', 'daily', 'alcançado', 'alcancado', 'atingido', 'reached', 'exceeded']):
+                has_limit_word = any(w in err_lower for w in ['limite', 'limit', 'cota', 'quota'])
+                has_daily_word = any(w in err_lower for w in ['diário', 'diario', 'daily'])
+                if has_limit_word and has_daily_word:
                     print(f"  [LIMITE DIARIO] {status['error']}")
                     return "DAILY_LIMIT"
                 print(f"  [ERRO] YouTube reportou erro: {status['error']}")
@@ -1382,7 +1427,7 @@ def upload_video_selenium(driver, filepath, title, description, known_ids, clien
             time.sleep(2)
 
         print("  [POS-UPLOAD] Aguardando YouTube registrar o upload...")
-        time.sleep(5)
+        time.sleep(2)
 
         for post_wait in range(6):
             try:
@@ -1418,7 +1463,7 @@ def upload_video_selenium(driver, filepath, title, description, known_ids, clien
                 break
             time.sleep(3)
 
-        time.sleep(5)
+        time.sleep(2)
     else:
         print("  [AVISO] Botao 'Concluir' nao foi clicado!")
 
@@ -1518,26 +1563,78 @@ def close_upload_dialog(driver):
 
 def load_progress():
     if os.path.exists(PROGRESS_FILE):
-        with open(PROGRESS_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+        try:
+            with open(PROGRESS_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            if not isinstance(data, dict) or "uploaded" not in data:
+                print(f"[AVISO] {PROGRESS_FILE} com estrutura invalida, recriando...")
+                ts = int(time.time())
+                shutil.copy2(PROGRESS_FILE, f"{PROGRESS_FILE}.corrupted.{ts}")
+                return {"uploaded": {}, "playlists": {}}
+            return data
+        except json.JSONDecodeError:
+            ts = int(time.time())
+            corrupted_path = f"{PROGRESS_FILE}.corrupted.{ts}"
+            shutil.copy2(PROGRESS_FILE, corrupted_path)
+            print(f"[AVISO] {PROGRESS_FILE} corrompido! Backup salvo em {corrupted_path}")
+            # Try .bak file
+            bak_path = PROGRESS_FILE + ".bak"
+            if os.path.exists(bak_path):
+                try:
+                    with open(bak_path, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                    if isinstance(data, dict) and "uploaded" in data:
+                        print(f"[RECUPERADO] Usando backup {bak_path}")
+                        return data
+                except Exception:
+                    pass
+            return {"uploaded": {}, "playlists": {}}
     return {"uploaded": {}, "playlists": {}}
 
 
 def save_progress(progress):
-    with open(PROGRESS_FILE, "w", encoding="utf-8") as f:
+    tmp_path = PROGRESS_FILE + ".tmp"
+    bak_path = PROGRESS_FILE + ".bak"
+    with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(progress, f, indent=2, ensure_ascii=False)
+        f.flush()
+        os.fsync(f.fileno())
+    if os.path.exists(PROGRESS_FILE):
+        shutil.copy2(PROGRESS_FILE, bak_path)
+    os.replace(tmp_path, PROGRESS_FILE)
 
 
 def load_results():
     if os.path.exists(RESULTS_FILE):
-        with open(RESULTS_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+        try:
+            with open(RESULTS_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except json.JSONDecodeError:
+            ts = int(time.time())
+            corrupted_path = f"{RESULTS_FILE}.corrupted.{ts}"
+            shutil.copy2(RESULTS_FILE, corrupted_path)
+            print(f"[AVISO] {RESULTS_FILE} corrompido! Backup salvo em {corrupted_path}")
+            bak_path = RESULTS_FILE + ".bak"
+            if os.path.exists(bak_path):
+                try:
+                    with open(bak_path, "r", encoding="utf-8") as f:
+                        return json.load(f)
+                except Exception:
+                    pass
+            return {}
     return {}
 
 
 def save_results(results):
-    with open(RESULTS_FILE, "w", encoding="utf-8") as f:
+    tmp_path = RESULTS_FILE + ".tmp"
+    bak_path = RESULTS_FILE + ".bak"
+    with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
+        f.flush()
+        os.fsync(f.fileno())
+    if os.path.exists(RESULTS_FILE):
+        shutil.copy2(RESULTS_FILE, bak_path)
+    os.replace(tmp_path, RESULTS_FILE)
 
 
 def main():
@@ -1563,19 +1660,71 @@ def main():
         if vid and vid != "UPLOADED_NO_ID" and len(vid) == 11:
             known_ids.add(vid)
 
+    # Restore playlist failures from previous sessions
+    for pf in progress.get("playlist_failures", []):
+        _playlist_create_failed.add(pf)
+    if _playlist_create_failed:
+        print(f"[INFO] {len(_playlist_create_failed)} playlists com falha de sessoes anteriores")
+
     total_videos = sum(len(v) for v in client_videos.values())
     already_done = len(progress["uploaded"])
-    remaining = total_videos - already_done
+
+    # Contar pendentes pelas chaves que faltam, nao pela diferenca de totais:
+    # progress["uploaded"] pode conter chaves que nao existem mais no catalogo
+    # (ex.: cliente renumerado), inflando o total e mascarando videos pendentes.
+    pending_keys = [
+        f"{client_name_raw}_{i:03d}"
+        for client_name_raw, videos in client_videos.items()
+        for i in range(1, len(videos) + 1)
+        if f"{client_name_raw}_{i:03d}" not in progress["uploaded"]
+    ]
+    remaining = len(pending_keys)
+
+    # Indice de arquivos-fonte ja enviados (deduplicacao)
+    source_index = build_source_index(results)
+    skipped_duplicates = 0
+    print(f"[DEDUP] {len(source_index)} arquivos-fonte ja mapeados para videos existentes")
 
     print(f"[INFO] {len(known_ids)} video IDs ja conhecidos")
     print(f"Total de videos: {total_videos}")
     print(f"Ja enviados: {already_done}")
     print(f"Restantes: {remaining}")
+    if pending_keys:
+        print(f"Pendentes: {', '.join(fix_accents(k) for k in pending_keys[:10])}"
+              + (" ..." if len(pending_keys) > 10 else ""))
     print()
 
-    if already_done >= total_videos:
+    # Check ffprobe availability
+    try:
+        subprocess.run(["ffprobe", "-version"], capture_output=True, timeout=10)
+        print("[OK] ffprobe disponivel - pillarbox anti-Shorts ativo")
+    except (FileNotFoundError, subprocess.TimeoutExpired):
+        print("[AVISO] ffprobe NAO encontrado - videos verticais serao enviados sem pillarbox (podem virar Shorts)")
+
+    if remaining == 0:
         print("Todos os videos ja foram enviados!")
         return
+
+    # Initialize YouTube Data API for playlist management
+    print()
+    youtube_api = get_youtube_api()
+    if youtube_api:
+        # get_youtube_api() so monta o cliente; o token so e validado na 1a
+        # requisicao. Um refresh_token expirado (invalid_grant) estourava aqui e
+        # abortava o upload inteiro, apesar de existir fallback sem API.
+        try:
+            load_playlist_cache()
+        except Exception as e:
+            youtube_api = None
+            globals()["_youtube_api"] = None
+            globals()["_api_disabled"] = True
+            print(f"[AVISO] YouTube API falhou ({type(e).__name__}: {str(e)[:120]})")
+            print("        Seguindo SEM atribuicao de playlists.")
+            print("        Execute 'python youtube_playlist_manager.py --full' depois para corrigir.")
+    else:
+        print("[AVISO] YouTube API indisponivel - playlists NAO serao atribuidas durante o upload")
+        print("        Execute 'python youtube_playlist_manager.py --full' depois para corrigir.")
+    print()
 
     print("[AUTO] Iniciando em 3 segundos...")
     time.sleep(3)
@@ -1592,8 +1741,25 @@ def main():
 
     # Verify YouTube login
     print("[BROWSER] Verificando login no YouTube Studio...")
-    driver.get("https://studio.youtube.com")
-    time.sleep(5)
+    for nav_attempt in range(3):
+        try:
+            driver.get("https://studio.youtube.com")
+            time.sleep(5)
+            current_url = driver.current_url
+            break
+        except Exception as e:
+            if nav_attempt < 2:
+                print(f"  [RETRY] Navegacao falhou ({nav_attempt + 1}/3), recriando driver...")
+                try:
+                    driver.quit()
+                except Exception:
+                    pass
+                time.sleep(3)
+                driver = create_driver()
+                time.sleep(3)
+            else:
+                print(f"[ERRO] Chrome nao consegue acessar YouTube Studio: {e}")
+                sys.exit(1)
 
     current_url = driver.current_url
     if "accounts.google.com" in current_url or "studio.youtube.com" not in current_url:
@@ -1631,11 +1797,14 @@ def main():
         ch_name = channel_info.get('name', '')
         print(f"\n[CANAL] Nome: {ch_name or '(nao detectado)'}")
         if ch_name and 'savylla' not in ch_name.lower() and 'adryan' not in ch_name.lower():
-            print(f"  ATENCAO: Canal detectado = '{ch_name}' (esperado: Savylla Adryan)")
-            print(f"  Aguardando 30s para trocar de conta...")
-            time.sleep(30)
-    except Exception:
-        pass
+            print(f"  [ERRO FATAL] Canal detectado = '{ch_name}' (esperado: Savylla Adryan)")
+            print(f"  PARANDO para evitar upload no canal errado!")
+            driver.quit()
+            sys.exit(1)
+        elif not ch_name:
+            print(f"  [AVISO] Nome do canal nao detectado (pode ser problema de seletor)")
+    except Exception as e:
+        print(f"  [AVISO] Erro ao verificar canal: {str(e)[:60]}")
 
     print("[OK] YouTube Studio carregado!")
 
@@ -1679,6 +1848,8 @@ def main():
 
     print()
 
+    # Playlists are created inline during upload (Phase 0 removed - CSS selectors broken)
+
     # Process each client
     video_counter = 0
     success_count = 0
@@ -1686,14 +1857,15 @@ def main():
     MAX_ERRORS = 3
 
     try:
-        for client_name, videos in client_videos.items():
+        for client_name_raw, videos in client_videos.items():
+            client_name = fix_accents(client_name_raw)
             print(f"\n{'-' * 60}")
             print(f"  CLIENTE: {client_name} ({len(videos)} videos)")
             print(f"{'-' * 60}")
 
             client_remaining = 0
             for i, video in enumerate(videos, 1):
-                video_key = f"{client_name}_{i:03d}"
+                video_key = f"{client_name_raw}_{i:03d}"
                 if video_key not in progress["uploaded"]:
                     client_remaining += 1
 
@@ -1705,17 +1877,44 @@ def main():
 
             for i, video in enumerate(videos, 1):
                 url = video["url"]
-                talento = video.get("talento", "")
-                video_key = f"{client_name}_{i:03d}"
+                talento = fix_accents(video.get("talento", ""))
+                video_key = f"{client_name_raw}_{i:03d}"
 
                 if video_key in progress["uploaded"]:
                     continue
 
+                # Deduplicacao por arquivo-fonte: se este mp4 ja virou video no
+                # canal (mesmo sob outro cliente), reaproveita em vez de subir de
+                # novo. Sem isto o mesmo arquivo pode gerar 2 videos no YouTube.
+                skey = source_key(url)
+                if skey and skey in source_index:
+                    dup_id, dup_cliente = source_index[skey]
+                    print(f"\n[{video_counter + 1}/{total_videos}] {client_name} - {skey[:60]}")
+                    print(f"  [DUPLICADO] Arquivo ja enviado como {dup_id}"
+                          + (f" (cliente '{fix_accents(dup_cliente)}')" if dup_cliente != client_name_raw else ""))
+                    # garante que o video existente esteja na playlist DESTE cliente
+                    if get_youtube_api():
+                        pl_nome = f"Portfolio - {client_name}"
+                        pl_id = api_find_or_create_playlist(pl_nome)
+                        if pl_id and api_add_video_to_playlist(pl_id, dup_id):
+                            print(f"  [API] Vinculado a '{pl_nome}'")
+                    progress["uploaded"][video_key] = {
+                        "video_id": dup_id,
+                        "url": f"https://youtu.be/{dup_id}",
+                        "title": "(reaproveitado de upload anterior)",
+                        "client": client_name,
+                        "deduplicado_de": dup_cliente,
+                    }
+                    save_progress(progress)
+                    skipped_duplicates += 1
+                    continue
+
                 video_counter += 1
-                video_name = extract_video_name(url)
+                video_name = fix_accents(extract_video_name(url))
                 title = f"{client_name} - {video_name}"
                 if talento:
                     title = f"{client_name} - {talento} - {video_name}"
+                title = fix_accents(title)
                 if len(title) > 100:
                     title = title[:97] + "..."
 
@@ -1791,7 +1990,21 @@ def main():
                         "client": client_name,
                         "talento": talento
                     }
+                    progress["playlist_failures"] = sorted(_playlist_create_failed)
                     save_progress(progress)
+
+                    # Add video to client playlist via YouTube Data API
+                    if client_name and video_id and video_id != "UPLOADED_NO_ID":
+                        playlist_name = f"Portfolio - {client_name}"
+                        playlist_id = api_find_or_create_playlist(playlist_name)
+                        if playlist_id:
+                            if api_add_video_to_playlist(playlist_id, video_id):
+                                print(f"  [API] Video adicionado a '{playlist_name}'")
+                            else:
+                                print(f"  [API] Falha ao adicionar video a '{playlist_name}'")
+                        else:
+                            print(f"  [API] Nao conseguiu obter/criar playlist '{playlist_name}'")
+                            _playlist_create_failed.add(playlist_name)
 
                     if client_name not in results:
                         results[client_name] = []
@@ -1803,6 +2016,11 @@ def main():
                         "original_url": url
                     })
                     save_results(results)
+
+                    # Registra a fonte no indice para nao reenviar o mesmo
+                    # arquivo mais adiante na propria sessao.
+                    if skey and video_id and video_id != "UPLOADED_NO_ID":
+                        source_index.setdefault(skey, (video_id, client_name_raw))
 
                     # Clean up downloaded file
                     try:
@@ -1832,10 +2050,42 @@ def main():
         print("\n\n[INTERRUMPIDO] Progresso salvo.")
 
     finally:
+        # Retry failed playlists: create playlists and add videos that were uploaded but not assigned
+        if _playlist_create_failed:
+            print(f"\n[RETRY-PLAYLISTS] Tentando criar {len(_playlist_create_failed)} playlists que falharam...")
+            fixed_playlists = []
+            for playlist_name in list(_playlist_create_failed):
+                client_name = playlist_name.replace("Portfolio - ", "")
+                print(f"\n  [RETRY] {playlist_name}...")
+                time.sleep(10)  # wait before retrying to avoid rate limits
+                playlist_id = api_find_or_create_playlist(playlist_name)
+                if playlist_id:
+                    # Find all uploaded videos for this client and add them
+                    added = 0
+                    for vkey, vdata in progress.get("uploaded", {}).items():
+                        if vdata.get("client") == client_name:
+                            vid = vdata.get("video_id", "")
+                            if vid and vid != "UPLOADED_NO_ID":
+                                if api_add_video_to_playlist(playlist_id, vid):
+                                    added += 1
+                                time.sleep(1)
+                    print(f"  [OK] {playlist_name}: {added} videos adicionados")
+                    fixed_playlists.append(playlist_name)
+                else:
+                    print(f"  [FALHOU] {playlist_name}: ainda nao foi possivel criar")
+
+            for pn in fixed_playlists:
+                _playlist_create_failed.discard(pn)
+            progress["playlist_failures"] = sorted(_playlist_create_failed)
+            save_progress(progress)
+            if fixed_playlists:
+                print(f"  [RETRY-PLAYLISTS] {len(fixed_playlists)} playlists corrigidas!")
         total_uploaded = len(progress["uploaded"])
         print(f"\n{'=' * 60}")
         print(f"  RESUMO")
         print(f"  Videos enviados nesta sessao: {success_count}")
+        if skipped_duplicates:
+            print(f"  Duplicados evitados (fonte ja no canal): {skipped_duplicates}")
         print(f"  Total enviados: {total_uploaded}/{total_videos}")
         print(f"  Restantes: {total_videos - total_uploaded}")
         print(f"  Resultados em: {RESULTS_FILE}")
