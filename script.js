@@ -2172,6 +2172,10 @@ function ajustarProporcaoLocal(container) {
   const video = container.querySelector('video');
   if (!video) return;
   const aplicar = () => {
+    // O player é reaproveitado entre projetos. Se os metadados demoram e o
+    // usuário já abriu outro vídeo, este evento chega para um <video> que foi
+    // descartado — aplicar a proporção dele deformaria o que está na tela.
+    if (!container.contains(video)) return;
     if (video.videoWidth && video.videoHeight) {
       marcarProporcao(container, video.videoHeight > video.videoWidth);
     }
