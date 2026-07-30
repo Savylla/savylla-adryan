@@ -421,6 +421,15 @@ button { font-family: inherit; }
 
 .nav-overlay.active { opacity: 1; visibility: visible; }
 
+/* Com o menu aberto, os gatilhos precisam ficar acima do overlay (1500) para
+   continuar clicáveis — são os únicos controles de fechar.
+   O .header cria contexto de empilhamento (fixed + z-index), então o z-index do
+   burger só vale dentro dele: quem precisa subir é o próprio header. */
+body.nav-open .side-label--left { z-index: 2000; }
+body.nav-open .header { z-index: 2000; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; border-bottom: none; }
+body.nav-open .header__logo,
+body.nav-open .header nav { opacity: 0; pointer-events: none; }
+
 .nav-overlay__inner {
   display: flex;
   flex-direction: column;
@@ -552,6 +561,8 @@ button { font-family: inherit; }
   padding: 12px;
   min-width: 44px;
   min-height: 44px;
+  /* position relative: sem ela o z-index não se aplica e o overlay cobre o botão de fechar */
+  position: relative;
   z-index: 2000;
 }
 
@@ -956,6 +967,14 @@ button { font-family: inherit; }
   opacity: 0.78;
   filter: brightness(1.04);
   transition: opacity 0.4s var(--ease), filter 0.4s var(--ease), transform 0.45s var(--ease);
+}
+
+/* Vários logos trazem max-width/max-height inline em px (até 300px), maiores que
+   a célula — o inline vence o CSS e o logo era recortado. Este clamp limita ao
+   espaço real disponível sem alterar a proporção. */
+.clientes__logo[style] {
+  max-width: 100% !important;
+  max-height: 100% !important;
 }
 
 .clientes__item:hover .clientes__logo,
@@ -1826,6 +1845,12 @@ iframe.trabalhos__hover-video.active {
 .footer__social a {
   color: var(--text-dim);
   transition: color 0.3s;
+  /* O ícone tem 20px; sem esta área o alvo de toque fica abaixo do mínimo acessível. */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .footer__social a:hover { color: var(--accent); }
@@ -1938,7 +1963,9 @@ iframe.trabalhos__hover-video.active {
   background: rgba(0, 0, 0, 0.95);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s var(--ease), visibility 0.3s var(--ease);
+  /* visibility com delay só ao fechar: ao abrir precisa virar visible na hora,
+     senão o botão de fechar ainda não é focável e o focus() é ignorado. */
+  transition: opacity 0.3s var(--ease), visibility 0s linear 0.3s;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -1946,6 +1973,7 @@ iframe.trabalhos__hover-video.active {
 .lightbox.active {
   opacity: 1;
   visibility: visible;
+  transition: opacity 0.3s var(--ease), visibility 0s linear 0s;
 }
 
 .lightbox__backdrop {

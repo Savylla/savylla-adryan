@@ -1428,9 +1428,9 @@ const projetos = [
       "Ano": "2026"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/ba1147dc-71ec-432e-8241-269a00d68711/%5B02%5D%20%5BP03%5D%5BNN%5D%20CARREFOUR%20-%20Grupo%20Carrefour%20Brasil%20-%20JAN%202026_v5_23s.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559488947&amp;usg=AOvVaw0XnhHDgVh_NPtB9J8dZcPp", direcao: true, talento: "Ismael Gotthardi" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/361303e4-fb37-4346-a185-1e5b73a080d5/%5B04%5D%20%5BP03%5D%5BNN%5D%20CARREFOUR%20%20%20Grupo%20Carrefour%20Brasil%20-%20JAN%202026_v4_29s_Ismael%20Gotthardi.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559490297&amp;usg=AOvVaw3fedUcOjpR3cnxw0VaRVPJ", direcao: true, talento: "Ismael Gotthardi" },
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/44ae2aa7-a483-40cc-8243-c1563c79abd6/%5B02%5D%20%5BP04%5D%5BNN%5D%20CARREFOUR%20-%20Grupo%20Carrefour%20Brasil_v2_26s_Quezia_Fernandes.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559491541&amp;usg=AOvVaw3okcvWCbCtjYpZOndsEx32", direcao: true, talento: "Quézia Castro" }
+      { youtubeId: "d8HKRjdFRY8", direcao: true, talento: "Ismael Gotthardi" },
+      { youtubeId: "DWJ4yAtYNoQ", direcao: true, talento: "Ismael Gotthardi" },
+      { youtubeId: "nXS3De32PSY", direcao: true, talento: "Quézia Castro" }
     ],
     galeria: []
   },
@@ -1907,7 +1907,7 @@ const projetos = [
       "Ano": "2026"
     },
     videos: [
-      { url: "https://t9007008605.p.clickup-attachments.com/t9007008605/194dafb9-b753-4015-8d35-c593933b2073/%5B04%5D%20%5BP04%5D%5BNN%5D%20CARREFOUR%20%20%20Grupo%20Carrefour%20Brasil%20-%20FEV%202026_v2_25s_Quezia.mp4?view%3Dopen&amp;sa=D&amp;source=editors&amp;ust=1773169559492777&amp;usg=AOvVaw2PolPo9rbTIvLhkOw4Ijc8", direcao: true, talento: "Quézia Castro" }
+      { youtubeId: "-2EXpu6Y_RM", direcao: true, talento: "Quézia Castro" }
     ],
     galeria: []
   },
@@ -2016,25 +2016,39 @@ const sideMenu = document.getElementById('sideMenu');
 const navOverlay = document.getElementById('navOverlay');
 const burgerBtn = document.getElementById('burgerBtn');
 
-function toggleNav() {
-  const isOpen = !navOverlay.classList.contains('active');
-  navOverlay.classList.toggle('active');
-  burgerBtn.classList.toggle('active');
-  burgerBtn.setAttribute('aria-expanded', String(isOpen));
+// Ambos os gatilhos (burger no mobile, rótulo lateral no desktop) controlam o
+// mesmo overlay, então os dois precisam refletir o estado para leitores de tela.
+function setNavState(isOpen) {
+  navOverlay.classList.toggle('active', isOpen);
+  burgerBtn.classList.toggle('active', isOpen);
+  document.body.classList.toggle('nav-open', isOpen);
   navOverlay.setAttribute('aria-hidden', String(!isOpen));
+  [burgerBtn, sideMenu].forEach(btn => {
+    btn.setAttribute('aria-expanded', String(isOpen));
+    btn.setAttribute('aria-label', isOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+  });
   document.body.style.overflow = isOpen ? 'hidden' : '';
 }
 
+function toggleNav() {
+  setNavState(!navOverlay.classList.contains('active'));
+}
+
 function closeNav() {
-  navOverlay.classList.remove('active');
-  burgerBtn.classList.remove('active');
-  burgerBtn.setAttribute('aria-expanded', 'false');
-  navOverlay.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
+  setNavState(false);
 }
 
 sideMenu.addEventListener('click', toggleNav);
 burgerBtn.addEventListener('click', toggleNav);
+
+// Sem estas duas saídas o overlay vira uma armadilha: ele cobre a tela inteira
+// e não tem botão de fechar próprio.
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && navOverlay.classList.contains('active')) closeNav();
+});
+navOverlay.addEventListener('click', e => {
+  if (!e.target.closest('.nav-overlay__link')) closeNav();
+});
 
 navOverlay.querySelectorAll('.nav-overlay__link').forEach(link => {
   link.addEventListener('click', (e) => {
@@ -2097,6 +2111,15 @@ filtros.forEach(btn => {
 const modal = document.getElementById('projetoModal');
 const modalClose = document.getElementById('modalClose');
 
+// A CSP (media-src 'self' blob:) bloqueia mp4 de terceiros, então um vídeo com
+// URL externa só renderiza um player vazio. Melhor omiti-lo até ser re-hospedado.
+function videoReproduzivel(v) {
+  if (!v) return false;
+  if (v.youtubeId) return true;
+  if (!v.url) return false;
+  return !/^https?:\/\//i.test(v.url) || v.url.startsWith(location.origin);
+}
+
 function openModal(id) {
   const p = projetos.find(x => x.id === id);
   if (!p) return;
@@ -2107,7 +2130,7 @@ function openModal(id) {
 
   const videoEl = document.getElementById('modalVideo');
   // Filter videos based on active filter
-  const allVideos = p.videos && p.videos.length > 0 ? p.videos : [];
+  const allVideos = p.videos && p.videos.length > 0 ? p.videos.filter(videoReproduzivel) : [];
   const displayVideos = activeFilter === 'direcao' && allVideos.length > 0
     ? allVideos.filter(v => v.direcao)
     : allVideos;
@@ -2131,8 +2154,9 @@ function openModal(id) {
     videoEl.style.display = '';
     videoEl.innerHTML = `<img src="${sanitizeURL(p.galeria[0])}" alt="${escapeHTML(p.nome)}" style="width:100%;height:100%;object-fit:cover;">`;
   } else {
-    videoEl.style.display = '';
-    videoEl.innerHTML = `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--text-muted)"><p>Video em breve</p></div>`;
+    // Sem mídia exibível: esconder o container em vez de deixar um bloco vazio
+    videoEl.style.display = 'none';
+    videoEl.innerHTML = '';
   }
 
   const fichaEl = document.getElementById('modalFicha');
@@ -2274,7 +2298,11 @@ function openModal(id) {
     // Image gallery for non-video projects
     const galeriaList = p.galeria || [];
     const galeriaTitle = document.getElementById('galeriaTitle');
-    if (galeriaTitle) galeriaTitle.textContent = `Galeria (${galeriaList.length})`;
+    if (galeriaTitle) {
+      galeriaTitle.textContent = `Galeria (${galeriaList.length})`;
+      // Não anunciar uma galeria vazia
+      galeriaTitle.style.display = galeriaList.length ? '' : 'none';
+    }
 
     // Use photo-optimized grid for photography projects
     if (p.categoria === 'fotografia' && galeriaList.length > 3) {
@@ -2345,7 +2373,13 @@ function openModalWithFocus(id) {
     history.pushState({ modalId: id }, '', `#projeto-${id}`);
   }
   if (document.startViewTransition) {
-    document.startViewTransition(() => openModal(id));
+    const vt = document.startViewTransition(() => openModal(id));
+    // O foco definido dentro do callback da view transition não sobrevive ao
+    // clique de mouse que abriu o modal — reaplicar depois que ela termina.
+    vt.finished.catch(() => {}).then(() => {
+      const closeBtn = document.getElementById('modalClose');
+      if (closeBtn && modal.classList.contains('active')) closeBtn.focus();
+    });
   } else {
     openModal(id);
   }
@@ -2410,10 +2444,11 @@ items.forEach(item => {
   const projeto = projetos.find(x => x.id === id);
   if (!projeto) return;
 
-  const hasVideos = (projeto.videos && projeto.videos.length > 0) || projeto.youtubePlaylist || projeto.youtubeGaleria;
-  if (!hasVideos || !projeto.videos || !projeto.videos.length) return;
+  const videosOk = (projeto.videos || []).filter(videoReproduzivel);
+  const hasVideos = videosOk.length > 0 || projeto.youtubePlaylist || projeto.youtubeGaleria;
+  if (!hasVideos || !videosOk.length) return;
 
-  const firstVideo = projeto.videos[0];
+  const firstVideo = videosOk[0];
   if (!firstVideo.url && !firstVideo.youtubeId) return;
 
   let hoverVideo = null;
@@ -2536,6 +2571,13 @@ function trapFocus(container, e) {
   if (!focusables.length) return;
   const first = focusables[0];
   const last = focusables[focusables.length - 1];
+  // Se o foco escapou do diálogo (ou nunca entrou), traz de volta em vez de
+  // deixar o Tab percorrer a página por trás do overlay.
+  if (!container.contains(document.activeElement)) {
+    (e.shiftKey ? last : first).focus();
+    e.preventDefault();
+    return;
+  }
   if (e.shiftKey && document.activeElement === first) {
     last.focus();
     e.preventDefault();
@@ -2710,16 +2752,28 @@ function showProjectPicker(projs) {
   document.body.appendChild(picker);
   requestAnimationFrame(() => picker.classList.add('active'));
 
-  picker.querySelector('.picker-backdrop').addEventListener('click', () => {
+  const fecharPicker = () => {
     picker.classList.remove('active');
+    document.removeEventListener('keydown', onPickerKeydown);
     setTimeout(() => picker.remove(), 300);
-  });
+    if (lastFocusedElement) lastFocusedElement.focus();
+  };
+  function onPickerKeydown(e) {
+    if (e.key === 'Escape') fecharPicker();
+    else trapFocus(picker, e);
+  }
+  document.addEventListener('keydown', onPickerKeydown);
+
+  picker.querySelector('.picker-backdrop').addEventListener('click', fecharPicker);
+  const primeiraOpcao = picker.querySelector('.picker-option');
+  if (primeiraOpcao) primeiraOpcao.focus();
 
   picker.querySelectorAll('.picker-option').forEach(btn => {
     btn.addEventListener('click', () => {
       picker.classList.remove('active');
+      document.removeEventListener('keydown', onPickerKeydown);
       setTimeout(() => picker.remove(), 300);
-      openModal(parseInt(btn.dataset.id));
+      openModalWithFocus(parseInt(btn.dataset.id));
     });
   });
 }
@@ -2733,8 +2787,11 @@ if (contatoForm) {
     e.preventDefault();
     const form = e.target;
     const btn = form.querySelector('button[type="submit"]');
+    const status = document.getElementById('formStatus');
     const originalText = btn.textContent;
-    btn.textContent = 'Enviando...';
+    // Espelha o texto do botão na região aria-live para leitores de tela.
+    const anunciar = (msg) => { btn.textContent = msg; if (status) status.textContent = msg; };
+    anunciar('Enviando...');
     btn.disabled = true;
 
     const controller = new AbortController();
@@ -2750,7 +2807,7 @@ if (contatoForm) {
       clearTimeout(timeout);
 
       if (res.ok) {
-        btn.textContent = 'Mensagem enviada!';
+        anunciar('Mensagem enviada!');
         form.reset();
         setTimeout(() => {
           btn.textContent = originalText;
@@ -2762,11 +2819,11 @@ if (contatoForm) {
     } catch (err) {
       clearTimeout(timeout);
       if (err.name === 'AbortError') {
-        btn.textContent = 'Tempo esgotado. Tente novamente.';
+        anunciar('Tempo esgotado. Tente novamente.');
       } else if (!navigator.onLine) {
-        btn.textContent = 'Sem conexão. Verifique sua internet.';
+        anunciar('Sem conexão. Verifique sua internet.');
       } else {
-        btn.textContent = 'Erro ao enviar. Tente novamente.';
+        anunciar('Erro ao enviar. Tente novamente.');
       }
       btn.disabled = false;
       setTimeout(() => { btn.textContent = originalText; }, 3000);
@@ -2789,12 +2846,20 @@ let lbIndex = 0;
 let touchStartX = 0;
 let touchEndX = 0;
 
+// Clicar numa <img> (não focável) faz o Chromium limpar o foco para o body
+// depois dos handlers — o que anularia o focus() do lightbox. Suprimir o
+// comportamento padrão do mousedown preserva o foco que definimos no JS.
+document.addEventListener('mousedown', e => {
+  if (e.target.closest('.modal__galeria img, .modal__video-card')) e.preventDefault();
+});
+
 function openLightbox(images, startIndex) {
   lbImages = images;
   lbIndex = startIndex || 0;
   showLightboxImage();
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
+  if (lightboxClose) lightboxClose.focus();
 }
 
 function closeLightbox() {

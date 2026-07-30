@@ -36,8 +36,8 @@
   <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), camera=(), microphone=(), geolocation=(), payment=(), usb=()">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon.ico">
+  <!-- Favicon: SVG inline (assets/favicon.ico não existe e retornava 404) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1220'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-style='italic' text-anchor='middle' fill='%236ba3e0'%3ES%3C/text%3E%3C/svg%3E">
 
   <!-- Preconnect & DNS prefetch -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1150,6 +1150,8 @@
           <textarea id="campo-mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" autocomplete="off" required></textarea>
         </div>
         <button type="submit" class="btn">Enviar Mensagem</button>
+        <!-- Sem isto o resultado do envio só existia como texto do botão, que leitores de tela não anunciam -->
+        <p id="formStatus" class="sr-only" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
