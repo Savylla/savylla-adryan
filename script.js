@@ -2024,6 +2024,7 @@ window.addEventListener('scroll', () => {
 const sideMenu = document.getElementById('sideMenu');
 const navOverlay = document.getElementById('navOverlay');
 const burgerBtn = document.getElementById('burgerBtn');
+const navClose = document.getElementById('navClose');
 
 // Ambos os gatilhos (burger no mobile, rótulo lateral no desktop) controlam o
 // mesmo overlay, então os dois precisam refletir o estado para leitores de tela.
@@ -2036,6 +2037,9 @@ function setNavState(isOpen) {
     btn.setAttribute('aria-expanded', String(isOpen));
     btn.setAttribute('aria-label', isOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
   });
+  // O rótulo lateral é o gatilho do desktop; deixá-lo escrito "MENU" com o
+  // overlay aberto escondia o único jeito de fechar (o burger some acima de 768px).
+  sideMenu.textContent = isOpen ? 'FECHAR' : 'MENU';
   document.body.style.overflow = isOpen ? 'hidden' : '';
 }
 
@@ -2044,11 +2048,19 @@ function toggleNav() {
 }
 
 function closeNav() {
+  // O overlay vira visibility:hidden ao fechar; se o foco estivesse dentro dele
+  // (botão de fechar, por exemplo) ele cairia no body e o teclado perderia o lugar.
+  const focoDentro = navOverlay.contains(document.activeElement);
   setNavState(false);
+  if (focoDentro) {
+    const gatilho = burgerBtn.offsetParent !== null ? burgerBtn : sideMenu;
+    gatilho.focus({ preventScroll: true });
+  }
 }
 
 sideMenu.addEventListener('click', toggleNav);
 burgerBtn.addEventListener('click', toggleNav);
+if (navClose) navClose.addEventListener('click', closeNav);
 
 // Sem estas duas saídas o overlay vira uma armadilha: ele cobre a tela inteira
 // e não tem botão de fechar próprio.
@@ -2129,6 +2141,45 @@ filtros.forEach(btn => {
 const modal = document.getElementById('projetoModal');
 const modalClose = document.getElementById('modalClose');
 
+// Proporção do player
+// -------------------
+// A moldura padrão é 16:9. Conteúdo 9:16 dentro dela fica espremido entre duas
+// tarjas pretas, então o container encolhe para 9:16 quando o vídeo é vertical.
+//
+// As duas listas são geradas offline por `probe_aspect_videos.py` — rode-o de
+// novo depois de adicionar vídeos ao portfólio. O YouTube depende disso: o
+// iframe não expõe as dimensões e a CSP (connect-src 'self') impede consultar a
+// API pelo navegador. Para mp4 local é só para não piscar: o navegador também
+// descobre sozinho, mas só quando os metadados chegam, e aí a moldura já entrou
+// em 16:9 e muda de tamanho na frente do usuário.
+const VIDEOS_YT_VERTICAIS = new Set([
+  "C8LcFan2gAs"
+]);
+
+const VIDEOS_LOCAIS_VERTICAIS = new Set([
+  "assets/projetos/ia-projeto-1/video.mp4",
+  "assets/projetos/ia-projeto-2/video.mp4",
+  "assets/projetos/oscar/video-1.mp4"
+]);
+
+function marcarProporcao(container, ehVertical) {
+  container.classList.toggle('modal__video--vertical', !!ehVertical);
+}
+
+// Rede de segurança para mp4 fora da lista acima (vídeo novo, lista desatualizada):
+// o <video> conhece as próprias dimensões assim que os metadados chegam.
+function ajustarProporcaoLocal(container) {
+  const video = container.querySelector('video');
+  if (!video) return;
+  const aplicar = () => {
+    if (video.videoWidth && video.videoHeight) {
+      marcarProporcao(container, video.videoHeight > video.videoWidth);
+    }
+  };
+  if (video.readyState >= 1) aplicar();
+  else video.addEventListener('loadedmetadata', aplicar, { once: true });
+}
+
 // A CSP (media-src 'self' blob:) bloqueia mp4 de terceiros, então um vídeo com
 // URL externa só renderiza um player vazio. Melhor omiti-lo até ser re-hospedado.
 function videoReproduzivel(v) {
@@ -2154,15 +2205,21 @@ function openModal(id) {
     : allVideos;
   const hasVideos = displayVideos.length > 0;
 
+  marcarProporcao(videoEl, false);
+
   if (p.videoId && !p.videoId.startsWith('VIDEO_ID') && p.videoId !== '') {
     videoEl.style.display = '';
     videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(p.videoId)}" params="rel=0&modestbranding=1&mute=1" style="width:100%;height:100%;"></lite-youtube>`;
+    marcarProporcao(videoEl, VIDEOS_YT_VERTICAIS.has(p.videoId));
   } else if (hasVideos) {
     videoEl.style.display = '';
     if (displayVideos[0].youtubeId) {
       videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(displayVideos[0].youtubeId)}" params="rel=0&modestbranding=1&mute=1" style="width:100%;height:100%;"></lite-youtube>`;
+      marcarProporcao(videoEl, VIDEOS_YT_VERTICAIS.has(displayVideos[0].youtubeId));
     } else {
       videoEl.innerHTML = `<video controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${sanitizeURL(displayVideos[0].url)}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
+      marcarProporcao(videoEl, VIDEOS_LOCAIS_VERTICAIS.has(displayVideos[0].url));
+      ajustarProporcaoLocal(videoEl);
     }
     if (displayVideos[0].talento) {
       videoEl.insertAdjacentHTML('beforeend', `<div class="modal__video-talent">${escapeHTML(displayVideos[0].talento)}</div>`);
@@ -2277,8 +2334,11 @@ function openModal(id) {
       card.addEventListener('click', () => {
         if (v.youtubeId) {
           videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(v.youtubeId)}" params="rel=0&modestbranding=1&mute=1" style="width:100%;height:100%;"></lite-youtube>`;
+          marcarProporcao(videoEl, VIDEOS_YT_VERTICAIS.has(v.youtubeId));
         } else {
           videoEl.innerHTML = `<video controls autoplay playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${sanitizeURL(v.url)}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
+          marcarProporcao(videoEl, VIDEOS_LOCAIS_VERTICAIS.has(v.url));
+          ajustarProporcaoLocal(videoEl);
         }
         if (v.talento) {
           videoEl.insertAdjacentHTML('beforeend', `<div class="modal__video-talent">${escapeHTML(v.talento)}</div>`);
@@ -2722,6 +2782,11 @@ if ('IntersectionObserver' in window) {
 document.querySelectorAll('.clientes__item').forEach(item => {
   item.setAttribute('tabindex', '0');
   item.setAttribute('role', 'button');
+  // Sem isto o nome acessível era só a marca ("Drogasil"), sem dizer o que o
+  // clique faz — o equivalente, para leitores de tela, do "Ver projeto" que o
+  // hover mostra.
+  const marca = item.dataset.name;
+  if (marca) item.setAttribute('aria-label', `Ver projeto — ${marca}`);
 
   const handleClientClick = () => {
     lastFocusedElement = document.activeElement;
@@ -3008,7 +3073,6 @@ lightboxTrack.addEventListener('touchend', (e) => {
 // "Carregar Mais" — limita projetos visíveis
 // ----------------------------------------
 (function() {
-  const INITIAL_VISIBLE = PROJETOS_POR_PAGINA;
   const grid = document.getElementById('trabalhosGrid');
   const loadMoreBtn = document.getElementById('loadMoreBtn');
   const loadMoreWrap = loadMoreBtn ? loadMoreBtn.parentElement : null;
@@ -3016,49 +3080,54 @@ lightboxTrack.addEventListener('touchend', (e) => {
 
   const allItems = Array.from(grid.querySelectorAll('.trabalhos__item'));
 
+  // Um clique só despejava os 44 projetos de uma vez. Agora o botão revela um
+  // lote por vez e diz quantos ainda faltam.
+  let limite = PROJETOS_POR_PAGINA;
+
+  const doFiltroAtual = () => allItems.filter(i => !i.classList.contains('hidden'));
+
   function applyLimit() {
-    let visibleCount = 0;
+    const visiveis = doFiltroAtual();
+    visiveis.forEach((item, i) => { item.style.display = i < limite ? '' : 'none'; });
     allItems.forEach(item => {
-      if (item.classList.contains('hidden')) return;
-      visibleCount++;
-      if (visibleCount > INITIAL_VISIBLE && !grid.dataset.expanded) {
-        item.style.display = 'none';
-      } else {
-        item.style.display = '';
-      }
+      if (item.classList.contains('hidden')) item.style.display = 'none';
     });
-    if (loadMoreWrap) {
-      loadMoreWrap.classList.toggle('hidden', visibleCount <= INITIAL_VISIBLE || grid.dataset.expanded === 'true');
+
+    const restantes = visiveis.length - limite;
+    if (loadMoreWrap) loadMoreWrap.classList.toggle('hidden', restantes <= 0);
+    if (restantes > 0) {
+      const lote = Math.min(restantes, PROJETOS_POR_PAGINA);
+      loadMoreBtn.textContent = `Carregar mais ${lote} (${restantes} restantes)`;
     }
   }
 
   applyLimit();
 
   loadMoreBtn.addEventListener('click', () => {
-    const visiveisAntes = allItems.filter(i => !i.classList.contains('hidden') && i.style.display !== 'none');
-    grid.dataset.expanded = 'true';
-    allItems.forEach(item => {
-      if (!item.classList.contains('hidden')) item.style.display = '';
-    });
-    if (loadMoreWrap) loadMoreWrap.classList.add('hidden');
+    const antes = limite;
+    limite += PROJETOS_POR_PAGINA;
+    applyLimit();
 
-    // O botão some ao ser clicado: sem isto o foco cai no body e o usuário de
-    // teclado perde o lugar. Manda o foco para o primeiro projeto revelado.
-    const primeiroNovo = allItems.filter(i => !i.classList.contains('hidden'))[visiveisAntes.length];
+    const visiveis = doFiltroAtual();
+    // Sem isto o foco cai no body quando o botão some no último lote — e mesmo
+    // quando ele fica, o teclado perde o lugar na grade.
+    const primeiroNovo = visiveis[antes];
     if (primeiroNovo) {
       primeiroNovo.setAttribute('tabindex', primeiroNovo.getAttribute('tabindex') || '0');
       primeiroNovo.focus({ preventScroll: true });
     }
     if (typeof announceStatus === 'function') {
-      const total = allItems.filter(i => !i.classList.contains('hidden')).length;
-      announceStatus(`Todos os ${total} projetos foram carregados.`);
+      const exibidos = Math.min(limite, visiveis.length);
+      announceStatus(exibidos >= visiveis.length
+        ? `Todos os ${visiveis.length} projetos foram carregados.`
+        : `Exibindo ${exibidos} de ${visiveis.length} projetos.`);
     }
   });
 
   // Re-apply on filter change
   filtros.forEach(btn => {
     btn.addEventListener('click', () => {
-      delete grid.dataset.expanded;
+      limite = PROJETOS_POR_PAGINA;
       setTimeout(applyLimit, 10);
     });
   });

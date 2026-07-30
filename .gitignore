@@ -68,6 +68,7 @@ pdf_portfolio_entries.json
 fix_*report.json
 playlist_manager_report.json
 channel_state.json
+aspect_map.json
 
 # Validation screenshots (local only)
 hover-*.png

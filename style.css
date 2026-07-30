@@ -434,10 +434,37 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   display: flex;
   flex-direction: column;
   gap: 4px;
-  text-align: center;
   justify-content: center;
   height: 100%;
   padding: 60px 0;
+}
+
+/* Único controle de fechar no desktop era o rótulo lateral, que continua
+   escrito "MENU" com o overlay aberto — parecia que a página tinha travado. */
+.nav-overlay__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.3s var(--ease), border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.nav-overlay__close svg { width: 22px; height: 22px; }
+
+.nav-overlay__close:hover,
+.nav-overlay__close:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: rotate(90deg);
 }
 
 .nav-overlay__link {
@@ -446,6 +473,10 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   font-weight: 600;
   color: var(--text);
   position: relative;
+  /* Os links esticam à largura do bloco; com o texto centralizado "Início" e
+     "Clientes" saíam desalinhados entre si enquanto a numeração 01–05 (::before,
+     ancorada na borda esquerda) ficava reta — parecia defeito. */
+  text-align: left;
   padding: 6px 0;
   transition: color 0.3s var(--ease), transform 0.3s var(--ease);
   opacity: 0;
@@ -936,6 +967,7 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
 }
 
 .clientes__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -998,6 +1030,43 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
 
 .clientes__item:hover .clientes__fallback {
   color: var(--accent);
+}
+
+/* Cada logo abre o projeto daquela marca, mas nada na tela dizia isso. */
+.clientes__item::after {
+  content: 'Ver projeto';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5px 0 6px;
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: linear-gradient(to top, rgba(7, 13, 24, 0.92), rgba(7, 13, 24, 0));
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+  pointer-events: none;
+}
+
+.clientes__item:hover::after,
+.clientes__item:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sem hover o rótulo nunca apareceria; num toque ele só piscaria antes do modal
+   abrir. Melhor deixar o logo respirar e confiar no cursor/role=button. */
+@media (hover: none) {
+  .clientes__item::after { content: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clientes__item::after { transition: none; }
 }
 
 @media (max-width: 1024px) {
@@ -1278,7 +1347,26 @@ iframe.trabalhos__hover-video.active {
   background: var(--bg-card);
 }
 
+/* Conteúdo 9:16 numa moldura 16:9 vira duas tarjas pretas com o vídeo espremido
+   no meio. A proporção real é detectada em runtime (VIDEOS_YT_VERTICAIS para o
+   YouTube, loadedmetadata para mp4 local) e o container encolhe para 9:16.
+   width:fit-content é o que faz o aspect-ratio derivar a largura da altura —
+   com width:auto o bloco esticaria e a proporção seria ignorada. */
+.modal__video--vertical {
+  /* Largura derivada da altura máxima: assim a proporção 9:16 se mantém mesmo
+     quando a tela é estreita demais para a altura pretendida. */
+  width: min(100%, calc(min(78vh, 760px) * 9 / 16));
+  aspect-ratio: 9/16;
+  margin-inline: auto;
+  background: #000;
+}
+
 .modal__video iframe { width: 100%; height: 100%; border: none; }
+
+/* <video> e <img> são inline por padrão: o espaço do descender da linha somava
+   ~7px à altura do container e quebrava a proporção exata. */
+.modal__video > video,
+.modal__video > img { display: block; }
 
 /* Lite-youtube embed: preenche containers (override do max-width:720px e ::after 16:9 hack) */
 .modal__video lite-youtube,
@@ -1437,9 +1525,10 @@ iframe.trabalhos__hover-video.active {
 }
 
 /* Video talent label */
+/* Fica no topo: embaixo cobria a barra de controles nativa do <video>. */
 .modal__video-talent {
   position: absolute;
-  bottom: 12px;
+  top: 12px;
   left: 12px;
   padding: 6px 14px;
   background: rgba(7, 13, 24, 0.85);
@@ -1795,10 +1884,18 @@ iframe.trabalhos__hover-video.active {
   gap: 16px;
 }
 
+/* Antes só existia placeholder: ao começar a digitar o rótulo sumia e, num
+   formulário de 4 campos, dava para perder a conta de qual campo era qual.
+   O rótulo agora sobe para cima do campo em vez de desaparecer. */
+.contato__field {
+  position: relative;
+  padding-top: 18px;
+}
+
 .contato__field input,
 .contato__field textarea {
   width: 100%;
-  padding: 16px 0;
+  padding: 12px 0;
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -1811,9 +1908,30 @@ iframe.trabalhos__hover-video.active {
   outline: none;
 }
 
+/* O placeholder é um espaço em branco só para :placeholder-shown funcionar;
+   quem mostra o texto é a label. */
 .contato__field input::placeholder,
 .contato__field textarea::placeholder {
+  color: transparent;
+}
+
+.contato__field-label {
+  position: absolute;
+  left: 0;
+  top: 30px;
   color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  pointer-events: none;
+  transform-origin: left top;
+  transition: transform 0.25s var(--ease), color 0.25s var(--ease);
+}
+
+.contato__field input:focus ~ .contato__field-label,
+.contato__field textarea:focus ~ .contato__field-label,
+.contato__field input:not(:placeholder-shown) ~ .contato__field-label,
+.contato__field textarea:not(:placeholder-shown) ~ .contato__field-label {
+  transform: translateY(-28px) scale(0.72);
+  color: var(--accent);
 }
 
 .contato__field input:focus,
@@ -1824,6 +1942,10 @@ iframe.trabalhos__hover-video.active {
 .contato__field textarea {
   resize: vertical;
   min-height: 100px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contato__field-label { transition: none; }
 }
 
 /* ========================================
@@ -1966,6 +2088,10 @@ iframe.trabalhos__hover-video.active {
   .footer__inner { flex-direction: column; gap: 8px; text-align: center; }
 
   .nav-overlay__link::before { display: none; }
+
+  /* Aqui o burger já vira um × por cima do overlay, no mesmo canto — os dois
+     botões se sobreporiam. O botão dedicado é só para desktop. */
+  .nav-overlay__close { display: none; }
 }
 
 /* Coluna única só em telas realmente estreitas. Em tablet retrato (768px) duas

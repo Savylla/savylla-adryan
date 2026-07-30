@@ -128,6 +128,9 @@
 
   <!-- Full-screen Navigation Overlay -->
   <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <button class="nav-overlay__close" id="navClose" type="button" aria-label="Fechar menu de navegação">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
     <nav class="nav-overlay__inner">
       <a href="#hero" class="nav-overlay__link" data-index="01">Início</a>
       <a href="#sobre" class="nav-overlay__link" data-index="02">Sobre</a>
@@ -1142,21 +1145,24 @@
         <input type="hidden" name="_captcha" value="true">
         <input type="hidden" name="_template" value="table">
         <input type="text" name="_honey" style="display:none">
+        <!-- Label depois do campo: o rótulo flutuante depende do seletor irmão
+             `input:not(:placeholder-shown) ~ label`. O placeholder é um espaço
+             em branco (invisível via CSS) só para esse seletor funcionar. -->
         <div class="contato__field">
-          <label for="campo-nome" class="sr-only">Seu nome</label>
-          <input type="text" id="campo-nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
+          <input type="text" id="campo-nome" name="nome" placeholder=" " autocomplete="name" required>
+          <label for="campo-nome" class="contato__field-label">Seu nome</label>
         </div>
         <div class="contato__field">
-          <label for="campo-email" class="sr-only">Seu email</label>
-          <input type="email" id="campo-email" name="email" placeholder="Seu email" autocomplete="email" inputmode="email" required>
+          <input type="email" id="campo-email" name="email" placeholder=" " autocomplete="email" inputmode="email" required>
+          <label for="campo-email" class="contato__field-label">Seu email</label>
         </div>
         <div class="contato__field">
-          <label for="campo-assunto" class="sr-only">Assunto</label>
-          <input type="text" id="campo-assunto" name="assunto" placeholder="Assunto" autocomplete="off">
+          <input type="text" id="campo-assunto" name="assunto" placeholder=" " autocomplete="off">
+          <label for="campo-assunto" class="contato__field-label">Assunto</label>
         </div>
         <div class="contato__field">
-          <label for="campo-mensagem" class="sr-only">Sua mensagem</label>
-          <textarea id="campo-mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" autocomplete="off" required></textarea>
+          <textarea id="campo-mensagem" name="mensagem" placeholder=" " rows="5" autocomplete="off" required></textarea>
+          <label for="campo-mensagem" class="contato__field-label">Sua mensagem</label>
         </div>
         <button type="submit" class="btn">Enviar Mensagem</button>
         <!-- Sem isto o resultado do envio só existia como texto do botão, que leitores de tela não anunciam -->
