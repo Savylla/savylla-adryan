@@ -79,20 +79,6 @@ When an agent is active:
 3. **Track changes** - Maintain the File List section in the story
 4. **Follow criteria** - Implement exactly what the acceptance criteria specify
 
-### Code Standards
-- Write clean, self-documenting code
-- Follow existing patterns in the codebase
-- Include comprehensive error handling
-- Add unit tests for all new functionality
-- Use TypeScript/JavaScript best practices
-
-### Testing Requirements
-- Run all tests before marking tasks complete
-- Ensure linting passes: `npm run lint`
-- Verify type checking: `npm run typecheck`
-- Add tests for new features
-- Test edge cases and error scenarios
-
 <!-- AIOX-MANAGED-START: framework-structure -->
 ## AIOX Framework Structure
 
@@ -205,43 +191,12 @@ aiox graph --stats                       # Entity stats e cache metrics
 - Validate user responses
 - Provide helpful defaults
 
-## Best Practices
-
-### When implementing features:
-- Check existing patterns first
-- Reuse components and utilities
-- Follow naming conventions
-- Keep functions focused and testable
-- Document complex logic
-
-### When working with agents:
-- Respect agent boundaries
-- Use appropriate agent for each task
-- Follow agent communication patterns
-- Maintain agent context
-
-### When handling errors:
-```javascript
-try {
-  // Operation
-} catch (error) {
-  console.error(`Error in ${operation}:`, error);
-  // Provide helpful error message
-  throw new Error(`Failed to ${operation}: ${error.message}`);
-}
-```
-
 ## Git & GitHub Integration
 
 ### Commit Conventions
 - Use conventional commits: `feat:`, `fix:`, `docs:`, `chore:`, etc.
 - Reference story ID: `feat: implement IDE detection [Story 2.1]`
 - Keep commits atomic and focused
-
-### GitHub CLI Usage
-- Ensure authenticated: `gh auth status`
-- Use for PR creation: `gh pr create`
-- Check org access: `gh api user/memberships`
 
 <!-- AIOX-MANAGED-START: aiox-patterns -->
 ## AIOX-Specific Patterns
@@ -268,19 +223,6 @@ story.updateTask(taskId, { status: 'completed' });
 await story.save();
 ```
 <!-- AIOX-MANAGED-END: aiox-patterns -->
-
-## Environment Setup
-
-### Required Tools
-- Node.js 18+
-- GitHub CLI
-- Git
-- Your preferred package manager (npm/yarn/pnpm)
-
-### Configuration Files
-- `.aiox/config.yaml` - Framework configuration
-- `.env` - Environment variables
-- `aiox.config.js` - Project-specific settings
 
 <!-- AIOX-MANAGED-START: common-commands -->
 ## Common Commands
@@ -310,17 +252,7 @@ export AIOX_DEBUG=true
 tail -f .aiox/logs/agent.log
 ```
 
-### Trace Workflow Execution
-```bash
-npm run trace -- workflow-name
-```
-
 ## Claude Code Specific Configuration
-
-### Performance Optimization
-- Prefer batched tool calls when possible for better performance
-- Use parallel execution for independent operations
-- Cache frequently accessed data in memory during sessions
 
 ### Tool Usage Guidelines
 - Always use the Grep tool for searching, never `grep` or `rg` in bash
@@ -333,24 +265,6 @@ npm run trace -- workflow-name
 - Update checkboxes immediately after completing tasks
 - Maintain context of the current story being worked on
 - Save important state before long-running operations
-
-### Error Recovery
-- Always provide recovery suggestions for failures
-- Include error context in messages to user
-- Suggest rollback procedures when appropriate
-- Document any manual fixes required
-
-### Testing Strategy
-- Run tests incrementally during development
-- Always verify lint and typecheck before marking complete
-- Test edge cases for each new feature
-- Document test scenarios in story files
-
-### Documentation
-- Update relevant docs when changing functionality
-- Include code examples in documentation
-- Keep README synchronized with actual behavior
-- Document breaking changes prominently
 
 ---
 *Sinkra AIOX Claude Code Configuration v2.0*
