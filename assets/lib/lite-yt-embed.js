@@ -73,7 +73,15 @@ class LiteYTEmbed extends HTMLElement {
         // However Safari desktop and most/all mobile browsers do not successfully track the user gesture of clicking through the creation/loading of the iframe,
         // so they don't autoplay automatically. Instead we must load an additional 2 sequential JS files (1KB + 165KB) (un-br) for the YT Player API
         // TODO: Try loading the the YT API in parallel with our iframe and then attaching/playing it. #82
-        this.needsYTApi = this.hasAttribute("js-api") || navigator.vendor.includes('Apple') || navigator.userAgent.includes('Mobi');
+        //
+        // ALTERADO NESTE PROJETO: o upstream liga o caminho da YT Player API por
+        // sniffing de user agent (Apple/Mobi). Aqui a CSP é `script-src 'self'`,
+        // então o <script> de youtube.com que esse caminho injeta é bloqueado, a
+        // promise rejeita e o iframe nunca é criado — no celular tocar num vídeo
+        // não fazia absolutamente nada. O iframe básico funciona em todo lugar e
+        // os params do site já trazem mute=1, que é o que o mobile exige para
+        // dar autoplay sem gesto. Mantido o opt-in explícito via [js-api].
+        this.needsYTApi = this.hasAttribute("js-api");
     }
 
     /**
