@@ -69,6 +69,16 @@ fix_*report.json
 playlist_manager_report.json
 channel_state.json
 aspect_map.json
+missing_videos.json
+
+# Snapshots de estado. As regras acima só pegam o nome exato, então
+# youtube_results.json.bak e afins escapavam — e eles carregam URLs de anexo do
+# ClickUp com assinatura de acesso aos brutos dos clientes. Repositório público.
+# Os script.js.bak.* são o mesmo caso: guardam o script de antes da migração
+# para o YouTube, quando os players ainda apontavam direto para o ClickUp.
+*.json.bak
+*.json.pre-*
+script.js.bak.*
 
 # Validation screenshots (local only)
 hover-*.png
