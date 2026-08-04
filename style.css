@@ -439,34 +439,6 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   padding: 60px 0;
 }
 
-/* Único controle de fechar no desktop era o rótulo lateral, que continua
-   escrito "MENU" com o overlay aberto — parecia que a página tinha travado. */
-.nav-overlay__close {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  color: var(--text);
-  cursor: pointer;
-  transition: color 0.3s var(--ease), border-color 0.3s var(--ease), transform 0.3s var(--ease);
-}
-
-.nav-overlay__close svg { width: 22px; height: 22px; }
-
-.nav-overlay__close:hover,
-.nav-overlay__close:focus-visible {
-  color: var(--accent);
-  border-color: var(--accent);
-  transform: rotate(90deg);
-}
-
 .nav-overlay__link {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 5vw, 3.5rem);
@@ -474,8 +446,7 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   color: var(--text);
   position: relative;
   /* Os links esticam à largura do bloco; com o texto centralizado "Início" e
-     "Clientes" saíam desalinhados entre si enquanto a numeração 01–05 (::before,
-     ancorada na borda esquerda) ficava reta — parecia defeito. */
+     "Marcas" saíam desalinhados entre si — parecia defeito. */
   text-align: left;
   padding: 6px 0;
   transition: color 0.3s var(--ease), transform 0.3s var(--ease);
@@ -494,19 +465,6 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
 .nav-overlay.active .nav-overlay__link:nth-child(4) { transition-delay: 0.25s; }
 .nav-overlay.active .nav-overlay__link:nth-child(5) { transition-delay: 0.3s; }
 .nav-overlay.active .nav-overlay__link:nth-child(6) { transition-delay: 0.35s; }
-
-.nav-overlay__link::before {
-  content: attr(data-index);
-  position: absolute;
-  left: -60px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-style: normal;
-  color: var(--accent);
-  letter-spacing: 1px;
-}
 
 .nav-overlay__link:hover {
   color: var(--accent);
@@ -917,16 +875,16 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
 .quote__text .accent { color: var(--accent-light); }
 
 /* ========================================
-   CLIENTES
+   MARCAS
    ======================================== */
-.clientes {
+.marcas {
   padding: 100px 40px;
   background: rgba(7, 13, 24, 0.85);
   position: relative;
   overflow: hidden;
 }
 
-.clientes::before {
+.marcas::before {
   content: '';
   position: absolute;
   top: 0;
@@ -938,7 +896,7 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   pointer-events: none;
 }
 
-.clientes__container {
+.marcas__container {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -946,27 +904,27 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   z-index: 1;
 }
 
-.clientes__title {
+.marcas__title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 12px;
 }
 
-.clientes__subtitle {
+.marcas__subtitle {
   color: var(--text-muted);
   font-size: 0.85rem;
   letter-spacing: 1px;
   margin-bottom: 60px;
 }
 
-.clientes__grid {
+.marcas__grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 14px;
 }
 
-.clientes__item {
+.marcas__item {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -984,15 +942,15 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   -webkit-backdrop-filter: blur(6px);
 }
 
-.clientes__item:hover,
-.clientes__item:focus-visible {
+.marcas__item:hover,
+.marcas__item:focus-visible {
   background: rgba(107, 163, 224, 0.10);
   border-color: rgba(107, 163, 224, 0.4);
   transform: translateY(-6px);
   box-shadow: 0 14px 40px rgba(107, 163, 224, 0.18), 0 0 0 1px rgba(107, 163, 224, 0.15) inset;
 }
 
-.clientes__logo {
+.marcas__logo {
   max-width: 140px;
   max-height: 55px;
   object-fit: contain;
@@ -1004,19 +962,19 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
 /* Vários logos trazem max-width/max-height inline em px (até 300px), maiores que
    a célula — o inline vence o CSS e o logo era recortado. Este clamp limita ao
    espaço real disponível sem alterar a proporção. */
-.clientes__logo[style] {
+.marcas__logo[style] {
   max-width: 100% !important;
   max-height: 100% !important;
 }
 
-.clientes__item:hover .clientes__logo,
-.clientes__item:focus-visible .clientes__logo {
+.marcas__item:hover .marcas__logo,
+.marcas__item:focus-visible .marcas__logo {
   opacity: 1;
   filter: brightness(1.18) saturate(1.08);
   transform: scale(1.06);
 }
 
-.clientes__fallback {
+.marcas__fallback {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1028,12 +986,12 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   transition: color 0.4s var(--ease);
 }
 
-.clientes__item:hover .clientes__fallback {
+.marcas__item:hover .marcas__fallback {
   color: var(--accent);
 }
 
 /* Cada logo abre o projeto daquela marca, mas nada na tela dizia isso. */
-.clientes__item::after {
+.marcas__item::after {
   content: 'Ver projeto';
   position: absolute;
   left: 0;
@@ -1053,8 +1011,8 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   pointer-events: none;
 }
 
-.clientes__item:hover::after,
-.clientes__item:focus-visible::after {
+.marcas__item:hover::after,
+.marcas__item:focus-visible::after {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1062,28 +1020,28 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
 /* Sem hover o rótulo nunca apareceria; num toque ele só piscaria antes do modal
    abrir. Melhor deixar o logo respirar e confiar no cursor/role=button. */
 @media (hover: none) {
-  .clientes__item::after { content: none; }
+  .marcas__item::after { content: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .clientes__item::after { transition: none; }
+  .marcas__item::after { transition: none; }
 }
 
 @media (max-width: 1024px) {
-  .clientes__grid { grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .marcas__grid { grid-template-columns: repeat(5, 1fr); gap: 12px; }
 }
 
 @media (max-width: 768px) {
-  .clientes { padding: 80px 20px; }
-  .clientes__grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
-  .clientes__item { padding: 20px 12px; height: 100px; }
-  .clientes__logo { max-width: 100px; max-height: 40px; }
+  .marcas { padding: 80px 20px; }
+  .marcas__grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .marcas__item { padding: 20px 12px; height: 100px; }
+  .marcas__logo { max-width: 100px; max-height: 40px; }
 }
 
 @media (max-width: 480px) {
-  .clientes__grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .clientes__item { padding: 16px 10px; height: 84px; border-radius: 10px; }
-  .clientes__logo { max-width: 80px; max-height: 34px; }
+  .marcas__grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .marcas__item { padding: 16px 10px; height: 84px; border-radius: 10px; }
+  .marcas__logo { max-width: 80px; max-height: 34px; }
 }
 
 /* ========================================
@@ -2202,12 +2160,6 @@ iframe.trabalhos__hover-video.active {
 
   .footer { padding: 24px 20px; }
   .footer__inner { flex-direction: column; gap: 8px; text-align: center; }
-
-  .nav-overlay__link::before { display: none; }
-
-  /* Aqui o burger já vira um × por cima do overlay, no mesmo canto — os dois
-     botões se sobreporiam. O botão dedicado é só para desktop. */
-  .nav-overlay__close { display: none; }
 }
 
 /* Coluna única só em telas realmente estreitas. Em tablet retrato (768px) duas

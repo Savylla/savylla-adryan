@@ -16,7 +16,7 @@ const projetos = [
     descricao: "Direção e Filmmaker nos projetos audiovisuais da Coletiva Garagem. Idealizado como um coletivo de produção audiovisual feito por e para mulheres que amam mulheres.",
     ficha: {
       "Função": "Direção e Filmmaker",
-      "Cliente": "Garagem Coletiva",
+      "Marca": "Garagem Coletiva",
       "Projeto": "Produções Audiovisuais",
       "Tipo": "Coletivo Audiovisual",
       "Ano": "2017 - 2020"
@@ -45,7 +45,7 @@ const projetos = [
     descricao: "Filmmaker na Campanha de divulgação da nova linha de roupas e estampas Devassas.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Devassas",
+      "Marca": "Devassas",
       "Projeto": "Campanha Nova Linha de Roupas e Estampas",
       "Tipo": "Campanha de Divulgação",
       "Ano": "2020"
@@ -74,7 +74,7 @@ const projetos = [
     descricao: "Produção do material para a campanha de divulgação e lançamento no Brasil do álbum Radical Optimism da Dua Lipa.",
     ficha: {
       "Função": "Designer",
-      "Cliente": "Warner Music UK",
+      "Marca": "Warner Music UK",
       "Projeto": "Álbum Radical Optimism - Dua Lipa",
       "Tipo": "Campanha de Divulgação",
       "Ano": "2024"
@@ -98,7 +98,7 @@ const projetos = [
     descricao: "Cobertura fotográfica da confraternização de fim de ano da Warner Music Brasil.",
     ficha: {
       "Função": "Fotógrafo",
-      "Cliente": "Warner Music Brasil",
+      "Marca": "Warner Music Brasil",
       "Projeto": "Confraternização 2023",
       "Tipo": "Cobertura Fotográfica",
       "Ano": "2023"
@@ -125,7 +125,7 @@ const projetos = [
     descricao: "Campanha de arrecadação através de twittada, a Ambev doou 1 real a cada tweet com a hashtag #OrgulhoNãoPara às ONGs Casinha, Casa 1 e Casarão Brasil. Somei nas artes de divulgação do projeto.",
     ficha: {
       "Função": "Designer",
-      "Cliente": "Casinha Acolhida / Ambev",
+      "Marca": "Casinha Acolhida / Ambev",
       "Projeto": "#OrgulhoNãoPara",
       "Tipo": "Campanha de Divulgação",
       "Ano": "2020"
@@ -148,7 +148,7 @@ const projetos = [
     descricao: "Campanha de criação da maior corrente de beijos pela internet. Cada beijo virtual enviado no site, a DORITOS®️ Rainbow doou R$1 real. Com meta de chegar em 1 milhão de beijos e reais! Auxiliei nas artes de divulgação do projeto.",
     ficha: {
       "Função": "Designer",
-      "Cliente": "Casinha Acolhida / Doritos",
+      "Marca": "Casinha Acolhida / Doritos",
       "Projeto": "Doritos Rainbow - 1Kiss1Donation",
       "Tipo": "Campanha de Divulgação",
       "Ano": "2020"
@@ -173,7 +173,7 @@ const projetos = [
     descricao: "Filmmaker na Websérie Encontro com 8 Episódios em exibição no YouTube.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Linha Produções",
+      "Marca": "Linha Produções",
       "Projeto": "Websérie Encontro",
       "Tipo": "Websérie",
       "Ano": "2020"
@@ -197,7 +197,7 @@ const projetos = [
     descricao: "Filmmaker no comercial de comemoração aos 20 anos da marca.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Força da Terra",
+      "Marca": "Força da Terra",
       "Projeto": "Comercial 20 Anos",
       "Tipo": "Comercial",
       "Ano": "2016"
@@ -220,7 +220,7 @@ const projetos = [
     descricao: "Responsável pela edição dos vídeos do canal do Youtube \"Doutora Drag\", no período de 21/08/2020 à 09/02/2022 realizados pela Dimitra Vulcana. Com os roteiros de Danilo Carreiro.",
     ficha: {
       "Função": "Editor de Vídeo",
-      "Cliente": "Doutora Drag",
+      "Marca": "Doutora Drag",
       "Projeto": "Canal Doutora Drag",
       "Tipo": "Edição de Vídeo",
       "Ano": "2020 - 2022"
@@ -247,7 +247,7 @@ const projetos = [
     descricao: "Elaboração de projetos audiovisuais junto à equipe da agência Imaginatto, criação da identidade visual para o Instagram e Youtube e elaboração estratégica dos conteúdos.",
     ficha: {
       "Função": "Designer / Produtor Audiovisual",
-      "Cliente": "Apsa",
+      "Marca": "Apsa",
       "Projeto": "Identidade Visual e Conteúdo",
       "Tipo": "Design e Produção Audiovisual",
       "Ano": "2020"
@@ -273,7 +273,7 @@ const projetos = [
     descricao: "Participei da equipe de criação de conteúdo e produção de materiais gráficos pelo período de 2019 à 2023 atuando em diversas vertentes dos projetos da ONG, junto aos demais voluntários.",
     ficha: {
       "Função": "Coordenador de Arte",
-      "Cliente": "Casinha Acolhida",
+      "Marca": "Casinha Acolhida",
       "Projeto": "Criação de Conteúdo e Materiais Gráficos",
       "Tipo": "Coordenação de Arte",
       "Ano": "2019 - 2023"
@@ -379,7 +379,7 @@ const projetos = [
     descricao: "Captação e edição fotográfica do Making Of e material de divulgação da série Acampamento do Medo 1 para o canal do YouTube dos Irmãos Scribel.",
     ficha: {
       "Função": "Fotógrafo + Editor",
-      "Cliente": "Irmãos Scribel",
+      "Marca": "Irmãos Scribel",
       "Projeto": "Acampamento do Medo 1",
       "Tipo": "Making Of + Divulgação",
       "Plataforma": "YouTube",
@@ -408,7 +408,7 @@ const projetos = [
     descricao: "Captação e edição fotográfica do Making Of e material de divulgação do filme Acampamento do Medo 2 para o canal do YouTube dos Irmãos Scribel.",
     ficha: {
       "Função": "Fotógrafo + Editor",
-      "Cliente": "Irmãos Scribel",
+      "Marca": "Irmãos Scribel",
       "Projeto": "Acampamento do Medo 2",
       "Tipo": "Making Of + Divulgação",
       "Plataforma": "YouTube",
@@ -439,7 +439,7 @@ const projetos = [
     descricao: "Realização da criação e produção dos materiais gráficos e físicos das diversas vertentes dos projetos da ONG, junto aos demais voluntários.",
     ficha: {
       "Função": "Coordenador de Arte",
-      "Cliente": "ONG Casinha Acolhida",
+      "Marca": "ONG Casinha Acolhida",
       "Tipo": "Materiais Gráficos e Físicos",
       "Período": "2019 - 2024",
       "Formato": "Voluntariado"
@@ -460,7 +460,7 @@ const projetos = [
     descricao: "Comercial para a chegada da cerveja Dalla no RJ. Com a Direção, Captação e Edição de Mariana Godois.",
     ficha: {
       "Função": "Captação de Som + Assistência de Produção",
-      "Cliente": "Dalla Cervejaria",
+      "Marca": "Dalla Cervejaria",
       "Direção": "Mariana Godois",
       "Tipo": "Comercial",
       "Locação": "Rio de Janeiro, RJ",
@@ -481,7 +481,7 @@ const projetos = [
     descricao: "Conteúdo de divulgação para promover o camarote Maracã Prime no jogo do Brasileirão (Flamengo x Fortaleza), atendendo à BRAX. Com Direção, Captação e Edição de Mariana Godois. Fotografia de Thaty Aguiar.",
     ficha: {
       "Função": "Captação de Som",
-      "Cliente": "BRAX Sports Assets",
+      "Marca": "BRAX Sports Assets",
       "Projeto": "Camarote Maracã Prime",
       "Direção": "Mariana Godois",
       "Fotografia": "Thaty Aguiar",
@@ -503,7 +503,7 @@ const projetos = [
     descricao: "Produção de Reels no Instagram para uso como vitrine virtual, sendo vídeos comerciais de agradecimento aos apoiadores do espetáculo teatral.",
     ficha: {
       "Função": "Editor de Vídeo",
-      "Cliente": "Teçá - Arte e Cultura",
+      "Marca": "Teçá - Arte e Cultura",
       "Tipo": "Reels / Conteúdo Social",
       "Plataforma": "Instagram",
       "Ano": "2023"
@@ -523,7 +523,7 @@ const projetos = [
     descricao: "Cobrindo o desfile da rainha de bateria Kelly Jorge (locutora da rádio Tupí), na nova Intendente Magalhães pela G.R.E.S. Sereno de Campo Grande. Executando pela equipe do empresário Raphael Almeida. Com a produção executiva da Camille Aboud. Criação de Mídia Kit da Kelly Jorge e arte para divulgação.",
     ficha: {
       "Função": "Produção de Campo + Design",
-      "Cliente": "Espetáculo Entretenimento",
+      "Marca": "Espetáculo Entretenimento",
       "Artista": "Kelly Jorge",
       "Produção Executiva": "Camille Aboud",
       "Empresário": "Raphael Almeida",
@@ -542,10 +542,10 @@ const projetos = [
     categoriaLabel: "Videomaker + Design",
     ano: "2020 - 2023",
     videoId: "",
-    descricao: "Produção remota de projetos audiovisuais junto à equipe da agência, elaborando identidade visual para os projetos dos clientes e tendo participação na execução estratégica dos conteúdos focados em resultados de engajamento.",
+    descricao: "Produção remota de projetos audiovisuais junto à equipe da agência, elaborando identidade visual para os projetos das marcas e tendo participação na execução estratégica dos conteúdos focados em resultados de engajamento.",
     ficha: {
       "Função": "Videomaker e Designer",
-      "Cliente": "Agência Imaginatto",
+      "Marca": "Agência Imaginatto",
       "Tipo": "Produção Audiovisual + Identidade Visual",
       "Formato": "Remoto",
       "Período": "2020 - 2023"
@@ -566,7 +566,7 @@ const projetos = [
     descricao: "Edição para o canal do YouTube \"Doutora Drag\", realizado pela Dimitra Vulcana. Com roteiros de Danilo Carreiro, sincronizando a edição aos vídeos de intérprete de libras. Criação de vinhetas e nova identidade visual do canal.",
     ficha: {
       "Função": "Editor de Vídeo + Motion Designer",
-      "Cliente": "Doutora Drag / Dimitra Vulcana",
+      "Marca": "Doutora Drag / Dimitra Vulcana",
       "Roteiro": "Danilo Carreiro",
       "Plataforma": "YouTube",
       "Tipo": "Edição + Vinhetas + ID Visual",
@@ -588,7 +588,7 @@ const projetos = [
     descricao: "Produção de material para divulgação da clínica na Barra da Tijuca (RJ), para as redes sociais do cliente. Captação, edição e motion do comercial. Criação da identidade visual para a clínica Imagem Integrada, com o objetivo de comunicar e realizar de uma melhor maneira o contato com seus clientes através dos meios digitais e físicos.",
     ficha: {
       "Função": "Videomaker + Motion Designer + Designer",
-      "Cliente": "Clínica Imagem Integrada",
+      "Marca": "Clínica Imagem Integrada",
       "Tipo": "Comercial + Identidade Visual",
       "Locação": "Barra da Tijuca, RJ",
       "Ano": "2021"
@@ -609,7 +609,7 @@ const projetos = [
     descricao: "Websérie Encontro da Linha Produções com 8 episódios em exibição no YouTube.",
     ficha: {
       "Função": "Câmera + Motion + Masterização",
-      "Cliente": "Linha Produções",
+      "Marca": "Linha Produções",
       "Tipo": "Websérie",
       "Episódios": "8",
       "Plataforma": "YouTube",
@@ -630,7 +630,7 @@ const projetos = [
     descricao: "Produção do comercial de comemoração aos 20 anos da empresa.",
     ficha: {
       "Função": "Videomaker",
-      "Cliente": "Força da Terra",
+      "Marca": "Força da Terra",
       "Tipo": "Comercial Institucional",
       "Motivo": "Comemoração 20 anos",
       "Ano": "2020"
@@ -650,7 +650,7 @@ const projetos = [
     descricao: "Campanha de divulgação da nova linha de roupas e estampas da Devassas. Fotografia de Victor Vieira.",
     ficha: {
       "Função": "Assistência de Produção + Edição de Vídeo",
-      "Cliente": "Devassas",
+      "Marca": "Devassas",
       "Fotografia": "Victor Vieira",
       "Tipo": "Campanha de Moda",
       "Ano": "2020"
@@ -670,7 +670,7 @@ const projetos = [
     descricao: "Produção de vídeo e arte (captação e edição) para os projetos e redes sociais da Coletiva Garagem. Idealizado como um coletivo de produção audiovisual feito por e para mulheres que amam mulheres.",
     ficha: {
       "Função": "Direção + Videomaker + Motion + Design",
-      "Cliente": "Coletiva Garagem",
+      "Marca": "Coletiva Garagem",
       "Tipo": "Produção Audiovisual + Arte",
       "Formato": "Vídeo + Design",
       "Período": "2018 - 2020"
@@ -691,7 +691,7 @@ const projetos = [
     descricao: "Produção de conteúdo para TikTok da Drogasil com diversos creators, incluindo Daniela Castelo, Débora Melo, Julia Helen, Larissa Venturini, Yago Capita, Andrei Lamberg, Murilo Amorim, Thays Godinho Ribeiro, Anny Melo e Quéren Hapuque. Ampla série de produções entre fevereiro e agosto de 2025.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Drogasil",
+      "Marca": "Drogasil",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -761,7 +761,7 @@ const projetos = [
     descricao: "Projetos extensos de filmagem e direção de conteúdo para TikTok do Mercado Pago, com diversos talentos e creators. Produções realizadas entre março e outubro de 2025.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Mercado Pago",
+      "Marca": "Mercado Pago",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -829,7 +829,7 @@ const projetos = [
     descricao: "Produção de conteúdo para TikTok da Magazine Luiza, atendendo a campanhas de divulgação com múltiplos creators.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Magazine Luiza",
+      "Marca": "Magazine Luiza",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -880,7 +880,7 @@ const projetos = [
     descricao: "Campanhas de conteúdo para TikTok da Raia com múltiplos criadores de conteúdo, entre março e agosto de 2025.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Raia",
+      "Marca": "Raia",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -964,7 +964,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas digitais do Bradesco em plataforma TikTok.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Bradesco",
+      "Marca": "Bradesco",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -995,7 +995,7 @@ const projetos = [
     descricao: "Filmagem de conteúdo para TikTok da Netshoes com diversos talentos e creators.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Netshoes",
+      "Marca": "Netshoes",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1029,7 +1029,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da LG em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "LG",
+      "Marca": "LG",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1054,7 +1054,7 @@ const projetos = [
     descricao: "Conteúdo audiovisual para campanhas digitais da Uber em TikTok.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Uber",
+      "Marca": "Uber",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1080,7 +1080,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para a marca Carolina Herrera em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Carolina Herrera",
+      "Marca": "Carolina Herrera",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1104,7 +1104,7 @@ const projetos = [
     descricao: "Produção de conteúdo para campanhas da Nestlé em plataformas de redes sociais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Nestlé",
+      "Marca": "Nestlé",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais / Exibido no Cinema",
@@ -1131,7 +1131,7 @@ const projetos = [
     descricao: "Conteúdo audiovisual para campanhas digitais da Philips em TikTok.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Philips",
+      "Marca": "Philips",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1155,7 +1155,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Intimus - Creative Incubator em TikTok.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Intimus",
+      "Marca": "Intimus",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Creative Incubator",
@@ -1177,7 +1177,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Domino's em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Domino's",
+      "Marca": "Domino's",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1205,7 +1205,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Serasa em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Serasa",
+      "Marca": "Serasa",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1237,7 +1237,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Movida em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Movida",
+      "Marca": "Movida",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1265,7 +1265,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas do KaBuM! em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "KaBuM!",
+      "Marca": "KaBuM!",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1289,7 +1289,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Neo Energia em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Neo Energia",
+      "Marca": "Neo Energia",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1319,7 +1319,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Claro em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Claro",
+      "Marca": "Claro",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1344,7 +1344,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Vans em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Vans",
+      "Marca": "Vans",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1368,7 +1368,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Bet Nacional em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Bet Nacional",
+      "Marca": "Bet Nacional",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1390,7 +1390,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Bravecto em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Bravecto",
+      "Marca": "Bravecto",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1421,7 +1421,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas do Carrefour em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Carrefour",
+      "Marca": "Carrefour",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1444,7 +1444,7 @@ const projetos = [
     descricao: "E se sua equipe fosse um filme, qual seria? Ana, founder da Allfluence, apresenta sua equipe fazendo uma analogia com o tema Oscar 2026.",
     ficha: {
       "Função": "Produção com IA",
-      "Cliente": "Allfluence",
+      "Marca": "Allfluence",
       "Projeto": "Oscar 2026",
       "Tipo": "Conteúdo com IA",
       "Ano": "2026"
@@ -1504,7 +1504,7 @@ const projetos = [
     descricao: "Produção de conteúdo interno e social media para a Allfluence, incluindo vídeos institucionais e de tendências com a equipe.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Allfluence",
+      "Marca": "Allfluence",
       "Plataforma": "TikTok / Instagram",
       "Tipo": "Social Media + Institucional",
       "Período": "Fev 2025 - 2026"
@@ -1536,7 +1536,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Veloe em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Veloe",
+      "Marca": "Veloe",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1557,7 +1557,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Agibank em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Agibank",
+      "Marca": "Agibank",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1585,7 +1585,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Livelo em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Livelo",
+      "Marca": "Livelo",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1615,7 +1615,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Baby Sec em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Baby Sec",
+      "Marca": "Baby Sec",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1639,7 +1639,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da GA.MA em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "GA.MA",
+      "Marca": "GA.MA",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1663,7 +1663,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Bullsbet em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Bullsbet",
+      "Marca": "Bullsbet",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1687,7 +1687,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Faculdade Estácio em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Faculdade Estácio",
+      "Marca": "Faculdade Estácio",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1731,7 +1731,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Reals Bet em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Reals Bet",
+      "Marca": "Reals Bet",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1755,7 +1755,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Sorriso em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Sorriso",
+      "Marca": "Sorriso",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1777,7 +1777,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Tramontina em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Tramontina",
+      "Marca": "Tramontina",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1799,7 +1799,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Softys Kitchen em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Softys Kitchen",
+      "Marca": "Softys Kitchen",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1827,7 +1827,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Aiqfome em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Aiqfome",
+      "Marca": "Aiqfome",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1851,7 +1851,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Philco Britânia em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Philco Britânia",
+      "Marca": "Philco Britânia",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1872,7 +1872,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Mycon em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Mycon",
+      "Marca": "Mycon",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1900,7 +1900,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Atacadão em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker + Direção",
-      "Cliente": "Atacadão",
+      "Marca": "Atacadão",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1921,7 +1921,7 @@ const projetos = [
     descricao: "Produção de conteúdo audiovisual para campanhas da Cassino.Bet em plataformas digitais.",
     ficha: {
       "Função": "Filmmaker",
-      "Cliente": "Cassino.Bet",
+      "Marca": "Cassino.Bet",
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
@@ -1965,7 +1965,7 @@ function sanitizeURL(url) {
 // ----------------------------------------
 // Logo fallback (moved from inline onerror)
 // ----------------------------------------
-document.querySelectorAll('.clientes__logo').forEach(img => {
+document.querySelectorAll('.marcas__logo').forEach(img => {
   img.addEventListener('error', () => {
     img.style.display = 'none';
     const fallback = img.nextElementSibling;
@@ -2024,7 +2024,6 @@ window.addEventListener('scroll', () => {
 const sideMenu = document.getElementById('sideMenu');
 const navOverlay = document.getElementById('navOverlay');
 const burgerBtn = document.getElementById('burgerBtn');
-const navClose = document.getElementById('navClose');
 
 // Ambos os gatilhos (burger no mobile, rótulo lateral no desktop) controlam o
 // mesmo overlay, então os dois precisam refletir o estado para leitores de tela.
@@ -2049,7 +2048,7 @@ function toggleNav() {
 
 function closeNav() {
   // O overlay vira visibility:hidden ao fechar; se o foco estivesse dentro dele
-  // (botão de fechar, por exemplo) ele cairia no body e o teclado perderia o lugar.
+  // (num dos links, por exemplo) ele cairia no body e o teclado perderia o lugar.
   const focoDentro = navOverlay.contains(document.activeElement);
   setNavState(false);
   if (focoDentro) {
@@ -2060,7 +2059,6 @@ function closeNav() {
 
 sideMenu.addEventListener('click', toggleNav);
 burgerBtn.addEventListener('click', toggleNav);
-if (navClose) navClose.addEventListener('click', closeNav);
 
 // Sem estas duas saídas o overlay vira uma armadilha: ele cobre a tela inteira
 // e não tem botão de fechar próprio.
@@ -2943,7 +2941,7 @@ if (showreelEl) {
 // ----------------------------------------
 // Scroll reveal
 // ----------------------------------------
-const revealElements = document.querySelectorAll('.sobre__image, .sobre__content, .trabalhos__header, .trabalhos__item, .showreel__container, .cta__content, .cta__quote, .contato__left, .contato__form, .quote__inner, .clientes__container');
+const revealElements = document.querySelectorAll('.sobre__image, .sobre__content, .trabalhos__header, .trabalhos__item, .showreel__container, .cta__content, .cta__quote, .contato__left, .contato__form, .quote__inner, .marcas__container');
 
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver((entries) => {
@@ -2971,7 +2969,7 @@ if ('IntersectionObserver' in window) {
 }
 
 // ----------------------------------------
-// Clientes -> Modal
+// Marcas -> Modal
 // ----------------------------------------
 // Custom cursor "PLAY" (P3.3) — só visível sobre cards de vídeo
 (function setupCustomCursor() {
@@ -3021,7 +3019,7 @@ if ('IntersectionObserver' in window) {
   });
 })();
 
-document.querySelectorAll('.clientes__item').forEach(item => {
+document.querySelectorAll('.marcas__item').forEach(item => {
   item.setAttribute('tabindex', '0');
   item.setAttribute('role', 'button');
   // Sem isto o nome acessível era só a marca ("Drogasil"), sem dizer o que o
@@ -3042,8 +3040,8 @@ document.querySelectorAll('.clientes__item').forEach(item => {
       showProjectPicker(projs);
       return;
     }
-    const clienteName = item.dataset.name || item.textContent.trim();
-    const projeto = projetos.find(p => p.nome.toLowerCase() === clienteName.toLowerCase());
+    const marcaName = item.dataset.name || item.textContent.trim();
+    const projeto = projetos.find(p => p.nome.toLowerCase() === marcaName.toLowerCase());
     if (projeto) {
       openModalWithFocus(projeto.id);
     }
