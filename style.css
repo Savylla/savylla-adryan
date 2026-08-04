@@ -1380,6 +1380,122 @@ iframe.trabalhos__hover-video.active {
   display: none;
 }
 
+/* ---- Tela cheia do player -------------------------------------------------
+   Num celular em retrato o player 16:9 sobra ~200px de altura e o vídeo abre
+   minúsculo. Ao dar play o JS pede tela cheia (ver expandirPlayer em script.js):
+   quando o navegador concede a Fullscreen API valem as regras :fullscreen;
+   quando não concede — o Safari do iPhone não dá fullscreen a <iframe> — o JS
+   aplica .player-cinema, um overlay fixo que funciona em qualquer navegador.
+   Os seletores :-webkit-full-screen ficam em regras separadas de propósito:
+   numa lista de seletores, um seletor que o navegador não conhece descarta a
+   regra inteira. */
+.modal__video:fullscreen,
+.showreel__video:fullscreen {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  aspect-ratio: auto;
+  margin: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__video:-webkit-full-screen,
+.showreel__video:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  aspect-ratio: auto;
+  margin: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* !important porque .modal__video--vertical tem a mesma especificidade e vem
+   antes no arquivo: a largura derivada da proporção 9:16 venceria e o overlay
+   não cobriria a tela. */
+.player-cinema {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 3500;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  margin: 0 !important;
+  aspect-ratio: auto !important;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.player-cinema-sair {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top, 0px));
+  right: max(12px, env(safe-area-inset-right, 0px));
+  z-index: 3600;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7, 13, 24, 0.75);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.player-cinema-sair svg { width: 20px; height: 20px; }
+
+/* Dica "gire o celular" — só aparece em vídeo horizontal com a tela em retrato.
+   Fica dentro do container do player: no fullscreen nativo, o que está fora do
+   elemento em tela cheia não é renderizado. */
+.player-dica-girar {
+  position: absolute;
+  left: 50%;
+  /* Acima da barra de controles do player (~50px), senão a dica cobre o tempo e
+     a barra de progresso. */
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 72px);
+  z-index: 3600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(7, 13, 24, 0.8);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  /* Não deve interceptar o toque nos controles do player por baixo dela. */
+  pointer-events: none;
+  animation: dica-girar-entra 0.4s var(--ease) both;
+}
+
+.player-dica-girar svg {
+  width: 15px;
+  height: 15px;
+  flex: none;
+}
+
+@keyframes dica-girar-entra {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .player-dica-girar {
+    animation: none;
+    transform: translateX(-50%);
+  }
+}
+
 .modal__body { padding: 48px; }
 
 .modal__cat {

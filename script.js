@@ -2193,6 +2193,220 @@ function videoReproduzivel(v) {
   return !/^https?:\/\//i.test(v.url) || v.url.startsWith(location.origin);
 }
 
+// ----------------------------------------
+// Tela cheia do player
+// ----------------------------------------
+// Num celular em retrato o player do modal tem a largura da tela menos o padding
+// e altura derivada da proporção: um 16:9 fica com ~200px de altura e o vídeo
+// abre pequeno demais. Ao tocar para dar play, promovemos o player a tela cheia.
+// Três caminhos, do melhor para o mais compatível:
+//   1. mp4 local no iPhone → player nativo do <video> (webkitEnterFullscreen),
+//      que já gira sozinho conforme a proporção do vídeo;
+//   2. Fullscreen API no container + travar a orientação (só o Android costuma
+//      permitir o lock, e é justamente onde ele faz mais diferença);
+//   3. .player-cinema — overlay fixo em CSS. É o plano B obrigatório porque o
+//      Safari do iPhone não concede fullscreen a <iframe>, e ainda assim o
+//      vídeo passa a ocupar a tela toda (e a preencher de verdade ao girar).
+let playerCinema = null;      // container atualmente em modo cinema
+let botaoSairCinema = null;
+
+function ehTelaDeToque() {
+  return window.matchMedia('(pointer: coarse)').matches ||
+         window.matchMedia('(max-width: 1024px)').matches;
+}
+
+function emTelaCheiaNativa() {
+  return !!(document.fullscreenElement || document.webkitFullscreenElement);
+}
+
+// Rejeita onde o lock não é permitido (iOS não implementa) — quem chama usa isso
+// para decidir se mostra a dica de girar o aparelho.
+function orientarTela(vertical) {
+  const so = window.screen && screen.orientation;
+  if (!so || typeof so.lock !== 'function') return Promise.reject();
+  return so.lock(vertical ? 'portrait' : 'landscape');
+}
+
+function liberarOrientacao() {
+  const so = window.screen && screen.orientation;
+  if (!so || typeof so.unlock !== 'function') return;
+  try { so.unlock(); } catch (e) { /* nem todo navegador implementa */ }
+}
+
+function expandirPlayer(container) {
+  if (!container || !ehTelaDeToque()) return;
+  if (playerCinema === container || emTelaCheiaNativa()) return;
+  // Projeto de fotografia mostra um <img> neste mesmo container: nada a expandir.
+  if (!container.querySelector('lite-youtube, iframe, video')) return;
+
+  const vertical = container.classList.contains('modal__video--vertical');
+  const videoLocal = container.querySelector('video');
+
+  // readyState 0 = metadados ainda não chegaram, e aí o iOS lança
+  // InvalidStateError em vez de abrir o player.
+  if (videoLocal && !videoLocal.requestFullscreen && videoLocal.readyState >= 1 &&
+      typeof videoLocal.webkitEnterFullscreen === 'function') {
+    try {
+      videoLocal.webkitEnterFullscreen();
+      return;
+    } catch (e) { /* segue para os caminhos abaixo */ }
+  }
+
+  const pedirTelaCheia = container.requestFullscreen || container.webkitRequestFullscreen;
+  if (!pedirTelaCheia) {
+    entrarModoCinema(container);
+    return;
+  }
+  // O gesto do usuário ainda vale aqui: é o mesmo clique que ativou o player e
+  // borbulhou até este handler.
+  Promise.resolve()
+    .then(() => pedirTelaCheia.call(container))
+    // O catch é interno de propósito: falhar em girar a tela não é motivo para
+    // cair no modo cinema — a tela cheia nativa já foi concedida.
+    .then(() => orientarTela(vertical).catch(() => {}))
+    // A dica de girar depende do estado real da tela, não do resultado do lock:
+    // há navegador em que lock('landscape') resolve sem girar coisa alguma. O
+    // atraso dá tempo de a orientação efetivar antes da checagem.
+    .then(() => { setTimeout(() => mostrarDicaGirar(container), 400); })
+    .catch(() => entrarModoCinema(container));
+}
+
+// position:fixed não se resolve contra a viewport quando algum ancestral cria um
+// containing block — e o .modal__content tem transform (a animação de entrada).
+// Sem neutralizar, o overlay do modo cinema herda a caixa do modal inteiro e
+// vira uma tarja de milhares de pixels de altura em vez de cobrir a tela.
+// Valor "neutro" por propriedade: o que faz o ancestral parar de criar o
+// containing block (will-change volta para auto, não para none).
+const PROPS_CONTAINING_BLOCK = {
+  transform: 'none',
+  filter: 'none',
+  perspective: 'none',
+  backdropFilter: 'none',
+  contain: 'none',
+  willChange: 'auto'
+};
+let ancestraisNeutralizados = [];
+
+function neutralizarAncestrais(el) {
+  restaurarAncestrais();
+  for (let no = el.parentElement; no && no !== document.body; no = no.parentElement) {
+    const estilo = getComputedStyle(no);
+    Object.keys(PROPS_CONTAINING_BLOCK).forEach(prop => {
+      const neutro = PROPS_CONTAINING_BLOCK[prop];
+      if (!estilo[prop] || estilo[prop] === neutro) return;
+      ancestraisNeutralizados.push({ no, prop, anterior: no.style[prop] });
+      no.style[prop] = neutro;
+    });
+  }
+}
+
+function restaurarAncestrais() {
+  ancestraisNeutralizados.forEach(({ no, prop, anterior }) => { no.style[prop] = anterior; });
+  ancestraisNeutralizados = [];
+}
+
+function entrarModoCinema(container) {
+  if (playerCinema) sairModoCinema();
+  playerCinema = container;
+  neutralizarAncestrais(container);
+  container.classList.add('player-cinema');
+  document.body.style.overflow = 'hidden';
+
+  if (!botaoSairCinema) {
+    botaoSairCinema = document.createElement('button');
+    botaoSairCinema.type = 'button';
+    botaoSairCinema.className = 'player-cinema-sair';
+    botaoSairCinema.setAttribute('aria-label', 'Sair da tela cheia');
+    botaoSairCinema.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>';
+    botaoSairCinema.addEventListener('click', sairModoCinema);
+  }
+  // No <body>, não dentro do container: trocar de vídeo reescreve o innerHTML
+  // dele e levaria o botão embora.
+  document.body.appendChild(botaoSairCinema);
+  mostrarDicaGirar(container);
+}
+
+function sairModoCinema() {
+  if (!playerCinema) return;
+  playerCinema.classList.remove('player-cinema');
+  playerCinema = null;
+  restaurarAncestrais();
+  esconderDicaGirar();
+  if (botaoSairCinema && botaoSairCinema.parentNode) botaoSairCinema.remove();
+  // O modal também trava a rolagem: só devolver se ele não estiver aberto.
+  if (!modal.classList.contains('active')) document.body.style.overflow = '';
+}
+
+function sairTelaCheia() {
+  sairModoCinema();
+  esconderDicaGirar();
+  if (emTelaCheiaNativa()) {
+    const sair = document.exitFullscreen || document.webkitExitFullscreen;
+    if (sair) {
+      try { sair.call(document); } catch (e) { /* já saiu */ }
+    }
+  }
+}
+
+document.addEventListener('fullscreenchange', () => {
+  if (!document.fullscreenElement) {
+    liberarOrientacao();
+    esconderDicaGirar();
+  }
+});
+
+// ----------------------------------------
+// Dica "gire o celular"
+// ----------------------------------------
+// Vídeo horizontal em tela cheia com o aparelho em retrato ainda sobra tarja em
+// cima e embaixo, e girar praticamente dobra o tamanho da imagem. Onde o lock de
+// orientação funciona (Android) o giro já aconteceu sozinho e a dica nem
+// aparece; ela existe para o iPhone, que não implementa o lock.
+const DICA_GIRAR_MS = 4500;
+let dicaGirar = null;
+let dicaGirarTimer = null;
+
+function mostrarDicaGirar(container) {
+  if (!container || container.classList.contains('modal__video--vertical')) return;
+  if (!window.matchMedia('(orientation: portrait)').matches) return;
+  // Chamada com atraso no caminho nativo: o usuário pode já ter saído da tela
+  // cheia, e aí a dica ficaria pendurada sobre o modal normal.
+  if (!emTelaCheiaNativa() && playerCinema !== container) return;
+
+  if (!dicaGirar) {
+    dicaGirar = document.createElement('div');
+    dicaGirar.className = 'player-dica-girar';
+    // role=status para o leitor de tela anunciar sem roubar o foco do player.
+    dicaGirar.setAttribute('role', 'status');
+    dicaGirar.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M4 9a8 8 0 0 1 13-3l2 2"/><path d="M19 4v4h-4"/>' +
+      '<path d="M20 15a8 8 0 0 1-13 3l-2-2"/><path d="M5 20v-4h4"/></svg>' +
+      '<span>Gire o celular para ampliar</span>';
+  }
+  // Dentro do container porque no fullscreen nativo só o que está dentro do
+  // elemento em tela cheia é renderizado.
+  container.appendChild(dicaGirar);
+
+  if (dicaGirarTimer) clearTimeout(dicaGirarTimer);
+  dicaGirarTimer = setTimeout(esconderDicaGirar, DICA_GIRAR_MS);
+}
+
+function esconderDicaGirar() {
+  if (dicaGirarTimer) {
+    clearTimeout(dicaGirarTimer);
+    dicaGirarTimer = null;
+  }
+  if (dicaGirar && dicaGirar.parentNode) dicaGirar.remove();
+}
+
+// Girou: a dica cumpriu o papel. Não reaparece se voltar para retrato — insistir
+// depois de já ter sido lida vira estorvo em cima do vídeo.
+const mqRetrato = window.matchMedia('(orientation: portrait)');
+const aoGirar = () => { if (!mqRetrato.matches) esconderDicaGirar(); };
+if (typeof mqRetrato.addEventListener === 'function') mqRetrato.addEventListener('change', aoGirar);
+else if (typeof mqRetrato.addListener === 'function') mqRetrato.addListener(aoGirar);
+
 function openModal(id) {
   const p = projetos.find(x => x.id === id);
   if (!p) return;
@@ -2354,6 +2568,9 @@ function openModal(id) {
             requestAnimationFrame(() => lyt.activate());
           }
         }
+        // Trocar de vídeo pelos cards também abre em tela cheia — o clique no
+        // card é o gesto que o navegador exige.
+        expandirPlayer(videoEl);
         galeriaEl.querySelectorAll('.modal__video-card').forEach(c => c.classList.remove('active'));
         card.classList.add('active');
         // Quem rola é o .modal (overflow-y:auto); o .modal__content não tem
@@ -2475,6 +2692,7 @@ function closeModal() {
   if (location.hash.startsWith('#projeto-')) {
     history.pushState(null, '', location.pathname + location.search);
   }
+  sairTelaCheia();
   const doClose = () => {
     modal.classList.remove('active');
     document.body.style.overflow = '';
@@ -2498,6 +2716,7 @@ window.addEventListener('popstate', (e) => {
     const id = parseInt(m[1]);
     if (!modal.classList.contains('active')) openModal(id);
   } else if (modal.classList.contains('active')) {
+    sairTelaCheia();
     modal.classList.remove('active');
     document.body.style.overflow = '';
     document.getElementById('modalVideo').innerHTML = '';
@@ -2674,7 +2893,24 @@ function trapFocus(container, e) {
 
 modalClose.addEventListener('click', closeModal);
 modal.querySelector('.modal__backdrop').addEventListener('click', closeModal);
+
+// Toque no player → tela cheia. O listener fica no container (que persiste entre
+// projetos, ao contrário do conteúdo dele) e recebe por bubbling o mesmo clique
+// que o lite-youtube usa para trocar o poster pelo iframe.
+const modalVideoEl = document.getElementById('modalVideo');
+if (modalVideoEl) {
+  modalVideoEl.addEventListener('click', e => {
+    // A tarja com o nome do talento fica sobre o player e não dá play.
+    if (e.target.closest('.modal__video-talent')) return;
+    expandirPlayer(modalVideoEl);
+  });
+}
+
 document.addEventListener('keydown', e => {
+  if (playerCinema && e.key === 'Escape') {
+    sairModoCinema();
+    return;
+  }
   if (modal.classList.contains('active')) {
     if (e.key === 'Escape' && !lightbox.classList.contains('active')) closeModal();
     else if (!lightbox.classList.contains('active')) trapFocus(modal, e);
@@ -2693,11 +2929,13 @@ if (showreelEl) {
       lyt.setAttribute('videoid', vid);
       lyt.setAttribute('params', 'rel=0&modestbranding=1&mute=1');
       lyt.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;';
-      showreelEl.parentNode.appendChild(lyt);
+      const container = showreelEl.parentNode;
+      container.appendChild(lyt);
       showreelEl.remove();
       if (typeof lyt.activate === 'function') {
         requestAnimationFrame(() => lyt.activate());
       }
+      expandirPlayer(container);
     }
   });
 }
