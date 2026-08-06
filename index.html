@@ -31,7 +31,7 @@
   <meta name="twitter:image" content="https://savylla.github.io/savylla-adryan/assets/og-image.jpg">
 
   <!-- Security -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://i.ytimg.com https://img.youtube.com; media-src 'self' blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://formsubmit.co; frame-src https://www.youtube-nocookie.com https://www.youtube.com; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://i.ytimg.com https://img.youtube.com; media-src 'self' blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://formsubmit.co; frame-src https://www.youtube-nocookie.com https://www.youtube.com https://www.instagram.com; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), camera=(), microphone=(), geolocation=(), payment=(), usb=()">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -717,7 +717,9 @@
 
       <article class="trabalhos__item" data-category="ia" data-id="71">
         <div class="trabalhos__thumb">
-          <video src="assets/projetos/ia-projeto-2/video.mp4" muted loop playsinline preload="metadata"></video>
+          <!-- O vídeo saiu para o Instagram, e o embed não serve de miniatura em
+               loop: a capa é um frame extraído do mp4 antes de ele ser removido. -->
+          <img src="assets/projetos/ia-projeto-2/capa.webp" alt="Dentro da Minha Cabeça" loading="lazy" decoding="async">
           <div class="trabalhos__play-icon"><svg><use href="#icon-play"/></svg></div>
         </div>
         <div class="trabalhos__info">

@@ -22,13 +22,14 @@ const projetos = [
       "Ano": "2017 - 2020"
     },
     videos: [
-      { url: "assets/projetos/garagem-coletiva/video-1.mp4", direcao: true, talento: "Tendinite" },
-      { url: "assets/projetos/garagem-coletiva/video-2.mp4", direcao: true, talento: "Conchinha" },
-      { url: "assets/projetos/garagem-coletiva/video-3.mp4", direcao: true, talento: "O que é ser lésbica?" },
+      { youtubeId: "flKhFJS4u8U", direcao: true, talento: "Tendinite" },
+      { youtubeId: "2MYGc6lUzJQ", direcao: true, talento: "Conchinha" },
+      { youtubeId: "AghqJJ8bfP0", direcao: true, talento: "O que é ser lésbica?" },
       { youtubeId: "Wp7oNIgtDow", direcao: true, talento: "Na Madruga Boladona" },
-      { url: "assets/projetos/garagem-coletiva/video-5.mp4", direcao: true, talento: "Isopormácio" },
-      { url: "assets/projetos/garagem-coletiva/video-6.mp4", direcao: true, talento: "Presente de Aniversário" },
-      { url: "assets/projetos/garagem-coletiva/video-7.mp4", direcao: true, talento: "Miami Beach Gay Pride" }
+      { youtubeId: "YdDfLK_gFSg", direcao: true, talento: "Isopormácio" },
+      { instagramUrl: "https://www.instagram.com/p/CBGTNDYH2Ae/", direcao: true, talento: "Presente de Aniversário" },
+      { url: "assets/projetos/garagem-coletiva/video-7.mp4", direcao: true, talento: "Miami Beach Gay Pride" },
+      { youtubeId: "sRbWaofh7fk", direcao: true, talento: "Deixe a Sapa Falar" }
     ],
     youtube: "https://www.youtube.com/@ColetivaGaragem",
     instagram: "https://www.instagram.com/coletivagaragem/",
@@ -1454,7 +1455,7 @@ const projetos = [
     instagram: "https://www.instagram.com/allfluence/",
     website: "https://www.allfluence.com.br/",
     videos: [
-      { url: "assets/projetos/oscar/video-1.mp4", talento: "Oscar 2026 - Produção com IA" }
+      { instagramUrl: "https://www.instagram.com/p/DVyIN0uERJL/", talento: "Oscar 2026 - Produção com IA" }
     ],
     galeria: []
   },
@@ -1492,7 +1493,7 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "assets/projetos/ia-projeto-2/video.mp4", talento: "Dentro da Minha Cabeça - Higgsfield + Flux AI" }
+      { instagramUrl: "https://www.instagram.com/p/DVODcCbAEbY/", talento: "Dentro da Minha Cabeça - Higgsfield + Flux AI" }
     ],
     galeria: []
   },
@@ -1644,7 +1645,7 @@ const projetos = [
       { youtubeId: "fwhdF2NlIpY", direcao: true, talento: "Camille Ana Claudia Padilha Savylla" },
       { youtubeId: "1kdog5TY15k", direcao: true, talento: "Camille Ana Claudia Padilha Savylla" },
       { youtubeId: "JKvGdRN-eeE", direcao: true, talento: "Equipe Allfluence" },
-      { url: "assets/projetos/oscar/video-1.mp4", talento: "Oscar 2026 - Produção com IA" }
+      { instagramUrl: "https://www.instagram.com/p/DVyIN0uERJL/", talento: "Oscar 2026 - Produção com IA" }
     ],
     galeria: []
   },
@@ -2285,13 +2286,53 @@ const VIDEOS_YT_VERTICAIS = new Set([
 ]);
 
 const VIDEOS_LOCAIS_VERTICAIS = new Set([
-  "assets/projetos/ia-projeto-1/video.mp4",
-  "assets/projetos/ia-projeto-2/video.mp4",
-  "assets/projetos/oscar/video-1.mp4"
+  "assets/projetos/ia-projeto-1/video.mp4"
 ]);
+
+// O Instagram tem moldura própria, medida no navegador post a post. Ele NÃO usa
+// modal__video--vertical (9:16): ali o iframe fica com ~395px de largura, o
+// Instagram encolhe o vídeo e a barra de curtidas entra no campo de visão.
+//   - post vertical  → 4:5 (a mais alta do feed): vídeo inteiro, no desktop e no
+//     celular, com pillarbox nas laterais;
+//   - post horizontal → 16:9 (o padrão do player). Numa moldura 4:5 a barra
+//     "Ver mais no Instagram" atravessa o meio do vídeo.
+const POSTS_IG_ALTOS = new Set([
+  "DVODcCbAEbY",
+  "DVyIN0uERJL"
+]);
+
+function codigoInstagram(url) {
+  const m = /instagram\.com\/(?:p|reel|tv)\/([A-Za-z0-9_-]+)/.exec(url || '');
+  return m ? m[1] : null;
+}
+
+// O embed do Instagram é montado a partir do código do post, nunca da URL crua:
+// só o shortcode entra na string final, então nada que venha do dado consegue
+// escapar para outro host ou pendurar parâmetro no src do iframe.
+function urlEmbedInstagram(url) {
+  const m = /instagram\.com\/(?:p|reel|tv)\/([A-Za-z0-9_-]+)/.exec(url || '');
+  return m ? `https://www.instagram.com/p/${m[1]}/embed/` : null;
+}
+
+// O embed do Instagram vem com a moldura do post (cabeçalho do perfil, curtidas,
+// caixa de comentário). scrolling="no" evita a barra de rolagem interna e o
+// container recorta a papelada de baixo, deixando cabeçalho + vídeo à mostra.
+function htmlEmbedInstagram(url) {
+  const src = urlEmbedInstagram(url);
+  if (!src) return '';
+  return `<iframe class="modal__video-ig" src="${src}" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media; fullscreen" title="Post do Instagram"></iframe>`;
+}
 
 function marcarProporcao(container, ehVertical) {
   container.classList.toggle('modal__video--vertical', !!ehVertical);
+  // Trocar de vídeo dentro do mesmo modal precisa limpar a moldura do Instagram,
+  // senão um post vertical deixa a moldura 4:5 para o vídeo seguinte.
+  container.classList.remove('modal__video--ig-alto');
+}
+
+function marcarProporcaoInstagram(container, ehAlto) {
+  container.classList.remove('modal__video--vertical');
+  container.classList.toggle('modal__video--ig-alto', !!ehAlto);
 }
 
 // Rede de segurança para mp4 fora da lista acima (vídeo novo, lista desatualizada):
@@ -2317,6 +2358,7 @@ function ajustarProporcaoLocal(container) {
 function videoReproduzivel(v) {
   if (!v) return false;
   if (v.youtubeId) return true;
+  if (v.instagramUrl) return !!urlEmbedInstagram(v.instagramUrl);
   if (!v.url) return false;
   return !/^https?:\/\//i.test(v.url) || v.url.startsWith(location.origin);
 }
@@ -2562,6 +2604,9 @@ function openModal(id) {
     if (displayVideos[0].youtubeId) {
       videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(displayVideos[0].youtubeId)}" params="rel=0&modestbranding=1&mute=1" style="width:100%;height:100%;"></lite-youtube>`;
       marcarProporcao(videoEl, VIDEOS_YT_VERTICAIS.has(displayVideos[0].youtubeId));
+    } else if (displayVideos[0].instagramUrl) {
+      videoEl.innerHTML = htmlEmbedInstagram(displayVideos[0].instagramUrl);
+      marcarProporcaoInstagram(videoEl, POSTS_IG_ALTOS.has(codigoInstagram(displayVideos[0].instagramUrl)));
     } else {
       videoEl.innerHTML = `<video controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${sanitizeURL(displayVideos[0].url)}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
       marcarProporcao(videoEl, VIDEOS_LOCAIS_VERTICAIS.has(displayVideos[0].url));
@@ -2681,6 +2726,9 @@ function openModal(id) {
         if (v.youtubeId) {
           videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(v.youtubeId)}" params="rel=0&modestbranding=1&mute=1" style="width:100%;height:100%;"></lite-youtube>`;
           marcarProporcao(videoEl, VIDEOS_YT_VERTICAIS.has(v.youtubeId));
+        } else if (v.instagramUrl) {
+          videoEl.innerHTML = htmlEmbedInstagram(v.instagramUrl);
+          marcarProporcaoInstagram(videoEl, POSTS_IG_ALTOS.has(codigoInstagram(v.instagramUrl)));
         } else {
           videoEl.innerHTML = `<video controls autoplay playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${sanitizeURL(v.url)}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
           marcarProporcao(videoEl, VIDEOS_LOCAIS_VERTICAIS.has(v.url));

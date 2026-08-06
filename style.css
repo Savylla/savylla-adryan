@@ -1301,6 +1301,35 @@ iframe.trabalhos__hover-video.active {
 
 .modal__video iframe { width: 100%; height: 100%; border: none; }
 
+/* O embed do Instagram não é um player: é o post inteiro, com cabeçalho branco do
+   perfil em cima e barra de curtidas/comentários embaixo. Nada disso é alcançável
+   por CSS (vive dentro do iframe), então o recorte é geométrico:
+   - top negativo joga o cabeçalho de 56px para fora do campo de visão;
+   - altura MENOR que o necessário corta a barra de ações — o iframe é o próprio
+     viewport, então o que passa dela simplesmente não aparece. Com 100% exatos
+     sobrava uma faixa branca de ~5px na base quando o vídeo é quase 16:9.
+   Sobra o vídeo e a legenda do site, coerente com o player do YouTube ao lado. */
+.modal__video { overflow: hidden; }
+
+/* Seletor com o tipo junto (iframe.classe): `.modal__video iframe` acima tem
+   especificidade maior que uma classe sozinha e vencia o height. */
+.modal__video iframe.modal__video-ig {
+  position: relative;
+  top: -56px;
+  height: calc(100% + 46px);
+}
+
+/* Moldura de post vertical do Instagram: 4:5, a mais alta que o feed usa. Medida
+   no navegador — em 9:16 o iframe fica estreito demais e o Instagram encolhe o
+   vídeo; em 16:9 a mídia vertical não caberia. Mesma técnica de largura derivada
+   da altura usada em .modal__video--vertical. */
+.modal__video--ig-alto {
+  width: min(100%, calc(min(78vh, 760px) * 4 / 5));
+  aspect-ratio: 4/5;
+  margin-inline: auto;
+  background: #000;
+}
+
 /* <video> e <img> são inline por padrão: o espaço do descender da linha somava
    ~7px à altura do container e quebrava a proporção exata. */
 .modal__video > video,
