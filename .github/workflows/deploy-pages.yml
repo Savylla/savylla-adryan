@@ -1,0 +1,63 @@
+name: Deploy no GitHub Pages
+
+# O build legado do Pages sincronizava os 1790 arquivos versionados do repositorio
+# e passou a estourar o limite de tempo (10min22s e 10min54s passaram raspando;
+# 11min17s e 10min40s falharam). Aqui o artefato leva so o site.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'assets/**'
+      - 'index.html'
+      - 'servicos.html'
+      - 'style.css'
+      - 'script.js'
+      - 'servicos.js'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - '.nojekyll'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Sem cancel-in-progress: cancelar um deploy no meio deixaria o site publicado
+# em estado parcial.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Monta o artefato apenas com o site
+        # Lista de inclusao, nao de exclusao: os .py e .json do pipeline de videos,
+        # o .aiox-core e o docs/ nao sao conteudo do site e ficam fora. Se algum
+        # arquivo da lista desaparecer, o cp falha e o deploy para aqui.
+        run: |
+          mkdir -p _site
+          cp -r assets _site/
+          cp index.html servicos.html style.css script.js servicos.js sitemap.xml robots.txt .nojekyll _site/
+          echo "Arquivos no artefato: $(find _site -type f | wc -l)"
+          echo "Peso do artefato: $(du -sh _site | cut -f1)"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
