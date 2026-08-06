@@ -1495,6 +1495,126 @@ const projetos = [
     galeria: []
   },
   {
+    id: 72,
+    nome: "Soldiers Nutrition",
+    categoria: "ia",
+    categoriaLabel: "Produção com IA",
+    ano: "2026",
+    videoId: "",
+    descricao: "Campanha de conteúdo com avatares digitais para a linha de suplementos da Soldiers Nutrition — creatina, whey, pré-treino e termogênico.",
+    ficha: {
+      "Função": "Produção com IA",
+      "Marca": "Soldiers Nutrition",
+      "Plataforma": "TikTok",
+      "Agência": "Allfluence",
+      "Tipo": "Conteúdo para Redes Sociais",
+      "Ano": "2026"
+    },
+    videos: [
+      { youtubeId: "CVVdJetIjVk", talento: "Creatina 1kg" },
+      { youtubeId: "OuHLFkBeXoE", talento: "Creatina 1kg" },
+      { youtubeId: "KZroIhBn2tE", talento: "Creatina 1kg" },
+      { youtubeId: "AdFQAPLVVFo", talento: "Creatina 1kg" },
+      { youtubeId: "pM1HCsq2pZw", talento: "Creatina 1kg" },
+      { youtubeId: "vO0ZCGvncRI", talento: "Creatina 1kg" },
+      { youtubeId: "x7UEgPPzGmc", talento: "Creatina 1kg" },
+      { youtubeId: "ej84rrYAzZA", talento: "Creatina 1kg" },
+      { youtubeId: "qb2jJbX8j3w", talento: "Creatina 1kg" },
+      { youtubeId: "m6DhIZuCuLs", talento: "Creatina 1kg" },
+      { youtubeId: "gaw6A7pmmBc", talento: "Creatina 1kg" },
+      { youtubeId: "gHgW5exW-6k", talento: "Creatina 1kg" },
+      { youtubeId: "2X25AaaKFuw", talento: "Creatina 1kg" },
+      { youtubeId: "igqbOIAN1s4", talento: "Creatina 1kg" },
+      { youtubeId: "khg29vLriUc", talento: "Creatina 1kg" },
+      { youtubeId: "t7ukjsCZY6M", talento: "Creatina 1kg" },
+      { youtubeId: "8yoJXviw4i4", talento: "Creatina 1kg" },
+      { youtubeId: "7rRFs9geI50", talento: "Creatina 1kg" },
+      { youtubeId: "fCEIr6KWItA", talento: "Creatina 1kg" },
+      { youtubeId: "Ty9WguB2QLY", talento: "Creatina 1kg" },
+      { youtubeId: "wNll1WXo_EY", talento: "Creatina 500g" },
+      { youtubeId: "PqmGzcPrixw", talento: "Creatina 500g" },
+      { youtubeId: "sd6R4k0kiBM", talento: "Creatina 500g" },
+      { youtubeId: "vpKD1pOlHDc", talento: "Creatina 500g" },
+      { youtubeId: "Jcpy7kJwQTM", talento: "Creatina 500g" },
+      { youtubeId: "7pvCcQZsez4", talento: "Creatina 500g" },
+      { youtubeId: "2KA7xwBr1D4", talento: "Creatina 500g" },
+      { youtubeId: "w8m4f5H439w", talento: "Creatina 500g" },
+      { youtubeId: "EYHTgYp1Umg", talento: "Creatina 500g" },
+      { youtubeId: "860B_SrEhkk", talento: "Creatina 500g" },
+      { youtubeId: "wjr5-3z3hpI", talento: "Creatina 500g" },
+      { youtubeId: "eOt6VXZns4s", talento: "Creatina 500g" },
+      { youtubeId: "BZy6jB2r5pY", talento: "Creatina 500g" },
+      { youtubeId: "9mWoBI4gq9U", talento: "Creatina 500g" },
+      { youtubeId: "dzj3ngFJmK0", talento: "Creatina 500g" },
+      { youtubeId: "ML1ukiLzuzA", talento: "Creatina 500g" },
+      { youtubeId: "_tXUJVjclUs", talento: "Creatina 500g" },
+      { youtubeId: "dg09dXXLVGU", talento: "Creatina 500g" },
+      { youtubeId: "6AJtMY_J2nE", talento: "Creatina 500g" },
+      { youtubeId: "d46xwRo3Tjw", talento: "Creatina 500g" },
+      { youtubeId: "s_vau70jTYY", talento: "Whey Primal" },
+      { youtubeId: "RYT7zCn32dU", talento: "Whey Primal" },
+      { youtubeId: "35LPgKD1boM", talento: "Whey Primal" },
+      { youtubeId: "c-gHr8KRzyw", talento: "Whey Primal" },
+      { youtubeId: "_XOpG3DeS0E", talento: "Whey Primal" },
+      { youtubeId: "RKgkpnGdkOM", talento: "Whey Primal" },
+      { youtubeId: "kGNkZJq9GUc", talento: "Whey Primal" },
+      { youtubeId: "Qa3xcRYRV_o", talento: "Whey Primal" },
+      { youtubeId: "D3ndPDIEwQ0", talento: "Whey Primal" },
+      { youtubeId: "sIuPMWH3Iek", talento: "Whey Primal" },
+      { youtubeId: "6KxaueKb_zc", talento: "Whey Primal" },
+      { youtubeId: "S7eCNcNnqpw", talento: "Whey Primal" },
+      { youtubeId: "eWCYoHhu57Y", talento: "Whey Primal" },
+      { youtubeId: "i6tnNyhzK-Q", talento: "Whey Primal" },
+      { youtubeId: "7S92V-YFi_Q", talento: "Whey Primal" },
+      { youtubeId: "PKpjAHDR4yU", talento: "Whey Primal" },
+      { youtubeId: "aoAy0_wMQGA", talento: "Whey Primal" },
+      { youtubeId: "nxw8GzVxhZw", talento: "Whey Primal" },
+      { youtubeId: "DhLTs4AGi-8", talento: "Whey Primal" },
+      { youtubeId: "dKUhat5biSg", talento: "Whey Primal" },
+      { youtubeId: "b73JXIya8cY", talento: "Pré-Treino Evolution" },
+      { youtubeId: "dVpzzASuG4Y", talento: "Pré-Treino Evolution" },
+      { youtubeId: "1LFe5LdlON8", talento: "Pré-Treino Evolution" },
+      { youtubeId: "_0dUiLv4qbQ", talento: "Pré-Treino Evolution" },
+      { youtubeId: "aaEhGNY_sQU", talento: "Pré-Treino Evolution" },
+      { youtubeId: "mlVp5VuIlF0", talento: "Pré-Treino Evolution" },
+      { youtubeId: "vQDcssK0ohA", talento: "Pré-Treino Evolution" },
+      { youtubeId: "ElRGkVwd7ts", talento: "Pré-Treino Evolution" },
+      { youtubeId: "-9l2tGe_1hs", talento: "Pré-Treino Evolution" },
+      { youtubeId: "AqVWbTiCiCs", talento: "Pré-Treino Evolution" },
+      { youtubeId: "48tcVAUHWQw", talento: "Pré-Treino Evolution" },
+      { youtubeId: "WcIZ0SyAeZA", talento: "Pré-Treino Evolution" },
+      { youtubeId: "VNMPOTf5reY", talento: "Pré-Treino Evolution" },
+      { youtubeId: "hnbTssGw-Hs", talento: "Pré-Treino Evolution" },
+      { youtubeId: "_QSbkxU6xVQ", talento: "Pré-Treino Evolution" },
+      { youtubeId: "Rh9au-MNS-8", talento: "Pré-Treino Evolution" },
+      { youtubeId: "FoHBGD6Fhok", talento: "Pré-Treino Evolution" },
+      { youtubeId: "1lSjmUXBiAc", talento: "Pré-Treino Evolution" },
+      { youtubeId: "VtdzPWuFX0w", talento: "Pré-Treino Evolution" },
+      { youtubeId: "WuBWnN4t7to", talento: "Pré-Treino Evolution" },
+      { youtubeId: "j0Eh-m6qmPg", talento: "Thermo Dark" },
+      { youtubeId: "ZhV0ww47bk4", talento: "Thermo Dark" },
+      { youtubeId: "6vif4bpsC1U", talento: "Thermo Dark" },
+      { youtubeId: "ev8_gDjqR4g", talento: "Thermo Dark" },
+      { youtubeId: "xTpNvOQOkPU", talento: "Thermo Dark" },
+      { youtubeId: "nhuMdmF98zA", talento: "Thermo Dark" },
+      { youtubeId: "e4Z1z0q2KDw", talento: "Thermo Dark" },
+      { youtubeId: "mD25X1GMypY", talento: "Thermo Dark" },
+      { youtubeId: "Y_zMlbARUG8", talento: "Thermo Dark" },
+      { youtubeId: "Mbojsdmolac", talento: "Thermo Dark" },
+      { youtubeId: "8kdCskFzAsk", talento: "Thermo Dark" },
+      { youtubeId: "44Ewt3Ca-VE", talento: "Thermo Dark" },
+      { youtubeId: "Ph6IPxIDLLw", talento: "Thermo Dark" },
+      { youtubeId: "jpXsc0H4QVA", talento: "Thermo Dark" },
+      { youtubeId: "_TCqHcgqZdI", talento: "Thermo Dark" },
+      { youtubeId: "jRCZI9vI4TY", talento: "Thermo Dark" },
+      { youtubeId: "v962tIyJ3VU", talento: "Thermo Dark" },
+      { youtubeId: "jDgIq-75EvQ", talento: "Thermo Dark" },
+      { youtubeId: "FdtGaoMJfq8", talento: "Thermo Dark" },
+      { youtubeId: "O72nhv6J6SY", talento: "Thermo Dark" }
+    ],
+    galeria: []
+  },
+  {
     id: 41,
     nome: "Allfluence",
     categoria: "video",
@@ -2071,9 +2191,17 @@ navOverlay.addEventListener('click', e => {
 
 navOverlay.querySelectorAll('.nav-overlay__link').forEach(link => {
   link.addEventListener('click', (e) => {
+    // Só as âncoras da própria página são interceptadas para rolar suave. Links
+    // para outra página (servicos.html) precisam navegar: com preventDefault
+    // aqui eles fechavam o menu e não saíam do lugar.
+    const href = link.getAttribute('href') || '';
+    if (!href.startsWith('#')) {
+      closeNav();
+      return;
+    }
     e.preventDefault();
     closeNav();
-    const target = document.querySelector(link.getAttribute('href'));
+    const target = document.querySelector(href);
     if (target) {
       setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 300);
     }
@@ -3426,4 +3554,30 @@ lightboxTrack.addEventListener('touchend', (e) => {
       }
     });
   });
+})();
+
+// ----------------------------------------
+// Filtro por URL — ?filtro=fotografia#trabalhos
+// ----------------------------------------
+// A página de serviços linka para categorias específicas do portfólio. Em vez de
+// duplicar a lógica de filtro, dispara um clique real no botão correspondente:
+// assim tanto o filtro quanto a paginação reagem exatamente como no clique do
+// usuário. Fica no fim do arquivo de propósito — os dois listeners (filtro e
+// "Carregar Mais") já estão registrados a esta altura.
+(function() {
+  const filtroURL = new URLSearchParams(window.location.search).get('filtro');
+  if (!filtroURL) return;
+
+  const btn = document.querySelector(`.trabalhos__filtro[data-filter="${CSS.escape(filtroURL)}"]`);
+  if (!btn || btn.classList.contains('active')) return;
+
+  btn.click();
+
+  // O href da página de serviços já traz #trabalhos, mas o navegador rola até a
+  // âncora antes do filtro rodar — e a grade encurta debaixo do usuário. Rolar
+  // de novo aqui recoloca a seção no lugar certo.
+  const secao = document.getElementById('trabalhos');
+  if (secao && window.location.hash === '#trabalhos') {
+    secao.scrollIntoView({ behavior: 'auto', block: 'start' });
+  }
 })();
