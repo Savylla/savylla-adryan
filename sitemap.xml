@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://savylla.github.io/savylla-adryan/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,5 +14,11 @@
       <image:loc>https://savylla.github.io/savylla-adryan/assets/perfil.webp</image:loc>
       <image:title>Savylla Adryan — Foto profissional</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://savylla.github.io/savylla-adryan/servicos.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

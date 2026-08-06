@@ -368,6 +368,20 @@ button { font-family: inherit; }
   font-weight: 400;
 }
 
+/* ── Quebra de linha ──
+   Título: 'balance' distribui as linhas com comprimento parecido, em vez de
+   encher a primeira até a borda e largar uma palavra sozinha embaixo.
+   Texto corrido: 'pretty' só puxa uma palavra a mais para a última linha,
+   sem remontar o parágrafo inteiro. Navegador antigo ignora as duas e volta
+   ao comportamento de sempre. */
+h1, h2, h3, h4, blockquote {
+  text-wrap: balance;
+}
+
+p, li, figcaption {
+  text-wrap: pretty;
+}
+
 /* ========================================
    SIDE LABELS
    ======================================== */
@@ -440,9 +454,12 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
 }
 
 .nav-overlay__link {
-  font-family: var(--font-display);
+  /* Mesma tipografia dos títulos das páginas (Inter Tight bold), não o serif
+     itálico do --font-display. */
+  font-family: var(--font-body);
   font-size: clamp(1.8rem, 5vw, 3.5rem);
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text);
   position: relative;
   /* Os links esticam à largura do bloco; com o texto centralizado "Início" e
@@ -2047,7 +2064,10 @@ iframe.trabalhos__hover-video.active {
 
 .footer__nav {
   display: flex;
-  gap: 24px;
+  /* Com os 5 itens, a linha estourava a largura da tela no celular. */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 24px;
 }
 
 .footer__nav a {
@@ -2395,12 +2415,356 @@ iframe.trabalhos__hover-video.active {
 }
 
 /* ========================================
+   PÁGINA DE SERVIÇOS (servicos.html)
+   ========================================
+   Página interna, fora do index. Não carrega vídeo de fundo: o .global-bg do
+   index é substituído por um fundo estático (poster + gradiente), então esta
+   página fica leve mesmo sendo longa. */
+
+.pagina-interna {
+  /* body é transparent no index porque o .global-bg fica atrás; aqui não há
+     esse elemento, e sem cor própria o fundo do body vazaria branco. */
+  background: var(--bg);
+}
+
+.pagina-interna__bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(rgba(7, 13, 24, 0.88), rgba(11, 17, 32, 0.94)),
+    url('assets/bg-poster.jpg') center / cover no-repeat;
+}
+
+/* Item de navegação da página atual */
+.header__nav a[aria-current="page"],
+.footer__nav a[aria-current="page"] { color: var(--accent); }
+
+.nav-overlay__link[aria-current="page"] { color: var(--accent); }
+
+.pagina-interna .footer {
+  background: rgba(7, 13, 24, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* ── Abertura ── */
+.servicos-hero {
+  padding: 200px 40px 100px;
+}
+
+.servicos-hero__inner {
+  /* Mesma largura do índice e da lista de serviços: com 900px aqui o título da
+     abertura começava 60px à direita do resto da página. */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.servicos-hero__eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+
+.servicos-hero__title {
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.servicos-hero__texto {
+  margin-top: 28px;
+  max-width: 700px;
+  font-size: 1.2rem;
+  color: var(--text-dim);
+}
+
+.servicos-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 96px;
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.servicos-hero__stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.servicos-hero__stat-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* ── Índice das frentes ── */
+.servicos-indice {
+  /* 1100 de conteúdo + os 40px de padding de cada lado: assim o texto começa
+     na mesma coluna da abertura, que tem o padding no elemento de fora. */
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+.servicos-indice__lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 16px;
+}
+
+/* Mesma linguagem dos botões .btn do resto do site — borda, caixa alta e
+   preenchimento no hover — só que ocupando a grade inteira. */
+.servicos-indice__lista a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 76px;
+  padding: 18px 24px;
+  border: 1px solid var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--accent);
+  transition: background 0.3s var(--ease), color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.servicos-indice__lista a:hover {
+  background: var(--accent);
+  color: var(--bg-dark);
+  box-shadow: 0 0 40px var(--accent-glow);
+}
+
+/* ── Lista de serviços ── */
+.servicos-lista {
+  /* Mesma conta do índice — ver comentário acima. */
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.servico {
+  padding: 90px 0;
+  border-top: 1px solid var(--border);
+  /* O header é fixo: sem isto o link do índice pára com o título por baixo dele. */
+  scroll-margin-top: 110px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+
+.servico.revelado {
+  opacity: 1;
+  transform: none;
+}
+
+.servico__titulo {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.servico__resumo {
+  margin-top: 22px;
+  max-width: 720px;
+  font-size: 1.15rem;
+  color: var(--text-dim);
+}
+
+.servico__resumo strong { color: var(--text); font-weight: 600; }
+
+.servico__cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  margin-top: 44px;
+}
+
+.servico__bloco-titulo {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+
+.servico__lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.servico__lista li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 1.05rem;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+
+.servico__lista li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 9px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.servico__lista strong { color: var(--text); font-weight: 600; }
+
+.servico__prova {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px 96px;
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.servico__stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.servico__stat-label {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 6px;
+  max-width: 170px;
+}
+
+.servico__nota {
+  margin-top: 32px;
+  padding: 16px 20px;
+  border-left: 2px solid var(--accent);
+  background: rgba(107, 163, 224, 0.06);
+  font-size: 1.02rem;
+  color: var(--text-dim);
+}
+
+.servico__nota strong { color: var(--text); font-weight: 600; }
+
+.servico__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: gap 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.servico__link::after {
+  content: '→';
+  font-size: 1rem;
+}
+
+.servico__link:hover {
+  gap: 18px;
+  color: var(--accent-light);
+}
+
+/* ── CTA final ── */
+.servicos-cta {
+  padding: 120px 40px 140px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+
+.servicos-cta__inner { max-width: 700px; margin: 0 auto; }
+
+.servicos-cta__titulo {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.servicos-cta__texto {
+  margin-top: 20px;
+  font-size: 1.15rem;
+  color: var(--text-dim);
+}
+
+.servicos-cta__botoes {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .servico { opacity: 1; transform: none; transition: none; }
+  .servicos-indice__lista a:hover { padding-left: 0; }
+  .servico__link:hover { gap: 10px; }
+}
+
+
+@media (max-width: 768px) {
+  .servicos-hero { padding: 150px 20px 70px; }
+  .servicos-hero__stats { gap: 28px 56px; margin-top: 40px; }
+  .servicos-hero__stat-num { font-size: 2.4rem; }
+  .servicos-indice { padding: 0 20px 60px; }
+  .servicos-lista { padding: 0 20px; }
+  .servico { padding: 64px 0; }
+  .servico__cols { gap: 32px; margin-top: 32px; }
+  .servico__prova { gap: 24px 56px; }
+  .servico__stat-num { font-size: 2rem; }
+  .servicos-cta { padding: 90px 20px 100px; }
+  .servicos-cta__botoes { flex-direction: column; align-items: stretch; }
+}
+
+@media (max-width: 480px) {
+  .servicos-indice__lista { grid-template-columns: 1fr; }
+  .servico__stat-label { max-width: none; }
+}
+
+/* ========================================
    PRINT
    ======================================== */
 @media print {
   body { background: #fff; color: #000; }
   .global-bg, .nav-overlay, .modal, .lightbox, .picker-overlay,
-  .side-label, .header__burger, .hero__scroll, .contato-wrapper__bg { display: none; }
+  .side-label, .header__burger, .hero__scroll, .contato-wrapper__bg,
+  .pagina-interna__bg { display: none; }
+  .servico { opacity: 1; transform: none; }
+  .servico__stat-num, .servicos-hero__stat-num { color: #000; }
   .header { position: static; background: #fff; border-bottom: 1px solid #ccc; }
   .header__logo, .header__nav a { color: #000; }
   video, iframe { display: none; }
