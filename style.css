@@ -1007,43 +1007,6 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   color: var(--accent);
 }
 
-/* Cada logo abre o projeto daquela marca, mas nada na tela dizia isso. */
-.marcas__item::after {
-  content: 'Ver projeto';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 5px 0 6px;
-  font-family: var(--font-body);
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: linear-gradient(to top, rgba(7, 13, 24, 0.92), rgba(7, 13, 24, 0));
-  opacity: 0;
-  transform: translateY(100%);
-  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
-  pointer-events: none;
-}
-
-.marcas__item:hover::after,
-.marcas__item:focus-visible::after {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Sem hover o rótulo nunca apareceria; num toque ele só piscaria antes do modal
-   abrir. Melhor deixar o logo respirar e confiar no cursor/role=button. */
-@media (hover: none) {
-  .marcas__item::after { content: none; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marcas__item::after { transition: none; }
-}
-
 @media (max-width: 1024px) {
   .marcas__grid { grid-template-columns: repeat(5, 1fr); gap: 12px; }
 }

@@ -3151,8 +3151,8 @@ document.querySelectorAll('.marcas__item').forEach(item => {
   item.setAttribute('tabindex', '0');
   item.setAttribute('role', 'button');
   // Sem isto o nome acessível era só a marca ("Drogasil"), sem dizer o que o
-  // clique faz — o equivalente, para leitores de tela, do "Ver projeto" que o
-  // hover mostra.
+  // clique faz. Na tela isso fica por conta do cursor e do role=button — o
+  // rótulo "Ver projeto" no hover cobria a logo e foi removido.
   const marca = item.dataset.name;
   if (marca) item.setAttribute('aria-label', `Ver projeto — ${marca}`);
 
