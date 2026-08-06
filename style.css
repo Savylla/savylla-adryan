@@ -2460,9 +2460,20 @@ iframe.trabalhos__hover-video.active {
   font-family: var(--font-display);
   font-size: 3rem;
   font-weight: 600;
+  /* O serif itálico entrega os algarismos quase encostados uns nos outros —
+     "425" lia como um borrão. O respiro vale para todos os números da página. */
+  letter-spacing: 0.06em;
   color: var(--accent);
   line-height: 1;
 }
+
+/* Correção ótica, usada nos dois tipos de número da página. No Instrument Serif
+   itálico o algarismo 1 tem um serifa de pé que transborda a caixa pela
+   esquerda: medindo a tinta, o "1" começa 3px antes da origem, contra 2px do
+   "4" e 0 do "6". Só os números que abrem com 1 saíam da coluna do rótulo.
+   text-indent em vez de margin para mexer no texto sem deslocar a caixa nem a
+   largura da coluna no flex. */
+.num-abre-com-1 { text-indent: 0.07em; }
 
 .servicos-hero__stat-label {
   display: block;
@@ -2486,9 +2497,15 @@ iframe.trabalhos__hover-video.active {
 .servicos-indice__lista {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
+
+/* São 7 frentes: em qualquer grade de largura uniforme sobra uma sozinha na
+   última linha. O primeiro item ocupa duas colunas — é o de rótulo mais longo,
+   então é o que melhor aproveita a largura extra — e aí 2+1+1+1+1+1+1 fecha
+   exatamente duas linhas cheias de 4. */
+.servicos-indice__lista li:first-child { grid-column: span 2; }
 
 /* Mesma linguagem dos botões .btn do resto do site — borda, caixa alta e
    preenchimento no hover — só que ocupando a grade inteira. */
@@ -2614,6 +2631,8 @@ iframe.trabalhos__hover-video.active {
   font-family: var(--font-display);
   font-size: 2.4rem;
   font-weight: 600;
+  /* Mesmo respiro do número do hero — ver comentário lá em cima. */
+  letter-spacing: 0.06em;
   color: var(--accent);
   line-height: 1;
 }
@@ -2699,6 +2718,13 @@ iframe.trabalhos__hover-video.active {
 }
 
 
+/* Abaixo de 1024px as 4 colunas não cabem sem espremer o rótulo. Em 2 colunas
+   a conta continua fechando: o primeiro item ainda ocupa uma linha inteira e os
+   outros seis fecham três linhas de dois. */
+@media (max-width: 1024px) {
+  .servicos-indice__lista { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 768px) {
   .servicos-hero { padding: 150px 20px 70px; }
   .servicos-hero__stats { gap: 28px 56px; margin-top: 40px; }
@@ -2715,6 +2741,8 @@ iframe.trabalhos__hover-video.active {
 
 @media (max-width: 480px) {
   .servicos-indice__lista { grid-template-columns: 1fr; }
+  /* Em coluna única não há o que preencher: o primeiro item volta a ser um. */
+  .servicos-indice__lista li:first-child { grid-column: auto; }
   .servico__stat-label { max-width: none; }
 }
 
