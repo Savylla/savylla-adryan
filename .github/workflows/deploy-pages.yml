@@ -61,3 +61,9 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Os 247MB de assets levam mais que os 600000ms padrao para o Pages
+          # servir. No timeout a action nao apenas desiste: ela cancela um deploy
+          # que estava em andamento (run 31113940202 morreu assim, com o servidor
+          # ainda em deployment_in_progress). 30min dao folga.
+          timeout: 1800000
