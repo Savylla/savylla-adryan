@@ -1117,7 +1117,9 @@ const projetos = [
       { youtubeId: "K9r_trZzBJ8", direcao: true, talento: "Alessandro Cerqueira" },
       { youtubeId: "YG6fXxkGmdM", direcao: true, talento: "Alessandro Cerqueira" },
       { youtubeId: "Zyl1AMK-wHs", talento: "Tati Infante" },
-      { youtubeId: "6HoHOCyhWf4", talento: "Tati Infante" }
+      { youtubeId: "6HoHOCyhWf4", talento: "Tati Infante" },
+      { youtubeId: "Q1hbdDCajbs", direcao: true, talento: "Kim Lemos Vieira" },
+      { youtubeId: "x8BGqs7Hpgg", direcao: true, talento: "Kim Lemos Vieira" }
     ],
     galeria: []
   },
