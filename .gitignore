@@ -56,6 +56,9 @@ upload_log.txt
 .aiox-core/local/
 .claude/settings.local.json
 .aiox/install-log.txt
+# Artefatos de runtime da troca de agentes — a própria regra do framework
+# (.claude/rules/agent-handoff.md) os declara gitignored.
+.aiox/handoffs/
 
 # YouTube/API tokens & progress files (NEVER commit)
 youtube_api_token*.json
@@ -76,9 +79,16 @@ missing_videos.json
 # ClickUp com assinatura de acesso aos brutos dos clientes. Repositório público.
 # Os script.js.bak.* são o mesmo caso: guardam o script de antes da migração
 # para o YouTube, quando os players ainda apontavam direto para o ClickUp.
-*.json.bak
-*.json.pre-*
-script.js.bak.*
+#
+# Os padrões abaixo são genéricos de propósito. A versão anterior listava as
+# extensões uma a uma (*.json.bak, *.json.pre-*, script.js.bak.*) e o sufixo
+# duplo escapava de todas: client_videos.json.bak.pre-soldiers-20260805-090242
+# não termina em .json.bak nem contém .json.pre-, e chegou a aparecer como
+# untracked com 411 URLs do ClickUp dentro. Nenhum arquivo versionado tem .bak
+# ou .pre- no nome, então pegar tudo não custa nada.
+*.bak
+*.bak.*
+*.pre-*
 
 # Validation screenshots (local only)
 hover-*.png
