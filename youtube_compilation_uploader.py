@@ -53,6 +53,14 @@ UPLOAD_TIMEOUT = 900  # 15 min per video
 # YouTube classifies Shorts by aspect ratio, not just duration
 # Video is NOT rescaled — original resolution is preserved, only black bars are added
 
+# Pillarbox re-encode quality. The YouTube transcode is a second generation of
+# loss, so the intermediate must stay as close to the master as possible.
+# Measured on a 1080x1920 / 15s clip (16 cores):
+#   crf 23 + ultrafast -> 2s, 31.8 MB   (old setting: ultrafast wastes bitrate)
+#   crf 16 + slow      -> 8s, 20.7 MB   (current: better quality AND smaller)
+PILLARBOX_CRF = "16"
+PILLARBOX_PRESET = "slow"
+
 # Chrome debug port
 CHROME_DEBUG_PORT = 9555
 
@@ -492,7 +500,7 @@ def pad_video_to_avoid_shorts(filepath):
         cmd = [
             "ffmpeg", "-y", "-i", filepath,
             "-vf", f"pad={out_w}:{out_h}:(ow-iw)/2:0:black",
-            "-c:v", "libx264", "-crf", "23", "-preset", "ultrafast",
+            "-c:v", "libx264", "-crf", PILLARBOX_CRF, "-preset", PILLARBOX_PRESET,
             "-c:a", "copy",
             "-movflags", "+faststart",
             pillarbox_path
@@ -510,7 +518,7 @@ def pad_video_to_avoid_shorts(filepath):
             cmd_retry = [
                 "ffmpeg", "-y", "-i", filepath,
                 "-vf", f"pad={out_w}:{out_h}:(ow-iw)/2:0:black",
-                "-c:v", "libx264", "-crf", "23", "-preset", "ultrafast",
+                "-c:v", "libx264", "-crf", PILLARBOX_CRF, "-preset", PILLARBOX_PRESET,
                 "-c:a", "aac", "-b:a", "192k",
                 "-movflags", "+faststart",
                 pillarbox_path
