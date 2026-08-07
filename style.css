@@ -984,6 +984,22 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   max-height: 100% !important;
 }
 
+/* Única logo em retrato da grade: com o teto de 55px do padrão ela ficaria
+   minúscula ao lado das horizontais. Não usa style inline porque o clamp
+   `.marcas__logo[style]` acima descartaria o valor. */
+.marcas__item[data-name="Nescau"] .marcas__logo {
+  max-height: 78px;
+  max-width: 92px;
+}
+
+@media (max-width: 768px) {
+  .marcas__item[data-name="Nescau"] .marcas__logo { max-height: 62px; max-width: 74px; }
+}
+
+@media (max-width: 480px) {
+  .marcas__item[data-name="Nescau"] .marcas__logo { max-height: 54px; max-width: 64px; }
+}
+
 .marcas__item:hover .marcas__logo,
 .marcas__item:focus-visible .marcas__logo {
   opacity: 1;
@@ -1680,6 +1696,109 @@ iframe.trabalhos__hover-video.active {
 
 .modal__video-card.active .modal__video-card-talent {
   color: var(--text);
+}
+
+/* Blocos de sub-marca (produtos de uma marca guarda-chuva, ex.: Nestlé).
+   Cada bloco repete a moldura do card da grade de marcas e guarda dentro os
+   vídeos daquele produto. Ocupa a linha inteira da galeria — senão o grid de
+   auto-fill espremeria cada bloco numa coluna de 240px. */
+.modal__submarca {
+  grid-column: 1 / -1;
+  padding: 18px 20px 20px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+}
+
+.modal__submarca + .modal__submarca {
+  margin-top: 4px;
+}
+
+/* Aceso por alguns segundos quando o visitante chega pelo card do produto na
+   grade de marcas, para ligar o clique ao bloco que apareceu na tela. */
+.modal__submarca--destaque {
+  border-color: rgba(107, 163, 224, 0.55);
+  box-shadow: 0 0 0 1px rgba(107, 163, 224, 0.25) inset, 0 14px 40px rgba(107, 163, 224, 0.14);
+  transition: border-color 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+
+.modal__submarca-header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  min-height: 72px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Seletor com o pai porque `.modal__galeria-grid img` (0,1,1) impõe
+   width:100% + aspect-ratio:16/9 + object-fit:cover a toda imagem da galeria —
+   com ele a logo saía recortada no meio. */
+.modal__galeria-grid .modal__submarca-logo {
+  grid-column: 2;
+  justify-self: center;
+  width: auto;
+  max-width: 100%;
+  max-height: var(--submarca-logo-h, 60px);
+  aspect-ratio: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  cursor: default;
+}
+
+.modal__galeria-grid .modal__submarca-logo:hover {
+  transform: none;
+}
+
+.modal__submarca-nome {
+  grid-column: 2;
+  justify-self: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.modal__submarca-count {
+  grid-column: 3;
+  justify-self: end;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.modal__submarca-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .modal__submarca {
+    padding: 14px 14px 16px;
+  }
+  /* Lado a lado a logo perderia o centro numa tela de 375px: empilha a
+     contagem embaixo dela, ambas centradas. */
+  .modal__submarca-header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 6px;
+    min-height: 0;
+    margin-bottom: 12px;
+  }
+  .modal__galeria-grid .modal__submarca-logo,
+  .modal__submarca-nome,
+  .modal__submarca-count {
+    grid-column: 1;
+    justify-self: center;
+  }
+  .modal__galeria-grid .modal__submarca-logo {
+    max-height: min(var(--submarca-logo-h, 60px), 48px);
+  }
 }
 
 /* ========================================

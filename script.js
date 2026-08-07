@@ -825,7 +825,7 @@ const projetos = [
     nome: "Magazine Luiza",
     categoria: "video",
     categoriaLabel: "Filmmaker + Direção",
-    ano: "2025",
+    ano: "2025 - 2026",
     videoId: "",
     descricao: "Produção de conteúdo para TikTok da Magazine Luiza, atendendo a campanhas de divulgação com múltiplos creators.",
     ficha: {
@@ -834,7 +834,7 @@ const projetos = [
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
-      "Ano": "2025"
+      "Ano": "2025 - 2026"
     },
     videos: [
       { youtubeId: "-f56zYQ3fDA", talento: "Letícia Machado" },
@@ -960,7 +960,7 @@ const projetos = [
     nome: "Bradesco",
     categoria: "video",
     categoriaLabel: "Filmmaker",
-    ano: "2025",
+    ano: "2025 - 2026",
     videoId: "",
     descricao: "Produção de conteúdo audiovisual para campanhas digitais do Bradesco em plataforma TikTok.",
     ficha: {
@@ -969,7 +969,7 @@ const projetos = [
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais",
-      "Ano": "2025"
+      "Ano": "2025 - 2026"
     },
     videos: [
       { youtubeId: "M17yhOXbkcU", talento: "Pedro Zurawski" },
@@ -1100,7 +1100,7 @@ const projetos = [
     nome: "Nestlé",
     categoria: "video",
     categoriaLabel: "Filmmaker + Direção",
-    ano: "2025",
+    ano: "2025 - 2026",
     videoId: "",
     descricao: "Produção de conteúdo para campanhas da Nestlé em plataformas de redes sociais.",
     ficha: {
@@ -1109,18 +1109,18 @@ const projetos = [
       "Plataforma": "TikTok",
       "Agência": "Allfluence",
       "Tipo": "Conteúdo para Redes Sociais / Exibido no Cinema",
-      "Ano": "2025"
+      "Ano": "2025 - 2026"
     },
     videos: [
-      { youtubeId: "RQiKHx6hAmI", talento: "Lucas Leal Souza" },
-      { youtubeId: "zJKsB2zMy58", talento: "Lucas Leal Souza" },
-      { youtubeId: "bAM16jswkMg", talento: "Lucas Leal Souza" },
-      { youtubeId: "K9r_trZzBJ8", direcao: true, talento: "Alessandro Cerqueira" },
-      { youtubeId: "YG6fXxkGmdM", direcao: true, talento: "Alessandro Cerqueira" },
-      { youtubeId: "Zyl1AMK-wHs", talento: "Tati Infante" },
-      { youtubeId: "6HoHOCyhWf4", talento: "Tati Infante" },
-      { youtubeId: "Q1hbdDCajbs", direcao: true, talento: "Kim Lemos Vieira" },
-      { youtubeId: "x8BGqs7Hpgg", direcao: true, talento: "Kim Lemos Vieira" }
+      { youtubeId: "RQiKHx6hAmI", talento: "Lucas Leal Souza", submarca: "Kit Kat" },
+      { youtubeId: "zJKsB2zMy58", talento: "Lucas Leal Souza", submarca: "Kit Kat" },
+      { youtubeId: "bAM16jswkMg", talento: "Lucas Leal Souza", submarca: "Kit Kat" },
+      { youtubeId: "K9r_trZzBJ8", direcao: true, talento: "Alessandro Cerqueira", submarca: "Kit Kat" },
+      { youtubeId: "YG6fXxkGmdM", direcao: true, talento: "Alessandro Cerqueira", submarca: "Kit Kat" },
+      { youtubeId: "Zyl1AMK-wHs", talento: "Tati Infante", submarca: "Nutren" },
+      { youtubeId: "6HoHOCyhWf4", talento: "Tati Infante", submarca: "Nutren" },
+      { youtubeId: "Q1hbdDCajbs", direcao: true, talento: "Kim Lemos Vieira", submarca: "Nescau" },
+      { youtubeId: "x8BGqs7Hpgg", direcao: true, talento: "Kim Lemos Vieira", submarca: "Nescau" }
     ],
     galeria: []
   },
@@ -1622,7 +1622,7 @@ const projetos = [
     nome: "Allfluence",
     categoria: "video",
     categoriaLabel: "Filmmaker + Direção",
-    ano: "2025",
+    ano: "2025 - 2026",
     videoId: "",
     descricao: "Produção de conteúdo interno e social media para a Allfluence, incluindo vídeos institucionais e de tendências com a equipe.",
     ficha: {
@@ -2364,6 +2364,34 @@ function videoReproduzivel(v) {
 }
 
 // ----------------------------------------
+// Sub-marcas
+// ----------------------------------------
+// A Nestlé é uma marca-guarda-chuva: os vídeos dela pertencem a produtos com
+// identidade própria. Quando um vídeo traz `submarca`, a lista de Produções
+// deixa de ser uma fileira única e passa a agrupar por produto, com a logo
+// dele no topo do bloco. Por ora só a Nestlé usa isso.
+const SUBMARCAS = {
+  'Kit Kat': { logo: 'assets/logos/kitkat.webp', altura: 62 },
+  'Nutren': { logo: 'assets/logos/nutren.webp', altura: 30 },
+  'Nescau': { logo: 'assets/logos/nescau.webp', altura: 72 }
+};
+
+// Preserva a ordem em que as sub-marcas aparecem no array de vídeos.
+function agruparPorSubmarca(videos) {
+  const grupos = [];
+  videos.forEach((v, i) => {
+    const nome = v.submarca || '';
+    let grupo = grupos.find(g => g.nome === nome);
+    if (!grupo) {
+      grupo = { nome, videos: [] };
+      grupos.push(grupo);
+    }
+    grupo.videos.push({ video: v, indice: i });
+  });
+  return grupos;
+}
+
+// ----------------------------------------
 // Tela cheia do player
 // ----------------------------------------
 // Num celular em retrato o player do modal tem a largura da tela menos o padding
@@ -2713,7 +2741,7 @@ function openModal(id) {
     const videoGaleriaTitle = document.getElementById('galeriaTitle');
     if (videoGaleriaTitle) videoGaleriaTitle.textContent = `Produções (${displayVideos.length})`;
 
-    displayVideos.forEach((v, i) => {
+    const criarCardVideo = (v, i) => {
       const card = document.createElement('div');
       card.className = 'modal__video-card' + (i === 0 ? ' active' : '');
       card.innerHTML = `
@@ -2753,8 +2781,44 @@ function openModal(id) {
         // scroll próprio, então chamar scrollTo nele não fazia nada.
         modal.scrollTo({ top: 0, behavior: 'smooth' });
       });
-      galeriaEl.appendChild(card);
-    });
+      return card;
+    };
+
+    const grupos = agruparPorSubmarca(displayVideos);
+    const temSubmarca = grupos.some(g => g.nome);
+
+    if (temSubmarca) {
+      // Cada produto vira um bloco com a logo no topo e os próprios vídeos
+      // dentro dele. Vídeo sem `submarca` cai num bloco sem cabeçalho, para
+      // nunca sumir da lista caso o dado venha incompleto.
+      grupos.forEach(grupo => {
+        const bloco = document.createElement('div');
+        bloco.className = 'modal__submarca';
+        if (grupo.nome) bloco.dataset.submarca = grupo.nome;
+
+        const meta = SUBMARCAS[grupo.nome];
+        if (grupo.nome) {
+          const cabecalho = document.createElement('div');
+          cabecalho.className = 'modal__submarca-header';
+          // A altura vai como custom property (e não como max-height inline) para
+          // a media query do mobile ainda conseguir apertar a logo.
+          const logo = meta
+            ? `<img src="${sanitizeURL(meta.logo)}" alt="${escapeHTML(grupo.nome)}" class="modal__submarca-logo" loading="lazy" decoding="async" style="--submarca-logo-h:${Number(meta.altura)}px">`
+            : `<span class="modal__submarca-nome">${escapeHTML(grupo.nome)}</span>`;
+          cabecalho.innerHTML = `${logo}<span class="modal__submarca-count">${grupo.videos.length} ${grupo.videos.length === 1 ? 'vídeo' : 'vídeos'}</span>`;
+          bloco.appendChild(cabecalho);
+        }
+
+        const lista = document.createElement('div');
+        lista.className = 'modal__submarca-videos';
+        grupo.videos.forEach(({ video, indice }) => lista.appendChild(criarCardVideo(video, indice)));
+        bloco.appendChild(lista);
+
+        galeriaEl.appendChild(bloco);
+      });
+    } else {
+      displayVideos.forEach((v, i) => galeriaEl.appendChild(criarCardVideo(v, i)));
+    }
 
     // Append gallery images after video cards if project has both
     if (p.galeria && p.galeria.length > 0) {
@@ -3197,6 +3261,21 @@ if ('IntersectionObserver' in window) {
   });
 })();
 
+// Clicar num produto da grade (Kit Kat, Nutren, Nescau) abre o modal da marca-mãe,
+// que é longo — sem isto o visitante cai no topo sem entender por que o título mudou.
+// O atraso espera a animação de abertura do modal; quem rola é o .modal.
+function rolarAteSubmarca(nome) {
+  if (!nome) return;
+  setTimeout(() => {
+    if (!modal.classList.contains('active')) return;
+    const bloco = modal.querySelector(`.modal__submarca[data-submarca="${CSS.escape(nome)}"]`);
+    if (!bloco) return;
+    bloco.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    bloco.classList.add('modal__submarca--destaque');
+    setTimeout(() => bloco.classList.remove('modal__submarca--destaque'), 2200);
+  }, 420);
+}
+
 document.querySelectorAll('.marcas__item').forEach(item => {
   item.setAttribute('tabindex', '0');
   item.setAttribute('role', 'button');
@@ -3213,6 +3292,7 @@ document.querySelectorAll('.marcas__item').forEach(item => {
       const projs = ids.map(id => projetos.find(p => p.id === id)).filter(Boolean);
       if (projs.length === 1) {
         openModalWithFocus(projs[0].id);
+        rolarAteSubmarca(item.dataset.submarca);
         return;
       }
       showProjectPicker(projs);
