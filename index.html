@@ -31,17 +31,16 @@
   <meta name="twitter:image" content="https://savylla.github.io/savylla-adryan/assets/og-image.jpg">
 
   <!-- Security -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://i.ytimg.com https://img.youtube.com; media-src 'self' blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://formsubmit.co; frame-src https://www.youtube-nocookie.com https://www.youtube.com https://www.instagram.com; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.ytimg.com https://img.youtube.com; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://formsubmit.co; frame-src https://www.youtube-nocookie.com https://www.youtube.com https://www.instagram.com; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), camera=(), microphone=(), geolocation=(), payment=(), usb=()">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
-  <!-- Favicon: SVG inline (assets/favicon.ico não existe e retornava 404) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1220'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-style='italic' text-anchor='middle' fill='%236ba3e0'%3ES%3C/text%3E%3C/svg%3E">
+  <!-- Favicon: o "S" é o glifo itálico da Instrument Serif convertido em path,
+       para não depender de fonte instalada no sistema de quem visita. -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
   <!-- Preconnect & DNS prefetch -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.youtube.com">
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
   <link rel="preconnect" href="https://i.ytimg.com">
@@ -51,8 +50,11 @@
   <!-- Preload críticos para LCP -->
   <link rel="preload" as="image" href="assets/bg-poster.jpg" fetchpriority="high">
 
-  <!-- Tipografia moderna: Instrument Serif Italic (display) + Inter Tight (UI/corpo) -->
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tipografia: Instrument Serif (display) + Inter Tight (corpo), autohospedadas
+       em assets/fonts/ e declaradas em style.css. Só o subset latin entra no
+       preload — o latin-ext o navegador busca sob demanda pelo unicode-range. -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/InterTight-Variable-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/InstrumentSerif-Italic-latin.woff2" crossorigin>
 
   <link rel="stylesheet" href="assets/lib/lite-yt-embed.css">
   <link rel="stylesheet" href="style.css">
@@ -165,8 +167,8 @@
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <h1 class="hero__title">
-        <span class="hero__title-line"><span class="word"><span class="display-font">Histórias</span></span> <span class="word">que</span></span>
-        <span class="hero__title-line"><span class="word">ganham</span> <span class="word"><span class="display-font">vida</span></span></span>
+        <span class="hero__title-line"><span class="word">Histórias</span> <span class="word">que</span></span>
+        <span class="hero__title-line"><span class="word">ganham</span> <span class="word">vida</span></span>
       </h1>
       <p class="hero__subtitle">Direção | Filmmaker | IA | Fotografia | Design</p>
       <div class="hero__ctas">
@@ -222,7 +224,7 @@
   <!-- Marcas -->
   <section class="marcas" id="marcas">
     <div class="marcas__container">
-      <h2 class="marcas__title">Marcas que <span class="display-font accent">acreditam</span> no meu trabalho</h2>
+      <h2 class="marcas__title">Marcas que <span class="accent">acreditam</span> no meu trabalho</h2>
       <div class="marcas__grid">
         <div class="marcas__item" data-name="Drogasil">
           <img src="assets/logos/drogasil.webp" alt="Drogasil" class="marcas__logo" loading="lazy" decoding="async">
@@ -446,7 +448,7 @@
   <!-- Projetos -->
   <section class="trabalhos" id="trabalhos">
     <div class="trabalhos__header">
-      <h2 class="trabalhos__title">Meus <span class="display-font accent">projetos</span></h2>
+      <h2 class="trabalhos__title">Meus <span class="accent">projetos</span></h2>
       <div class="trabalhos__filtros" role="group" aria-label="Filtrar projetos por categoria">
         <button class="trabalhos__filtro active" data-filter="todos" aria-pressed="true">Tudo</button>
         <button class="trabalhos__filtro" data-filter="video" aria-pressed="false">Vídeo</button>

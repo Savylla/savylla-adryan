@@ -5,112 +5,89 @@
 
 /* -----------------------------------------
    FONTS
-   IBM Plex Sans (body) + IBM Plex Sans Condensed (display)
-   Todas carregadas localmente via assets/fonts/
+   Par único do site: Instrument Serif (display) + Inter Tight (corpo).
+   Autohospedadas em assets/fonts/ — nada de Google Fonts em runtime, o que
+   mantém a CSP fechada em font-src 'self'.
+
+   Cada família vem em dois subsets (latin e latin-ext); o unicode-range faz o
+   navegador baixar o latin-ext só quando a página tem caractere que o exige.
+   O Inter Tight é uma variable font (wght 100–900) — um arquivo cobre os
+   quatro pesos usados no site.
    ----------------------------------------- */
 
 @font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('assets/fonts/IBMPlexSans-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('assets/fonts/IBMPlexSans-Regular.woff2') format('woff2');
+  font-family: 'Instrument Serif';
+  src: url('assets/fonts/InstrumentSerif-Regular-latin.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('assets/fonts/IBMPlexSans-Italic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('assets/fonts/IBMPlexSans-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('assets/fonts/IBMPlexSans-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('assets/fonts/IBMPlexSans-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans Condensed';
-  src: url('assets/fonts/IBMPlexSans_Condensed-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans Condensed';
-  src: url('assets/fonts/IBMPlexSans_Condensed-Regular.woff2') format('woff2');
+  font-family: 'Instrument Serif';
+  src: url('assets/fonts/InstrumentSerif-Regular-latinext.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans Condensed';
-  src: url('assets/fonts/IBMPlexSans_Condensed-Italic.woff2') format('woff2');
+  font-family: 'Instrument Serif';
+  src: url('assets/fonts/InstrumentSerif-Italic-latin.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans Condensed';
-  src: url('assets/fonts/IBMPlexSans_Condensed-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans Condensed';
-  src: url('assets/fonts/IBMPlexSans_Condensed-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans Condensed';
-  src: url('assets/fonts/IBMPlexSans_Condensed-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Bonheur Royale';
-  src: url('assets/fonts/BonheurRoyale-Regular.woff2') format('woff2');
+  font-family: 'Instrument Serif';
+  src: url('assets/fonts/InstrumentSerif-Italic-latinext.woff2') format('woff2');
   font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('assets/fonts/InterTight-Variable-latin.woff2') format('woff2');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('assets/fonts/InterTight-Variable-latinext.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Itálica real do corpo — usada só pelos <em> (títulos de obra). Sem ela o
+   navegador inclinava a romana à força, o que deforma a letra. O arquivo só
+   é baixado nas páginas que de fato têm <em>. */
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('assets/fonts/InterTight-VariableItalic-latin.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('assets/fonts/InterTight-VariableItalic-latinext.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 :root {
@@ -128,9 +105,11 @@
   --border: rgba(255, 255, 255, 0.18);
   --border-light: rgba(255, 255, 255, 0.32);
 
-  /* Tipografia moderna: Instrument Serif Italic (display editorial) + Inter Tight (UI/corpo) */
-  --font-display: 'Instrument Serif', 'IBM Plex Sans Condensed', serif;
-  --font-body: 'Inter Tight', 'Inter', 'IBM Plex Sans', -apple-system, sans-serif;
+  /* Par tipográfico único do site: Instrument Serif (display editorial) +
+     Inter Tight (UI/corpo). Nenhuma regra deve escrever a família à mão —
+     sempre use uma destas duas variáveis. */
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -165,7 +144,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter Tight', sans-serif;
+  font-family: var(--font-body);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -362,11 +341,6 @@ img { max-width: 100%; display: block; }
 button { font-family: inherit; }
 
 .accent { color: var(--accent); }
-.display-font {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 400;
-}
 
 /* ── Quebra de linha ──
    Título: 'balance' distribui as linhas com comprimento parecido, em vez de
@@ -625,7 +599,7 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
 }
 
 .hero__title {
-  font-family: 'Instrument Serif', 'Bonheur Royale', serif;
+  font-family: var(--font-display);
   font-style: italic;
   font-size: clamp(4rem, 10vw, 9rem);
   font-weight: 400;
@@ -655,13 +629,6 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .hero__title .word { opacity: 1; transform: none; animation: none; }
-}
-
-.hero__title .display-font {
-  font-family: 'Instrument Serif', 'Bonheur Royale', serif;
-  font-weight: 400;
-  font-style: italic;
-  color: #ffffff;
 }
 
 .hero__subtitle {
@@ -804,7 +771,10 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
 .sobre__image:hover img { transform: scale(1.03); }
 
 .sobre__title {
-  font-family: 'Instrument Serif', 'Bonheur Royale', serif;
+  font-family: var(--font-display);
+  /* Itálico explícito: antes de a face romana existir no site, o navegador
+     caía na itálica sozinho. Declarado aqui para o visual não mudar. */
+  font-style: italic;
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 400;
   line-height: 1.05;
@@ -831,7 +801,9 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   display: block;
   font-family: var(--font-display);
   font-size: 3rem;
-  font-weight: 600;
+  /* A Instrument Serif só existe em 400: pedir 600 aqui fazia o navegador
+     engordar a letra artificialmente (faux bold). */
+  font-weight: 400;
   color: var(--accent);
   line-height: 1;
 }
@@ -862,7 +834,7 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   position: absolute;
   top: -40px;
   left: 4%;
-  font-family: 'Instrument Serif', serif;
+  font-family: var(--font-display);
   font-style: italic;
   font-size: clamp(12rem, 24vw, 22rem);
   line-height: 1;
@@ -880,7 +852,7 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
 }
 
 .quote__text {
-  font-family: 'Instrument Serif', 'Bonheur Royale', serif;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4.5vw, 3.5rem);
   font-style: italic;
   font-weight: 400;
@@ -1504,7 +1476,7 @@ iframe.trabalhos__hover-video.active {
 
 .modal__ficha h3,
 .modal__galeria h3 {
-  font-family: 'IBM Plex Sans Condensed', var(--font-display);
+  font-family: var(--font-body);
   font-size: 1.5rem;
   font-weight: 700;
   font-style: normal;
@@ -2501,8 +2473,11 @@ iframe.trabalhos__hover-video.active {
 
 .picker-title {
   font-family: var(--font-display);
+  /* Ver .sobre__title: itálico explícito para preservar o visual. */
+  font-style: italic;
   font-size: 1.2rem;
-  font-weight: 700;
+  /* Ver .sobre__stat-num: a família só tem peso 400. */
+  font-weight: 400;
   text-align: center;
   margin-bottom: 20px;
   color: var(--text);
@@ -2630,8 +2605,9 @@ iframe.trabalhos__hover-video.active {
   display: block;
   font-family: var(--font-display);
   font-size: 3rem;
-  font-weight: 600;
-  /* O serif itálico entrega os algarismos quase encostados uns nos outros —
+  /* Ver .sobre__stat-num: a família só tem peso 400. */
+  font-weight: 400;
+  /* Os algarismos da Instrument Serif saem quase encostados uns nos outros —
      "425" lia como um borrão. O respiro vale para todos os números da página. */
   letter-spacing: 0.06em;
   color: var(--accent);
@@ -2729,7 +2705,10 @@ iframe.trabalhos__hover-video.active {
 
 .servico__titulo {
   font-size: clamp(2rem, 4.5vw, 3.2rem);
-  font-weight: 700;
+  /* 600 em vez de 700: no corpo do texto o peso cheio pesava demais em sete
+     títulos seguidos. O Inter Tight é variable, então este 600 é desenhado,
+     não interpolado à força. */
+  font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.02em;
 }
@@ -2801,7 +2780,8 @@ iframe.trabalhos__hover-video.active {
   display: block;
   font-family: var(--font-display);
   font-size: 2.4rem;
-  font-weight: 600;
+  /* Ver .sobre__stat-num: a família só tem peso 400. */
+  font-weight: 400;
   /* Mesmo respiro do número do hero — ver comentário lá em cima. */
   letter-spacing: 0.06em;
   color: var(--accent);

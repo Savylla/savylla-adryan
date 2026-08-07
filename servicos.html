@@ -32,20 +32,20 @@
 
   <!-- Security — mais restritiva que a do index: esta página não tem vídeo
        embedado, nem formulário, nem player do YouTube. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; media-src 'none'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'none'; font-src 'self'; connect-src 'self'; frame-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), camera=(), microphone=(), geolocation=(), payment=(), usb=()">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
-  <!-- Favicon: mesmo SVG inline do index -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1220'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-style='italic' text-anchor='middle' fill='%236ba3e0'%3ES%3C/text%3E%3C/svg%3E">
+  <!-- Favicon: mesmo SVG do index -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-  <!-- Preconnect & preload -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preload (fontes autohospedadas — ver comentário no index) -->
   <link rel="preload" as="image" href="assets/bg-poster.jpg" fetchpriority="high">
-
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/InterTight-Variable-latin.woff2" crossorigin>
+  <!-- Aqui a display só aparece nos números das estatísticas, que são romanos —
+       ao contrário do index, esta página não usa a face itálica. -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/InstrumentSerif-Regular-latin.woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 
   <!-- Schema.org: catálogo de serviços vinculado ao Person/ProfessionalService do index -->
@@ -116,7 +116,7 @@
     <div class="servicos-hero__inner">
       <p class="servicos-hero__eyebrow">Serviços</p>
       <h1 class="servicos-hero__title">
-        Me conta a ideia, eu cuido do <span class="display-font accent">resto</span>.
+        Me conta a ideia, eu cuido do <span class="accent">resto</span>.
       </h1>
       <p class="servicos-hero__texto">
         Contrate uma frente sozinha ou várias no mesmo projeto — o formato se
@@ -158,7 +158,7 @@
     <!-- 01 ─────────────────────────────────────────── -->
     <article class="servico" id="conteudo-redes-sociais" data-revelar>
       <div class="servico__corpo">
-        <h2 class="servico__titulo">Conteúdo para <span class="display-font accent">Redes Sociais</span></h2>
+        <h2 class="servico__titulo">Conteúdo para <span class="accent">Redes Sociais</span></h2>
         <p class="servico__resumo">
           Vídeo vertical para TikTok, Reels e Shorts produzido em volume — do
           briefing à entrega em lote, com padrão constante ao longo de meses de
@@ -216,7 +216,7 @@
     <!-- 02 ─────────────────────────────────────────── -->
     <article class="servico" id="direcao-de-creators" data-revelar>
       <div class="servico__corpo">
-        <h2 class="servico__titulo">Direção de <span class="display-font accent">Creators</span></h2>
+        <h2 class="servico__titulo">Direção de <span class="accent">Creators</span></h2>
         <p class="servico__resumo">
           Dirigir quem não é ator. Creator travado entrega conteúdo morno, e
           roteiro decorado soa falso — o trabalho é extrair performance natural
@@ -263,7 +263,7 @@
     <!-- 03 ─────────────────────────────────────────── -->
     <article class="servico" id="filmmaker" data-revelar>
       <div class="servico__corpo">
-        <h2 class="servico__titulo"><span class="display-font accent">Filmmaker</span></h2>
+        <h2 class="servico__titulo"><span class="accent">Filmmaker</span></h2>
         <p class="servico__resumo">
           Captação completa em equipe enxuta: direção, câmera, luz e som na mesma
           mão. É o formato que viabiliza volume sem diária de equipe grande — e
@@ -302,7 +302,7 @@
     <!-- 04 ─────────────────────────────────────────── -->
     <article class="servico" id="pos-producao" data-revelar>
       <div class="servico__corpo">
-        <h2 class="servico__titulo"><span class="display-font accent">Pós-produção</span></h2>
+        <h2 class="servico__titulo"><span class="accent">Pós-produção</span></h2>
         <p class="servico__resumo">
           Edição, motion e finalização como serviço independente — para quem já
           tem material captado e precisa de acabamento. Inclui operação contínua
@@ -350,7 +350,7 @@
     <!-- 05 ─────────────────────────────────────────── -->
     <article class="servico" id="fotografia" data-revelar>
       <div class="servico__corpo">
-        <h2 class="servico__titulo"><span class="display-font accent">Fotografia</span></h2>
+        <h2 class="servico__titulo"><span class="accent">Fotografia</span></h2>
         <p class="servico__resumo">
           Três frentes: cobertura de evento, making of de produção audiovisual e
           still de campanha. Captação e tratamento na mesma mão — a edição
@@ -391,7 +391,7 @@
     <!-- 06 ─────────────────────────────────────────── -->
     <article class="servico" id="direcao-de-arte" data-revelar>
       <div class="servico__corpo">
-        <h2 class="servico__titulo">Direção de <span class="display-font accent">Arte</span></h2>
+        <h2 class="servico__titulo">Direção de <span class="accent">Arte</span></h2>
         <p class="servico__resumo">
           Design e coordenação de arte para campanha e para canal — do key visual
           de lançamento internacional ao material gráfico e físico de projeto
@@ -431,7 +431,7 @@
     <!-- 07 ─────────────────────────────────────────── -->
     <article class="servico" id="producao-com-ia" data-revelar>
       <div class="servico__corpo">
-        <h2 class="servico__titulo">Produção com <span class="display-font accent">IA</span></h2>
+        <h2 class="servico__titulo">Produção com <span class="accent">IA</span></h2>
         <p class="servico__resumo">
           Vídeo e imagem com pipeline de IA generativa, usada onde ela resolve de
           verdade: cenário que não daria para construir, expansão de plano,
@@ -470,7 +470,7 @@
   <section class="servicos-cta">
     <div class="servicos-cta__inner">
       <h2 class="servicos-cta__titulo">
-        Tem um projeto em <span class="display-font accent">mente</span>?
+        Tem um projeto em <span class="accent">mente</span>?
       </h2>
       <p class="servicos-cta__texto">
         Me conte o que precisa entregar e para onde vai. Eu digo quais dessas
