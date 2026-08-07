@@ -1120,7 +1120,9 @@ const projetos = [
       { youtubeId: "Zyl1AMK-wHs", talento: "Tati Infante", submarca: "Nutren" },
       { youtubeId: "6HoHOCyhWf4", talento: "Tati Infante", submarca: "Nutren" },
       { youtubeId: "Q1hbdDCajbs", direcao: true, talento: "Kim Lemos Vieira", submarca: "Nescau" },
-      { youtubeId: "x8BGqs7Hpgg", direcao: true, talento: "Kim Lemos Vieira", submarca: "Nescau" }
+      { youtubeId: "x8BGqs7Hpgg", direcao: true, talento: "Kim Lemos Vieira", submarca: "Nescau" },
+      { youtubeId: "-_5TT177-i0", direcao: true, talento: "Sara Watanabe", submarca: "Nescau" },
+      { youtubeId: "X8KblkSc3r0", direcao: true, talento: "Sara Watanabe", submarca: "Nescau" }
     ],
     galeria: []
   },
