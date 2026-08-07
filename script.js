@@ -28,7 +28,7 @@ const projetos = [
       { youtubeId: "Wp7oNIgtDow", direcao: true, talento: "Na Madruga Boladona" },
       { youtubeId: "YdDfLK_gFSg", direcao: true, talento: "Isopormácio" },
       { instagramUrl: "https://www.instagram.com/p/CBGTNDYH2Ae/", direcao: true, talento: "Presente de Aniversário" },
-      { url: "assets/projetos/garagem-coletiva/video-7.mp4", direcao: true, talento: "Miami Beach Gay Pride" },
+      { youtubeId: "NCDBzfPAjK0", direcao: true, talento: "Miami Beach Gay Pride" },
       { youtubeId: "sRbWaofh7fk", direcao: true, talento: "Deixe a Sapa Falar" }
     ],
     youtube: "https://www.youtube.com/@ColetivaGaragem",
@@ -52,9 +52,9 @@ const projetos = [
       "Ano": "2020"
     },
     videos: [
-      { url: "assets/projetos/devassas/video-1.mp4", talento: "Devassas - Video 1" },
-      { url: "assets/projetos/devassas/video-2.mp4", talento: "Devassas - Video 2" },
-      { url: "assets/projetos/devassas/video-3.mp4", talento: "Devassas - Video 3" }
+      { youtubeId: "8kdZVMwr3Gc", talento: "Devassas - Video 1" },
+      { youtubeId: "zaRhDGWtjM0", talento: "Devassas - Video 2" },
+      { youtubeId: "4fVpJOqWRjY", talento: "Devassas - Video 3" }
     ],
     instagram: "https://www.instagram.com/devassascom/",
     facebook: "https://www.facebook.com/devassascom",
@@ -204,7 +204,7 @@ const projetos = [
       "Ano": "2016"
     },
     videos: [
-      { url: "assets/projetos/forca-da-terra/forca-da-terra-20-anos.mp4", talento: "Força da Terra 20 Anos" }
+      { youtubeId: "Kl1GaslcCbA", talento: "Força da Terra 20 Anos" }
     ],
     website: "https://www.forcadaterra.com.br/",
     instagram: "https://www.instagram.com/forcadaterra/",
@@ -1476,7 +1476,7 @@ const projetos = [
       "Ano": "2025"
     },
     videos: [
-      { url: "assets/projetos/ia-projeto-1/video.mp4", talento: "Teste de Fluxo - Nano Banana + VEO3" }
+      { youtubeId: "lg6CRRu62m8", talento: "Teste de Fluxo - Nano Banana + VEO3" }
     ],
     galeria: []
   },
@@ -2287,9 +2287,7 @@ const VIDEOS_YT_VERTICAIS = new Set([
   "C8LcFan2gAs"
 ]);
 
-const VIDEOS_LOCAIS_VERTICAIS = new Set([
-  "assets/projetos/ia-projeto-1/video.mp4"
-]);
+const VIDEOS_LOCAIS_VERTICAIS = new Set([]);
 
 // O Instagram tem moldura própria, medida no navegador post a post. Ele NÃO usa
 // modal__video--vertical (9:16): ali o iframe fica com ~395px de largura, o
