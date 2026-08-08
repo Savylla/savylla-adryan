@@ -1513,7 +1513,7 @@ const projetos = [
     categoriaLabel: "Produção com IA",
     ano: "2026",
     videoId: "",
-    descricao: "Campanha de conteúdo com avatares digitais para a linha de suplementos da Soldiers Nutrition — creatina, whey, pré-treino e termogênico.",
+    descricao: "Campanha de conteúdo com avatares digitais para a linha de suplementos da Soldiers Nutrition: creatina, whey, pré-treino e termogênico.",
     ficha: {
       "Função": "Produção com IA",
       "Marca": "Soldiers Nutrition",
@@ -3316,7 +3316,7 @@ document.querySelectorAll('.marcas__item').forEach(item => {
   // clique faz. Na tela isso fica por conta do cursor e do role=button — o
   // rótulo "Ver projeto" no hover cobria a logo e foi removido.
   const marca = item.dataset.name;
-  if (marca) item.setAttribute('aria-label', `Ver projeto — ${marca}`);
+  if (marca) item.setAttribute('aria-label', `Ver projeto de ${marca}`);
 
   const handleClientClick = () => {
     lastFocusedElement = document.activeElement;
@@ -3550,7 +3550,7 @@ function closeLightbox() {
 function tornarFotoAcessivel(img, lista, indice, nomeProjeto) {
   img.tabIndex = 0;
   img.setAttribute('role', 'button');
-  img.setAttribute('aria-label', `Ampliar foto ${indice + 1} de ${lista.length} — ${nomeProjeto}`);
+  img.setAttribute('aria-label', `Ampliar foto ${indice + 1} de ${lista.length}, ${nomeProjeto}`);
   img.addEventListener('click', () => openLightbox(lista, indice));
   img.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(lista, indice); }
