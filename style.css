@@ -2767,6 +2767,15 @@ iframe.trabalhos__hover-video.active {
 
 .servico__lista strong { color: var(--text); font-weight: 600; }
 
+/* Quebra manual dos itens: só vale onde a coluna tem largura para as duas
+   linhas planejadas. Abaixo de 1024px a coluna encolhe e o texto reflui
+   sozinho, então o <br> sai de cena para não picotar a frase. */
+.servico__lista br { display: none; }
+
+@media (min-width: 1024px) {
+  .servico__lista br { display: inline; }
+}
+
 .servico__prova {
   display: flex;
   flex-wrap: wrap;
