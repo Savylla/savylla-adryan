@@ -51,9 +51,21 @@ jobs:
           echo "Arquivos no artefato: $(find _site -type f | wc -l)"
           echo "Peso do artefato: $(du -sh _site | cut -f1)"
 
-      - uses: actions/upload-pages-artifact@v3
+      # v5 e a unica major que sai do node20: ela e composite e nao tem runtime
+      # proprio, mas chamava actions/upload-artifact@v4, que e node20 — era a
+      # ultima fonte do aviso de descontinuacao depois que checkout e
+      # deploy-pages subiram. A v5 pina upload-artifact@v7, ja em node24.
+      #
+      # include-hidden-files e obrigatorio aqui, nao opcional: a v4.0.0 passou a
+      # excluir dotfiles do artefato por padrao, e o unico dotfile do site e o
+      # .nojekyll — justamente o arquivo que impede o Pages de processar tudo com
+      # Jekyll. Sem este input a subida de versao derrubaria o .nojekyll em
+      # silencio, sem erro em lugar nenhum. .git e .github seguem fora de
+      # qualquer forma, por regra da propria action.
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
+          include-hidden-files: true
 
   deploy:
     needs: build
