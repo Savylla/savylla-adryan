@@ -713,8 +713,15 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   color: var(--text-dim);
 }
 
+/* flex-wrap não é detalhe aqui: sem ele os dois botões formam uma linha
+   indivisível de ~326px que vira a largura mínima do .hero__content. Em telas
+   de 320px o bloco inteiro passava a 359px e transbordava 27px para cada lado
+   — o subtítulo saía cortado nas duas bordas e o segundo botão, pela direita.
+   Como o .hero tem overflow:hidden, nada disso gerava barra de rolagem: o
+   conteúdo era simplesmente decepado, sem sintoma nenhum além do visual. */
 .hero__ctas {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
   margin-top: 32px;
@@ -2890,13 +2897,48 @@ iframe.trabalhos__hover-video.active {
 /* Item de lista já está em 600 — o destaque precisa de um degrau acima. */
 .servico__lista strong { color: var(--text); font-weight: var(--fw-forte); }
 
-/* Quebra manual dos itens: só vale onde a coluna tem largura para as duas
-   linhas planejadas. Abaixo de 1024px a coluna encolhe e o texto reflui
-   sozinho, então o <br> sai de cena para não picotar a frase. */
-.servico__lista br { display: none; }
+/* ── Quebra editorial: regra única da página ──────────────────────────────
+   Todo <br> escrito à mão aqui é uma quebra ESCOLHIDA olhando o desktop, que é
+   onde dá para ver a linha inteira e decidir onde ela deve terminar. Esse ponto
+   de quebra só faz sentido na largura em que foi escolhido: levado para uma
+   tela estreita ele picota a frase em lugar arbitrário e produz linhas órfãs.
+
+   Por isso a quebra manual é um enfeite de desktop, nunca estrutura: abaixo de
+   1024px todo <br> some e o texto reflui sozinho, adaptando-se a qualquer
+   largura de aparelho. Vale para os três blocos de texto da página — resumo,
+   item de lista e rótulo de número — e qualquer <br> novo dentro deles já
+   nasce com o comportamento certo.
+
+   Contrapartida obrigatória no HTML: todo <br> precisa de um espaço antes
+   ("vídeos <br>publicados"). Escondido, o <br> não separa nada, e sem o espaço
+   as duas palavras colam — "vídeospublicados" — sem erro em lugar nenhum. */
+.servico__resumo br,
+.servico__lista br,
+.servico__stat-label br { display: none; }
 
 @media (min-width: 1024px) {
-  .servico__lista br { display: inline; }
+  .servico__resumo br,
+  .servico__lista br,
+  .servico__stat-label br { display: inline; }
+}
+
+/* Abaixo de 1024px quem decide o corte das linhas é o navegador, já que as
+   quebras manuais estão desligadas. Por padrão ele resolve linha a linha e
+   sobra a última com uma palavra sozinha — em 280 e 320px isso acontecia em
+   até 12 blocos ("plataforma", "consistência", "finalização"). text-wrap:
+   pretty faz ele avaliar o parágrafo inteiro antes de decidir e puxar uma
+   palavra da penúltima linha para fechar a última.
+
+   Restrito a esta faixa de propósito: no desktop as quebras são as escolhidas
+   a olho e não podem mudar sozinhas. Onde o navegador não suporta a
+   propriedade, ela é ignorada e o texto continua como está hoje. */
+@media (max-width: 1023px) {
+  .servicos-hero__texto,
+  .servico__resumo,
+  .servico__lista li,
+  .servico__nota,
+  .servico__stat-label,
+  .servicos-cta__texto { text-wrap: pretty; }
 }
 
 .servico__prova {
