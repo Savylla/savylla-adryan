@@ -35,7 +35,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # v5 e a primeira major em node24. A v4 ainda era node20 e ja rodava
+      # forcada em node24 pelo runner, com aviso — mesma divida da deploy-pages.
+      # Exige runner >= v2.327.1; o ubuntu-latest hospedado passa folgado.
+      - uses: actions/checkout@v5
 
       - name: Monta o artefato apenas com o site
         # Lista de inclusao, nao de exclusao: os .py e .json do pipeline de videos,
@@ -59,11 +62,18 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # v5 e a primeira major em node24; a v4 era node20 e o runner ja a rodava
+      # forcada em node24, avisando a cada deploy. O unico item funcional do
+      # changelog da v5 e a troca do runtime, e os inputs sao os mesmos.
+      #
+      # O input `timeout` saiu daqui. Ele dizia 1800000 com um comentario
+      # afirmando que "30min dao folga", mas a action corta qualquer valor pelo
+      # seu proprio MAX_TIMEOUT de 600000ms (deployment.js: Math.min(input,
+      # MAX_TIMEOUT)) e avisa no log. Os 30min nunca existiram: o teto sempre
+      # foi 10min, e e nele que este deploy vive — o comentario no topo do
+      # arquivo lista os runs de 10min22s e 10min54s que passaram raspando e os
+      # de 11min17s e 10min40s que falharam. O artefato enxuto montado no job de
+      # build existe justamente para caber nesse teto. Deixar o numero antigo
+      # faria o proximo a ler o arquivo acreditar numa folga que nao ha.
       - id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          # Os 247MB de assets levam mais que os 600000ms padrao para o Pages
-          # servir. No timeout a action nao apenas desiste: ela cancela um deploy
-          # que estava em andamento (run 31113940202 morreu assim, com o servidor
-          # ainda em deployment_in_progress). 30min dao folga.
-          timeout: 1800000
+        uses: actions/deploy-pages@v5
