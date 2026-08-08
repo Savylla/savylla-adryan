@@ -173,6 +173,26 @@
   --fs-numero: 3rem;
   --fs-numero-sm: 2.4rem;
 
+  /* Medida de linha — largura máxima de um bloco de texto corrido.
+     Em ch, não em px: ch é a largura do glifo "0" da fonte do próprio
+     elemento, então a medida fica presa à CONTAGEM DE CARACTERES e não a uma
+     distância fixa. Se o corpo mudar de tamanho, a linha continua com a mesma
+     quantidade de palavras; com max-width em px ela esticava junto.
+
+     Aferido sobre linhas renderizadas deste par tipográfico: 1ch cabe ~1,5
+     caractere de texto real, porque o "0" é bem mais largo que a média das
+     minúsculas. Logo 43ch entrega ~65 caracteres por linha, dentro da faixa
+     confortável — os blocos vinham de 85 a 110, o que obrigava o olho a
+     procurar o começo da linha seguinte a cada volta.
+
+     O piso não é arbitrário: a maior linha fixada à mão num resumo tem 58
+     caracteres ("O que trava o canal da sua marca não é a ideia, é o ritmo.").
+     A medida precisa comportá-la inteira, senão a quebra manual se parte em
+     duas e o desenho validado no desktop se perde. Por isso 43ch e não menos:
+     é o ponto em que a medida entra na faixa de leitura sem espremer essa
+     linha. Baixar daqui exige reescrever a copy do resumo antes. */
+  --medida-texto: 43ch;
+
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -865,6 +885,7 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
 
 .sobre__text {
   color: #ffffff;
+  max-width: var(--medida-texto);
   font-size: var(--fs-corpo);
   font-weight: var(--fw-corpo);
   line-height: var(--lh-corpo);
@@ -1559,6 +1580,7 @@ iframe.trabalhos__hover-video.active {
    uma coluna estreita e o passo cheio de --fs-corpo apertaria a linha. */
 .modal__desc {
   color: var(--text-dim);
+  max-width: var(--medida-texto);
   font-size: var(--fs-corpo-sm);
   font-weight: var(--fw-corpo);
   line-height: var(--lh-corpo);
@@ -1994,8 +2016,12 @@ iframe.trabalhos__hover-video.active {
   margin-bottom: 16px;
 }
 
+/* Centralizado: precisa do margin-inline para não encostar à esquerda quando a
+   medida for menor que o container. */
 .cta__text {
   color: var(--text-dim);
+  max-width: var(--medida-texto);
+  margin-inline: auto;
   font-size: var(--fs-corpo);
   font-weight: var(--fw-corpo);
   line-height: var(--lh-corpo);
@@ -2078,6 +2104,7 @@ iframe.trabalhos__hover-video.active {
 /* Também não tinha tamanho próprio: herdava o 1rem do body. */
 .contato__text {
   color: #ffffff;
+  max-width: var(--medida-texto);
   font-size: var(--fs-corpo);
   font-weight: var(--fw-corpo);
   margin-bottom: 40px;
@@ -2709,7 +2736,7 @@ iframe.trabalhos__hover-video.active {
    a lista pesa mais que o parágrafo que a apresenta. */
 .servicos-hero__texto {
   margin-top: 28px;
-  max-width: 700px;
+  max-width: var(--medida-texto);
   font-size: var(--fs-corpo-lg);
   font-weight: var(--fw-corpo);
   line-height: var(--lh-corpo);
@@ -2839,7 +2866,7 @@ iframe.trabalhos__hover-video.active {
 
 .servico__resumo {
   margin-top: 22px;
-  max-width: 720px;
+  max-width: var(--medida-texto);
   font-size: var(--fs-corpo);
   font-weight: var(--fw-corpo);
   line-height: var(--lh-corpo);
@@ -2981,10 +3008,10 @@ iframe.trabalhos__hover-video.active {
   padding: 16px 20px;
   border-left: 2px solid var(--accent);
   background: rgba(107, 163, 224, 0.06);
-  /* A nota é o único texto corrido sem largura própria: esticada nos 1100px do
-     container ela passava de 110 caracteres por linha, e o olho errava a linha
-     seguinte na volta. 780px a põe na mesma faixa de medida do resumo. */
-  max-width: 780px;
+  /* Mesma medida dos demais blocos. Como o box-sizing é border-box, os 20px de
+     padding de cada lado saem de dentro dela — o texto fica com ~65 caracteres
+     em vez dos ~68 do resumo, diferença que não se nota na leitura. */
+  max-width: var(--medida-texto);
   font-size: var(--fs-corpo-sm);
   font-weight: var(--fw-corpo);
   line-height: var(--lh-corpo);
@@ -3032,8 +3059,12 @@ iframe.trabalhos__hover-video.active {
   line-height: 1.1;
 }
 
+/* Texto centralizado: além da medida, precisa do margin-inline para continuar
+   centrado quando a medida for menor que o .servicos-cta__inner. */
 .servicos-cta__texto {
   margin-top: 20px;
+  max-width: var(--medida-texto);
+  margin-inline: auto;
   font-size: var(--fs-corpo);
   font-weight: var(--fw-corpo);
   line-height: var(--lh-corpo);
