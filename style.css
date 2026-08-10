@@ -2963,7 +2963,6 @@ iframe.trabalhos__hover-video.active {
   .servicos-hero__texto,
   .servico__resumo,
   .servico__lista li,
-  .servico__nota,
   .servico__stat-label,
   .servicos-cta__texto { text-wrap: pretty; }
 }
@@ -3002,23 +3001,6 @@ iframe.trabalhos__hover-video.active {
      linhas. A proporção com o texto continua a mesma. */
   max-width: 190px;
 }
-
-.servico__nota {
-  margin-top: 32px;
-  padding: 16px 20px;
-  border-left: 2px solid var(--accent);
-  background: rgba(107, 163, 224, 0.06);
-  /* Mesma medida dos demais blocos. Como o box-sizing é border-box, os 20px de
-     padding de cada lado saem de dentro dela — o texto fica com ~65 caracteres
-     em vez dos ~68 do resumo, diferença que não se nota na leitura. */
-  max-width: var(--medida-texto);
-  font-size: var(--fs-corpo-sm);
-  font-weight: var(--fw-corpo);
-  line-height: var(--lh-corpo);
-  color: var(--text-dim);
-}
-
-.servico__nota strong { color: var(--text); font-weight: var(--fw-forte); }
 
 .servico__link {
   display: inline-flex;
