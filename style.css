@@ -203,6 +203,22 @@
   :root {
     --fs-numero: 2.4rem;
     --fs-numero-sm: 2rem;
+
+    /* A escala de rótulo sobe um degrau no celular. Ela foi calibrada para a
+       distância de leitura do desktop, e ali o miúdo em 0.72rem (11.5px) ainda
+       se defende: a caixa alta com 2px de espacejamento lê maior do que o
+       número sugere. No celular o texto vem mais perto do olho e em tela menor,
+       e 11.5px passa a ser o piso do desconforto — abaixo dos 12px que as
+       diretrizes de acessibilidade tratam como mínimo para texto funcional.
+       Nav, botão, filtro e crédito são justamente o que a pessoa precisa ler
+       para navegar, não ornamento.
+
+       Os três sobem juntos e mantêm o passo de 0.08rem entre eles: mexer só no
+       menor achataria a hierarquia que separa rótulo de seção de rótulo de
+       botão. O piso passa a 13.1px. */
+    --fs-rotulo-lg: 0.98rem;  /* 15.7px */
+    --fs-rotulo: 0.9rem;      /* 14.4px */
+    --fs-rotulo-sm: 0.82rem;  /* 13.1px */
   }
 }
 
@@ -1477,6 +1493,73 @@ iframe.trabalhos__hover-video.active {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ---- Tarja gravada: ampliar até o conteúdo encostar nas bordas -------------
+   Quase todo vídeo daqui é 9:16 exportado dentro de um container 16:9, com as
+   tarjas pretas queimadas no arquivo. As regras acima esticam a MOLDURA até a
+   tela — e aí o conteúdo, que é a faixa central de 31,6% dela, abre com ~1/10 da
+   largura do celular. Era o vídeo minúsculo no meio do preto.
+
+   O tamanho passa a sair do CONTEÚDO. Com o conteúdo em C (largura/altura, vindo
+   de --conteudo-ratio, medido por probe_pillarbox_videos.py) dentro de uma
+   moldura 16:9, para o conteúdo encostar nas duas laterais sem ser cortado:
+
+       altura da moldura = min(100vw / C, 100vh)
+       largura da moldura = altura * 16/9
+
+   O min() é o que evita o exagero quando a tela é larga — celular deitado,
+   tablet, desktop: ali quem limita é a altura, e o resultado é o mesmo de antes.
+   O que sobra da moldura (as tarjas) sai para fora do container, que já tem
+   overflow:hidden. Nada do vídeo é cortado: sobra faixa preta em cima e embaixo,
+   que é o preço de não cortar. */
+.modal__video--preenche {
+  --moldura-h: min(calc(100vw / var(--conteudo-ratio)), 100vh);
+  --moldura-w: calc(var(--moldura-h) * 16 / 9);
+}
+
+/* No modo cinema do iPhone não há fullscreen real e 100vh conta a barra de
+   endereço que ainda está na tela — o vídeo passaria por baixo dela. */
+@supports (height: 100dvh) {
+  .modal__video--preenche {
+    --moldura-h: min(calc(100vw / var(--conteudo-ratio)), 100dvh);
+  }
+}
+
+/* !important porque o template escreve style="width:100%;height:100%" inline no
+   <lite-youtube>, e estilo inline vence seletor.
+
+   As três regras repetem o corpo em vez de compartilhar uma lista de seletores
+   pelo mesmo motivo explicado acima: numa lista, um seletor desconhecido derruba
+   a regra inteira, e :-webkit-full-screen não existe fora do WebKit. */
+.modal__video--preenche:fullscreen lite-youtube {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--moldura-w) !important;
+  height: var(--moldura-h) !important;
+  max-width: none;
+}
+
+.modal__video--preenche:-webkit-full-screen lite-youtube {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--moldura-w) !important;
+  height: var(--moldura-h) !important;
+  max-width: none;
+}
+
+.modal__video--preenche.player-cinema lite-youtube {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--moldura-w) !important;
+  height: var(--moldura-h) !important;
+  max-width: none;
 }
 
 /* !important porque .modal__video--vertical tem a mesma especificidade e vem

@@ -2322,6 +2322,155 @@ const VIDEOS_YT_VERTICAIS = new Set([
 
 const VIDEOS_LOCAIS_VERTICAIS = new Set([]);
 
+/* Tarja preta GRAVADA no arquivo. Quase todo vídeo daqui foi exportado em 9:16 e
+   subiu para o YouTube dentro de um container 16:9, com as duas tarjas queimadas
+   no vídeo. Para a API isso é um 1280x720 comum — indistinguível de um comercial
+   horizontal —, então VIDEOS_YT_VERTICAIS (que lê a moldura) não pega estes.
+
+   A medição sai da capa do YouTube, que é um frame do próprio vídeo e carrega a
+   mesma tarja: `python probe_pillarbox_videos.py` gera pillarbox_map.json e
+   imprime estas listas. Rode depois de adicionar vídeo novo — sem estar aqui, o
+   vídeo apenas se comporta como antes, que é o padrão seguro.
+
+   Serve para o player em tela cheia ampliar até o CONTEÚDO encostar nas bordas.
+   Sem isso, no celular o vídeo abre com ~1/10 da largura da tela: a moldura 16:9
+   preenche a tela e o conteúdo vertical fica espremido no meio dela.
+
+   A esmagadora maioria é 9:16 exato (as variações de milésimo são ruído de JPEG
+   na borda da tarja), então o grupo grande é um Set e só as proporções fora dele
+   guardam o número medido. */
+const VIDEOS_YT_TARJA = new Set([
+  "-2EXpu6Y_RM", "-9l2tGe_1hs", "-Eclfq86EGo", "-HkT1-b3EjM", "-NSvoAL99pM",
+  "-SiLgbLMipY", "-TQwyN3Eg6E", "-V-9LwVRXpo", "-WnlPFEMdFg", "-_5TT177-i0",
+  "-f56zYQ3fDA", "-m7qP5pd9xQ", "-o7dERVmDUA", "-rruV4XAFxM", "0PY15VxyeTU",
+  "0T9tXKLZG2I", "0UvgfcS8l34", "1-VmKHjpzfs", "13_ulJahCIA", "1LFe5LdlON8",
+  "1NCpqO2JDYA", "1PnTyixd9VM", "1Ptzf4q0f-0", "1heeu4JlBrs", "1joTeMnRzns",
+  "1kdog5TY15k", "1lSjmUXBiAc", "1vJz6i2Oysw", "2KA7xwBr1D4", "2MHPFeMDlHo",
+  "2X25AaaKFuw", "2dy78GzXYmI", "2k59DKam2Ak", "2t6zKJiidyo", "2v7iO26xlTA",
+  "3-hSdScDuqM", "35LPgKD1boM", "36jEg7uyN4g", "3JxtXPL1IkQ", "3tsSZqYuNlQ",
+  "3u9MuBy1MA8", "3vRmgWKQ-KI", "3vt2ctF6ZBg", "3wWNUjj6ELI", "3yGiT5qdrys",
+  "433JzW9eKY0", "44Ewt3Ca-VE", "48tcVAUHWQw", "49QCUcSAKuA", "49Wu2PZjiTY",
+  "4Uofj7ZBmtw", "4VjXFp7PK4c", "4YAsshDgYrE", "4gqaftd-Wno", "4swS2g9mh80",
+  "4vFmVzr2fyM", "4x6q0joaIvc", "53jQhy1RTXA", "58ygYoOz_y4", "5KDSlaL1t_w",
+  "5jbZ5utFLyY", "5qStD36HNoQ", "5rYCACBOAYY", "5rciUtPVuL0", "69XENhu2ZLQ",
+  "6AJtMY_J2nE", "6HhYfAefd88", "6HoHOCyhWf4", "6KxaueKb_zc", "6NqxW-978Y4",
+  "6ZMZNKIWJ4c", "6vif4bpsC1U", "6xUcrJaAO10", "73HEDSjMaq0", "75A3rMytAQE",
+  "7ASm4zJXidk", "7C1QEG2m29k", "7F-XTs7O2VE", "7G_XcintAnE", "7S92V-YFi_Q",
+  "7XygUZFTdI8", "7Z1O-UByi_M", "7pvCcQZsez4", "7rRFs9geI50", "7s8ah4HarJI",
+  "7zsuUDj6fws", "860B_SrEhkk", "872RY8rhtxw", "879bcwYfPKg", "8DOQ9eNbuGU",
+  "8PUTeD8Aj5U", "8kdCskFzAsk", "8yoJXviw4i4", "8zVNOrVPzZs", "9BZS3t242m0",
+  "9Bu4B6Vjcns", "9Kc2cyKRb7Q", "9bpjUvES1K4", "9cN0JeeCHgc", "9iCdW6UJc-o",
+  "9jKktlUZVqc", "9mWoBI4gq9U", "9xypUfGo5nE", "AV3vjr8SrSI", "AdFQAPLVVFo",
+  "Aq1O9dt5xWI", "AqVWbTiCiCs", "BBOBwlA6fF0", "BJvLyfX2h5A", "BUz4VewUxJ0",
+  "BVxlxR_CRKc", "BZy6jB2r5pY", "B_2bS-q02n8", "C8fOvcxr_7E", "CD0-WI3Cl6Q",
+  "CVVdJetIjVk", "CVmumik2hnw", "C_1KwT9qjWo", "CfLLQlnjgkg", "CmNwHyH0wso",
+  "D3ndPDIEwQ0", "DDXT9lkQUK4", "DVo5UwG7zSU", "DWEWlJZtEUY", "DWJ4yAtYNoQ",
+  "DhLTs4AGi-8", "DlqE5_TP6L0", "DoWeEwO9Eb8", "DrcgiaJ2K6o", "E4wm7LWDHGA",
+  "EJCbUlPcEsw", "EReFfZhL_r4", "EYHTgYp1Umg", "ElRGkVwd7ts", "F4qxnn5gmHM",
+  "FBE1MW1hyvg", "FK1GiTPrnt4", "FdtGaoMJfq8", "FgF_fDoVYXk", "FoHBGD6Fhok",
+  "GL8dWgbun18", "GMGoiJaMvo4", "GQn-bgQy1XU", "G_ggKHUkqJ8", "GbRmuDDoU9M",
+  "GbXPStW3ICo", "H2tWDso6ScE", "HN4I6uBSLuY", "Hef2F2YkWBY", "HoHtVzNKMMY",
+  "HrIE4gV11jA", "I1PYDVfc2A4", "I3OYnOGyxJs", "I5QmoGohwPI", "ISe7rscHKVw",
+  "IV1yjTzWiUI", "IdynLiO1-Dk", "IptEabWDjW0", "IsYjN2K7zkw", "IxfzC-BVmVA",
+  "J58_VMwT7E4", "JKvGdRN-eeE", "JbdzrKKP6Qw", "Jcpy7kJwQTM", "JsT9oAogP4o",
+  "K-FR4hVqPRc", "K9r_trZzBJ8", "KArk5ZJES3A", "KS0rgWmvGzc", "KVFNqq-0B6M",
+  "KZroIhBn2tE", "KfAy2GJmw0I", "KkDAblY2_qM", "Km8Mw4ew1sE", "KnAVcVZXizM",
+  "L4Kli6X2Mis", "L9DDlLiVsqc", "LJs7g6_08vs", "LgtyB5yGwk0", "LoOTy7du6Iw",
+  "M17yhOXbkcU", "MGnkhl2Dx84", "ML1ukiLzuzA", "MSv7PkJwgvU", "MURgCVfDNbg",
+  "Mbojsdmolac", "Mh_TPDkDH70", "MvX5EXOkXqg", "MvwBEtwZ6XM", "NDl-BKL_jQA",
+  "NEHleVfNaZQ", "NT3ixIxn9Fc", "NVcXhACOIx4", "NgqudglKjYY", "Nj75nnQPwtE",
+  "NrwwmOnYfUk", "NzpLW_es2JA", "O0xg4LJcnTY", "O72nhv6J6SY", "OFMijRGWQcw",
+  "OIC_kkT4u-o", "OTFYJYOT2Uo", "O_Y6-vdgDDY", "Od1BqBgoJ9c", "OdCiyIQH-rE",
+  "Oo5AF_iUASU", "OqvXQHW-CTs", "OuHLFkBeXoE", "P0qRbPVlkcY", "P6SkAXCI41g",
+  "P8DqRIRCrPE", "PExvD8hVBlQ", "PKpjAHDR4yU", "PNNXRIiaq5U", "PVuKOKW0TMw",
+  "PYQ-HQhlDFU", "Pa63ewjV_Ig", "Pe50lqGN3zw", "PfB7avwrrAs", "Ph6IPxIDLLw",
+  "PqmGzcPrixw", "Pwqr0TFxOAo", "QBQx_zq-m6w", "QLF4xBQ30jo", "Qa3xcRYRV_o",
+  "RENf_JTMZ5A", "RKgkpnGdkOM", "RMPKvAVqwJ8", "RQUdYKJSFD4", "RQiKHx6hAmI",
+  "RWnOjv4W9po", "RYT7zCn32dU", "R_eMeHFFFVM", "Rh9au-MNS-8", "RzaWv1-lxQ0",
+  "S0j8u7mk5m0", "S7eCNcNnqpw", "SB9TvZa4G-A", "SDL5JRfZU9o", "STDiMaj-5hE",
+  "SfxQcOjKLU4", "SifzvaTS70Y", "Sx-Rylazlh4", "TFU6R7oTlUQ", "TGVVJxBPTHQ",
+  "THQYuflaSYU", "TKbhu1ePwgA", "TMiHks55BgA", "TNwbZRTjOZI", "TRxWckgUgwU",
+  "TTP5YQles-k", "ThbjiI7GgVI", "TqXiHSydBEw", "TqrsjTIEqhY", "TtfjanvFocw",
+  "Tu1D2ugM_mA", "Ty9WguB2QLY", "U79hizyMLaM", "UBiPwU0Kkzw", "UMCTBg0Aog0",
+  "UOhP1uIfD3k", "UbxUor7dgD4", "UdgJsE0Lyu0", "Uu36LkjoKtc", "V1j8_wTIHJM",
+  "VJFGHtAWCWQ", "VNMPOTf5reY", "VSz0gSqmiDE", "VUx0Rxx0_no", "VX3XeDdLe4A",
+  "VcvxRWe8mkI", "VtdzPWuFX0w", "VwR9ksjnl0w", "W2SpYLt4d9A", "W3cPrLIoQms",
+  "WID5OYWU8xY", "WQKvY6xmOhs", "WQqyTjkW67I", "WcIZ0SyAeZA", "WuBWnN4t7to",
+  "Wv1lnqe9b94", "WzLgP64ctkw", "X4SLuPfPzlQ", "X8KblkSc3r0", "XIu7SO5hxZo",
+  "XNKlYL9lKBA", "Xn5h4xDTY6g", "XuL7wexZg6g", "Xwdx-OOk_0U", "Y3Ha-wHWAiA",
+  "Y4yW1to3re8", "Y6SqHlpv3RM", "Y7AiWpRCHcA", "YG6fXxkGmdM", "Y_zMlbARUG8",
+  "Yzyqr_sNQNk", "ZCgxHei4D6I", "ZT8eawnV8p4", "ZUQlSJj1fAE", "ZhV0ww47bk4",
+  "ZkgDj_WIA8Y", "ZuonxxzGqcE", "Zyl1AMK-wHs", "_0dUiLv4qbQ", "_QSbkxU6xVQ",
+  "_TCqHcgqZdI", "_XOpG3DeS0E", "_aTr2OMEiPs", "_tXUJVjclUs", "aJYINzKnweI",
+  "aQG2M8aLwfA", "aQjrIn8v7gI", "aaEhGNY_sQU", "an_wiA3e7mU", "aoAy0_wMQGA",
+  "b73JXIya8cY", "bAM16jswkMg", "bCQmkH50a8s", "bL1QKnbPACg", "bM1w0WL-N4I",
+  "bMkx1BOe44U", "bhDld0yNZUw", "bxIgQU1I9RE", "c-gHr8KRzyw", "cBGTodEPCuU",
+  "cF1syOFPE7M", "cFIjWD32UB0", "cZurkdSZDec", "cdVMwx2pjwQ", "cfWFu7zlyFQ",
+  "ckrM_e-58Zs", "cwhzu-foUs0", "cz2A4uSbQOI", "d0qnoEjHgOM", "d2t2Pi6X0XQ",
+  "d46xwRo3Tjw", "d8HKRjdFRY8", "dFBLa-oVYV0", "dKUhat5biSg", "dVpzzASuG4Y",
+  "dYoqcyU082E", "daS4IjfpigA", "dg09dXXLVGU", "dmVpaBDXIqI", "dpBXykL1CRM",
+  "dxdNxe9Zzg4", "dzj3ngFJmK0", "e4Z1z0q2KDw", "eOt6VXZns4s", "eWCYoHhu57Y",
+  "ein__DWHnh0", "ej84rrYAzZA", "etwKYRii-PQ", "euSotih5hqs", "ev8_gDjqR4g",
+  "ez-at7lP7HY", "fCEIr6KWItA", "fMHNZbbcQJE", "fjBwFzbjzgw", "fopYpuObULw",
+  "fwhdF2NlIpY", "g-MEwRKpeT4", "gHgW5exW-6k", "gQvE6zuFLR4", "gY-Qb8YOP1A",
+  "ga8O04wMf40", "gaw6A7pmmBc", "gbVcmDSMZ90", "gexMpN0aSZE", "h5ZbUewydlE",
+  "hnbTssGw-Hs", "hvzXSqK7ysk", "i6tnNyhzK-Q", "iBLVYhc1lNQ", "iSFowsarqrQ",
+  "iTBwPlIWLwo", "iXMJt6yicoE", "igqbOIAN1s4", "ii1zsUCsKaw", "izoH41Te-Vw",
+  "j0Eh-m6qmPg", "jDgIq-75EvQ", "jInRNm1CRSw", "jJlTNW5L8r8", "jP0vGWfg3Vc",
+  "jRCZI9vI4TY", "jmZ7Uab2hpY", "jpXsc0H4QVA", "jxHghz1u2OI", "k3ozkk3OZVM",
+  "k58aVMVH9Sw", "kGNkZJq9GUc", "kGZHDLwl_5E", "kRs4zbA0B-U", "kW0yqcZoiMs",
+  "khg29vLriUc", "kt4bPfBPMYw", "l5PiIUoa8Is", "l5rExGkiRTo", "lH-SgFOGpJY",
+  "lSF5HQzfglE", "lXiBZ6NHzHM", "lZBe8nEN6hk", "l_NFuiXX8Hs", "lg6CRRu62m8",
+  "lx8l6P-GmEI", "lyrgIE4SHbM", "m4u72jlB-Tw", "m6DhIZuCuLs", "m7DLJqcJecU",
+  "mATBN8ULM6o", "mD25X1GMypY", "mGz7jWVNDqw", "mKAlH0IPnYs", "mO27JR1aYGw",
+  "mV13Vf1yRzg", "metF5HqeBy0", "mlVp5VuIlF0", "mxX3cv0Dqj0", "n9aPlT6_KqE",
+  "nLsCifRsfVA", "nXS3De32PSY", "nhuMdmF98zA", "nmyY1x5cS_Y", "nqgNfNBQ4mc",
+  "nrWPZMy85Ys", "ntZ5FZcphzM", "nxfehOV9_vE", "nxw8GzVxhZw", "o0mx1oSki2k",
+  "o38LV90mbXA", "oE_jYqTHzAU", "oOh-g3OiCWo", "oSLYs1TB22A", "og-ujl2b2X4",
+  "otPsDTAN-iM", "ozhdJtYqrTs", "p6FXXTSpL0E", "pI1O5y1Mxps", "pJfBXKSByCc",
+  "pM1HCsq2pZw", "pNVspyGAHms", "ph6-fETnA7g", "pipzmvZqiuU", "qLu3vudI7As",
+  "qb2jJbX8j3w", "r5UP4Wt0h3M", "rEGK16dni-8", "rI1Avy1hz1c", "ratqvzQX73Y",
+  "rprRW3ReCoo", "rtLXU60r4Qc", "rvWxO415PTw", "sIuPMWH3Iek", "sYB5NegUsbk",
+  "s_vau70jTYY", "sd6R4k0kiBM", "skn_frmGPg4", "srXIpTh6Ips", "t7ukjsCZY6M",
+  "tL6MSoLIWPs", "tMDNOb91s1Q", "tTeTbjNalJY", "tdXXqQLKeCA", "thP2xd7T1ok",
+  "topA6s23vLk", "tx2GDqTC7r4", "uH4KK0HTjHI", "ubhaAB_eEjk", "ud2cfUj3zzk",
+  "udU_zSYwp38", "ugzawOFiRLg", "ukGK-l6WyMU", "uqw2XmN7Vjw", "uyJf71ov1Uo",
+  "v-7Jdnsf1tg", "v6esQrHSqlU", "v962tIyJ3VU", "vC3ObmufVpo", "vEAYovMcRnM",
+  "vHKHH4UBFPg", "vO0ZCGvncRI", "vPQww1qTQrs", "vQDcssK0ohA", "vR6PoRlKxO4",
+  "vVuiNZk6zKc", "vpKD1pOlHDc", "w8m4f5H439w", "wKvkhHMKs2s", "wNll1WXo_EY",
+  "wTgDYMoxXkY", "wV5lv_6-grk", "wjr5-3z3hpI", "wsDZVmBUrNo", "x7UEgPPzGmc",
+  "x7xXZs3LeEw", "x8BGqs7Hpgg", "xDe-4vMFMGM", "xTpNvOQOkPU", "xiM6_X6yALw",
+  "xux8Z7bUgpY", "y5_iDsHXKRE", "yDUXW76PUmk", "yDwK_0ma93s", "yVjto8K7BqQ",
+  "y_DVjSTJGkA", "yp5di3n_lM8", "yypqTjCPpfs", "z490SYGwyBE", "zJKsB2zMy58",
+  "zPrMXgucQFU", "zTDNCe8lSjs", "zcFKV5W4YgE", "zlgZVZlnYys", "zxeRSTxanAY",
+  "zyTZ9ZawHDQ"
+]);
+
+/* Conteúdo com tarja em proporção que não é 9:16 — 4:3 antigo, e alguns cortes
+   mais estreitos. Guardam a proporção medida porque a fórmula do tamanho em tela
+   cheia deriva dela. */
+const VIDEOS_YT_TARJA_OUTROS = new Map([
+  ["2JwwXfYXo4k", 0.471],
+  ["3ZK9KNnVUuE", 0.478],
+  ["4fVpJOqWRjY", 1.333],
+  ["8kdZVMwr3Gc", 1.333],
+  ["AghqJJ8bfP0", 1.333],
+  ["Hl5U6xSQ-o0", 0.467],
+  ["JAsHoP3Y214", 0.539],
+  ["NCDBzfPAjK0", 1.333],
+  ["YdDfLK_gFSg", 1.333],
+  ["flKhFJS4u8U", 1.333],
+  ["zaRhDGWtjM0", 1.333],
+]);
+
+/* Proporção (largura/altura) do conteúdo real dentro da moldura, ou null quando
+   o vídeo preenche a moldura inteira e não há nada a compensar. */
+function proporcaoConteudoYT(id) {
+  if (VIDEOS_YT_TARJA.has(id)) return 9 / 16;
+  return VIDEOS_YT_TARJA_OUTROS.get(id) ?? null;
+}
+
+
 // O Instagram tem moldura própria, medida no navegador post a post. Ele NÃO usa
 // modal__video--vertical (9:16): ali o iframe fica com ~395px de largura, o
 // Instagram encolhe o vídeo e a barra de curtidas entra no campo de visão.
@@ -2356,11 +2505,138 @@ function htmlEmbedInstagram(url) {
   return `<iframe class="modal__video-ig" src="${src}" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media; fullscreen" title="Post do Instagram"></iframe>`;
 }
 
+/* Parâmetros de todo player do YouTube do site, num lugar só — eram três cópias
+   da mesma string, e uma delas sempre ficava para trás.
+
+   cc_load_policy=0 desliga a legenda automática. Ela entrava por conta própria e
+   ficava por cima do vídeo; pior ainda depois que o player passou a ser ampliado
+   em tela cheia, porque a legenda é desenhada na largura da MOLDURA e as pontas
+   dela saíam da tela. O botão CC continua na barra de controles — o embed não
+   tem parâmetro para esconder um botão isolado, só controls=0, que derrubaria a
+   barra inteira —, então quem quiser legenda ainda liga com um toque.
+
+   cc_lang_pref=pt para que esse toque traga português, e não a tradução
+   automática para o idioma do navegador de quem visita.
+
+   controls=0 tira a barra do YouTube inteira. Não é preferência estética: o
+   player é ampliado em tela cheia (ver style.css, --moldura-w), e a interface do
+   YouTube é desenhada na largura da MOLDURA — numa tela de 390px a barra fica com
+   1234px e as pontas dela, o play e o botão de tela cheia, caem para fora. Some
+   junto o botão CC e o título sobreposto, que o modestbranding não esconde mais
+   desde que o YouTube o descontinuou em 2023. O toque na tela continua pausando.
+
+   vq=hd1080 é uma dica, não uma ordem: o YouTube escolhe a qualidade pelo tamanho
+   do player, pela banda e pela conta de quem assiste, e ignora o parâmetro quando
+   quer. Fica porque não custa nada — mas quem realmente puxa a qualidade para
+   cima é o player estar grande, que é o que a ampliação já faz.
+
+   Não há mute=1 aqui, de propósito: o vídeo toca com som. O navegador só permite
+   som sem gesto do usuário quando a mídia está muda, mas aqui o iframe nasce
+   dentro do clique que abre o player — o gesto existe, e a permissão vem com
+   ele. Isso NÃO vale para o vídeo de fundo do hero, que começa sozinho e
+   continua mudo em outro trecho do arquivo. */
+const PARAMS_YT = 'rel=0&modestbranding=1&controls=0&cc_load_policy=0&cc_lang_pref=pt&enablejsapi=1&vq=hd1080';
+
+/* O que os parâmetros da URL não garantem, mandado pela API do iframe — daí o
+   enablejsapi=1 lá em cima.
+
+   Legenda: cc_load_policy=0 sozinho não segura. O parâmetro só diz "respeite a
+   preferência do usuário", nunca "desligue", e o YouTube liga a legenda
+   automática por conta própria em alguns casos. unloadModule é o que desliga.
+
+   Volume: o player guarda a última preferência de quem assiste, então um
+   visitante que baixou o volume em outro vídeo do YouTube chegaria aqui com o
+   som pela metade. setVolume(100) alinha todo mundo no máximo. */
+function prepararPlayerYT(container) {
+  const iframe = container && container.querySelector('iframe');
+  if (!iframe || !iframe.contentWindow) return;
+
+  const enviar = (mensagem) => {
+    try {
+      iframe.contentWindow.postMessage(JSON.stringify(mensagem), '*');
+    } catch (e) { /* iframe já trocado ou descarregado */ }
+  };
+
+  // Apagar a FAIXA, não descarregar o módulo. unloadModule('captions') parece o
+  // comando óbvio e é uma armadilha: ele tira o módulo, o player recarrega o
+  // módulo sozinho porque precisa dele, e a legenda volta ligada alguns segundos
+  // depois — o efeito é uma legenda que pisca e retorna. setOption com track
+  // vazio desmarca a faixa e ela não volta. Medido no navegador, não deduzido.
+  //
+  // Precisa repetir porque no instante do handshake a faixa ainda não existe: ela
+  // chega junto com o vídeo, já selecionada. Um comando só desmarca o que ainda
+  // não está lá e a legenda aparece depois, como se nada tivesse sido pedido.
+  const desligarLegenda = () => {
+    enviar({ event: 'command', func: 'setOption', args: ['captions', 'track', {}] });
+  };
+
+  const preparar = () => {
+    desligarLegenda();
+    [400, 1000, 2000, 3500, 6000, 9000].forEach(ms => setTimeout(desligarLegenda, ms));
+
+    // Som no talo, uma vez só: repetir sequestraria o volume de quem baixou o som
+    // no meio do vídeo. unMute antes de setVolume porque o volume gravado não
+    // vale nada enquanto o player estiver mudo — e o visitante pode chegar com o
+    // player mudo por preferência salva do YouTube dele.
+    enviar({ event: 'command', func: 'unMute', args: [] });
+    enviar({ event: 'command', func: 'setVolume', args: [100] });
+    // Pedido de qualidade. O YouTube tratou setPlaybackQuality como sugestão e
+    // depois o descontinuou — ele decide sozinho pelo tamanho do player e pela
+    // banda. Mandar não atrapalha e cobre o caso de a dica ainda ser ouvida.
+    enviar({ event: 'command', func: 'setPlaybackQuality', args: ['hd1080'] });
+  };
+
+  // O handshake não é formalidade: mandar `command` antes dele faz o embed lançar
+  // "isExternalMethodAvailable is not a function" no console do visitante — o
+  // player ainda não ligou a ponte que interpreta comandos. Manda-se `listening`,
+  // espera-se a primeira resposta dele, e só então o comando vale.
+  const aoResponder = (evento) => {
+    if (evento.source !== iframe.contentWindow) return;
+    window.removeEventListener('message', aoResponder);
+    clearTimeout(desistir);
+    preparar();
+  };
+  window.addEventListener('message', aoResponder);
+
+  // Player que nunca responde (bloqueio de terceiros, rede caída) não pode deixar
+  // o listener preso à página para sempre.
+  const desistir = setTimeout(() => {
+    window.removeEventListener('message', aoResponder);
+  }, 8000);
+
+  enviar({ event: 'listening' });
+}
+
 function marcarProporcao(container, ehVertical) {
   container.classList.toggle('modal__video--vertical', !!ehVertical);
   // Trocar de vídeo dentro do mesmo modal precisa limpar a moldura do Instagram,
   // senão um post vertical deixa a moldura 4:5 para o vídeo seguinte.
   container.classList.remove('modal__video--ig-alto');
+  // Mesmo motivo: o container é reaproveitado, e a compensação de tarja do vídeo
+  // anterior ampliaria o próximo — que pode não ter tarja nenhuma.
+  container.classList.remove('modal__video--preenche');
+  container.style.removeProperty('--conteudo-ratio');
+}
+
+// Ponto único para vídeo do YouTube: resolve a moldura (VIDEOS_YT_VERTICAIS) e a
+// tarja gravada dentro dela (VIDEOS_YT_TARJA), que são coisas diferentes e podem
+// valer para o mesmo vídeo.
+function marcarProporcaoYouTube(container, id) {
+  marcarProporcao(container, VIDEOS_YT_VERTICAIS.has(id));
+  const proporcao = proporcaoConteudoYT(id);
+  if (!proporcao) return;
+  container.style.setProperty('--conteudo-ratio', String(proporcao));
+  container.classList.add('modal__video--preenche');
+}
+
+// Vertical aqui é o CONTEÚDO, não a moldura — e a diferença é justamente o caso
+// da tarja gravada: moldura 16:9, conteúdo 9:16. Quem tem proporção medida decide
+// por ela; o resto cai na moldura, como sempre foi. Orientação e dica de girar
+// precisam da mesma resposta, senão o player trava em paisagem um vídeo em pé.
+function conteudoEhVertical(container) {
+  const medida = parseFloat(container.style.getPropertyValue('--conteudo-ratio'));
+  if (Number.isFinite(medida)) return medida < 1;
+  return container.classList.contains('modal__video--vertical');
 }
 
 function marcarProporcaoInstagram(container, ehAlto) {
@@ -2470,7 +2746,7 @@ function expandirPlayer(container) {
   // Projeto de fotografia mostra um <img> neste mesmo container: nada a expandir.
   if (!container.querySelector('lite-youtube, iframe, video')) return;
 
-  const vertical = container.classList.contains('modal__video--vertical');
+  const vertical = conteudoEhVertical(container);
   const videoLocal = container.querySelector('video');
 
   // readyState 0 = metadados ainda não chegaram, e aí o iOS lança
@@ -2598,7 +2874,7 @@ let dicaGirar = null;
 let dicaGirarTimer = null;
 
 function mostrarDicaGirar(container) {
-  if (!container || container.classList.contains('modal__video--vertical')) return;
+  if (!container || conteudoEhVertical(container)) return;
   if (!window.matchMedia('(orientation: portrait)').matches) return;
   // Chamada com atraso no caminho nativo: o usuário pode já ter saído da tela
   // cheia, e aí a dica ficaria pendurada sobre o modal normal.
@@ -2658,13 +2934,13 @@ function openModal(id) {
 
   if (p.videoId && !p.videoId.startsWith('VIDEO_ID') && p.videoId !== '') {
     videoEl.style.display = '';
-    videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(p.videoId)}" params="rel=0&modestbranding=1&mute=1" style="width:100%;height:100%;"></lite-youtube>`;
-    marcarProporcao(videoEl, VIDEOS_YT_VERTICAIS.has(p.videoId));
+    videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(p.videoId)}" params="${PARAMS_YT}" style="width:100%;height:100%;"></lite-youtube>`;
+    marcarProporcaoYouTube(videoEl, p.videoId);
   } else if (hasVideos) {
     videoEl.style.display = '';
     if (displayVideos[0].youtubeId) {
-      videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(displayVideos[0].youtubeId)}" params="rel=0&modestbranding=1&mute=1" style="width:100%;height:100%;"></lite-youtube>`;
-      marcarProporcao(videoEl, VIDEOS_YT_VERTICAIS.has(displayVideos[0].youtubeId));
+      videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(displayVideos[0].youtubeId)}" params="${PARAMS_YT}" style="width:100%;height:100%;"></lite-youtube>`;
+      marcarProporcaoYouTube(videoEl, displayVideos[0].youtubeId);
     } else if (displayVideos[0].instagramUrl) {
       videoEl.innerHTML = htmlEmbedInstagram(displayVideos[0].instagramUrl);
       marcarProporcaoInstagram(videoEl, POSTS_IG_ALTOS.has(codigoInstagram(displayVideos[0].instagramUrl)));
@@ -2785,8 +3061,8 @@ function openModal(id) {
       `;
       card.addEventListener('click', () => {
         if (v.youtubeId) {
-          videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(v.youtubeId)}" params="rel=0&modestbranding=1&mute=1" style="width:100%;height:100%;"></lite-youtube>`;
-          marcarProporcao(videoEl, VIDEOS_YT_VERTICAIS.has(v.youtubeId));
+          videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(v.youtubeId)}" params="${PARAMS_YT}" style="width:100%;height:100%;"></lite-youtube>`;
+          marcarProporcaoYouTube(videoEl, v.youtubeId);
         } else if (v.instagramUrl) {
           videoEl.innerHTML = htmlEmbedInstagram(v.instagramUrl);
           marcarProporcaoInstagram(videoEl, POSTS_IG_ALTOS.has(codigoInstagram(v.instagramUrl)));
@@ -2808,6 +3084,7 @@ function openModal(id) {
         // Trocar de vídeo pelos cards também abre em tela cheia — o clique no
         // card é o gesto que o navegador exige.
         expandirPlayer(videoEl);
+        prepararPlayerYT(videoEl);
         galeriaEl.querySelectorAll('.modal__video-card').forEach(c => c.classList.remove('active'));
         card.classList.add('active');
         // Quem rola é o .modal (overflow-y:auto); o .modal__content não tem
@@ -3176,6 +3453,9 @@ if (modalVideoEl) {
     // A tarja com o nome do talento fica sobre o player e não dá play.
     if (e.target.closest('.modal__video-talent')) return;
     expandirPlayer(modalVideoEl);
+    // Este é o clique que faz o lite-youtube trocar a capa pelo iframe: antes
+    // dele não havia player para receber o comando.
+    prepararPlayerYT(modalVideoEl);
   });
 }
 
@@ -3200,13 +3480,20 @@ if (showreelEl) {
     if (vid && vid !== 'VIDEO_ID') {
       const lyt = document.createElement('lite-youtube');
       lyt.setAttribute('videoid', vid);
-      lyt.setAttribute('params', 'rel=0&modestbranding=1&mute=1');
+      // Mesma string dos players do modal: este aqui montava a sua própria e
+      // ficou para trás nas duas últimas mudanças de parâmetro.
+      lyt.setAttribute('params', PARAMS_YT);
       lyt.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;';
       const container = showreelEl.parentNode;
       container.appendChild(lyt);
       showreelEl.remove();
       if (typeof lyt.activate === 'function') {
-        requestAnimationFrame(() => lyt.activate());
+        // O iframe só nasce no activate(), e prepararPlayerYT precisa dele para
+        // ter a quem falar.
+        requestAnimationFrame(() => {
+          lyt.activate();
+          prepararPlayerYT(container);
+        });
       }
       expandirPlayer(container);
     }
