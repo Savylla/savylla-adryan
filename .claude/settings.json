@@ -1,25 +1,18 @@
 {
   "language": "portuguese",
   "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Edit(workspace/output/**)",
+      "Edit(.sinkra/state/**)",
+      "Edit(.sinkra/extraction/**)",
+      "Write(workspace/output/**)",
+      "Write(.sinkra/state/**)",
+      "Write(.sinkra/extraction/**)",
+      "Bash(node:*,npm:*)"
+    ],
     "deny": [
-      "Edit(.aiox-core/core/**)",
-      "Write(.aiox-core/core/**)",
-      "Edit(.aiox-core/development/tasks/**)",
-      "Write(.aiox-core/development/tasks/**)",
-      "Edit(.aiox-core/development/templates/**)",
-      "Write(.aiox-core/development/templates/**)",
-      "Edit(.aiox-core/development/checklists/**)",
-      "Write(.aiox-core/development/checklists/**)",
-      "Edit(.aiox-core/development/workflows/**)",
-      "Write(.aiox-core/development/workflows/**)",
-      "Edit(.aiox-core/infrastructure/**)",
-      "Write(.aiox-core/infrastructure/**)",
-      "Edit(.aiox-core/constitution.md)",
-      "Write(.aiox-core/constitution.md)",
-      "Edit(bin/aiox.js)",
-      "Write(bin/aiox.js)",
-      "Edit(bin/aiox-init.js)",
-      "Write(bin/aiox-init.js)"
+      "Read(.env*)"
     ]
   }
 }

@@ -1,65 +1,20 @@
-# AGENTS.md - Sinkra AIOX (Codex CLI)
+# AGENTS.md — Site Savylla Adryan
 
-Este arquivo define as instrucoes do projeto para o Codex CLI.
+As instruções deste projeto vivem em [`.claude/CLAUDE.md`](.claude/CLAUDE.md).
+Leia aquele arquivo: ele descreve o site, o mapa de diretórios, como o deploy no
+GitHub Pages funciona e qual sistema está instalado.
 
-<!-- AIOX-MANAGED-START: core -->
-## Core Rules
+Resumo do essencial:
 
-1. Siga a Constitution em `.aiox-core/constitution.md`
-2. Priorize `CLI First -> Observability Second -> UI Third`
-3. Trabalhe por stories em `docs/stories/`
-4. Nao invente requisitos fora dos artefatos existentes
-<!-- AIOX-MANAGED-END: core -->
+- Site estático, sem build step. `index.html`, `servicos.html`, `style.css`,
+  `script.js`, `servicos.js` e `assets/` são o site; os `.py` e `.json` da raiz são
+  o pipeline de vídeos, não conteúdo publicado.
+- O deploy monta o artefato por lista de inclusão e só dispara quando um arquivo do
+  site muda. Alterações em `.claude/` ou `.sinkra/` não publicam nada.
+- Escreva em português, com acentuação correta.
+- `push`, PR e release são exclusivos do `@devops`.
 
-<!-- AIOX-MANAGED-START: quality -->
-## Quality Gates
-
-- Rode `npm run lint`
-- Rode `npm run typecheck`
-- Rode `npm test`
-- Atualize checklist e file list da story antes de concluir
-<!-- AIOX-MANAGED-END: quality -->
-
-<!-- AIOX-MANAGED-START: codebase -->
-## Project Map
-
-- Core framework: `.aiox-core/`
-- CLI entrypoints: `bin/`
-- Shared packages: `packages/`
-- Tests: `tests/`
-- Docs: `docs/`
-<!-- AIOX-MANAGED-END: codebase -->
-
-<!-- AIOX-MANAGED-START: commands -->
-## Common Commands
-
-- `npm run sync:ide`
-- `npm run sync:ide:check`
-- `npm run sync:skills:codex`
-- `npm run sync:skills:codex:global` (opcional; neste repo o padrao e local-first)
-- `npm run validate:structure`
-- `npm run validate:agents`
-<!-- AIOX-MANAGED-END: commands -->
-
-<!-- AIOX-MANAGED-START: shortcuts -->
-## Agent Shortcuts
-
-Preferencia de ativacao no Codex CLI:
-1. Use `/skills` e selecione `aiox-<agent-id>` vindo de `.codex/skills` (ex.: `aiox-architect`)
-2. Se preferir, use os atalhos abaixo (`@architect`, `/architect`, etc.)
-
-Interprete os atalhos abaixo carregando o arquivo correspondente em `.aiox-core/development/agents/` (fallback: `.codex/agents/`), renderize o greeting via `generate-greeting.js` e assuma a persona ate `*exit`:
-
-- `@architect`, `/architect`, `/architect.md` -> `.aiox-core/development/agents/architect.md`
-- `@dev`, `/dev`, `/dev.md` -> `.aiox-core/development/agents/dev.md`
-- `@qa`, `/qa`, `/qa.md` -> `.aiox-core/development/agents/qa.md`
-- `@pm`, `/pm`, `/pm.md` -> `.aiox-core/development/agents/pm.md`
-- `@po`, `/po`, `/po.md` -> `.aiox-core/development/agents/po.md`
-- `@sm`, `/sm`, `/sm.md` -> `.aiox-core/development/agents/sm.md`
-- `@analyst`, `/analyst`, `/analyst.md` -> `.aiox-core/development/agents/analyst.md`
-- `@devops`, `/devops`, `/devops.md` -> `.aiox-core/development/agents/devops.md`
-- `@data-engineer`, `/data-engineer`, `/data-engineer.md` -> `.aiox-core/development/agents/data-engineer.md`
-- `@ux-design-expert`, `/ux-design-expert`, `/ux-design-expert.md` -> `.aiox-core/development/agents/ux-design-expert.md`
-- `@squad-creator`, `/squad-creator`, `/squad-creator.md` -> `.aiox-core/development/agents/squad-creator.md`
-- `@aiox-master`, `/aiox-master`, `/aiox-master.md` -> `.aiox-core/development/agents/aiox-master.md`
-<!-- AIOX-MANAGED-END: shortcuts -->
+O AIOX legacy (`.aiox-core/`, agentes por arquivo em `.codex/`, `.gemini/`, `.kimi/`,
+`.antigravity/`, `.cursor/`) foi aposentado em 11/08/2026. O sistema atual é o
+SINKRA-OS 3.1.9 com o AIOX Cockpit — as skills e os agentes vêm de `.claude/skills/`,
+`.claude/agents/` e da camada global em `~/.claude/skills`.

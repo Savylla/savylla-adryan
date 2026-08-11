@@ -53,7 +53,6 @@ debug_*.txt
 upload_log.txt
 
 # AIOX Local (AIOX)
-.aiox-core/local/
 .claude/settings.local.json
 .aiox/install-log.txt
 # Artefatos de runtime da troca de agentes — a própria regra do framework
@@ -100,3 +99,33 @@ p0-*.png
 p1-*.png
 p2-*.png
 p3-*.png
+
+# AIOX cockpit-integration (conductor file-protocol + state) — managed
+.sdc-decision/
+.sdc-resolution/
+.sdc-inbox/
+.sdc-ack/
+.sdc-status/
+.aiox/
+workspace/output/.tmp/
+.sinkra/state/**/checkpoints/
+.sinkra/state/**/*.bak*
+.companion-ready.json
+
+# SINKRA-OS bundle (licenciado, instalado por `npx sinkra-os install`).
+# Este repositorio e publico: o bundle nao e redistribuido aqui. Ele vive so na
+# maquina e se reinstala com o email de aluno + token. Ver .sinkra/install-manifest.json.
+.sinkra/
+.claude/skills/
+.claude/agents/
+services/
+package.json
+MANIFEST.json
+GUIA-ALUNO.md
+# rules que vieram no bundle (a mcp-usage.md e do projeto e continua versionada)
+.claude/rules/authoring-convention.md
+.claude/rules/dual-session-workflow.md
+.claude/rules/entity-architecture.md
+.claude/rules/sinkra-naming-defaults.md
+.claude/rules/sinkra-pipeline-canon.md
+.claude/rules/sinkra-squad-creator-canon.md
