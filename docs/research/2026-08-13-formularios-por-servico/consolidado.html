@@ -1,0 +1,1061 @@
+<title>Briefing em Sete Frentes</title>
+<style>
+  /* ---- Tokens: light (bare :root = complete palette) ---- */
+  :root{
+    --ground:#F1F3F4;
+    --surface:#FBFCFC;
+    --surface-2:#E8EBEC;
+    --ink:#15191C;
+    --ink-2:#525C63;
+    --ink-3:#7C868D;
+    --rule:#D5DADD;
+    --rule-soft:#E3E7E9;
+    /* tungstênio 3200K — acento primário */
+    --amber:#B06A22;
+    --amber-soft:#F0E2D2;
+    --amber-ink:#8A5119;
+    /* daylight 5600K — condicionais e notas */
+    --day:#33648F;
+    --day-soft:#DCE6EE;
+    --day-ink:#27506F;
+    --flag:#8C3A3A;
+    --flag-soft:#F2DEDE;
+
+    --display:'Iowan Old Style',Charter,'Bitstream Charter',Georgia,'Times New Roman',serif;
+    --body:-apple-system,BlinkMacSystemFont,'Segoe UI Variable Text','Segoe UI',system-ui,Roboto,sans-serif;
+    --mono:'Cascadia Mono','SF Mono',Menlo,Consolas,'Liberation Mono',monospace;
+
+    --measure:68ch;
+    --pad:clamp(1.1rem,4vw,2.6rem);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#121517;
+      --surface:#1A1E21;
+      --surface-2:#23282C;
+      --ink:#E4E8EA;
+      --ink-2:#A0AAB1;
+      --ink-3:#78838A;
+      --rule:#2E353A;
+      --rule-soft:#252B2F;
+      --amber:#DFA35F;
+      --amber-soft:#33261A;
+      --amber-ink:#EBBB84;
+      --day:#79A6CC;
+      --day-soft:#1B2833;
+      --day-ink:#9CC0DE;
+      --flag:#CE8585;
+      --flag-soft:#31201F;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#121517;
+    --surface:#1A1E21;
+    --surface-2:#23282C;
+    --ink:#E4E8EA;
+    --ink-2:#A0AAB1;
+    --ink-3:#78838A;
+    --rule:#2E353A;
+    --rule-soft:#252B2F;
+    --amber:#DFA35F;
+    --amber-soft:#33261A;
+    --amber-ink:#EBBB84;
+    --day:#79A6CC;
+    --day-soft:#1B2833;
+    --day-ink:#9CC0DE;
+    --flag:#CE8585;
+    --flag-soft:#31201F;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 var(--pad) 6rem}
+
+  /* ---- Header ---- */
+  header.top{
+    border-bottom:1px solid var(--rule);
+    padding:clamp(2.4rem,6vw,4.2rem) 0 2rem;
+    margin-bottom:2.6rem;
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin:0 0 1.1rem;
+  }
+  h1{
+    font-family:var(--display);
+    font-weight:400;
+    font-size:clamp(2.1rem,6vw,3.5rem);
+    line-height:1.08;
+    letter-spacing:-.015em;
+    text-wrap:balance;
+    margin:0 0 1rem;
+    max-width:22ch;
+  }
+  .standfirst{
+    font-size:clamp(1rem,2.2vw,1.14rem);
+    color:var(--ink-2);
+    max-width:60ch;
+    margin:0 0 2.2rem;
+  }
+  .facts{
+    display:flex;flex-wrap:wrap;gap:0;
+    border-top:1px solid var(--rule-soft);
+  }
+  .fact{
+    flex:1 1 140px;
+    padding:.9rem 1.2rem .9rem 0;
+    border-right:1px solid var(--rule-soft);
+  }
+  .fact:last-child{border-right:0}
+  .fact b{
+    display:block;
+    font-family:var(--display);
+    font-size:1.75rem;
+    font-weight:400;
+    line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .fact span{
+    font-family:var(--mono);
+    font-size:.66rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+  }
+
+  /* ---- Nav ---- */
+  nav.toc{
+    position:sticky;top:0;z-index:20;
+    background:var(--ground);
+    border-bottom:1px solid var(--rule);
+    margin:0 0 3rem;
+    padding:.7rem 0;
+    display:flex;flex-wrap:wrap;gap:.25rem 1.4rem;
+  }
+  nav.toc a{
+    font-family:var(--mono);
+    font-size:.72rem;
+    letter-spacing:.03em;
+    color:var(--ink-2);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    padding:.12rem 0;
+  }
+  nav.toc a:hover,nav.toc a:focus-visible{color:var(--amber);border-bottom-color:var(--amber)}
+
+  /* ---- Sections ---- */
+  section{margin:0 0 4.2rem;scroll-margin-top:4rem}
+  h2{
+    font-family:var(--display);
+    font-weight:400;
+    font-size:clamp(1.5rem,3.4vw,2.1rem);
+    line-height:1.15;
+    letter-spacing:-.01em;
+    margin:0 0 .3rem;
+    text-wrap:balance;
+  }
+  h2 .num{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.14em;
+    color:var(--amber);
+    display:block;
+    margin-bottom:.5rem;
+  }
+  h3{
+    font-family:var(--body);
+    font-size:1.02rem;
+    font-weight:640;
+    letter-spacing:-.005em;
+    margin:2.4rem 0 .9rem;
+  }
+  .lede{color:var(--ink-2);max-width:var(--measure);margin:0 0 2rem}
+  p{max-width:var(--measure)}
+  a{color:var(--day-ink)}
+
+  /* ---- Decision table ---- */
+  .scroller{overflow-x:auto;margin:0 0 1.6rem}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:.92rem}
+  th{
+    text-align:left;
+    font-family:var(--mono);
+    font-size:.66rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    font-weight:400;
+    padding:0 1rem .55rem 0;
+    border-bottom:1px solid var(--rule);
+    vertical-align:bottom;
+  }
+  td{
+    padding:.85rem 1rem .85rem 0;
+    border-bottom:1px solid var(--rule-soft);
+    vertical-align:top;
+  }
+  td:last-child,th:last-child{padding-right:0}
+  tbody tr:last-child td{border-bottom:0}
+  td strong{font-weight:620}
+
+  /* ---- Field cards ---- */
+  .fields{display:flex;flex-direction:column;gap:0;margin:0 0 1.6rem}
+  .field{
+    display:grid;
+    grid-template-columns:4.4rem 1fr;
+    gap:0 1.3rem;
+    padding:1.15rem 0;
+    border-bottom:1px solid var(--rule-soft);
+  }
+  .field:first-child{border-top:1px solid var(--rule)}
+  .fid{
+    font-family:var(--mono);
+    font-size:.78rem;
+    color:var(--amber);
+    padding-top:.1rem;
+    font-variant-numeric:tabular-nums;
+  }
+  .fbody{min-width:0}
+  .ask{
+    font-family:var(--display);
+    font-size:1.16rem;
+    line-height:1.34;
+    margin:0 0 .35rem;
+    text-wrap:balance;
+  }
+  .opts{
+    font-family:var(--mono);
+    font-size:.78rem;
+    line-height:1.62;
+    color:var(--ink-2);
+    margin:.4rem 0 .5rem;
+    padding-left:.85rem;
+    border-left:2px solid var(--rule);
+  }
+  .help{
+    font-size:.9rem;
+    color:var(--ink-2);
+    font-style:italic;
+    margin:.3rem 0 .5rem;
+    max-width:60ch;
+  }
+  .why{
+    font-size:.9rem;
+    color:var(--ink-2);
+    margin:.45rem 0 0;
+    max-width:64ch;
+  }
+  .why b{color:var(--ink);font-weight:620}
+
+  /* ---- Pills ---- */
+  .tags{display:flex;flex-wrap:wrap;gap:.35rem;margin:0 0 .5rem}
+  .pill{
+    font-family:var(--mono);
+    font-size:.63rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:.16rem .48rem;
+    border-radius:2px;
+    white-space:nowrap;
+  }
+  .p-req{background:var(--amber-soft);color:var(--amber-ink)}
+  .p-opt{background:var(--surface-2);color:var(--ink-3)}
+  .p-cond{background:var(--day-soft);color:var(--day-ink)}
+  .p-type{background:transparent;color:var(--ink-3);border:1px solid var(--rule);text-transform:none;letter-spacing:.02em}
+
+  /* ---- Callouts ---- */
+  .note{
+    background:var(--surface);
+    border-left:3px solid var(--day);
+    padding:1.05rem 1.3rem;
+    margin:1.6rem 0;
+    max-width:var(--measure);
+  }
+  .note.warn{border-left-color:var(--flag);background:var(--flag-soft)}
+  .note.key{border-left-color:var(--amber);background:var(--amber-soft)}
+  .note p{margin:0}
+  .note p+p{margin-top:.7rem}
+  .note .lbl{
+    display:block;
+    font-family:var(--mono);
+    font-size:.65rem;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin-bottom:.4rem;
+  }
+
+  /* ---- Service block header ---- */
+  .svc{
+    margin:3rem 0 0;
+    padding-top:1.6rem;
+    border-top:2px solid var(--ink);
+  }
+  .svc-head{
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem .9rem;
+    margin:0 0 .2rem;
+  }
+  .svc-head h3{
+    font-family:var(--display);
+    font-size:1.5rem;
+    font-weight:400;
+    letter-spacing:-.01em;
+    margin:0;
+  }
+  .svc-count{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.06em;
+    color:var(--ink-3);
+  }
+  .cut{
+    font-size:.87rem;
+    color:var(--ink-3);
+    border-top:1px dashed var(--rule);
+    padding-top:.8rem;
+    margin-top:.4rem;
+    max-width:var(--measure);
+  }
+  .cut b{color:var(--ink-2);font-weight:600}
+
+  /* ---- Step label ---- */
+  .step{
+    font-family:var(--mono);
+    font-size:.68rem;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin:2.2rem 0 .8rem;
+    padding-bottom:.4rem;
+    border-bottom:1px solid var(--rule);
+  }
+
+  /* ---- Lists ---- */
+  ul.plain{list-style:none;padding:0;margin:0 0 1.4rem;max-width:var(--measure)}
+  ul.plain li{
+    padding:.55rem 0 .55rem 1.4rem;
+    border-bottom:1px solid var(--rule-soft);
+    position:relative;
+  }
+  ul.plain li:before{
+    content:'';position:absolute;left:0;top:1.12rem;
+    width:.42rem;height:1px;background:var(--amber);
+  }
+  ul.plain li:last-child{border-bottom:0}
+  code{
+    font-family:var(--mono);
+    font-size:.86em;
+    background:var(--surface-2);
+    padding:.1em .34em;
+    border-radius:2px;
+  }
+  footer{
+    border-top:1px solid var(--rule);
+    padding-top:1.6rem;
+    color:var(--ink-3);
+    font-size:.85rem;
+  }
+  footer p{max-width:var(--measure)}
+  :focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+  @media (max-width:620px){
+    .field{grid-template-columns:1fr;gap:.3rem}
+    .fid{padding-top:0}
+  }
+</style>
+
+<div class="wrap">
+
+<header class="top">
+  <p class="eyebrow">Pesquisa · 13 de agosto de 2026</p>
+  <h1>Um briefing que devolve proposta em uma rodada</h1>
+  <p class="standfirst">Nove pesquisas — uma por frente de trabalho, mais UX e infraestrutura — destiladas num formulário só. O que cada cliente responde, por que cada pergunta existe, e o que muda no site.</p>
+  <div class="facts">
+    <div class="fact"><b>13</b><span>pesquisas</span></div>
+    <div class="fact"><b>7</b><span>frentes cobertas</span></div>
+    <div class="fact"><b>~110</b><span>campos propostos</span></div>
+    <div class="fact"><b>16</b><span>campos por cliente</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Índice">
+  <a href="#decisoes">Decisões</a>
+  <a href="#tronco">O tronco</a>
+  <a href="#redes">Redes Sociais</a>
+  <a href="#creators">Creators</a>
+  <a href="#filmmaker">Filmmaker</a>
+  <a href="#pos">Pós-produção</a>
+  <a href="#foto">Fotografia</a>
+  <a href="#arte">Direção de Arte</a>
+  <a href="#ia">Produção com IA</a>
+  <a href="#repo">O que muda no site</a>
+  <a href="#aberto">Em aberto</a>
+</nav>
+
+<!-- ============ DECISÕES ============ -->
+<section id="decisoes">
+  <h2><span class="num">01 — travado</span>As decisões que fecham o desenho</h2>
+  <p class="lede">Seis escolhas feitas em 13/08/2026. Tudo o que vem depois decorre delas.</p>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th style="width:20%">Decisão</th><th style="width:30%">Escolha</th><th>Consequência</th></tr></thead>
+    <tbody>
+      <tr><td>Plataforma</td><td><strong>HTML nativo no site</strong>, enviando pelo FormSubmit que já roda no <code>index.html</code></td><td>Zero fornecedor novo, zero custo, identidade visual preservada. Em troca, a lógica condicional vira JS a escrever e manter.</td></tr>
+      <tr><td>Arquitetura</td><td><strong>Um formulário só</strong>, que se adapta ao serviço</td><td>Um tronco, sete blocos. Atende quem combina frentes. O link por serviço faz a caixa já chegar marcada.</td></tr>
+      <tr><td>Verba</td><td><strong>Campo aberto, opcional</strong>, sem faixas</td><td>Nenhum número parte do site. A regra de preço nunca aparecer fica intacta.</td></tr>
+      <tr><td>Upload</td><td><strong>Não existe</strong> — todo material é campo de link</td><td>Restrição do site estático. Decisão técnica, não de produto.</td></tr>
+      <tr><td>Passos</td><td><strong>Três</strong>, num único <code>&lt;form&gt;</code> com blocos escondidos</td><td>Se o JS falhar, degrada para um formulário longo que ainda envia.</td></tr>
+      <tr><td>Contato</td><td><strong>No fim</strong></td><td>Em site estático nada é gravado antes do envio — pedir contato antes não recupera abandono nenhum.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note warn">
+    <span class="lbl">A discordância que a pesquisa não resolveu</span>
+    <p>O relatório de UX recomendou <strong>faixas</strong> de verba. Quatro relatórios de serviço recomendaram <strong>texto livre</strong>. O argumento que decidiu, vindo de Direção de Arte: faixas prontas publicam a escada de preço na página, em formato de menu — colisão frontal com a regra do site.</p>
+    <p>O custo aceito: menos gente responde campo aberto do que radio. Se em alguns meses o campo vier vazio quase sempre, a saída é movê-lo para o e-mail de retorno — não transformá-lo em faixas.</p>
+  </div>
+
+  <h3>A contagem, sem maquiagem</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Bloco</th><th>Obrigatórios</th><th>Condicionais</th><th>Opcionais</th></tr></thead>
+    <tbody>
+      <tr><td>Tronco — todo cliente vê</td><td>10</td><td>3</td><td>4</td></tr>
+      <tr><td>Bloco do serviço</td><td>6 a 7</td><td>varia</td><td>varia</td></tr>
+      <tr><td><strong>Total por cliente</strong></td><td><strong>16 a 17</strong></td><td><strong>3+</strong></td><td><strong>4+</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Cada campo passou pela mesma régua — <strong>muda preço, prazo, formato ou risco, ou sai.</strong> Quem marca três ou mais frentes não vê três blocos somados — viraria trinta campos —, vê um bloco combinado com o mínimo de cada.</p>
+
+  <div class="note warn">
+    <span class="lbl">A tensão, dita com todas as letras</span>
+    <p>A pesquisa de UX pedia no máximo 14 campos, 10 obrigatórios. A pesquisa de conformidade jurídica acrescentou três campos ao tronco e três ao bloco de IA. <strong>O formulário passou do teto de conversão.</strong></p>
+    <p>Três coisas seguram o estrago: os campos jurídicos novos são quase todos <strong>condicionais</strong> — só aparecem quando há pessoa real em cena, então projeto de produto ou pós-produção sem gente não vê nenhum; são todos de <strong>clique</strong>, não de digitação; e o trade-off foi escolhido, não sofrido — perder alguns leads custa menos que uma notificação por uso de imagem.</p>
+    <p>Se a conversão cair demais na prática, o corte sai de <strong>T5a</strong> (data travada) ou <strong>T2</strong> (link da marca), que são conveniência. Nunca de T9a ou T14.</p>
+  </div>
+</section>
+
+<!-- ============ TRONCO ============ -->
+<section id="tronco">
+  <h2><span class="num">02 — comum</span>O tronco</h2>
+  <p class="lede">Treze campos que todo cliente vê, independente do serviço. Microcopy pronta para colar.</p>
+
+  <p class="step">Passo 1 — o que você precisa</p>
+  <div class="fields">
+
+    <div class="field"><div class="fid">T1</div><div class="fbody">
+      <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">checkbox múltiplo</span></div>
+      <p class="ask">De que você precisa?</p>
+      <p class="help">Marque quantas quiser — dá para combinar.</p>
+      <p class="opts">☐ Conteúdo para Redes Sociais ☐ Direção de Creators ☐ Filmmaker ☐ Pós-produção ☐ Fotografia ☐ Direção de Arte ☐ Produção com IA<br>☐ Ainda não sei — me ajuda a definir</p>
+      <p class="why">A última caixa é a que segura quem não conhece o nome do serviço. E é resposta valiosa por si: indica cliente que precisa de conversa, não de orçamento.</p>
+    </div></div>
+
+    <div class="field"><div class="fid">T2</div><div class="fbody">
+      <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">texto + URL</span></div>
+      <p class="ask">Qual a marca ou empresa?</p>
+      <p class="help">Se tiver site ou Instagram, cola aqui — eu dou uma olhada antes de responder.</p>
+      <p class="why">O link <b>substitui cinco perguntas de contexto</b>: ela vê sozinha o mercado, o padrão visual atual e o nível de acabamento esperado.</p>
+    </div></div>
+
+    <div class="field"><div class="fid">T3</div><div class="fbody">
+      <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">textarea</span></div>
+      <p class="ask">Me conta a ideia.</p>
+      <p class="help">Do jeito que você contaria por áudio. Não precisa escrever briefing — três ou quatro linhas bastam.</p>
+      <p class="why">Campo aberto único do tronco. Substitui objetivo, público-alvo e mensagem-chave em caixas separadas — que é onde os modelos de mercado ficam longos e vazios. <b>Convergência dos sete relatórios.</b></p>
+    </div></div>
+  </div>
+
+  <p class="step">Passo 2 — como é o projeto</p>
+  <div class="fields">
+
+    <div class="field"><div class="fid">T4</div><div class="fbody">
+      <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">checkbox múltiplo</span></div>
+      <p class="ask">Onde isso vai aparecer?</p>
+      <p class="help">Marque tudo que já é certo — é o que define formato, tamanho e quantidade de entrega.</p>
+      <p class="opts">☐ Instagram / TikTok ☐ YouTube ☐ LinkedIn ☐ Site ou e-commerce ☐ Anúncio pago ☐ Impresso, PDV ou evento ☐ Uso interno ☐ Ainda não sei</p>
+    </div></div>
+
+    <div class="field"><div class="fid">T4a</div><div class="fbody">
+      <div class="tags"><span class="pill p-cond">condicional</span><span class="pill p-req">obrigatório</span><span class="pill p-type">select duplo</span></div>
+      <p class="ask">Por quanto tempo isso vai ficar no ar, e só na internet ou também fora dela?</p>
+      <p class="help">Só aparece se marcar “anúncio pago” ou “impresso, PDV ou evento”.</p>
+      <p class="opts">Tempo: até 3 meses · 6 meses · 1 ano · sem prazo definido · não sei<br>Onde: uma cidade ou região · Brasil todo · fora do Brasil também · não sei</p>
+      <p class="why">O par de campos que mais aparece nas sete pesquisas, por caminhos diferentes que chegam ao mesmo lugar: a <b>Lei 9.610/98 exige tempo e lugar</b> no instrumento de cessão, e o guia APRO trata a veiculação como a <b>segunda face do contrato</b>, com prazo próprio e renovação. Perguntado em português de negócio, sem as palavras “licença” ou “cessão”.</p>
+    </div></div>
+  </div>
+
+  <div class="note">
+    <span class="lbl">Aqui entra o bloco do serviço</span>
+    <p>Os seis a sete campos específicos da frente marcada em T1 aparecem neste ponto, entre T4a e T5.</p>
+  </div>
+
+  <div class="fields">
+    <div class="field"><div class="fid">T5</div><div class="fbody">
+      <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">select</span></div>
+      <p class="ask">Para quando?</p>
+      <p class="opts">Até 1 semana · 2 a 4 semanas · 1 a 2 meses · Mais de 2 meses · Sem data definida ainda</p>
+      <p class="why">Select e não campo de data: a maioria não tem data exata, e date picker no celular é tortura. “Sem data definida” evita resposta inventada — e é sinal de lead menos maduro.</p>
+    </div></div>
+
+    <div class="field"><div class="fid">T5a</div><div class="fbody">
+      <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+      <p class="ask">Essa data é travada?</p>
+      <p class="opts">Travada — tem lançamento, evento ou feira em cima<br>Tenho uma preferência, mas dá para conversar</p>
+      <p class="why">Separa desejo de compromisso. Urgência é fator de preço em todas as fontes levantadas; <b>sem esse campo, toda data vira urgência.</b></p>
+    </div></div>
+
+    <div class="field"><div class="fid">T6</div><div class="fbody">
+      <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+      <p class="ask">Quem dá a palavra final?</p>
+      <p class="opts">Sou eu · Eu e mais uma pessoa · Passa por um time ou comitê · Passa pelo jurídico · Ainda não está definido</p>
+      <p class="help">Quanto mais gente aprova, mais rodadas o projeto pede. Prefiro já contar isso na proposta.</p>
+      <p class="why"><b>Convergência unânime: os sete relatórios pediram este campo.</b> É proxy direto de rodadas de revisão — o padrão de mercado é duas a três inclusas — e é qualificação: mostra se quem preenche decide. “Ainda não está definido” é o sinal mais forte de todos: a proposta pode incluir definir o decisor como primeira etapa.</p>
+    </div></div>
+
+    <div class="field"><div class="fid">T7</div><div class="fbody">
+      <div class="tags"><span class="pill p-opt">opcional</span><span class="pill p-type">textarea + links</span></div>
+      <p class="ask">Já existe roteiro, manual de marca, referência ou material bruto?</p>
+      <p class="help">Cola links aqui. Arquivo grande, manda o link do Drive ou WeTransfer.</p>
+    </div></div>
+  </div>
+
+  <p class="step">Passo 3 — fechamento</p>
+  <div class="fields">
+
+    <div class="field"><div class="fid">T8</div><div class="fbody">
+      <div class="tags"><span class="pill p-opt">opcional</span><span class="pill p-type">texto livre</span></div>
+      <p class="ask">Já existe verba definida?</p>
+      <p class="help">Se puder me dizer a ordem de grandeza, eu já monto a proposta dentro dela — em vez de te mandar algo fora da realidade. Se ainda não tem, escreve “ainda não” que eu proponho os caminhos.</p>
+      <p class="why">Texto livre, sem número sugerido, sem faixa.</p>
+    </div></div>
+
+    <div class="field"><div class="fid">T9</div><div class="fbody">
+      <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+      <p class="ask">Posso mostrar esse trabalho depois?</p>
+      <p class="opts">Sim, quando estiver publicado · Sim, mas me avise antes · Só com aprovação de vocês por escrito · Não, é confidencial</p>
+      <p class="help">Meu portfólio é como novos clientes me encontram. Combinar isso agora evita ter que perguntar depois — e se for confidencial, tudo bem, é só me dizer.</p>
+      <p class="why"><b>Este site é o motor comercial dela</b> — 540 vídeos e 63 marcas viraram portfólio. A pesquisa de imagem e voz classificou a ausência deste campo como <b>“a omissão mais cara do conjunto”</b>: o formulário inteiro cuidava da produção e nada cuidava do direito de mostrar o resultado. Promovido a obrigatório em 13/08/2026.</p>
+    </div></div>
+
+    <div class="field"><div class="fid">T9a</div><div class="fbody">
+      <div class="tags"><span class="pill p-cond">condicional</span><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+      <p class="ask">A autorização assinada por quem aparece cobre mostrar o vídeo no portfólio de quem produziu?</p>
+      <p class="opts">Sim · Não · Não sei</p>
+      <p class="help">Pergunto porque a autorização costuma valer para a campanha de vocês, não para o site de quem produziu. Se não cobrir, é uma linha a mais no termo — resolve em um minuto agora, e não resolve depois.</p>
+      <p class="why"><b>O campo que ataca o problema dos três polos.</b> O contrato entre ela e a marca <b>não vincula a pessoa filmada</b>: por mais cláusula que o cliente assine, quem autoriza o uso da própria imagem é quem aparece. Hoje o site publica <b>84 nomes próprios</b> ao lado dos rostos, sem autorização escrita para esse uso específico.</p>
+    </div></div>
+
+    <div class="field"><div class="fid">T10<br>T11</div><div class="fbody">
+      <div class="tags"><span class="pill p-req">obrigatórios</span><span class="pill p-type">nome · e-mail</span></div>
+      <p class="ask">Seu nome · Seu e-mail</p>
+      <p class="help">É por aqui que eu mando a proposta.</p>
+    </div></div>
+
+    <div class="field"><div class="fid">T12</div><div class="fbody">
+      <div class="tags"><span class="pill p-opt">opcional</span><span class="pill p-type">telefone</span></div>
+      <p class="ask">WhatsApp</p>
+      <p class="help">Se preferir que eu responda por aqui, é mais rápido.</p>
+      <p class="why">Opcional de propósito: telefone é campo de alto abandono, e no Brasil o WhatsApp é onde a pessoa provavelmente prefere. Oferecer sem exigir pega os dois públicos.</p>
+    </div></div>
+
+    <div class="field"><div class="fid">T13</div><div class="fbody">
+      <div class="tags"><span class="pill p-opt">opcional</span><span class="pill p-type">textarea</span></div>
+      <p class="ask">Quer me contar mais alguma coisa?</p>
+      <p class="why">Todo formulário com roteamento perde casos — é aqui que eles aparecem. Segundo três dos relatórios, é onde costuma aparecer algo caro.</p>
+    </div></div>
+
+    <div class="field"><div class="fid">T14</div><div class="fbody">
+      <div class="tags"><span class="pill p-cond">condicional</span><span class="pill p-req">obrigatório</span><span class="pill p-type">checkbox</span></div>
+      <p class="ask">☐ Confirmo que as informações acima são verdadeiras e que, quando houver pessoas no material, os direitos de uso de imagem e voz estão em ordem do nosso lado.</p>
+      <p class="help">Isso vira parte da proposta. Não é pegadinha — é o que me permite tocar o projeto sem travar tudo em jurídico.</p>
+      <p class="why"><b>Perguntar gera informação; declarar gera prova.</b> O peso vem de um caso real: ao julgar um comercial com voz sintética, o TJSP listou entre o que precisaria ser apurado <b>“quem foi contratado para produzi-la, se houve algum tipo de verificação prévia”</b> — e registrou que <em>“o uso de Inteligência Artificial, por si só, não elimina — bem pelo contrário, agrava — o risco de utilização indevida de direitos de terceiros”</em>. O que defende a produtora é ter verificado antes, por escrito.</p>
+    </div></div>
+  </div>
+
+  <div class="note key">
+    <span class="lbl">O botão</span>
+    <p><strong>Enviar briefing</strong> — <em>Eu respondo em até 1 dia útil.</em></p>
+    <p>O prazo fica no botão, não só na tela de obrigado: a pessoa decide enviar já sabendo o que vem depois.</p>
+  </div>
+</section>
+
+<!-- ============ BLOCOS ============ -->
+<section id="blocos">
+  <h2><span class="num">03 — específico</span>Os sete blocos</h2>
+  <p class="lede">Entram entre T4a e T5. Máximo de sete campos cada. O que foi cortado não sumiu: virou pergunta da primeira resposta dela.</p>
+
+  <!-- 01 REDES -->
+  <div class="svc" id="redes">
+    <div class="svc-head"><h3>Conteúdo para Redes Sociais</h3><span class="svc-count">6 campos</span></div>
+    <div class="fields">
+      <div class="field"><div class="fid">A1</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+        <p class="ask">A gente vai gravar ou o material já existe?</p>
+        <p class="opts">Preciso gravar · Já tenho o bruto, quero só edição · Um pouco de cada</p>
+        <p class="why">Bifurcação central do escopo — “já tenho” é, na prática, Pós-produção. <b>Nenhum modelo de brief de redes sociais do mercado pergunta isso.</b></p>
+      </div></div>
+      <div class="field"><div class="fid">A2</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">número + select</span></div>
+        <p class="ask">Quantos vídeos você imagina — e em que ritmo?</p>
+        <p class="opts">___ vídeos · por mês / no total · durante 1, 3, 6 meses ou projeto único</p>
+        <p class="why">Eixo de escala do pacote. O select de período resolve, no mesmo campo, se é projeto único ou canal contínuo — que é outro tipo de contrato.</p>
+      </div></div>
+      <div class="field"><div class="fid">A3</div><div class="fbody">
+        <div class="tags"><span class="pill p-cond">condicional</span><span class="pill p-type">select + número</span></div>
+        <p class="ask">Onde a gente grava? E quantos dias de gravação você acha que dá?</p>
+        <p class="help">Um dia bem aproveitado rende muito vídeo. Se não souber, deixa em branco que eu proponho.</p>
+        <p class="why">O eixo de custo mais pesado. <b>Uma diária rende de 10 a 30 entregas — o que precifica é a razão peças por diária, não o número de peças.</b></p>
+      </div></div>
+      <div class="field"><div class="fid">A4</div><div class="fbody">
+        <div class="tags"><span class="pill p-cond">condicional</span><span class="pill p-type">texto</span></div>
+        <p class="ask">Em que cidade?</p>
+        <p class="why">Deslocamento é linha separada de orçamento.</p>
+      </div></div>
+      <div class="field"><div class="fid">A5</div><div class="fbody">
+        <div class="tags"><span class="pill p-cond">condicional</span><span class="pill p-type">radio</span></div>
+        <p class="ask">Quem aparece na frente da câmera?</p>
+        <p class="opts">Ninguém, só produto ou ambiente · Gente da empresa · Ator ou modelo · Um creator · Ainda não decidimos</p>
+        <p class="why">Ativa o tripé de direitos da APRO — produtora, diretor e elenco — e a autorização de imagem. “Creator” sugere a frente 02.</p>
+      </div></div>
+      <div class="field"><div class="fid">A6</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+        <p class="ask">O que falar já está definido?</p>
+        <p class="opts">Temos o planejamento pronto · Temos ideias soltas · Preciso que você monte a estratégia</p>
+        <p class="why">A estratégia está no escopo do serviço: se o cliente já tem calendário, esse bloco sai da proposta. Diferença real de preço que <b>nenhum modelo de mercado captura</b>, porque todos assumem que a marca chega com a estratégia pronta.</p>
+      </div></div>
+    </div>
+    <p class="cut"><b>Cortado:</b> link do canal (absorvido em T2), manual de marca (só se marcar também Direção de Arte), redes específicas (T4 cobre).</p>
+  </div>
+
+  <!-- 02 CREATORS -->
+  <div class="svc" id="creators">
+    <div class="svc-head"><h3>Direção de Creators</h3><span class="svc-count">6 campos + 2 condicionais</span></div>
+    <div class="fields">
+      <div class="field"><div class="fid">B1</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">select</span></div>
+        <p class="ask">A marca está em setor com regra de publicidade?</p>
+        <p class="opts">Saúde, farma ou suplemento · Alimento ou bebida · Bebida alcoólica · Financeiro ou crédito · Apostas · Infantil · Nenhum desses · Não sei</p>
+        <p class="help">Pergunto porque muda o jeito de dirigir: em setor regulado a frase é a frase, e a gente ensaia para soar natural sem mudar palavra.</p>
+        <p class="why"><b>O campo mais importante do bloco.</b> Roteia todo o compliance e sinaliza o job de maior valor dela.</p>
+      </div></div>
+      <div class="field"><div class="fid">B1a</div><div class="fbody">
+        <div class="tags"><span class="pill p-cond">condicional</span><span class="pill p-type">radio</span></div>
+        <p class="ask">O texto já passou pelo jurídico?</p>
+        <p class="opts">Passou e não muda uma palavra · Passou, mas dá para ajustar com nova aprovação · Ainda não passou · Não tem jurídico envolvido</p>
+        <p class="why">Peça aprovada em fluxo regulado fica travada e não muda sem novo ciclo. É o que define se o trabalho é <b>tirar naturalidade de texto imutável</b> — a especialidade que o site vende.</p>
+      </div></div>
+      <div class="field"><div class="fid">B1b</div><div class="fbody">
+        <div class="tags"><span class="pill p-cond">condicional</span><span class="pill p-type">textarea</span></div>
+        <p class="ask">Tem palavra proibida, frase obrigatória ou coisa que não pode aparecer em cena?</p>
+        <p class="help">Vale “não pode dizer que cura”, “tem que ter a tarja”, “beba com moderação”.</p>
+        <p class="why">Descobrir em set custa a diária.</p>
+      </div></div>
+      <div class="field"><div class="fid">B2</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">select</span></div>
+        <p class="ask">Quantos creators entram nessa?</p>
+        <p class="opts">1 · 2 a 4 · 5 a 10 · Mais de 10 · Ainda não fechou</p>
+        <p class="why">Multiplica preparação, set e trabalho de consistência.</p>
+      </div></div>
+      <div class="field"><div class="fid">B3</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">select duplo</span></div>
+        <p class="ask">Quantos dias de gravação, e quantas horas por dia?</p>
+        <p class="help">Chute se precisar. Eu volto com o número certo na proposta.</p>
+        <p class="why"><b>A unidade de cobrança.</b> A tabela sindical remunera Diretor de Cena por bloco de tempo, base 8h/dia — não por vídeo.</p>
+      </div></div>
+      <div class="field"><div class="fid">B4</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+        <p class="ask">Eu vou estar no set ou entro por chamada?</p>
+        <p class="opts">Presencial · Remoto, entro por vídeo · Um pouco de cada</p>
+        <p class="help">Dirigir por chamada funciona e eu faço — só preciso de internet firme e um segundo aparelho do lado do creator.</p>
+        <p class="why">Deslocamento e hospedagem, ou requisito técnico do remoto: linha de orçamento nos dois casos. Cidade vem em campo condicional se presencial.</p>
+      </div></div>
+      <div class="field"><div class="fid">B5</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+        <p class="ask">Quem contrata e paga o creator?</p>
+        <p class="opts">A marca · A agência · Ainda não definimos</p>
+        <p class="help">Só para eu saber com quem alinho agenda. Eu não entro no cachê do creator.</p>
+        <p class="why"><b>Se ninguém contratou, a data não é real.</b> Substitui todo o bloco de direitos e exclusividade do creator, que mexe no cachê dele e não na diária dela.</p>
+      </div></div>
+    </div>
+    <p class="cut"><b>Cortado:</b> métricas do creator, KPIs de mídia, hashtag e #publi (obrigação do anunciante), direitos e exclusividade do creator.</p>
+  </div>
+
+  <!-- 03 FILMMAKER -->
+  <div class="svc" id="filmmaker">
+    <div class="svc-head"><h3>Filmmaker</h3><span class="svc-count">7 campos — exceção justificada</span></div>
+    <p class="why" style="margin-bottom:1.2rem">O bloco passa de seis porque três dos campos formam, juntos, o <b>detector de limite do formato solo</b>. Separados, não funcionam.</p>
+    <div class="fields">
+      <div class="field"><div class="fid">C1</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">select</span></div>
+        <p class="ask">Quantos dias de gravação você imagina?</p>
+        <p class="opts">1 · 2 · 3 a 5 · Mais de 5 · Não sei</p>
+        <p class="why">Unidade de preço do serviço.</p>
+      </div></div>
+      <div class="field"><div class="fid">C2</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">texto</span></div>
+        <p class="ask">Em que cidade a gravação acontece?</p>
+        <p class="why">Deslocamento, viabilidade de ida e volta, hospedagem acima de ~200 km. <b>O tempo de deslocamento conta dentro da diária</b> pela tabela ASTIM/Sindcine.</p>
+      </div></div>
+      <div class="field"><div class="fid">C3</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">select + condicional</span></div>
+        <p class="ask">São quantos lugares diferentes de gravação?</p>
+        <p class="opts">1 · 2 · 3 ou mais · Ainda definindo → se ≠ 1: “Entram no mesmo dia ou em dias separados?”</p>
+        <p class="why">Duas locações num dia é jornada estourada; em dois dias é outra diária.</p>
+      </div></div>
+      <div class="field"><div class="fid">C4</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">select</span></div>
+        <p class="ask">Como é essa gravação, na prática?</p>
+        <p class="opts">Depoimento ou entrevista · Cena dirigida com roteiro · Cobertura de evento · Produto, mesa ou detalhe · Conteúdo com creator · Mistura</p>
+        <p class="why">Quatro operações diferentes com o mesmo nome. Define luz, som, tempo de setup — e se o formato solo atende.</p>
+      </div></div>
+      <div class="field"><div class="fid">C5</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">checkbox + condicional</span></div>
+        <p class="ask">Quem vai aparecer no vídeo?</p>
+        <p class="opts">Ninguém · Pessoas da empresa · Creator ou apresentador · Atores contratados · Figuração · Não sei → se ator ou figuração: “Quantas pessoas em cena?”</p>
+        <p class="why">Ator e figuração mudam o regime <b>por via legal</b> — DRT, AET, seguro, camarim. Não é só operacional.</p>
+      </div></div>
+      <div class="field"><div class="fid">C6</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">select</span></div>
+        <p class="ask">Quanto tempo a gravação deve ocupar no dia?</p>
+        <p class="opts">Até 4h · Até 8h · Vai passar de 8h · À noite ou madrugada · Não sei</p>
+        <p class="why">A régua da CCT é 8h; acima é hora extra de 50% a 100%, e depois das 22h entra adicional noturno. <b>Sem esse campo, hora extra vira prejuízo silencioso.</b></p>
+      </div></div>
+      <div class="field"><div class="fid">C7</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">checkbox</span></div>
+        <p class="ask">Tem alguma coisa nessa lista que o projeto pede?</p>
+        <p class="opts">Drone · Segunda câmera simultânea · Maquiagem · Teleprompter · Estúdio alugado · Trilha licenciada · Arquivos brutos no fim · Nada disso · Não sei</p>
+        <p class="why">Cada item é linha de orçamento ou licença própria. <b>Drone é serviço regulado</b> — SISANT mais SARPAS por operação.</p>
+      </div></div>
+    </div>
+    <div class="note key">
+      <span class="lbl">O detector, disparado por C4 + C5 + C7</span>
+      <p>Se marcar atores, ou figuração com mais de três pessoas, <em>ou</em> cena dirigida junto com drone ou segunda câmera simultânea, aparece esta linha — como informação, não como erro:</p>
+      <p>“Esse projeto provavelmente pede mais gente em set do que uma pessoa só. Eu continuo na direção e monto o time necessário — só já te aviso para a proposta não te surpreender.”</p>
+      <p>Protege a promessa da página sem perder o lead. O teto documentado do set solo é cerca de duas câmeras, duas pessoas em cena e três a cinco luzes com som; acima disso o áudio fica sem mão livre.</p>
+    </div>
+  </div>
+
+  <!-- 04 PÓS -->
+  <div class="svc" id="pos">
+    <div class="svc-head"><h3>Pós-produção</h3><span class="svc-count">7 campos</span></div>
+    <div class="fields">
+      <div class="field"><div class="fid">D1</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">select</span></div>
+        <p class="ask">Como é esse trabalho?</p>
+        <p class="opts">Um vídeo só · Um lote · Canal com publicação recorrente · Acervo parado que quero destravar</p>
+        <p class="why">Separa pontual de recorrência — contrato mensal — antes do valor. Se for recorrente, D2 vira “quantos por mês”.</p>
+      </div></div>
+      <div class="field"><div class="fid">D2</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">texto guiado</span></div>
+        <p class="ask">Quantos vídeos precisam sair, e com que duração cada um?</p>
+        <p class="help">Chute. “Uns 4 vídeos de 1 minuto” já me serve.</p>
+        <p class="why">Base do cálculo: cerca de uma hora de trabalho por minuto finalizado, <b>em cada fase</b>.</p>
+      </div></div>
+      <div class="field"><div class="fid">D3</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">select + escape</span></div>
+        <p class="ask">Quanto material bruto você tem?</p>
+        <p class="opts">Até 1h · 1 a 5h · 5 a 20h · Mais de 20h · <strong>Não sei — o link responde</strong></p>
+        <p class="help">Essa é a informação que mais muda o orçamento, então um chute honesto vale mais que um número redondo.</p>
+        <p class="why">Razão bruto para final é o <b>driver número 1</b> de preço e prazo.</p>
+      </div></div>
+      <div class="field"><div class="fid">D4</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">select</span></div>
+        <p class="ask">Em que estado está esse material?</p>
+        <p class="opts">Tudo bruto · Os melhores trechos já marcados · Tem roteiro ou ordem definida · Existe um corte antigo para refazer</p>
+        <p class="why">Define as horas de decupagem — é aqui que volume vira custo.</p>
+      </div></div>
+      <div class="field"><div class="fid">D5</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">URL</span></div>
+        <p class="ask">Manda o link de um arquivo bruto, do jeito que saiu da câmera.</p>
+        <p class="help">Só um clipe. Eu abro a ficha técnica dele e descubro sozinha o formato, a resolução e a taxa de quadros. Assim você não precisa procurar nada disso.</p>
+        <p class="why"><b>O campo mais valioso do formulário inteiro.</b> Substitui seis perguntas técnicas que o cliente leigo erraria: codec, resolução, taxa de quadros, log ou RAW, peso por hora e câmera de origem.</p>
+      </div></div>
+      <div class="field"><div class="fid">D6</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">select + URL</span></div>
+        <p class="ask">Como você pretende me mandar?</p>
+        <p class="opts">Drive · WeTransfer · Frame.io · MASV ou Dropbox · Disco físico · Ainda não organizei</p>
+        <p class="help">WeTransfer grátis não passa de 3 GB, o que dá menos de 4 minutos de vídeo em qualidade alta.</p>
+        <p class="why"><b>Validação inline:</b> se D3 for 5h ou mais e D6 for WeTransfer, avisar na hora — em vez de descobrir três e-mails depois.</p>
+      </div></div>
+      <div class="field"><div class="fid">D7</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">multiselect</span></div>
+        <p class="ask">O que você quer que entre no acabamento?</p>
+        <p class="opts">Montagem · Cor · Motion, vinheta e cartelas · Abertura, selos e tarjas · Legenda · Áudio e mixagem · Entrega por plataforma · <strong>Não sei — me diga o que esse material precisa</strong></p>
+        <p class="why">Motion e cor avançada são <b>multiplicadores de tarifa, não adicionais</b>. O escape evita que o cliente desmarque algo que o material exige. Legenda abre condicional de idioma — tradução é outra ordem de grandeza.</p>
+      </div></div>
+    </div>
+    <div class="note">
+      <span class="lbl">Condicional que evita retrabalho</span>
+      <p>Se houver áudio gravado em aparelho separado: <strong>“O som já está encaixado com a imagem?”</strong> — com timecode é um comando, sem é claquete por claquete.</p>
+    </div>
+    <p class="cut"><b>Cortado:</b> os nove campos técnicos (substituídos por D5), proxies, LUT, objetivo, público e funil (é briefing de acabamento, não de campanha), e número de rodadas desejadas — T6 já responde.</p>
+  </div>
+
+  <!-- 05 FOTO -->
+  <div class="svc" id="foto">
+    <div class="svc-head"><h3>Fotografia</h3><span class="svc-count">1 bifurcação + 6 campos por caminho</span></div>
+    <div class="fields">
+      <div class="field"><div class="fid">E0</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio — bifurcação</span></div>
+        <p class="ask">O que você precisa fotografar?</p>
+        <p class="opts">Um evento — festival, confraternização, congresso → <strong>A</strong><br>O bastidor de uma produção — making of, ensaio, set → <strong>A</strong><br>Foto planejada de produto ou campanha — still, catálogo → <strong>B</strong><br>As duas coisas → <strong>A e B</strong></p>
+        <p class="why">O único ponto de decisão. Making of cai no caminho de cobertura porque operacionalmente <em>é</em> cobertura. Uso, direitos, prazo e referências ficam no tronco e nunca se repetem.</p>
+      </div></div>
+    </div>
+
+    <p class="step">Caminho A — cobertura</p>
+    <div class="fields">
+      <div class="field"><div class="fid">EA1</div><div class="fbody"><p class="ask">Quando é? E onde — cidade e nome do espaço.</p><p class="why">Gate binário de agenda, mais deslocamento.</p></div></div>
+      <div class="field"><div class="fid">EA2</div><div class="fbody"><p class="ask">A cobertura precisa começar e terminar quando?</p><p class="why"><b>Variável primária de preço.</b> Duas horas de coquetel e oito de congresso são orçamentos diferentes.</p></div></div>
+      <div class="field"><div class="fid">EA3</div><div class="fbody"><p class="ask">Me conta rapidinho que evento é esse e quanta gente você espera.</p><p class="why">Porte muda equipamento e logística.</p></div></div>
+      <div class="field"><div class="fid">EA4</div><div class="fbody"><p class="ask">O que não pode ficar de fora?</p><p class="help">Cronograma, discurso, premiação, foto oficial. Se tiver a programação em PDF, cola o link — funciona melhor que descrever.</p><p class="why">É o que evita o “você não fotografou isso”.</p></div></div>
+      <div class="field"><div class="fid">EA5</div><div class="fbody"><p class="ask">Vai ter coisa importante acontecendo em dois lugares ao mesmo tempo?</p><p class="why"><b>Decide segundo fotógrafo</b> — a diferença entre cobrir tudo e escolher o que perder.</p></div></div>
+      <div class="field"><div class="fid">EA6</div><div class="fbody">
+        <p class="ask">Você precisa de foto ainda durante o evento?</p>
+        <p class="opts">Sim, para postar na hora · No mesmo dia, à noite serve · No dia seguinte · Não, prefiro tudo tratado com calma</p>
+        <p class="help">Postar na hora muda a forma de trabalhar — edito em campo —, então precisa estar combinado antes.</p>
+        <p class="why"><b>O campo de maior alavancagem do caminho A.</b> Prévia no mesmo dia tem adicional de 25% a 50% nas referências, e já é oferta de prateleira de concorrente brasileiro.</p>
+      </div></div>
+      <div class="field"><div class="fid">EA7</div><div class="fbody">
+        <p class="ask">Quem cuida da autorização de uso de imagem dos convidados?</p>
+        <p class="opts">A gente coleta na inscrição ou na entrada · Ainda não pensamos nisso · Não vai ter gente identificável</p>
+        <p class="help">Isso é da organização do evento, não minha — mas eu preciso saber para não te colocar num problema depois.</p>
+        <p class="why">LGPD. <b>O formulário não coleta autorização de ninguém — só pergunta quem se responsabiliza.</b> Coletar dado de terceiro num formulário de orçamento feriria minimização.</p>
+      </div></div>
+    </div>
+
+    <p class="step">Caminho B — still</p>
+    <div class="fields">
+      <div class="field"><div class="fid">EB1</div><div class="fbody"><p class="ask">Quantos produtos ou itens diferentes vamos fotografar?</p><p class="why">O SKU é a unidade de orçamento.</p></div></div>
+      <div class="field"><div class="fid">EB2</div><div class="fbody"><p class="ask">Quantas fotos de cada um?</p><p class="opts">1 · 2 a 3 ângulos · 4 a 6 · Não sei, me sugere</p><p class="why">Junto com EB1, <b>a unidade real de orçamento</b>.</p></div></div>
+      <div class="field"><div class="fid">EB3</div><div class="fbody">
+        <p class="ask">Como você imagina as fotos?</p>
+        <p class="opts">Fundo branco, tipo catálogo · Cena montada, com clima de campanha · As duas</p>
+        <p class="why"><b>A maior bifurcação de custo interna.</b> Não são o mesmo trabalho nem o mesmo dia. Se “cena montada”, abre “quem providencia os objetos de cena?”.</p>
+      </div></div>
+      <div class="field"><div class="fid">EB4</div><div class="fbody"><p class="ask">Vai ter gente na foto?</p><p class="opts">Modelo · Só mão ou parte do corpo · Alguém da equipe de vocês · Ninguém</p><p class="why">Modelo é diária extra mais termo de imagem.</p></div></div>
+      <div class="field"><div class="fid">EB5</div><div class="fbody"><p class="ask">Onde vamos fotografar? E como o produto chega até mim?</p><p class="why">Estúdio é diária extra. Logística de produto é o que atrasa a produção inteira quando fica para depois.</p></div></div>
+      <div class="field"><div class="fid">EB6</div><div class="fbody">
+        <p class="ask">Precisa do produto recortado, sem fundo? E que nível de acabamento?</p>
+        <p class="opts">O padrão — cor, luz e limpeza, pronta para publicar · Avançado — montagem, troca de fundo, retoque</p>
+        <p class="why">Recorte é serviço adicional, não “tratamento incluído”. Separa a promessa do site do retoque avançado.</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- 06 ARTE -->
+  <div class="svc" id="arte">
+    <div class="svc-head"><h3>Direção de Arte</h3><span class="svc-count">1 roteador + 5 comuns + caminho</span></div>
+    <div class="fields">
+      <div class="field"><div class="fid">F0</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio — roteador</span></div>
+        <p class="ask">O que você precisa resolver?</p>
+        <p class="opts">“Minha marca precisa de uma cara.” → <strong>A</strong><br>“Tenho uma campanha e preciso do visual dela, em todos os lugares onde ela vai aparecer.” → <strong>B</strong><br>“Preciso de uma peça específica.” → <strong>C</strong><br>“Tenho um time criando e preciso de alguém segurando o padrão visual.” → <strong>D</strong><br>“É mais de um desses, ou não sei encaixar.” → <strong>B</strong> + campo livre</p>
+        <p class="why">Escrito <b>como situação, não como nome de serviço</b> — o cliente não sabe se quer “key visual” ou “identidade visual”, mas sabe o que precisa entregar.</p>
+      </div></div>
+      <div class="field"><div class="fid">F1</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+        <p class="ask">Você já tem manual de identidade?</p>
+        <p class="opts">Sim, manual fechado, com regras de uso, cores e tipografia · Tenho o logo e umas cores, mas nada escrito · Não tenho nada ainda</p>
+        <p class="why"><b>A pergunta que mais muda o trabalho.</b> Três estados, não dois: “tenho o logo em PNG” não é ter manual, e é o caso mais comum. Define criar sistema contra aplicar sistema.</p>
+      </div></div>
+      <div class="field"><div class="fid">F2</div><div class="fbody">
+        <div class="tags"><span class="pill p-cond">condicional</span><span class="pill p-type">URL</span></div>
+        <p class="ask">Se tem material de marca, joga aqui.</p>
+        <p class="help">Manual, logo em vetor, paleta, fontes. Link de pasta serve.</p>
+        <p class="why">Vetor contra PNG é diferença de horas.</p>
+      </div></div>
+      <div class="field"><div class="fid">F3</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">checkbox + número</span></div>
+        <p class="ask">Cada peça vai precisar de quantos formatos diferentes?</p>
+        <p class="help">Um post pode virar 1:1, 4:5 e 9:16 — cada versão é uma arte.</p>
+        <p class="why"><b>O multiplicador silencioso — o campo mais importante do bloco.</b> “Um anúncio de rede social não é um entregável.” Entregável vago é a principal fonte de scope creep. O texto de apoio ensina o cliente por que a pergunta existe, e é isso que faz ele responder de verdade.</p>
+      </div></div>
+      <div class="field"><div class="fid">F4</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+        <p class="ask">Depois de entregue, sua equipe vai precisar mexer nos arquivos?</p>
+        <p class="opts">Sim, vamos adaptar e criar peças novas · Não, só vou usar o que veio pronto · Não sei ainda</p>
+        <p class="why">Direitos e preço. Arquivo editável é extra na prática de mercado, e no Brasil <b>o que não está escrito não foi cedido</b> (art. 4º da 9.610). Perguntado como necessidade de negócio, não como cláusula.</p>
+      </div></div>
+      <div class="field"><div class="fid">F5</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">textarea</span></div>
+        <p class="ask">Manda 2 ou 3 referências visuais — e diz em uma linha o que te agradou em cada uma.</p>
+        <p class="help">O “o que te agradou” vale mais que o link.</p>
+        <p class="why">A instrução de justificar é deliberada: <b>referência sem motivo produz cópia; referência com motivo produz critério.</b> Substitui as perguntas abstratas de estilo dos questionários de branding.</p>
+      </div></div>
+    </div>
+
+    <h3>Por caminho</h3>
+    <ul class="plain">
+      <li><strong>A — identidade:</strong> o que vai ganhar identidade (marca nova, refeita, canal ou projeto) · o logo pode mudar? · nome definido e registrado? · aplicações obrigatórias na entrega</li>
+      <li><strong>B — campanha:</strong> do que é a campanha · a única coisa que a pessoa tem que lembrar · quais peças · já existe material visual ou a arte cria a imagem? · quem escreve os textos · por quanto tempo roda</li>
+      <li><strong>C — peça avulsa ou mídia kit:</strong> que peça é · quantas páginas · <strong>os números já existem?</strong> · tem case com resultado real? · vai ter tabela de cotas? · PDF, link ou apresentação ao vivo</li>
+      <li><strong>D — coordenação:</strong> quem cria hoje · quantas pessoas · quantas peças por semana · existe padrão escrito? · <strong>você quer que eu decida ou que eu opine?</strong> · projeto fechado ou mensal</li>
+    </ul>
+
+    <div class="note">
+      <span class="lbl">Bloco impresso — condicional</span>
+      <p>Abre se T4 incluir “impresso, PDV ou evento”. Cinco campos, <strong>todos aceitam “ainda não sei” e nenhum bloqueia o envio</strong>: tamanho final · tiragem · já tem gráfica e gabarito · papel e acabamento · <strong>a data em que a gráfica precisa receber o arquivo</strong>, deliberadamente separada da data do T5.</p>
+      <p>Confundir essas duas datas é o erro de cronograma mais comum em projeto com impresso.</p>
+    </div>
+  </div>
+
+  <!-- 07 IA -->
+  <div class="svc" id="ia">
+    <div class="svc-head"><h3>Produção com IA</h3><span class="svc-count">6 campos + 2 blocos condicionais</span></div>
+    <p class="why" style="margin-bottom:1.2rem">Não existe modelo de mercado para este briefing — os guias de estúdio param em “audiência, objetivo, plataforma”. Construção original, e o bloco de maior risco jurídico dos sete.</p>
+    <div class="fields">
+      <div class="field"><div class="fid">G1</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">checkbox — roteador</span></div>
+        <p class="ask">O que você imagina que a IA vai fazer aqui?</p>
+        <p class="opts">Completar ou ampliar algo já filmado · Um apresentador ou porta-voz digital · Cenas criadas do zero · Versões em outros idiomas · Não sei, quero sua recomendação</p>
+        <p class="why">Define pipeline, custo e qual bloco de risco abrir.</p>
+      </div></div>
+      <div class="field"><div class="fid">G2</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">número + select</span></div>
+        <p class="ask">Quantas peças e de que duração?</p>
+        <p class="why">Uma peça de 60s são 8 a 12 gerações, pelo limite de plano das ferramentas.</p>
+      </div></div>
+      <div class="field"><div class="fid">G3</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+        <p class="ask">Sua empresa tem alguma regra ou restrição sobre usar IA em material da marca?</p>
+        <p class="opts">Não tem · Tem, e é tranquilo · Tem, e é restritiva — precisa aprovação · Não sei, vou checar</p>
+        <p class="help">Pergunto no começo porque muita empresa grande tem política interna, e não vale a pena produzir algo que o jurídico de vocês não vai deixar publicar.</p>
+        <p class="why"><b>Descobrir isso no fim é perder o projeto inteiro.</b></p>
+      </div></div>
+      <div class="field"><div class="fid">G4</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+        <p class="ask">Posso usar o material de vocês dentro das ferramentas de IA?</p>
+        <p class="opts">Sim · Sim, com NDA assinado · Não — precisa rodar sem enviar nosso material para fora · Não sei</p>
+        <p class="help">Algumas ferramentas usam o que você envia para treinar os modelos delas. Existe caminho fechado para quando isso não pode acontecer.</p>
+        <p class="why">Fora do plano Enterprise, a Runway declara que <b>input e output entram no treino, sem opt-out</b>. Se o cliente não pode, o stack muda e o custo muda.</p>
+      </div></div>
+      <div class="field"><div class="fid">G5</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">radio</span></div>
+        <p class="ask">Tudo bem o vídeo aparecer marcado como “feito com IA”?</p>
+        <p class="opts">Sim · Preferimos que não · Não pode de jeito nenhum · Não sei</p>
+        <p class="help">As ferramentas de IA gravam uma marca invisível dentro do arquivo. YouTube, TikTok e LinkedIn leem essa marca e podem exibir o aviso sozinhos — nesses casos não é escolha nossa nem sua. No Instagram costuma depender de quem publica. E quando o vídeo mostra uma pessoa com aparência realista, YouTube e TikTok exigem que quem posta declare. Se isso for um problema para a marca, me diga agora: dá para desenhar a peça de um jeito que não caia na regra.</p>
+        <p class="why"><b>A pergunta certa não é “quer rotular?”, é “está preparado para aparecer rotulado?”</b> ⚠️ Microcopy corrigido em 13/08/2026: a versão anterior dizia que o Instagram rotula sozinho, e a política oficial da Meta diz o contrário — ela <b>não detecta</b> vídeo e áudio realistas de terceiros, e por isso exige declaração de quem publica. Nenhum blog que afirma o oposto aponta para página oficial.</p>
+      </div></div>
+      <div class="field"><div class="fid">G6</div><div class="fbody">
+        <div class="tags"><span class="pill p-req">obrigatório</span><span class="pill p-type">checkbox + textarea</span></div>
+        <p class="ask">Tem algo que precisa aparecer perfeito, sem margem para erro?</p>
+        <p class="opts">Embalagem, rótulo ou texto legível · Mão segurando o produto, em close · O rosto de alguém que o público reconhece · O produto exatamente como é na vida real · Nada disso, é mais atmosfera</p>
+        <p class="help">Essas quatro coisas são justamente onde a IA ainda escorrega. Se alguma for essencial, eu prefiro filmar aquele trecho e integrar — e te digo isso na proposta, não no meio do projeto.</p>
+        <p class="why">Traduz os limites técnicos de 2026 para linguagem de cliente. <b>É o campo que evita prometer o impossível.</b></p>
+      </div></div>
+    </div>
+
+    <div class="note warn">
+      <span class="lbl">Bloco condicional — pessoas e direitos · só se G1 incluir apresentador ou avatar</span>
+      <p>A pessoa já sabe e concordou? · Existe documento assinado? · E a voz? · Por quanto tempo e onde o rosto pode continuar sendo usado?</p>
+      <p>Súmula 403 do STJ: uso comercial de imagem sem autorização gera <strong>dano presumido</strong>, sem precisar provar prejuízo. E as próprias ferramentas exigem: a HeyGen pede vídeo de consentimento gravado pela pessoa; a Synthesia proíbe avatar de catálogo em anúncio pago sem consentimento escrito.</p>
+      <p><strong>Consequência prática:</strong> para avatar de pessoa real e clone de voz, <strong>legítimo interesse é indisponível</strong> (dado sensível, art. 11). A única base é consentimento específico e destacado, separado do texto principal.</p>
+    </div>
+
+    <div class="note">
+      <span class="lbl">Correção de redação — a voz · 13/08/2026</span>
+      <p>A versão anterior dizia “a lei brasileira trata voz como dado sensível”. É impreciso: voz vira dado sensível quando processada para <em>identificar ou replicar</em> a pessoa — o caso do clone, não o de qualquer gravação. E o fundamento mais forte é outro, e mais simples: <strong>a Constituição cita a voz junto com a imagem</strong> (art. 5º, XXVIII, “a”). Microcopy novo:</p>
+      <p>“Usar a voz da própria pessoa é possível e dá o melhor resultado, mas exige uma autorização separada da do rosto — a lei protege voz e imagem como coisas diferentes, e clonar uma voz é mais delicado do que gravar uma.”</p>
+    </div>
+
+    <h3>Três campos acrescentados pela pesquisa de conformidade</h3>
+    <div class="fields">
+      <div class="field"><div class="fid">G7</div><div class="fbody">
+        <div class="tags"><span class="pill p-cond">condicional</span><span class="pill p-type">radio</span></div>
+        <p class="ask">Quem vai cuidar da autorização?</p>
+        <p class="opts">Nós cuidamos e te enviamos assinado · Prefiro que você me mande o modelo e eu coleto · <strong>Quero que você cuide disso (incluir no orçamento)</strong> · Não sei</p>
+        <p class="help">Qualquer caminho serve — só preciso saber qual, porque muda o prazo e o escopo.</p>
+        <p class="why">Descobrir que <b>não há</b> documento sem definir <b>quem resolve</b> deixa o problema no ar. E a terceira opção é receita: no padrão ABAP/APRO, obter direito de imagem é <b>serviço remunerado a 40%</b> quando cai na produtora. Deixar em aberto é abrir mão de dinheiro, não só de proteção.</p>
+      </div></div>
+      <div class="field"><div class="fid">G8</div><div class="fbody">
+        <div class="tags"><span class="pill p-cond">condicional</span><span class="pill p-type">radio</span></div>
+        <p class="ask">Alguma pessoa que aparece tem menos de 18 anos?</p>
+        <p class="opts">Não · Sim · Não sei</p>
+        <p class="help">Se tiver, o caminho é diferente e leva mais tempo — precisa de autorização dos pais e, em alguns casos, de autorização da Justiça.</p>
+        <p class="why">Menor exige autorização dos responsáveis e, quando aplicável, <b>alvará judicial</b>. São semanas de prazo — descobrir tarde inviabiliza a data.</p>
+      </div></div>
+      <div class="field"><div class="fid">G9</div><div class="fbody">
+        <div class="tags"><span class="pill p-cond">condicional</span><span class="pill p-type">radio</span></div>
+        <p class="ask">Quando o prazo acabar, o que fazer com o avatar?</p>
+        <p class="opts">Apagar tudo · Guardar para usar de novo (renovando a autorização) · Não sei</p>
+        <p class="help">O avatar é um arquivo que continua existindo depois do vídeo pronto. Melhor combinar agora se ele fica guardado ou se some no fim.</p>
+        <p class="why">O campo de prazo pergunta por quanto tempo o rosto pode ser usado, mas não o destino do <b>modelo treinado</b> — que é ativo separado e sobrevive à campanha. Sem isso, não existe saída limpa quando a pessoa sai da empresa.</p>
+      </div></div>
+    </div>
+
+    <div class="note warn">
+      <span class="lbl">Bloco condicional — material filmado · só se G1 incluir “completar algo já filmado”</span>
+      <p>Tem os arquivos originais em boa qualidade? · Aparece gente? · <strong>A autorização que essas pessoas assinaram permite modificar a imagem delas depois, inclusive com IA?</strong></p>
+      <p>“Essa é a pergunta que evita dor de cabeça: autorização de gravação antiga em geral libera editar, mas não libera criar imagem nova da pessoa. Se a resposta for ‘não sei’, eu te digo exatamente o que checar.”</p>
+      <p>É o risco menos óbvio e mais provável do serviço — há processo em curso alegando exatamente isso —, e ataca direto o item “expansão de plano”, que é o mais vendável dela.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REPO ============ -->
+<section id="repo">
+  <h2><span class="num">04 — implementação</span>O que muda no site</h2>
+  <p class="lede">Nada disso está feito. É a lista da próxima fase.</p>
+  <div class="scroller">
+  <table>
+    <thead><tr><th style="width:26%">Onde</th><th>O quê</th></tr></thead>
+    <tbody>
+      <tr><td><code>briefing.html</code> <em>novo</em></td><td>A página. Um <code>&lt;form&gt;</code>, três blocos, campos escondidos do FormSubmit no mesmo padrão do <code>index.html</code>.</td></tr>
+      <tr><td>CSP do <code>briefing.html</code></td><td>Precisa nascer com <code>connect-src 'self' https://formsubmit.co</code> e <code>form-action https://formsubmit.co</code>. <strong>A CSP de <code>servicos.html</code> está em <code>form-action 'none'</code></strong> — se o formulário for embutido ali em vez de ganhar página própria, o envio falha silenciosamente no navegador.</td></tr>
+      <tr><td><code>briefing.js</code></td><td>Lógica condicional, validação inline, navegação entre passos e honeypot. Progressive enhancement: sem JS, o formulário continua enviando.</td></tr>
+      <tr><td><code>obrigado.html</code> <em>novo</em></td><td>Destino do <code>_next</code>, com o prazo de 1 dia útil repetido.</td></tr>
+      <tr><td><code>politica-privacidade.html</code> <strong>✓ feito</strong></td><td>Publicado em 13/08/2026, junto com o link no rodapé das duas páginas, a entrada no sitemap e o registro nas duas listas do workflow. Faltava desde sempre — o formulário de contato já coletava dados sem aviso.</td></tr>
+      <tr><td><code>deploy-pages.yml</code></td><td><strong>Dois lugares:</strong> o <code>on.push.paths</code> — esquecer significa que o deploy nem dispara — e a lista de inclusão do <code>cp</code> — esquecer significa deploy verde com 404 no ar. Nomes por extenso, não glob: o glob destrói o fail-fast que o workflow tem de propósito.</td></tr>
+      <tr><td><code>servicos.html</code></td><td>Os sete links de serviço ganham um irmão: “Fazer o briefing”, apontando para <code>briefing.html?servico=&lt;slug&gt;</code>.</td></tr>
+      <tr><td><code>style.css</code></td><td>Estilo dos campos — não existe formulário estilizado além do <code>#contatoForm</code>.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>LGPD e anti-spam</h3>
+  <p><strong>Base legal: art. 7º, V — procedimentos preliminares a contrato, a pedido do titular.</strong> Sem checkbox de consentimento, que jogaria o ônus da prova nela e seria revogável a qualquer momento.</p>
+  <div class="note warn">
+    <span class="lbl">Correção — 13/08/2026</span>
+    <p>A recomendação original era <strong>legítimo interesse</strong> (art. 7º, IX). Está errada: o art. 33, IX só autoriza transferência internacional para as hipóteses dos incisos <strong>II, V e VI</strong> — legítimo interesse não está na lista, e o FormSubmit fica fora do Brasil. Com o inciso IX seria preciso assinar as cláusulas-padrão da ANPD com o fornecedor, o que é inviável para uma autônoma. O inciso V encaixa melhor no que o formulário é de fato e abre o mecanismo sem nada a assinar.</p>
+  </div>
+  <p>Obrigatório: aviso de privacidade acessível a partir do formulário e um canal de contato para o titular. <strong>Não precisa de DPO</strong> — Resolução ANPD 2/2022, art. 11, agente de pequeno porte.</p>
+  <p>Anti-spam por <strong>honeypot mais tempo mínimo de preenchimento</strong>. Sem CAPTCHA: em site estático não há backend para validar o token, então CAPTCHA próprio seria teatro.</p>
+
+  <div class="note">
+    <span class="lbl">Fase 2 — não bloqueia nada</span>
+    <p>O briefing virar tarefa no ClickUp. A API é gratuita em qualquer plano, com o token que ela já tem e um limite de 100 requisições por minuto — cem vezes o necessário. Como o FormSubmit não tem API de leitura, o caminho é o webhook dele apontando para um receptor, ou um script Python no padrão dos 43 que já existem na pasta.</p>
+  </div>
+</section>
+
+<!-- ============ ABERTO ============ -->
+<section id="aberto">
+  <h2><span class="num">05 — pendente</span>O que ficou em aberto</h2>
+  <ul class="plain">
+    <li><strong>A copy de rotulagem de IA precisa de olhar jurídico.</strong> O Guia do CONAR não foi lido no original: duas leituras de escritórios convergem que não há obrigação de rotular, uma terceira diverge. O PL 2338 está em tramitação, com status de agosto de 2026 não confirmado.</li>
+    <li><strong>O multiplicador por formato em Direção de Arte não tem fonte pública.</strong> Nenhuma referência publica número. O valor é dela.</li>
+    <li><strong>As estatísticas de conversão não batem entre si.</strong> Três pesquisas trouxeram números de fontes diferentes para “campos contra abandono”, e o relatório de UX marcou parte como folclore de mercado. Nenhuma decisão deste documento depende desses números — o dimensionamento saiu do conteúdo, não do benchmark.</li>
+    <li><strong>Fora deste escopo:</strong> o JSON-LD de <code>servicos.html</code> ainda descreve os serviços com a redação anterior ao commit <code>847de0c</code>.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Consolida treze relatórios: nove em <code>docs/research/2026-08-13-formularios-por-servico/</code> (5.567 linhas, o desenho dos campos) e quatro em <code>docs/research/2026-08-13-conformidade-conar-lgpd/</code> (4.259 linhas, CONAR, LGPD, direito de imagem e rotulagem nas plataformas). Lá estão as fontes completas, o que cada pesquisa descartou por não conseguir confirmar, e os campos que não couberam aqui.</p>
+  <p>As marcações ⚠️ nesta página são correções aplicadas em 13/08/2026, quando a pesquisa jurídica derrubou premissas da primeira rodada.</p>
+</footer>
+
+</div>
