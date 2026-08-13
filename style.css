@@ -99,6 +99,10 @@
   --text: #e2e8f2;
   --text-dim: #a3b3ce;
   --text-muted: #9eb1cc;
+  /* Cor única de título. É o tom mais claro da paleta: sobre o fundo escuro
+     do site é o que dá mais leitura no texto grande. Nenhum título deve
+     escrever branco à mão nem cair no --text do corpo. */
+  --text-titulo: #ffffff;
   --accent: #6ba3e0;
   --accent-light: #8fbeed;
   --accent-glow: rgba(107, 163, 224, 0.18);
@@ -450,6 +454,16 @@ button { font-family: inherit; }
 
 .accent { color: var(--accent); }
 
+/* ── Cor dos títulos ──
+   Título não mistura cor. O realce azul no meio da frase partia o título em
+   dois tons — e a metade realçada tinha menos contraste que a outra, então o
+   destaque custava leitura em vez de dar. Todo h1/h2 e a citação ficam no
+   --text-titulo, e o <span class="accent"> herdado do HTML herda essa cor em
+   vez de virar azul. O azul segue sendo cor de ação (link, botão, borda,
+   hover), nunca de texto de título. */
+h1, h2, blockquote { color: var(--text-titulo); }
+h1 .accent, h2 .accent, blockquote .accent { color: inherit; }
+
 /* ── Quebra de linha ──
    Título: 'balance' distribui as linhas com comprimento parecido, em vez de
    encher a primeira até a borda e largar uma palavra sozinha embaixo.
@@ -714,7 +728,7 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   line-height: 1.05;
   letter-spacing: 0px;
   margin-bottom: 28px;
-  color: #ffffff;
+  color: var(--text-titulo);
 }
 
 .hero__title-line { display: block; }
@@ -896,7 +910,7 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   font-weight: 400;
   line-height: 1.05;
   margin-bottom: 28px;
-  color: #ffffff;
+  color: var(--text-titulo);
 }
 
 .sobre__text {
@@ -980,11 +994,9 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   font-style: italic;
   font-weight: 400;
   line-height: 1.25;
-  color: #ffffff;
+  color: var(--text-titulo);
   text-wrap: balance;
 }
-
-.quote__text .accent { color: var(--accent-light); }
 
 /* ========================================
    MARCAS
