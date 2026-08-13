@@ -11,6 +11,7 @@ on:
       - 'assets/**'
       - 'index.html'
       - 'servicos.html'
+      - 'politica-privacidade.html'
       - 'style.css'
       - 'script.js'
       - 'servicos.js'
@@ -48,7 +49,7 @@ jobs:
         run: |
           mkdir -p _site
           cp -r assets _site/
-          cp index.html servicos.html style.css script.js servicos.js sitemap.xml robots.txt .nojekyll _site/
+          cp index.html servicos.html politica-privacidade.html style.css script.js servicos.js sitemap.xml robots.txt .nojekyll _site/
           echo "Arquivos no artefato: $(find _site -type f | wc -l)"
           echo "Peso do artefato: $(du -sh _site | cut -f1)"
 

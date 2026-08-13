@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO básico -->
+  <title>Política de Privacidade | Savylla Adryan</title>
+  <meta name="description" content="Quais dados este site coleta, para quê, por quanto tempo e como pedir para apagar. Escrito em português normal.">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Savylla Adryan">
+  <meta name="theme-color" content="#0b1120">
+  <link rel="canonical" href="https://savylla.github.io/savylla-adryan/politica-privacidade.html">
+
+  <!-- CSP: esta página é texto puro. Sem vídeo, sem formulário, sem imagem
+       externa — por isso é a política mais fechada do site. Se um dia entrar
+       formulário aqui, form-action e connect-src precisam liberar o destino. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'none'; font-src 'self'; connect-src 'self'; frame-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Escopado em .legal para não tocar na cascata do resto do site.
+       São regras de uma página só; não vale poluir o style.css com elas. */
+    .legal{
+      max-width:44rem;
+      margin:0 auto;
+      padding:clamp(5rem,12vw,8rem) 1.5rem 6rem;
+    }
+    .legal__titulo{
+      font-family:var(--font-display);
+      font-weight:400;
+      color:var(--text-titulo);
+      font-size:clamp(2.2rem,7vw,3.4rem);
+      line-height:1.1;
+      margin:0 0 .6rem;
+    }
+    .legal__data{
+      font-family:var(--font-body);
+      color:var(--text-muted);
+      font-size:.9rem;
+      margin:0 0 2.5rem;
+      padding-bottom:2.5rem;
+      border-bottom:1px solid var(--border);
+    }
+    .legal h2{
+      font-family:var(--font-display);
+      font-weight:400;
+      color:var(--text-titulo);
+      font-size:clamp(1.4rem,4vw,1.9rem);
+      line-height:1.2;
+      margin:3rem 0 1rem;
+    }
+    .legal p,.legal li{
+      font-family:var(--font-body);
+      font-weight:500;
+      color:var(--text-dim);
+      font-size:1rem;
+      line-height:1.7;
+    }
+    .legal p{margin:0 0 1.1rem}
+    .legal strong{color:var(--text);font-weight:600}
+    .legal a{color:var(--accent-light)}
+    .legal a:hover{color:var(--accent)}
+    .legal ul{margin:0 0 1.1rem;padding-left:1.2rem}
+    .legal li{margin-bottom:.5rem}
+    .legal__abre{
+      font-size:1.08rem;
+      color:var(--text);
+    }
+    .legal__tabela{
+      width:100%;
+      border-collapse:collapse;
+      margin:0 0 1.4rem;
+      font-family:var(--font-body);
+    }
+    .legal__tabela th{
+      text-align:left;
+      font-weight:600;
+      color:var(--text);
+      font-size:.82rem;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      padding:0 1rem .6rem 0;
+      border-bottom:1px solid var(--border);
+    }
+    .legal__tabela td{
+      color:var(--text-dim);
+      font-weight:500;
+      font-size:.95rem;
+      padding:.8rem 1rem .8rem 0;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      vertical-align:top;
+    }
+    .legal__destaque{
+      background:var(--bg-card);
+      border-left:3px solid var(--accent);
+      padding:1.1rem 1.3rem;
+      margin:0 0 1.6rem;
+      border-radius:0 4px 4px 0;
+    }
+    .legal__destaque p:last-child{margin-bottom:0}
+    @media (max-width:520px){
+      .legal__tabela th:first-child,.legal__tabela td:first-child{padding-right:.6rem}
+    }
+  </style>
+</head>
+<body class="pagina-interna">
+
+  <a href="#main-content" class="skip-link">Pular para conteúdo</a>
+
+  <!-- Fundo das páginas internas: o body é transparent no index porque lá existe
+       o .global-bg atrás. Aqui não existe, então a classe e esta div é que
+       pintam o fundo — sem elas o site inteiro vaza branco. -->
+  <div class="pagina-interna__bg" aria-hidden="true"></div>
+
+  <button class="side-label side-label--left" id="sideMenu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navOverlay">MENU</button>
+  <div class="side-label side-label--right"><a href="index.html#contato">Contato</a></div>
+
+  <!-- Full-screen Navigation Overlay -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <nav class="nav-overlay__inner">
+      <a href="index.html#hero" class="nav-overlay__link">Início</a>
+      <a href="index.html#sobre" class="nav-overlay__link">Sobre</a>
+      <a href="index.html#marcas" class="nav-overlay__link">Marcas</a>
+      <a href="index.html#trabalhos" class="nav-overlay__link">Projetos</a>
+      <a href="servicos.html" class="nav-overlay__link">Serviços</a>
+      <a href="index.html#contato" class="nav-overlay__link">Contato</a>
+    </nav>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html#hero" class="header__logo">SAVYLLA ADRYAN</a>
+      <nav class="header__nav">
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#marcas">Marcas</a>
+        <a href="index.html#trabalhos">Projetos</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="index.html#contato" class="header__cta">Contato</a>
+      </nav>
+      <button class="header__burger" id="burgerBtn" aria-label="Menu" aria-expanded="false" aria-controls="navOverlay">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <article class="legal">
+
+      <h1 class="legal__titulo">Política de Privacidade</h1>
+      <p class="legal__data">Última atualização: 13 de agosto de 2026</p>
+
+      <p class="legal__abre">Este site é meu portfólio profissional. Se você me mandou uma mensagem ou preencheu um briefing, alguns dados seus passaram por aqui. Esta página explica quais, para quê, por quanto tempo, e como pedir que eu apague.</p>
+
+      <p>Está escrito em português normal de propósito.</p>
+
+      <h2>Quem sou eu</h2>
+
+      <p>Savylla Adryan, profissional autônoma de audiovisual.</p>
+
+      <p>Sou quem decide o que este site coleta e por quê — na linguagem da lei, sou <strong>o controlador</strong> dos dados. É comigo que você fala sobre eles.</p>
+
+      <!-- Canal do titular. Trocar aqui se preferir outro endereço; ele aparece
+           em três pontos desta página (aqui, em "Seus direitos" e em "Se você
+           não ficar satisfeita"). -->
+      <div class="legal__destaque">
+        <p><strong>Contato para qualquer assunto de dados pessoais:</strong><br>
+        <a href="mailto:savyllaadryan@gmail.com">savyllaadryan@gmail.com</a></p>
+      </div>
+
+      <p>Este é o canal oficial. Não tenho encarregado (DPO) designado, porque a lei dispensa disso quem é agente de tratamento de pequeno porte — Resolução CD/ANPD nº 2/2022, art. 11. Em lugar do encarregado, existe este e-mail, e ele funciona.</p>
+
+      <h2>O que eu coleto</h2>
+
+      <p><strong>No formulário de contato:</strong> seu nome, seu e-mail, o assunto e a mensagem.</p>
+
+      <p><strong>No formulário de briefing:</strong> seu nome, e-mail, WhatsApp, marca ou empresa, a descrição do projeto, o prazo, a verba pretendida e os links de material que você me mandar.</p>
+
+      <p>Nada além disso. Não peço documento, não peço endereço, não peço data de nascimento.</p>
+
+      <p><strong>Só coleto quando você preenche e envia.</strong> Não há formulário que salve enquanto você digita.</p>
+
+      <h2>Para que eu uso</h2>
+
+      <p>Para uma coisa: <strong>responder você e tocar o projeto.</strong> Ler o que você precisa, tirar dúvida, montar orçamento, negociar, e, se a gente fechar, produzir.</p>
+
+      <p>Não uso para mais nada. Não mando newsletter. Não faço disparo em massa. Não vendo, não alugo e não passo seus dados para ninguém comprar.</p>
+
+      <h2>Com que base legal</h2>
+
+      <p>Com base no <strong>art. 7º, inciso V da LGPD</strong> (Lei 13.709/2018): tratamento necessário para a execução de contrato ou de procedimentos preliminares relacionados a contrato, <strong>a pedido do titular</strong>.</p>
+
+      <p>Em português: você me procurou pedindo um orçamento. Tratar seus dados para responder é parte de atender esse pedido. É por isso que não tem caixinha de “eu concordo” — não porque eu pulei a etapa, mas porque a base legal aqui não é consentimento.</p>
+
+      <h2>Por onde seus dados passam</h2>
+
+      <p>Preciso ser honesta sobre isto, porque envolve empresas fora do Brasil.</p>
+
+      <p><strong>FormSubmit</strong> — é o serviço que recebe o formulário e me encaminha por e-mail. Um site estático como este não consegue receber mensagem sozinho; sem esse intermediário, o formulário não existe. Ele atua como <strong>operador</strong>: trata os dados em meu nome e só para encaminhar. É mantido pela Devro LABS, com sede no <strong>Sri Lanka</strong>, e a infraestrutura dele passa por <strong>Cloudflare</strong> e por um servidor de e-mail no <strong>Canadá</strong>. O FormSubmit guarda uma cópia da submissão por <strong>30 dias</strong> e depois descarta.</p>
+
+      <p><strong>Google (Gmail)</strong> — é onde a mensagem chega e fica guardada comigo. Estados Unidos.</p>
+
+      <p><strong>GitHub Pages</strong> — é onde este site está hospedado. Como qualquer hospedagem, os servidores registram o endereço de IP e o navegador de quem acessa, em logs técnicos. Isso vale para toda visita, mesmo sem preencher nada. Estados Unidos.</p>
+
+      <p><strong>YouTube e Instagram</strong> — os vídeos e posts do portfólio ficam nessas plataformas e só são carregados <strong>depois que você clica</strong> para assistir. Quando você clica, seu navegador se conecta ao YouTube ou ao Instagram, e essas empresas passam a enxergar seu acesso, sob as políticas de privacidade delas. Se você não clicar em nenhum vídeo, isso não acontece.</p>
+
+      <p><strong>WhatsApp</strong> — se você me passou seu número no briefing, é bem provável que a gente continue a conversa por lá, porque é como eu trabalho. Nesse caso, o histórico da nossa conversa fica no WhatsApp, que é da Meta, sob as regras deles. Se você preferir tratar tudo por e-mail, é só me dizer.</p>
+
+      <p><strong>Sobre a transferência internacional:</strong> nenhum desses países tem decisão de adequação reconhecida pela ANPD — hoje só a União Europeia tem. A transferência é feita com fundamento no <strong>art. 33, inciso IX da LGPD</strong>, que a permite quando ela é necessária para atender às hipóteses do art. 7º, V — exatamente o caso aqui: sem esse envio, a sua mensagem não chega até mim. Limito essa transferência ao mínimo necessário: só vai o que você escreveu no formulário, nada além.</p>
+
+      <h2>Cookies</h2>
+
+      <p><strong>Este site não usa cookies.</strong> Não tenho Google Analytics, não tenho pixel do Facebook, não tenho nenhuma ferramenta de rastreamento ou medição. O site também não guarda nada na memória do seu navegador.</p>
+
+      <p>As únicas exceções são os players de vídeo do YouTube e do Instagram: se você clicar para assistir, essas plataformas podem gravar cookies próprios delas no seu navegador. Isso é decisão delas, sob as políticas delas — e só acontece se você clicar.</p>
+
+      <h2>Por quanto tempo eu guardo</h2>
+
+      <table class="legal__tabela">
+        <thead>
+          <tr><th scope="col">O que</th><th scope="col">Quanto tempo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mensagem do formulário de contato que não virou projeto</td><td>6 meses depois da última resposta</td></tr>
+          <tr><td>Briefing de projeto que não fechou</td><td>6 meses depois da última conversa</td></tr>
+          <tr><td>Dados de projeto que fechou</td><td>3 meses depois de entregue</td></tr>
+        </tbody>
+      </table>
+
+      <p>São prazos curtos de propósito: eu guardo pelo tempo de responder, tocar o projeto e resolver o que vier logo depois da entrega. Passado o prazo, eu apago.</p>
+
+      <p>Uma exceção que não depende de mim: <strong>nota fiscal e documento de cobrança</strong> seguem a regra fiscal, que obriga a guarda por prazo maior. Isso vale só para o documento em si — seu briefing, suas mensagens e seus contatos são apagados nos prazos da tabela.</p>
+
+      <p>Se você pedir para apagar antes, eu apago antes. Ver logo abaixo.</p>
+
+      <h2>Seus direitos</h2>
+
+      <p>A LGPD, no art. 18, te dá o direito de, a qualquer momento, me pedir:</p>
+
+      <ul>
+        <li><strong>confirmação</strong> de que eu tenho dados seus;</li>
+        <li><strong>acesso</strong> a esses dados;</li>
+        <li><strong>correção</strong> do que estiver errado, incompleto ou desatualizado;</li>
+        <li><strong>anonimização, bloqueio ou eliminação</strong> de dado desnecessário ou excessivo;</li>
+        <li><strong>portabilidade</strong> dos dados para outro fornecedor;</li>
+        <li><strong>eliminação</strong> dos dados;</li>
+        <li><strong>informação</strong> sobre com quem eu compartilhei;</li>
+        <li><strong>oposição</strong> ao tratamento, se você achar que ele está em desacordo com a lei.</li>
+      </ul>
+
+      <p><strong>Como pedir:</strong> manda um e-mail para <a href="mailto:savyllaadryan@gmail.com">savyllaadryan@gmail.com</a> dizendo o que você quer. Não precisa de formulário, nem de linguagem formal, nem de justificativa. “Apaga meus dados” basta.</p>
+
+      <p><strong>É de graça</strong>, sempre.</p>
+
+      <p><strong>Prazo:</strong> respondo o mais rápido que der. Para pedidos de acesso, a lei me dá até 15 dias (art. 19, I da LGPD, combinado com o art. 15 da Resolução CD/ANPD nº 2/2022). Como agente de tratamento de pequeno porte, tenho prazo em dobro nos demais casos (art. 14 da mesma Resolução) — mas na prática eu respondo bem antes disso.</p>
+
+      <p>Uma ressalva sincera: se você me pedir para apagar tudo no meio de um projeto em andamento, eu vou apagar, mas provavelmente não vou conseguir continuar o trabalho. A gente conversa antes.</p>
+
+      <h2>Segurança</h2>
+
+      <p>O que eu faço, na prática: o site inteiro roda em HTTPS; as mensagens chegam numa conta de e-mail com verificação em duas etapas; e sou a única pessoa com acesso a elas.</p>
+
+      <p>Nenhuma medida é infalível. Se acontecer um incidente de segurança que possa causar risco relevante a você, eu comunico você e a ANPD, como manda o art. 48 da LGPD.</p>
+
+      <h2>Se você não ficar satisfeita</h2>
+
+      <p>Fala comigo primeiro, em <a href="mailto:savyllaadryan@gmail.com">savyllaadryan@gmail.com</a> — quase tudo se resolve aí.</p>
+
+      <p>Se não resolver, você tem o direito de reclamar diretamente à <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong>, em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">gov.br/anpd</a>. Esse direito está no art. 18, §1º da LGPD e não depende de nada que eu diga.</p>
+
+      <h2>Mudanças nesta página</h2>
+
+      <p>Se eu mudar alguma coisa aqui, a data lá em cima muda junto. Se a mudança for significativa, aviso quem estiver com projeto em andamento.</p>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__logo">SAVYLLA ADRYAN</span>
+      <nav class="footer__nav">
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#marcas">Marcas</a>
+        <a href="index.html#trabalhos">Projetos</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="index.html#contato">Contato</a>
+        <a href="politica-privacidade.html" aria-current="page">Privacidade</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/savyllaadryan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+      <p>&copy; 2026 Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="servicos.js" defer></script>
+</body>
+</html>
