@@ -1627,32 +1627,6 @@ const projetos = [
     galeria: []
   },
   {
-    id: 73,
-    nome: "Encceja",
-    categoria: "ia",
-    categoriaLabel: "Produção com IA",
-    ano: "2026",
-    videoId: "",
-    descricao: "Série de vídeos de treinamento produzidos com IA para o Encceja, com apresentadora e cenários gerados, orientando as equipes sobre os procedimentos de aplicação do exame.",
-    ficha: {
-      "Função": "Produção com IA",
-      "Marca": "Encceja",
-      "Plataforma": "Multi plataforma",
-      "Agência": "Allfluence",
-      "Tipo": "Vídeo de Treinamento",
-      "Ano": "2026"
-    },
-    videos: [
-      { youtubeId: "vIHdZpGgIq0", talento: "Recebimento dos Malotes" },
-      { youtubeId: "peK3XYWhxv8", talento: "Treinamento Completo" },
-      { youtubeId: "acFWaoQAvrI", talento: "Conferência dos Documentos" },
-      { youtubeId: "kYVVJtkVJDg", talento: "Identificação dos Participantes" },
-      { youtubeId: "AsfxJUWVSEA", talento: "Eliminação dos Participantes" },
-      { youtubeId: "1omKHlZATnY", talento: "Preparação para a Abertura" }
-    ],
-    galeria: []
-  },
-  {
     id: 41,
     nome: "Allfluence",
     categoria: "video",
