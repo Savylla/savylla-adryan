@@ -419,6 +419,10 @@ body::after {
   html { scroll-behavior: smooth; }
 }
 
+/* O header é fixo e tem 69px. Sem este respiro, as âncoras do menu param com o
+   título da seção a 11px da borda inferior dele — legível, mas colado. */
+html { scroll-padding-top: 90px; }
+
 body {
   font-family: var(--font-body);
   background: transparent;
@@ -620,6 +624,9 @@ body.nav-open .header nav { opacity: 0; pointer-events: none; }
   letter-spacing: var(--ls-rotulo-largo);
   color: var(--text);
   transition: color 0.3s;
+  /* O texto sozinho rende ~26px de altura. O padding leva o alvo de toque a
+     46px — com 9px ficava em 43,99 e raspava o mínimo. Cabe nos 69px do header. */
+  padding: 10px 0;
 }
 
 .header__logo:hover { color: var(--accent); }
@@ -2238,6 +2245,8 @@ iframe.trabalhos__hover-video.active {
   /* padding vertical dá ao alvo de toque uma altura confortável no celular e
      afasta o tracejado do texto */
   padding: 2px 0 5px;
+  /* ancora o ::after que estende o alvo de toque aos 44px */
+  position: relative;
   background: none;
   border: none;
   color: #ffffff;
@@ -2249,6 +2258,17 @@ iframe.trabalhos__hover-video.active {
   cursor: pointer;
   border-bottom: 1px dashed var(--accent);
   transition: color 0.3s, border-color 0.3s;
+}
+
+/* O botão mede 30px de altura. Estender o alvo por um ::after invisível leva o
+   toque a 46px sem afastar o tracejado do texto nem empurrar o bloco ao lado. */
+.email-revelar::after {
+  content: '';
+  position: absolute;
+  inset: -9px -8px;
+  /* sem isto o bloco seguinte do .contato__info pinta por cima da metade de
+     baixo da área estendida e ela deixa de receber o toque */
+  z-index: 1;
 }
 
 .email-revelar:hover,
@@ -2387,7 +2407,9 @@ iframe.trabalhos__hover-video.active {
   /* Com os 5 itens, a linha estourava a largura da tela no celular. */
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px 24px;
+  /* gap menor porque cada link passou a carregar 12px de padding próprio —
+     o espaçamento visual entre eles continua o mesmo de antes. */
+  gap: 4px 16px;
 }
 
 .footer__nav a {
@@ -2397,6 +2419,8 @@ iframe.trabalhos__hover-video.active {
   text-transform: uppercase;
   color: var(--text-dim);
   transition: color 0.3s;
+  /* 21px de texto + 24px de padding = 45px de alvo de toque no celular. */
+  padding: 12px 8px;
 }
 
 .footer__nav a:hover { color: var(--accent); }
@@ -3101,7 +3125,10 @@ iframe.trabalhos__hover-video.active {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-top: 36px;
+  /* 26px de texto + 20px de padding = 46px de alvo de toque. O margin-top
+     desconta o padding para o espaçamento visual do card não mudar. */
+  padding: 10px 0;
+  margin-top: 26px;
   font-size: var(--fs-rotulo-sm);
   font-weight: var(--fw-rotulo);
   letter-spacing: var(--ls-rotulo);
