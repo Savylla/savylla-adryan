@@ -28,6 +28,13 @@ O job vive perto do teto de 10 minutos da `actions/deploy-pages` — o artefato
 enxuto existe justamente para caber nele. Não adicione diretórios ao `_site` sem
 medir.
 
+> **O briefing não é publicável.** `briefing.html`, `briefing.js` e `obrigado.html`
+> ainda não foram aprovados pela dona do site e só vão ao ar quando ela autorizar
+> **pelo nome**. "Pode dar push" e "publica o site" não bastam. Nunca use `git add -A`
+> ou `git commit -a` aqui enquanto isso estiver pendente — a lista de inclusão do
+> workflow é a única coisa que hoje segura essa página fora do Google.
+> Detalhes e checklist em `.claude/rules/briefing-nao-publicar.md`.
+
 ## Sistema instalado
 
 | Camada | Onde |
