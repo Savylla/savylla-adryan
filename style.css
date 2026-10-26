@@ -1479,6 +1479,17 @@ iframe.trabalhos__hover-video.active {
   display: none;
 }
 
+/* O iframe é renderizado --yt-escala vezes maior e reduzido de volta ao tamanho
+   da moldura, para o YouTube se enxergar grande e escolher 1080p. A escala vem do
+   JS (ajustarResolucaoYT em script.js); sem ela fica 1 e nada muda. */
+.modal__video lite-youtube > iframe,
+.showreel__video lite-youtube > iframe {
+  width: calc(100% * var(--yt-escala, 1));
+  height: calc(100% * var(--yt-escala, 1));
+  transform: scale(calc(1 / var(--yt-escala, 1)));
+  transform-origin: 0 0;
+}
+
 /* ---- Tela cheia do player -------------------------------------------------
    Num celular em retrato o player 16:9 sobra ~200px de altura e o vídeo abre
    minúsculo. Ao dar play o JS pede tela cheia (ver expandirPlayer em script.js):

@@ -2501,8 +2501,8 @@ function htmlEmbedInstagram(url) {
 
    vq=hd1080 é uma dica, não uma ordem: o YouTube escolhe a qualidade pelo tamanho
    do player, pela banda e pela conta de quem assiste, e ignora o parâmetro quando
-   quer. Fica porque não custa nada — mas quem realmente puxa a qualidade para
-   cima é o player estar grande, que é o que a ampliação já faz.
+   quer. Fica porque não custa nada — quem realmente puxa a qualidade para cima é
+   o player ser grande, e é isso que ajustarResolucaoYT garante mais abaixo.
 
    Não há mute=1 aqui, de propósito: o vídeo toca com som. O navegador só permite
    som sem gesto do usuário quando a mídia está muda, mas aqui o iframe nasce
@@ -2520,14 +2520,17 @@ const PARAMS_YT = 'rel=0&modestbranding=1&controls=0&cc_load_policy=0&cc_lang_pr
 
    Volume: o player guarda a última preferência de quem assiste, então um
    visitante que baixou o volume em outro vídeo do YouTube chegaria aqui com o
-   som pela metade. setVolume(100) alinha todo mundo no máximo. */
-function prepararPlayerYT(container) {
+   som pela metade. setVolume(100) alinha todo mundo no máximo. A prévia muda da
+   grade passa som: false, porque ela precisa continuar muda. */
+function prepararPlayerYT(container, { som = true } = {}) {
   const iframe = container && container.querySelector('iframe');
   if (!iframe || !iframe.contentWindow) return;
 
+  if (som) ajustarResolucaoYT(iframe);
+
   const enviar = (mensagem) => {
     try {
-      iframe.contentWindow.postMessage(JSON.stringify(mensagem), '*');
+      iframe.contentWindow.postMessage(JSON.stringify({ ...mensagem, id: 1, channel: 'widget' }), '*');
     } catch (e) { /* iframe já trocado ou descarregado */ }
   };
 
@@ -2548,6 +2551,7 @@ function prepararPlayerYT(container) {
     desligarLegenda();
     [400, 1000, 2000, 3500, 6000, 9000].forEach(ms => setTimeout(desligarLegenda, ms));
 
+    if (!som) return;
     // Som no talo, uma vez só: repetir sequestraria o volume de quem baixou o som
     // no meio do vídeo. unMute antes de setVolume porque o volume gravado não
     // vale nada enquanto o player estiver mudo — e o visitante pode chegar com o
@@ -2564,21 +2568,87 @@ function prepararPlayerYT(container) {
   // "isExternalMethodAvailable is not a function" no console do visitante — o
   // player ainda não ligou a ponte que interpreta comandos. Manda-se `listening`,
   // espera-se a primeira resposta dele, e só então o comando vale.
+  //
+  // E o `listening` precisa ser repetido até a resposta chegar. O iframe acabou de
+  // nascer quando esta função roda: um envio único cai na página em branco que
+  // existe antes do embed carregar, se perde, e o player nunca responde — era por
+  // isso que a legenda continuava ligada mesmo com todo o código acima. A API
+  // oficial do YouTube faz a mesma insistência.
+  let preparado = false;
   const aoResponder = (evento) => {
+    // Iframe descartado (o container é reaproveitado entre vídeos): solta o
+    // listener na próxima mensagem que chegar de qualquer player.
+    if (!iframe.isConnected) {
+      window.removeEventListener('message', aoResponder);
+      return;
+    }
     if (evento.source !== iframe.contentWindow) return;
-    window.removeEventListener('message', aoResponder);
-    clearTimeout(desistir);
-    preparar();
+    if (!preparado) {
+      preparado = true;
+      clearInterval(insistir);
+      clearTimeout(desistir);
+      preparar();
+      return;
+    }
+    // Depois do handshake o player avisa quando volta a tocar (onStateChange 1) e
+    // quando carrega o módulo de legenda (onApiChange) — os dois momentos em que
+    // a faixa automática pode voltar selecionada.
+    let dados;
+    try { dados = JSON.parse(evento.data); } catch (e) { return; }
+    if (dados.event === 'onApiChange' || (dados.event === 'onStateChange' && dados.info === 1)) {
+      desligarLegenda();
+    }
   };
   window.addEventListener('message', aoResponder);
 
+  const insistir = setInterval(() => enviar({ event: 'listening' }), 250);
   // Player que nunca responde (bloqueio de terceiros, rede caída) não pode deixar
   // o listener preso à página para sempre.
   const desistir = setTimeout(() => {
+    clearInterval(insistir);
     window.removeEventListener('message', aoResponder);
-  }, 8000);
+  }, 10000);
 
   enviar({ event: 'listening' });
+}
+
+/* Qualidade de verdade. O YouTube escolhe a resolução pelo tamanho do player em
+   pixels FÍSICOS (largura CSS × devicePixelRatio) e ignora vq e
+   setPlaybackQuality. Medido no navegador: com o player do modal em ~960px ele
+   ficava em 720p mesmo com 1080p disponível; a partir de ~1800px físicos no lado
+   maior ele passa para 1080p.
+
+   Então o iframe é renderizado no tamanho que pede 1080p e reduzido com
+   transform até caber na moldura. Para quem assiste nada muda — controls=0 tira a
+   interface que ficaria miúda, e o toque continua acertando o player, porque o
+   navegador aplica o transform também no clique. O player é que passa a se
+   enxergar grande e busca o arquivo em 1080p. Quando a moldura já é grande o
+   bastante (tela cheia num monitor), a escala fica em 1 e nada é feito.
+
+   A escala vive numa variável CSS no <lite-youtube> (ver style.css) e é
+   recalculada a cada mudança de tamanho — abrir em tela cheia, girar o celular.
+   A banda de quem assiste continua mandando: numa conexão fraca o YouTube desce a
+   qualidade de qualquer jeito. */
+const LADO_MAIOR_1080 = 1920;
+
+function ajustarResolucaoYT(iframe) {
+  const lyt = iframe.parentElement;
+  if (!lyt || lyt.tagName !== 'LITE-YOUTUBE' || lyt._observadorResolucao) return;
+  if (typeof ResizeObserver !== 'function') return;
+
+  const observador = new ResizeObserver(([entrada]) => {
+    if (!lyt.isConnected) {
+      observador.disconnect();
+      return;
+    }
+    const { width, height } = entrada.contentRect;
+    const ladoMaior = Math.max(width, height) * (window.devicePixelRatio || 1);
+    if (!ladoMaior) return;
+    const escala = Math.max(1, LADO_MAIOR_1080 / ladoMaior);
+    lyt.style.setProperty('--yt-escala', escala.toFixed(3));
+  });
+  observador.observe(lyt);
+  lyt._observadorResolucao = observador;
 }
 
 function marcarProporcao(container, ehVertical) {
@@ -3052,13 +3122,18 @@ function openModal(id) {
         if (v.youtubeId) {
           const lyt = videoEl.querySelector('lite-youtube');
           if (lyt && typeof lyt.activate === 'function') {
-            requestAnimationFrame(() => lyt.activate());
+            // prepararPlayerYT junto do activate, não depois do rAF: o iframe só
+            // nasce no activate(), e chamado antes ele não achava player nenhum —
+            // a legenda dos vídeos trocados pelos cards nunca era desligada.
+            requestAnimationFrame(() => {
+              lyt.activate();
+              prepararPlayerYT(videoEl);
+            });
           }
         }
         // Trocar de vídeo pelos cards também abre em tela cheia — o clique no
         // card é o gesto que o navegador exige.
         expandirPlayer(videoEl);
-        prepararPlayerYT(videoEl);
         galeriaEl.querySelectorAll('.modal__video-card').forEach(c => c.classList.remove('active'));
         card.classList.add('active');
         // Quem rola é o .modal (overflow-y:auto); o .modal__content não tem
@@ -3291,7 +3366,7 @@ items.forEach(item => {
         // YouTube: iframe com autoplay+mute+loop (loop requer playlist=mesmoId)
         const id = encodeURIComponent(firstVideo.youtubeId);
         hoverVideo = document.createElement('iframe');
-        hoverVideo.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&controls=0&loop=1&playlist=${id}&modestbranding=1&playsinline=1&rel=0&disablekb=1&iv_load_policy=3`;
+        hoverVideo.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&controls=0&loop=1&playlist=${id}&modestbranding=1&playsinline=1&rel=0&disablekb=1&iv_load_policy=3&cc_load_policy=0&enablejsapi=1`;
         hoverVideo.allow = 'autoplay; encrypted-media';
         hoverVideo.setAttribute('frameborder', '0');
         hoverVideo.setAttribute('aria-hidden', 'true');
@@ -3306,6 +3381,8 @@ items.forEach(item => {
       }
       hoverVideo.className = 'trabalhos__hover-video';
       thumb.insertBefore(hoverVideo, playIcon);
+      // A prévia também recebia a legenda automática por cima da capa.
+      if (hoverVideo.tagName === 'IFRAME') prepararPlayerYT(thumb, { som: false });
     }
     // iframe YouTube: dimensiona com aspect 16:9 cobrindo o thumb (overflow corta excesso)
     if (hoverVideo.tagName === 'IFRAME') {
