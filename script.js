@@ -2664,10 +2664,11 @@ function ajustarResolucaoYT(iframe) {
    savylla-adryan-videos: gratuito, sem limite de espaço total nem de banda. Os
    vídeos continuam no YouTube como acervo; o youtubeId segue sendo a chave.
 
-   Sem original no ClickUp, 12 vieram da melhor fonte que havia (YouTube, Drive
-   ou o mp4 antigo do repositório), com a tarja do YouTube cortada; alguns ficam
-   abaixo de 1080p até chegar o original. Wp7oNIgtDow tem restrição de idade e
-   não pôde ser baixado, então segue pelo YouTube.
+   Sem original no ClickUp, 13 vieram da melhor fonte que havia (YouTube, Drive,
+   o mp4 antigo do repositório ou arquivo enviado pela dona), com a tarja do
+   YouTube cortada. Seis não existem acima de 1080p em fonte nenhuma e sobem sem
+   recompressão, na resolução nativa: 4fVpJOqWRjY, 8kdZVMwr3Gc, zaRhDGWtjM0,
+   NCDBzfPAjK0, Kl1GaslcCbA e lg6CRRu62m8.
 
    Vídeo fora desta lista, ou cujo arquivo falhar ao carregar, toca pelo YouTube
    como antes. Migrar um cliente = subir os arquivos e acrescentar os ids aqui. */
@@ -2729,9 +2730,9 @@ const VIDEOS_1080 = new Set([
   "Kl1GaslcCbA",
   // Gama — 4 vídeos
   "G_ggKHUkqJ8", "OFMijRGWQcw", "TFU6R7oTlUQ", "pJfBXKSByCc",
-  // Garagem Coletiva — 6 vídeos
-  "2MYGc6lUzJQ", "AghqJJ8bfP0", "NCDBzfPAjK0", "YdDfLK_gFSg", "flKhFJS4u8U",
-  "sRbWaofh7fk",
+  // Garagem Coletiva — 7 vídeos
+  "2MYGc6lUzJQ", "AghqJJ8bfP0", "NCDBzfPAjK0", "Wp7oNIgtDow", "YdDfLK_gFSg",
+  "flKhFJS4u8U", "sRbWaofh7fk",
   // Grupo Carrefour — 3 vídeos
   "DWJ4yAtYNoQ", "d8HKRjdFRY8", "nXS3De32PSY",
   // Intimus — 2 vídeos
