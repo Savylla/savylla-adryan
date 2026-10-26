@@ -2651,6 +2651,235 @@ function ajustarResolucaoYT(iframe) {
   lyt._observadorResolucao = observador;
 }
 
+/* Vídeos em 1080p servidos pelo próprio site, no lugar do player do YouTube.
+
+   Por quê: no celular o YouTube trava o vídeo incorporado em 480p, mesmo com
+   banda sobrando e o 1080p disponível, e nenhum comando aceito pelo embed muda
+   isso — medido num Galaxy A15 real em 26/10/2026. Com o arquivo hospedado por
+   nós, não há quem rebaixe a qualidade: o arquivo é 1080p e é ele que toca.
+
+   Os arquivos vêm dos ORIGINAIS do ClickUp (melhores que a cópia recomprimida
+   pelo YouTube), convertidos para H.264 1080p, CRF 20, teto de 8 Mbps — o
+   original chega a 20 Mbps e engasgaria no 4G. Ficam nos Releases do repositório
+   savylla-adryan-videos: gratuito, sem limite de espaço total nem de banda. Os
+   vídeos continuam no YouTube como acervo; o youtubeId segue sendo a chave.
+
+   Sem original no ClickUp, 12 vieram da melhor fonte que havia (YouTube, Drive
+   ou o mp4 antigo do repositório), com a tarja do YouTube cortada; alguns ficam
+   abaixo de 1080p até chegar o original. Wp7oNIgtDow tem restrição de idade e
+   não pôde ser baixado, então segue pelo YouTube.
+
+   Vídeo fora desta lista, ou cujo arquivo falhar ao carregar, toca pelo YouTube
+   como antes. Migrar um cliente = subir os arquivos e acrescentar os ids aqui. */
+const BASE_VIDEOS_1080 = 'https://github.com/Savylla/savylla-adryan-videos/releases/download/1080p/';
+const VIDEOS_1080 = new Set([
+  // Agibank — 8 vídeos
+  "-rruV4XAFxM", "AV3vjr8SrSI", "EReFfZhL_r4", "O0xg4LJcnTY", "h5ZbUewydlE",
+  "srXIpTh6Ips", "vHKHH4UBFPg", "yp5di3n_lM8",
+  // Aiqfome — 4 vídeos
+  "NDl-BKL_jQA", "iTBwPlIWLwo", "jJlTNW5L8r8", "yDwK_0ma93s",
+  // Allfluence — 10 vídeos
+  "1heeu4JlBrs", "1kdog5TY15k", "CmNwHyH0wso", "JKvGdRN-eeE", "QLF4xBQ30jo",
+  "fMHNZbbcQJE", "fwhdF2NlIpY", "mATBN8ULM6o", "wKvkhHMKs2s", "zlgZVZlnYys",
+  // Atacadão — 1 vídeo
+  "-2EXpu6Y_RM",
+  // Baby Sec — 4 vídeos
+  "9BZS3t242m0", "J58_VMwT7E4", "Km8Mw4ew1sE", "jP0vGWfg3Vc",
+  // Bet Nacional — 2 vídeos
+  "BBOBwlA6fF0", "V1j8_wTIHJM",
+  // Bradesco — 11 vídeos
+  "1NCpqO2JDYA", "2t6zKJiidyo", "7F-XTs7O2VE", "DDXT9lkQUK4", "EJCbUlPcEsw",
+  "I1PYDVfc2A4", "M17yhOXbkcU", "R_eMeHFFFVM", "SDL5JRfZU9o", "UdgJsE0Lyu0",
+  "xiM6_X6yALw",
+  // Bravecto — 11 vídeos
+  "7s8ah4HarJI", "8DOQ9eNbuGU", "C8LcFan2gAs", "DrcgiaJ2K6o", "L9DDlLiVsqc",
+  "P0qRbPVlkcY", "iXMJt6yicoE", "lH-SgFOGpJY", "rvWxO415PTw", "vR6PoRlKxO4",
+  "y_DVjSTJGkA",
+  // Bullsbet — 4 vídeos
+  "H2tWDso6ScE", "MvwBEtwZ6XM", "TRxWckgUgwU", "nLsCifRsfVA",
+  // Carolina Herrera — 5 vídeos
+  "7ASm4zJXidk", "S0j8u7mk5m0", "Xwdx-OOk_0U", "cF1syOFPE7M", "qLu3vudI7As",
+  // Cassino.Bet — 2 vídeos
+  "XNKlYL9lKBA", "thP2xd7T1ok",
+  // Claro — 5 vídeos
+  "Hl5U6xSQ-o0", "OTFYJYOT2Uo", "RzaWv1-lxQ0", "TNwbZRTjOZI", "WQKvY6xmOhs",
+  // Devassas — 3 vídeos
+  "4fVpJOqWRjY", "8kdZVMwr3Gc", "zaRhDGWtjM0",
+  // Dominos — 8 vídeos
+  "7C1QEG2m29k", "7XygUZFTdI8", "NgqudglKjYY", "Pe50lqGN3zw", "TqrsjTIEqhY",
+  "jmZ7Uab2hpY", "o0mx1oSki2k", "pNVspyGAHms",
+  // Drogasil — 50 vídeos
+  "-WnlPFEMdFg", "3vRmgWKQ-KI", "3vt2ctF6ZBg", "4Uofj7ZBmtw", "5rciUtPVuL0",
+  "73HEDSjMaq0", "9bpjUvES1K4", "9jKktlUZVqc", "BJvLyfX2h5A", "C_1KwT9qjWo",
+  "CfLLQlnjgkg", "DlqE5_TP6L0", "GL8dWgbun18", "GbXPStW3ICo", "HN4I6uBSLuY",
+  "JAsHoP3Y214", "MSv7PkJwgvU", "NVcXhACOIx4", "OIC_kkT4u-o", "O_Y6-vdgDDY",
+  "Oo5AF_iUASU", "PNNXRIiaq5U", "Pwqr0TFxOAo", "ThbjiI7GgVI", "UbxUor7dgD4",
+  "VUx0Rxx0_no", "VwR9ksjnl0w", "W2SpYLt4d9A", "WID5OYWU8xY", "WzLgP64ctkw",
+  "X4SLuPfPzlQ", "ZCgxHei4D6I", "_aTr2OMEiPs", "an_wiA3e7mU", "bCQmkH50a8s",
+  "cZurkdSZDec", "dpBXykL1CRM", "fopYpuObULw", "gexMpN0aSZE", "iSFowsarqrQ",
+  "k58aVMVH9Sw", "n9aPlT6_KqE", "nxfehOV9_vE", "tMDNOb91s1Q", "tTeTbjNalJY",
+  "tx2GDqTC7r4", "wTgDYMoxXkY", "wV5lv_6-grk", "y5_iDsHXKRE", "zyTZ9ZawHDQ",
+  // Faculdade Estácio — 24 vídeos
+  "-Eclfq86EGo", "-HkT1-b3EjM", "-TQwyN3Eg6E", "2MHPFeMDlHo", "3wWNUjj6ELI",
+  "4VjXFp7PK4c", "C8fOvcxr_7E", "FBE1MW1hyvg", "L4Kli6X2Mis", "Sx-Rylazlh4",
+  "TqXiHSydBEw", "UBiPwU0Kkzw", "Y4yW1to3re8", "ZuonxxzGqcE", "aQjrIn8v7gI",
+  "cz2A4uSbQOI", "ein__DWHnh0", "ii1zsUCsKaw", "jxHghz1u2OI", "kRs4zbA0B-U",
+  "m7DLJqcJecU", "mxX3cv0Dqj0", "zPrMXgucQFU", "zcFKV5W4YgE",
+  // Força da Terra — 1 vídeo
+  "Kl1GaslcCbA",
+  // Gama — 4 vídeos
+  "G_ggKHUkqJ8", "OFMijRGWQcw", "TFU6R7oTlUQ", "pJfBXKSByCc",
+  // Garagem Coletiva — 6 vídeos
+  "2MYGc6lUzJQ", "AghqJJ8bfP0", "NCDBzfPAjK0", "YdDfLK_gFSg", "flKhFJS4u8U",
+  "sRbWaofh7fk",
+  // Grupo Carrefour — 3 vídeos
+  "DWJ4yAtYNoQ", "d8HKRjdFRY8", "nXS3De32PSY",
+  // Intimus — 2 vídeos
+  "Xn5h4xDTY6g", "tL6MSoLIWPs",
+  // Kabum — 4 vídeos
+  "49QCUcSAKuA", "MURgCVfDNbg", "Y6SqHlpv3RM", "l_NFuiXX8Hs",
+  // LG — 5 vídeos
+  "36jEg7uyN4g", "6HhYfAefd88", "l5PiIUoa8Is", "otPsDTAN-iM", "topA6s23vLk",
+  // Livelo — 10 vídeos
+  "-V-9LwVRXpo", "5KDSlaL1t_w", "BUz4VewUxJ0", "IptEabWDjW0", "RENf_JTMZ5A",
+  "XIu7SO5hxZo", "lSF5HQzfglE", "lZBe8nEN6hk", "v-7Jdnsf1tg", "wsDZVmBUrNo",
+  // Magazine Luiza — 37 vídeos
+  "-f56zYQ3fDA", "0PY15VxyeTU", "3-hSdScDuqM", "5jbZ5utFLyY", "5qStD36HNoQ",
+  "6ZMZNKIWJ4c", "7G_XcintAnE", "7Z1O-UByi_M", "872RY8rhtxw", "Aq1O9dt5xWI",
+  "GQn-bgQy1XU", "GbRmuDDoU9M", "KS0rgWmvGzc", "KVFNqq-0B6M", "LoOTy7du6Iw",
+  "NzpLW_es2JA", "OqvXQHW-CTs", "Uu36LkjoKtc", "VSz0gSqmiDE", "WQqyTjkW67I",
+  "Yzyqr_sNQNk", "aQG2M8aLwfA", "cFIjWD32UB0", "d2t2Pi6X0XQ", "g-MEwRKpeT4",
+  "k3ozkk3OZVM", "nmyY1x5cS_Y", "nrWPZMy85Ys", "o38LV90mbXA", "r5UP4Wt0h3M",
+  "ubhaAB_eEjk", "ugzawOFiRLg", "ukGK-l6WyMU", "uyJf71ov1Uo", "vPQww1qTQrs",
+  "xux8Z7bUgpY", "yDUXW76PUmk",
+  // Mercado Pago — 48 vídeos
+  "-NSvoAL99pM", "-o7dERVmDUA", "0T9tXKLZG2I", "0UvgfcS8l34", "6xUcrJaAO10",
+  "9iCdW6UJc-o", "CVmumik2hnw", "DoWeEwO9Eb8", "F4qxnn5gmHM", "FgF_fDoVYXk",
+  "Mh_TPDkDH70", "NT3ixIxn9Fc", "Od1BqBgoJ9c", "RWnOjv4W9po", "SfxQcOjKLU4",
+  "TTP5YQles-k", "TtfjanvFocw", "W3cPrLIoQms", "XuL7wexZg6g", "Y3Ha-wHWAiA",
+  "bMkx1BOe44U", "bhDld0yNZUw", "cBGTodEPCuU", "ckrM_e-58Zs", "cwhzu-foUs0",
+  "d0qnoEjHgOM", "dFBLa-oVYV0", "dxdNxe9Zzg4", "ez-at7lP7HY", "hvzXSqK7ysk",
+  "izoH41Te-Vw", "jInRNm1CRSw", "lXiBZ6NHzHM", "m4u72jlB-Tw", "mKAlH0IPnYs",
+  "mO27JR1aYGw", "oE_jYqTHzAU", "og-ujl2b2X4", "rI1Avy1hz1c", "ratqvzQX73Y",
+  "sYB5NegUsbk", "v6esQrHSqlU", "vEAYovMcRnM", "vVuiNZk6zKc", "xDe-4vMFMGM",
+  "yVjto8K7BqQ", "z490SYGwyBE", "zxeRSTxanAY",
+  // Movida — 8 vídeos
+  "1vJz6i2Oysw", "3yGiT5qdrys", "8zVNOrVPzZs", "CD0-WI3Cl6Q", "IxfzC-BVmVA",
+  "JsT9oAogP4o", "cdVMwx2pjwQ", "fjBwFzbjzgw",
+  // Mycon — 8 vídeos
+  "49Wu2PZjiTY", "4swS2g9mh80", "KArk5ZJES3A", "MGnkhl2Dx84", "dYoqcyU082E",
+  "gQvE6zuFLR4", "tdXXqQLKeCA", "x7xXZs3LeEw",
+  // Neo Energia — 10 vídeos
+  "2JwwXfYXo4k", "4x6q0joaIvc", "53jQhy1RTXA", "HrIE4gV11jA", "PVuKOKW0TMw",
+  "RQUdYKJSFD4", "TGVVJxBPTHQ", "U79hizyMLaM", "bL1QKnbPACg", "p6FXXTSpL0E",
+  // Nestlé / Kitkat — 5 vídeos
+  "K9r_trZzBJ8", "RQiKHx6hAmI", "YG6fXxkGmdM", "bAM16jswkMg", "zJKsB2zMy58",
+  // Nestlé / Nescau — 4 vídeos
+  "-_5TT177-i0", "Q1hbdDCajbs", "X8KblkSc3r0", "x8BGqs7Hpgg",
+  // Nestlé / Nutren — 2 vídeos
+  "6HoHOCyhWf4", "Zyl1AMK-wHs",
+  // Netshoes — 14 vídeos
+  "2v7iO26xlTA", "5rYCACBOAYY", "7zsuUDj6fws", "I3OYnOGyxJs", "I5QmoGohwPI",
+  "TKbhu1ePwgA", "UOhP1uIfD3k", "VX3XeDdLe4A", "ZkgDj_WIA8Y", "euSotih5hqs",
+  "pI1O5y1Mxps", "ph6-fETnA7g", "uH4KK0HTjHI", "vC3ObmufVpo",
+  // Philco Britânia — 1 vídeo
+  "ozhdJtYqrTs",
+  // Philips — 4 vídeos
+  "8PUTeD8Aj5U", "OdCiyIQH-rE", "TMiHks55BgA", "rtLXU60r4Qc",
+  // Projetos IA — 1 vídeo
+  "lg6CRRu62m8",
+  // Raia — 64 vídeos
+  "-SiLgbLMipY", "-m7qP5pd9xQ", "13_ulJahCIA", "1Ptzf4q0f-0", "1joTeMnRzns",
+  "2dy78GzXYmI", "3JxtXPL1IkQ", "3ZK9KNnVUuE", "3tsSZqYuNlQ", "3u9MuBy1MA8",
+  "433JzW9eKY0", "4gqaftd-Wno", "4vFmVzr2fyM", "58ygYoOz_y4", "69XENhu2ZLQ",
+  "6NqxW-978Y4", "879bcwYfPKg", "9Bu4B6Vjcns", "9Kc2cyKRb7Q", "BVxlxR_CRKc",
+  "DVo5UwG7zSU", "DWEWlJZtEUY", "E4wm7LWDHGA", "Hef2F2YkWBY", "IdynLiO1-Dk",
+  "IsYjN2K7zkw", "JbdzrKKP6Qw", "K-FR4hVqPRc", "KfAy2GJmw0I", "KkDAblY2_qM",
+  "KnAVcVZXizM", "LgtyB5yGwk0", "NEHleVfNaZQ", "NrwwmOnYfUk", "P8DqRIRCrPE",
+  "PExvD8hVBlQ", "PYQ-HQhlDFU", "Pa63ewjV_Ig", "PfB7avwrrAs", "QBQx_zq-m6w",
+  "STDiMaj-5hE", "THQYuflaSYU", "VJFGHtAWCWQ", "VcvxRWe8mkI", "Wv1lnqe9b94",
+  "ZUQlSJj1fAE", "bM1w0WL-N4I", "bxIgQU1I9RE", "dmVpaBDXIqI", "etwKYRii-PQ",
+  "gY-Qb8YOP1A", "ga8O04wMf40", "kGZHDLwl_5E", "kW0yqcZoiMs", "mGz7jWVNDqw",
+  "metF5HqeBy0", "oOh-g3OiCWo", "oSLYs1TB22A", "pipzmvZqiuU", "rEGK16dni-8",
+  "skn_frmGPg4", "ud2cfUj3zzk", "udU_zSYwp38", "yypqTjCPpfs",
+  // Reals Bet — 4 vídeos
+  "4YAsshDgYrE", "SB9TvZa4G-A", "daS4IjfpigA", "l5rExGkiRTo",
+  // Serasa — 12 vídeos
+  "1-VmKHjpzfs", "9xypUfGo5nE", "FK1GiTPrnt4", "ISe7rscHKVw", "LJs7g6_08vs",
+  "Tu1D2ugM_mA", "aJYINzKnweI", "cfWFu7zlyFQ", "gbVcmDSMZ90", "iBLVYhc1lNQ",
+  "rprRW3ReCoo", "uqw2XmN7Vjw",
+  // Softys Kitchen — 8 vídeos
+  "1PnTyixd9VM", "B_2bS-q02n8", "Nj75nnQPwtE", "SifzvaTS70Y", "kt4bPfBPMYw",
+  "lx8l6P-GmEI", "lyrgIE4SHbM", "nqgNfNBQ4mc",
+  // Soldiers Nutrition — 100 vídeos
+  "-9l2tGe_1hs", "1LFe5LdlON8", "1lSjmUXBiAc", "2KA7xwBr1D4", "2X25AaaKFuw",
+  "35LPgKD1boM", "44Ewt3Ca-VE", "48tcVAUHWQw", "6AJtMY_J2nE", "6KxaueKb_zc",
+  "6vif4bpsC1U", "7S92V-YFi_Q", "7pvCcQZsez4", "7rRFs9geI50", "860B_SrEhkk",
+  "8kdCskFzAsk", "8yoJXviw4i4", "9mWoBI4gq9U", "AdFQAPLVVFo", "AqVWbTiCiCs",
+  "BZy6jB2r5pY", "CVVdJetIjVk", "D3ndPDIEwQ0", "DhLTs4AGi-8", "EYHTgYp1Umg",
+  "ElRGkVwd7ts", "FdtGaoMJfq8", "FoHBGD6Fhok", "Jcpy7kJwQTM", "KZroIhBn2tE",
+  "ML1ukiLzuzA", "Mbojsdmolac", "O72nhv6J6SY", "OuHLFkBeXoE", "PKpjAHDR4yU",
+  "Ph6IPxIDLLw", "PqmGzcPrixw", "Qa3xcRYRV_o", "RKgkpnGdkOM", "RYT7zCn32dU",
+  "Rh9au-MNS-8", "S7eCNcNnqpw", "Ty9WguB2QLY", "VNMPOTf5reY", "VtdzPWuFX0w",
+  "WcIZ0SyAeZA", "WuBWnN4t7to", "Y_zMlbARUG8", "ZhV0ww47bk4", "_0dUiLv4qbQ",
+  "_QSbkxU6xVQ", "_TCqHcgqZdI", "_XOpG3DeS0E", "_tXUJVjclUs", "aaEhGNY_sQU",
+  "aoAy0_wMQGA", "b73JXIya8cY", "c-gHr8KRzyw", "d46xwRo3Tjw", "dKUhat5biSg",
+  "dVpzzASuG4Y", "dg09dXXLVGU", "dzj3ngFJmK0", "e4Z1z0q2KDw", "eOt6VXZns4s",
+  "eWCYoHhu57Y", "ej84rrYAzZA", "ev8_gDjqR4g", "fCEIr6KWItA", "gHgW5exW-6k",
+  "gaw6A7pmmBc", "hnbTssGw-Hs", "i6tnNyhzK-Q", "igqbOIAN1s4", "j0Eh-m6qmPg",
+  "jDgIq-75EvQ", "jRCZI9vI4TY", "jpXsc0H4QVA", "kGNkZJq9GUc", "khg29vLriUc",
+  "m6DhIZuCuLs", "mD25X1GMypY", "mlVp5VuIlF0", "nhuMdmF98zA", "nxw8GzVxhZw",
+  "pM1HCsq2pZw", "qb2jJbX8j3w", "sIuPMWH3Iek", "s_vau70jTYY", "sd6R4k0kiBM",
+  "t7ukjsCZY6M", "v962tIyJ3VU", "vO0ZCGvncRI", "vQDcssK0ohA", "vpKD1pOlHDc",
+  "w8m4f5H439w", "wNll1WXo_EY", "wjr5-3z3hpI", "x7UEgPPzGmc", "xTpNvOQOkPU",
+  // Sorriso — 2 vídeos
+  "2k59DKam2Ak", "75A3rMytAQE",
+  // Tramontina — 2 vídeos
+  "9cN0JeeCHgc", "RMPKvAVqwJ8",
+  // Uber — 6 vídeos
+  "MvX5EXOkXqg", "P6SkAXCI41g", "Y7AiWpRCHcA", "ZT8eawnV8p4", "ntZ5FZcphzM",
+  "zTDNCe8lSjs",
+  // Vans — 4 vídeos
+  "GMGoiJaMvo4", "HoHtVzNKMMY", "IV1yjTzWiUI", "UMCTBg0Aog0",
+  // Veloe — 1 vídeo
+  "mV13Vf1yRzg",
+]);
+
+function htmlLiteYouTube(id) {
+  return `<lite-youtube videoid="${escapeHTML(id)}" params="${PARAMS_YT}" style="width:100%;height:100%;"></lite-youtube>`;
+}
+
+// Ponto único para pôr um vídeo do YouTube no player: decide entre o arquivo
+// 1080p e o embed, e acerta a moldura. Devolve true quando montou o arquivo.
+function montarVideoYouTube(container, id, { autoplay = false } = {}) {
+  if (!VIDEOS_1080.has(id)) {
+    container.innerHTML = htmlLiteYouTube(id);
+    marcarProporcaoYouTube(container, id);
+    return false;
+  }
+  // #t=0.1 faz o navegador mostrar o primeiro quadro como capa (o iOS deixa o
+  // <video> preto até o play sem isso). Sem tarja aqui: o original do ClickUp é
+  // 9:16 de verdade, então a moldura sai da proporção do CONTEÚDO, não da do
+  // embed — e ajustarProporcaoLocal confirma quando os metadados chegam.
+  const src = `${BASE_VIDEOS_1080}${encodeURIComponent(id)}.mp4#t=0.1`;
+  container.innerHTML = `<video controls playsinline ${autoplay ? 'autoplay ' : ''}preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#000"><source src="${src}" type="video/mp4">Seu navegador não suporta vídeo.</video>`;
+  const proporcao = proporcaoConteudoYT(id);
+  marcarProporcao(container, VIDEOS_YT_VERTICAIS.has(id) || (proporcao !== null && proporcao < 1));
+  ajustarProporcaoLocal(container);
+
+  // Rede de segurança: arquivo que não carrega (apagado, release fora do ar)
+  // volta para o YouTube em vez de deixar um player preto.
+  const video = container.querySelector('video');
+  video.querySelector('source').addEventListener('error', () => {
+    if (!container.contains(video)) return;
+    const tarja = container.querySelector('.modal__video-talent');
+    video.replaceWith(document.createRange().createContextualFragment(htmlLiteYouTube(id)));
+    marcarProporcaoYouTube(container, id);
+    if (tarja) container.appendChild(tarja);
+  }, { once: true });
+  return true;
+}
+
 function marcarProporcao(container, ehVertical) {
   container.classList.toggle('modal__video--vertical', !!ehVertical);
   // Trocar de vídeo dentro do mesmo modal precisa limpar a moldura do Instagram,
@@ -2706,8 +2935,9 @@ function ajustarProporcaoLocal(container) {
   else video.addEventListener('loadedmetadata', aplicar, { once: true });
 }
 
-// A CSP (media-src 'self' blob:) bloqueia mp4 de terceiros, então um vídeo com
-// URL externa só renderiza um player vazio. Melhor omiti-lo até ser re-hospedado.
+// A CSP (media-src) só libera o próprio site e os Releases do GitHub usados por
+// VIDEOS_1080, então um `url` de outro domínio só renderiza um player vazio.
+// Melhor omiti-lo até ser re-hospedado.
 function videoReproduzivel(v) {
   if (!v) return false;
   if (v.youtubeId) return true;
@@ -2978,13 +3208,11 @@ function openModal(id) {
 
   if (p.videoId && !p.videoId.startsWith('VIDEO_ID') && p.videoId !== '') {
     videoEl.style.display = '';
-    videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(p.videoId)}" params="${PARAMS_YT}" style="width:100%;height:100%;"></lite-youtube>`;
-    marcarProporcaoYouTube(videoEl, p.videoId);
+    montarVideoYouTube(videoEl, p.videoId);
   } else if (hasVideos) {
     videoEl.style.display = '';
     if (displayVideos[0].youtubeId) {
-      videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(displayVideos[0].youtubeId)}" params="${PARAMS_YT}" style="width:100%;height:100%;"></lite-youtube>`;
-      marcarProporcaoYouTube(videoEl, displayVideos[0].youtubeId);
+      montarVideoYouTube(videoEl, displayVideos[0].youtubeId);
     } else if (displayVideos[0].instagramUrl) {
       videoEl.innerHTML = htmlEmbedInstagram(displayVideos[0].instagramUrl);
       marcarProporcaoInstagram(videoEl, POSTS_IG_ALTOS.has(codigoInstagram(displayVideos[0].instagramUrl)));
@@ -3105,8 +3333,9 @@ function openModal(id) {
       `;
       card.addEventListener('click', () => {
         if (v.youtubeId) {
-          videoEl.innerHTML = `<lite-youtube videoid="${escapeHTML(v.youtubeId)}" params="${PARAMS_YT}" style="width:100%;height:100%;"></lite-youtube>`;
-          marcarProporcaoYouTube(videoEl, v.youtubeId);
+          // O clique no card é o gesto do usuário: o arquivo 1080p já pode
+          // começar sozinho, com som.
+          montarVideoYouTube(videoEl, v.youtubeId, { autoplay: true });
         } else if (v.instagramUrl) {
           videoEl.innerHTML = htmlEmbedInstagram(v.instagramUrl);
           marcarProporcaoInstagram(videoEl, POSTS_IG_ALTOS.has(codigoInstagram(v.instagramUrl)));
